@@ -1,0 +1,33 @@
+{
+ "date": "2026-09-27 22:03",
+ "command": "m05/rungC_pretrain.py out/_smoke_pretrain --smoke",
+ "shards": {
+  "data-00000-of-00005.arrow": "8fb0ae620ddaf83b",
+  "data-00001-of-00005.arrow": "4a5435bab3710f71",
+  "data-00002-of-00005.arrow": "2df9a6977971f0a2",
+  "data-00003-of-00005.arrow": "67cf5c6dbb9e03ab",
+  "data-00004-of-00005.arrow": "5cda6cd30270bd9c"
+ },
+ "epochs": 1,
+ "lr": 0.001,
+ "class_scale": [
+  0.2534780215302892,
+  0.12600024662949819,
+  0.006926802857029199
+ ],
+ "val_every": 50,
+ "smoke": true,
+ "hlow_channel": "bond",
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 0.3119522530872088,
+   "val_loss": 0.34352782368659973,
+   "n_train": 39,
+   "n_val": 1,
+   "seconds": 0.6
+  }
+ ],
+ "molecules_seen": 39,
+ "seconds": 4.0
+}
