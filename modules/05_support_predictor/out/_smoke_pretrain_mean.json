@@ -1,0 +1,50 @@
+{
+ "date": "2026-09-28 10:08",
+ "provenance": {
+  "timestamp_utc": "2026-09-28 08:08:33",
+  "host": "Asus18",
+  "python": "3.14.6",
+  "numpy": "2.5.1",
+  "command": "rungC_pretrain.py out/_smoke_pretrain_mean --smoke",
+  "commit": "68111ca54f52611a56ff81b3472f81388fd35621",
+  "dirty": "yes"
+ },
+ "command": "m05/rungC_pretrain.py out/_smoke_pretrain_mean --smoke",
+ "shards": {
+  "data-00000-of-00005.arrow": "8fb0ae620ddaf83b",
+  "data-00001-of-00005.arrow": "4a5435bab3710f71",
+  "data-00002-of-00005.arrow": "2df9a6977971f0a2",
+  "data-00003-of-00005.arrow": "67cf5c6dbb9e03ab",
+  "data-00004-of-00005.arrow": "5cda6cd30270bd9c"
+ },
+ "epochs": 1,
+ "lr": 0.001,
+ "class_scale": [
+  0.2534780215302892,
+  0.12600024662949819,
+  0.006926802857029199
+ ],
+ "val_every": 50,
+ "smoke": true,
+ "hlow_channel": "bond",
+ "aggregation": "mean",
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 0.09934530725989205,
+   "val_loss": 0.05787366256117821,
+   "n_train": 39,
+   "n_val": 1,
+   "seconds": 0.6
+  }
+ ],
+ "molecules_seen": 39,
+ "elements": [
+  1,
+  6,
+  7,
+  8,
+  9
+ ],
+ "seconds": 4.7
+}
