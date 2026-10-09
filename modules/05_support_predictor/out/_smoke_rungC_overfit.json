@@ -1,0 +1,195 @@
+{
+ "date": "2026-09-30 22:46",
+ "smoke": false,
+ "provenance": {
+  "timestamp_utc": "2026-09-30 20:46:05",
+  "host": "Asus18",
+  "python": "3.14.6",
+  "numpy": "2.5.1",
+  "command": "rungC_train.py corpus/molecules out/_smoke_rungC_overfit --use-analytic --overfit-one A_8448043181 --seeds 0 --threads 2 --aggregation sum --epochs 3 --aux-weight 1.0 --lr 1e-3",
+  "commit": "a895fc167dbf241f142122279e40749a46e39af1",
+  "dirty": "yes"
+ },
+ "model": "rungC_equivariant C1 (from scratch; output scaled by the training set's RMS \u0394H, or per entry class)",
+ "n_molecules": 799,
+ "holdout_a": [
+  "A_8448043181"
+ ],
+ "holdout_b": [
+  "A_8448043181"
+ ],
+ "scaffold_cores": [
+  "fluoranthene",
+  "fluorene"
+ ],
+ "pool": 1,
+ "pool_ids": [
+  "A_8448043181"
+ ],
+ "pool_layers": "A,A2",
+ "sizes": [
+  1
+ ],
+ "seeds": [
+  0
+ ],
+ "epochs": 3,
+ "lr": 0.001,
+ "aux_weight": 1.0,
+ "loss": "registered",
+ "scale": "rms",
+ "inner_val": 0.0,
+ "patience": 0,
+ "pretrained": null,
+ "aggregation": "sum",
+ "pretrained_elements": null,
+ "aux_mode": "all",
+ "zero_hlow": false,
+ "overfit_one": "A_8448043181",
+ "pair_class_names": [
+  "diag_bond",
+  "diag_angle",
+  "diag_dihedral",
+  "diag_other",
+  "off_bondbond",
+  "off_other"
+ ],
+ "substituted_analytic": [
+  "A2_0420908ebe",
+  "A2_13bafae8e0",
+  "A2_13eea56ee5",
+  "A2_197913eb9c",
+  "A2_1c29b66c9d",
+  "A2_20747fd501",
+  "A2_20e59f3897",
+  "A2_220d2c107b",
+  "A2_22d0e8105c",
+  "A2_28eed45ad3",
+  "A2_2a0b78bd2b",
+  "A2_2b693cf6e7",
+  "A2_2c22216564",
+  "A2_3020175511",
+  "A2_330b4d6d8d",
+  "A2_356c370f21",
+  "A2_3802542cb6",
+  "A2_3a2982dd85",
+  "A2_3c2cf09504",
+  "A_014f8519af",
+  "A_01f3186607",
+  "A_3100da3761",
+  "A_6e858b26e5",
+  "A_78896cfe24",
+  "A_8448043181",
+  "A_b90527ca2d",
+  "B_8b12a55d3a"
+ ],
+ "curve": {
+  "1": {
+   "n": 1,
+   "per_seed": [
+    {
+     "seed": 0,
+     "train_history": [
+      {
+       "epoch": 1,
+       "main": 6.0147271142341197e-05,
+       "aux": 5.438652515411377
+      },
+      {
+       "epoch": 2,
+       "main": 0.0005178215797059238,
+       "aux": 87.3004150390625
+      },
+      {
+       "epoch": 3,
+       "main": 0.00031644143746234477,
+       "aux": 32.79251480102539
+      }
+     ],
+     "output_scale": 0.0035681590411749614,
+     "class_scale": null,
+     "aux_class_scale": null,
+     "seconds": 2.6,
+     "inner_val_ids": [],
+     "inner_val_aux": null,
+     "best_epoch": null,
+     "a": {
+      "diag_rms": {
+       "CH-stretch": 70.34408498499174,
+       "CH-oop": 69.04017173053214,
+       "ring-ip": 46.86724112472249,
+       "other": 28.829756312789662
+      },
+      "coupling_rms": 7.088540236258119,
+      "coupling_zero_rms": 3.298880865688448,
+      "block_rms": 22.67154802978357,
+      "block_median_rule_rms": 0.0,
+      "coupling_ratio": 2.1487712120755234,
+      "corrected_freq_rms": 52.92163948680862,
+      "corrected_freq_rms_zero_rule": 25.010250770736004,
+      "duschinsky_overlap_median": 0.9360066034547734,
+      "duschinsky_overlap_p10": 0.7144825941450924,
+      "dH_residual_ratio": 0.9457920981228016
+     },
+     "b": {
+      "diag_rms": {
+       "CH-stretch": 70.34408498499174,
+       "CH-oop": 69.04017173053214,
+       "ring-ip": 46.86724112472249,
+       "other": 28.829756312789662
+      },
+      "coupling_rms": 7.088540236258119,
+      "coupling_zero_rms": 3.298880865688448,
+      "block_rms": 22.67154802978357,
+      "block_median_rule_rms": 0.0,
+      "coupling_ratio": 2.1487712120755234,
+      "corrected_freq_rms": 52.92163948680862,
+      "corrected_freq_rms_zero_rule": 25.010250770736004,
+      "duschinsky_overlap_median": 0.9360066034547734,
+      "duschinsky_overlap_p10": 0.7144825941450924,
+      "dH_residual_ratio": 0.9457920981228016
+     }
+    }
+   ]
+  }
+ },
+ "zero_rule": {
+  "a": {
+   "diag_rms": {
+    "CH-stretch": 43.19608567558804,
+    "CH-oop": 24.236899461763578,
+    "ring-ip": 17.74703043273814,
+    "other": 10.421494222468226
+   },
+   "coupling_rms": 3.298880865688448,
+   "coupling_zero_rms": 3.298880865688448,
+   "block_rms": 7.230164527893066,
+   "block_median_rule_rms": 0.0,
+   "coupling_ratio": 1.0,
+   "corrected_freq_rms": 25.010250770736004,
+   "corrected_freq_rms_zero_rule": 25.010250770736004,
+   "duschinsky_overlap_median": 0.9194390029205686,
+   "duschinsky_overlap_p10": 0.7747495218964741,
+   "dH_residual_ratio": 1.0
+  },
+  "b": {
+   "diag_rms": {
+    "CH-stretch": 43.19608567558804,
+    "CH-oop": 24.236899461763578,
+    "ring-ip": 17.74703043273814,
+    "other": 10.421494222468226
+   },
+   "coupling_rms": 3.298880865688448,
+   "coupling_zero_rms": 3.298880865688448,
+   "block_rms": 7.230164527893066,
+   "block_median_rule_rms": 0.0,
+   "coupling_ratio": 1.0,
+   "corrected_freq_rms": 25.010250770736004,
+   "corrected_freq_rms_zero_rule": 25.010250770736004,
+   "duschinsky_overlap_median": 0.9194390029205686,
+   "duschinsky_overlap_p10": 0.7747495218964741,
+   "dH_residual_ratio": 1.0
+  }
+ },
+ "seconds": 29.3
+}
