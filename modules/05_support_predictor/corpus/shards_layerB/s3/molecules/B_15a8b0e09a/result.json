@@ -1,0 +1,42 @@
+{
+ "id": "B_15a8b0e09a",
+ "layer": "B",
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 16,
+  "memory_gb": 24,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "status": "failed",
+ "timings_s": {
+  "total": 446.7
+ },
+ "error": "Traceback (most recent call last):\n  File \"/root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus/psi4_worker.py\", line 55, in main\n    t = time.time(); e_opt = psi4.optimize(d[\"low_functional\"], molecule=mol); res[\"timings_s\"][\"optimise\"] = round(time.time() - t, 1); res[\"e_opt\"] = e_opt\n                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/psi4/driver/driver.py\", line 1371, in optimize\n    raise OptimizationConvergenceError(\"\"\"geometry optimization\"\"\", n - 1, wfn)\npsi4.driver.p4util.exceptions.OptimizationConvergenceError: Could not converge geometry optimization in 50 iterations.\n",
+ "peak_rss_gb": 3.57
+}

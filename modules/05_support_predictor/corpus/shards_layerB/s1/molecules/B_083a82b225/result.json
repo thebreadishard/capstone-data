@@ -1,0 +1,42 @@
+{
+ "id": "B_083a82b225",
+ "layer": "B",
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 16,
+  "memory_gb": 24,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "status": "failed",
+ "timings_s": {
+  "total": 34.4
+ },
+ "error": "Traceback (most recent call last):\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/optking/opt_helper.py\", line 192, in take_step\n    self.dq, self.step_str = self.opt_manager.take_step(\n                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^\n        self.fq, self._Hq, self.E, return_str=True\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/optking/optimize.py\", line 269, in take_step\n    achieved_dq, returned_str = self.opt_method.take_step(fq, H, energy, return_str=True)\n                                ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/optking/stepAlgorithms.py\", line 459, in take_step\n    return super().take_step(fq, H, energy, return_str)\n           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/optking/stepAlgorithms.py\", line 214, in take_step\n    raise AlgError(\"opt.py: Step is far too large.\")\noptking.exceptions.AlgError: opt.py: Step is far too large.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus/psi4_worker.py\", line 55, in main\n    t = time.time(); e_opt = psi4.optimize(d[\"low_functional\"], molecule=mol); res[\"timings_s\"][\"optimise\"] = round(time.time() - t, 1); res[\"e_opt\"] = e_opt\n                             ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/psi4/driver/driver.py\", line 1285, in optimize\n    opt_object.take_step()\n    ~~~~~~~~~~~~~~~~~~~~^^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/optking/opt_helper.py\", line 196, in take_step\n    self.opt_manager.alg_error_handler(self._Hq, self.fq, e)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/miniforge3/envs/qc/lib/python3.14/site-packages/optking/optimize.py\", line 493, in alg_error_handler\n    raise OptError(\"Maximum dynamic_level reached.\")\noptking.exceptions.OptError: Maximum dynamic_level reached.\n",
+ "peak_rss_gb": 2.32
+}
