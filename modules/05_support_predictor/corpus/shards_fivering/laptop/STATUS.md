@@ -1,11 +1,11 @@
-# Corpus status — 2026-10-12 03:26
+# Corpus status — 2026-10-13 03:35
 
-Manifest rows: 13,714; ledger entries: 31; compute spent so far: 38.9 h (from the ledger).
+Manifest rows: 13,714; ledger entries: 43; compute spent so far: 62.1 h (from the ledger).
 
 | layer | pending | running | done | failed | median s/molecule (measured) | hours to go at that rate |
 |---|---|---|---|---|---|---|
 | A | 0 | 0 | 46 | 0 | — | not yet measured |
-| A2 | 574 | 0 | 293 | 1 | 4376 | 697.7 |
+| A2 | 562 | 0 | 305 | 1 | 4600 | 718.2 |
 | B | 3,610 | 0 | 738 | 5 | — | not yet measured |
 | C | 6,055 | 0 | 0 | 0 | — | not yet measured |
 | G | 2,272 | 0 | 0 | 0 | — | not yet measured |
@@ -16,13 +16,13 @@ Last ten ledger entries:
 
 | id | name | machine | start | total s | status |
 |---|---|---|---|---|---|
-| A2_a59abce698 | carbazole+Cl | Asus18 | 2026-10-11 12:32:59 | 4663.1 | done |
-| A2_f29090ff8c | dibenzofuran+Cl | Asus18 | 2026-10-11 13:50:47 | 5436.6 | done |
-| A2_442dbe2a98 | dibenzothiophene+SH | Asus18 | 2026-10-11 15:21:26 | 6511.9 | done |
-| A2_fae1c8f737 | acenaphthylene+F | Asus18 | 2026-10-11 17:10:03 | 3493.6 | done |
-| A2_bebd41726d | carbazole+Cl | Asus18 | 2026-10-11 18:08:22 | 4662.9 | done |
-| A2_683fc80974 | dibenzofuran+OH | Asus18 | 2026-10-11 19:26:10 | 4261.4 | done |
-| A2_7024e3f7d1 | dibenzothiophene+CN | Asus18 | 2026-10-11 20:37:17 | 5880.4 | done |
-| A2_6b54d33fe5 | acenaphthylene+SH | Asus18 | 2026-10-11 22:15:26 | 5602.3 | done |
-| A2_e4ae65b774 | carbazole+F | Asus18 | 2026-10-11 23:48:52 | 5947.8 | done |
-| A2_79f5b634ce | dibenzofuran+CN | Asus18 | 2026-10-12 01:28:02 | 7078.2 | done |
+| A2_5714da246b | carbazole+OH | Asus18 | 2026-10-12 06:13:17 | 4651.0 | done |
+| A2_7fb917c8c9 | dibenzofuran+CN | Asus18 | 2026-10-12 07:30:53 | 7456.0 | done |
+| A2_761a97450a | dibenzothiophene+OH | Asus18 | 2026-10-12 09:35:15 | 6529.4 | done |
+| A2_781fb48872 | acenaphthylene+SH | Asus18 | 2026-10-12 11:24:11 | 6032.9 | done |
+| A2_ac0d67ce8b | carbazole+OH | Asus18 | 2026-10-12 13:04:48 | 7740.1 | done |
+| A2_843b0c7ea2 | dibenzofuran+OH | Asus18 | 2026-10-12 15:13:51 | 7754.6 | done |
+| A2_89953a471d | dibenzothiophene+SH | Asus18 | 2026-10-12 17:23:08 | 9190.8 | done |
+| A2_82cfd45c7d | acenaphthylene+CN | Asus18 | 2026-10-12 19:56:22 | 8587.4 | done |
+| A2_c0d747f921 | carbazole+OH | Asus18 | 2026-10-12 23:17:45 | 8151.6 | done |
+| A2_94546d1c5a | dibenzofuran+OH | Asus18 | 2026-10-13 01:33:40 | 7313.4 | done |
