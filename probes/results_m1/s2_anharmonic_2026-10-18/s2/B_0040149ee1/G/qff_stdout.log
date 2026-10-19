@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/dpir_s2/src/dpir/qff.py", line 549, in <module>
+    main()
+  File "/root/dpir_s2/src/dpir/qff.py", line 538, in main
+    qff, harm, ref, info = qff_from_records(recs, args.disp, allow_noisy=args.allow_noisy)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dpir_s2/src/dpir/qff.py", line 311, in qff_from_records
+    harm = harmonic(ref.H, ref.symbols, ref.geom)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/dpir_s2/src/dpir/qff.py", line 177, in harmonic
+    raise ValueError(f"imaginary mode(s): eigenvalue(s) {lam[lam < -1e-8]} of the projected mass-weighted Hessian; not a minimum")
+ValueError: imaginary mode(s): eigenvalue(s) [-3.84913594e-07] of the projected mass-weighted Hessian; not a minimum

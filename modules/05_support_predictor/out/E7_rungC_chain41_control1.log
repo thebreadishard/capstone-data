@@ -61,3 +61,15 @@ coverage ablation: 37 pool molecules excluded (chain41_fold1_exclude.txt); pool 
     seed 2 epoch 60/200: loss main 8.566e-08 aux 0.03291 val 0.0726 (2981 s)
     seed 2 epoch 70/200: loss main 7.88e-08 aux 0.02869 val 0.05956 (3502 s)
     seed 2 epoch 80/200: loss main 7.647e-08 aux 0.0264 val 0.05874 (4025 s)
+    seed 2 epoch 90/200: loss main 7.356e-08 aux 0.02491 val 0.06122 (4590 s)
+    seed 2 epoch 100/200: loss main 7e-08 aux 0.02248 val 0.05786 (5115 s)
+    seed 2 epoch 110/200: loss main 6.916e-08 aux 0.02241 val 0.0585 (5622 s)
+    seed 2 epoch 120/200: loss main 6.621e-08 aux 0.02043 val 0.05695 (6104 s)
+    seed 2 epoch 130/200: loss main 6.363e-08 aux 0.01958 val 0.05761 (6625 s)
+    seed 2 epoch 140/200: loss main 6.145e-08 aux 0.01832 val 0.05741 (7118 s)
+    seed 2: early stop at epoch 149, best inner val 0.05645 at epoch 129
+  model saved: out\E7_rungC_chain41_control1_model_n986_seed2.pt
+  n=986 seed 2: inner validation internal term 0.05645 on 148 molecules (fit on 838)
+  n=986 seed 2 (a): ring couplings 0.58 vs zero 3.73 (ratio 0.15) | corrected ω 1.97 (zero 23.37) | ΔH residual ratio 0.106
+  n=986 seed 2 (b): ring couplings 1.08 vs zero 3.90 (ratio 0.28) | corrected ω 3.14 (zero 23.01) | ΔH residual ratio 0.221
+wrote out/E7_rungC_chain41_control1.json/.md in 24068 s
