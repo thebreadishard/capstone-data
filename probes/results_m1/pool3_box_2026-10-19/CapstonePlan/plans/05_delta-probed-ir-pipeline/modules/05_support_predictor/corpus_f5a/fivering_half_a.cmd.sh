@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus_f5a || exit 1
+export OMP_NUM_THREADS=8 MKL_NUM_THREADS=8 OPENBLAS_NUM_THREADS=8
+NO_WAIT=1 P=/root/CapstonePlan/plans/05_delta-probed-ir-pipeline D=/root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus_f5a LIST=/root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus_f5a/list.txt PY=/root/miniforge3/envs/qc/bin/python CORPUS_QC_PYTHON=/root/miniforge3/envs/qc/bin/python PIDFILE=/root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus_f5a/runner.pid WORKER_MAX_HOURS=16 bash /root/f5/progress_on_growth.sh --tag F5A --dir /root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus_f5a/molecules --name psi4.out -- bash /root/f5/fivering_laptop_1015.sh "$@"

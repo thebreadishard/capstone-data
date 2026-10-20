@@ -1,0 +1,11 @@
+=== (AS3) wave start: 1 molecules from /root/dpir/smoke_list2.txt on ubuntu-32gb-hel1-4, two-route mode energy 2026-10-13 01:44:55
+[2026-10-13 01:44:55] chain (corrected route) start on ubuntu-32gb-hel1-4
+[2026-10-13 01:44:55] ANCHOR watersmoke2 START (parallel: 2 partial runs x 1 threads x 1500 MB) (/root/dpir/geoms/watersmoke/geometry.json)
+[2026-10-13 01:45:07] ANCHOR watersmoke2: 6 symmetry-unique displacements over 2 partial runs
+[2026-10-13 01:45:17] ANCHOR watersmoke2: partial runs done (12 gradient files) -> assembling run
+[2026-10-13 01:45:17] ANCHOR watersmoke2: two-route check (energy route) PASSED: reference gradient vs (E(+h) − E(−h)) / 2h over 6 coordinates, max |Δ| 3.5e-06 a.u. at coordinate 4 (limit 2e-05)
+[2026-10-13 01:45:18] ANCHOR watersmoke2 DONE: symmetry: 4 operations, orbits [[0], [1, 2]], 6 displacements (12 gradients) instead of 18; FD asymmetry max 5.77e-13 a.u.
+[2026-10-13 01:45:18] CHAIN FINISHED
+=== (AS3) watersmoke2 hessian DONE 2026-10-13 01:45:18
+=== (AS3) watersmoke2 apt PASS {"apt": "results/watersmoke2_ccpvdz/apt_ccsd_t_field.npz", "sum_rule": 3.0475115839518462e-12, "seconds": 78, "passed":  2026-10-13 01:46:36
+=== (AS3) wave done 2026-10-13 01:46:36

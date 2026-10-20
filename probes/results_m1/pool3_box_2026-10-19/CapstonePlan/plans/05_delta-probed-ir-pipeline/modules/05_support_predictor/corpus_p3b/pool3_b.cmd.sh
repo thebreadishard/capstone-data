@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /root/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus_p3b || exit 1
+
+export CORPUS_QC_PYTHON=/root/miniforge3/envs/qc/bin/python; /root/miniforge3/envs/qc/bin/python run_corpus.py --ids P3_2b5a6c3201,P3_2e68b34382,P3_34d837d676,P3_37aef7945b,P3_37c45f1142,P3_3f66942313,P3_4d14684fda,P3_5592613777,P3_6298fa7888,P3_a052950c1f,P3_a48efac7c7,P3_b36c153df2,P3_ff62f88395 --threads 8 --memory-gb 12 --worker-max-hours 48 "$@"
