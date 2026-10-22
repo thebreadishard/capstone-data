@@ -1,0 +1,62 @@
+{
+ "slopes": {
+  "ring-ip": -0.34,
+  "CH-stretch": -0.79,
+  "CH-oop": -0.43,
+  "other": -1.16
+ },
+ "recipe": [
+  "--use-analytic",
+  "--pool-layers",
+  "A,A2,B",
+  "--sizes",
+  "all",
+  "--seeds",
+  "0,1,2",
+  "--inner-val",
+  "0.15",
+  "--threads",
+  "8",
+  "--aggregation",
+  "sum",
+  "--head",
+  "hybrid",
+  "--aux",
+  "both",
+  "--kring-weight",
+  "0.3",
+  "--kdiag-weight",
+  "0.1",
+  "--kdiag-mode",
+  "family",
+  "--sqm-scale",
+  "--pair-features",
+  "--aux-weight",
+  "1.0",
+  "--epochs",
+  "200",
+  "--patience",
+  "20",
+  "--lr",
+  "3e-4",
+  "--hybrid-hidden",
+  "256",
+  "--pattern",
+  "f",
+  "--save-model"
+ ],
+ "pool": {
+  "a": 750,
+  "b": 607
+ },
+ "pool_a_vs_chain34": {
+  "missing": [],
+  "extra": []
+ },
+ "a_reservoir": 200,
+ "a_read": 343,
+ "b_reservoir": 40,
+ "b_read": 27,
+ "a_exclude": 222,
+ "b_exclude": 434
+}
