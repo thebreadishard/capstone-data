@@ -1,0 +1,135 @@
+{
+ "registration": "PreRegistration_2026-10-14_TZ_Anharmonic_Basis.md (+ amendment 1)",
+ "window": [
+  550.0,
+  2000.0
+ ],
+ "molecules": {
+  "benzene": {
+   "n": 22,
+   "rms": 81.53742256580948,
+   "max": 268.9327264079916,
+   "mean": 36.029632488578244,
+   "families": {
+    "CH-oop": {
+     "n": 6,
+     "rms": 145.8072927172041,
+     "mean": 109.88734944043546
+    },
+    "ring-ip": {
+     "n": 13,
+     "rms": 0.9592329284169622,
+     "mean": -0.22570241258653403
+    },
+    "other": {
+     "n": 3,
+     "rms": 78.93703569342088,
+     "mean": 45.42064982324454
+    }
+   },
+   "min_overlap": 0.5634906017465905
+  },
+  "naphthalene": {
+   "n": 32,
+   "rms": 76.34594128823001,
+   "max": 258.1326911768331,
+   "mean": 33.638546751921936,
+   "families": {
+    "CH-oop": {
+     "n": 8,
+     "rms": 144.66731466345536,
+     "mean": 111.24382588394313
+    },
+    "ring-ip": {
+     "n": 18,
+     "rms": 1.026288996319827,
+     "mean": -0.4294919028313807
+    },
+    "other": {
+     "n": 6,
+     "rms": 56.377409392111694,
+     "mean": 32.36895720682031
+    }
+   },
+   "min_overlap": 0.992668640443315
+  },
+  "acenaphthylene": {
+   "n": 38,
+   "rms": 65.08068687866752,
+   "max": 252.9679790235922,
+   "mean": 27.74379369308371,
+   "families": {
+    "CH-oop": {
+     "n": 8,
+     "rms": 132.53069579219914,
+     "mean": 102.6479649921047
+    },
+    "ring-ip": {
+     "n": 21,
+     "rms": 0.8161578224622549,
+     "mean": -0.37223061928022527
+    },
+    "other": {
+     "n": 9,
+     "rms": 47.63258638560416,
+     "mean": 26.766364822803123
+    }
+   },
+   "min_overlap": 0.9440012906629907
+  }
+ },
+ "branch_deciding": "b",
+ "deciding_molecules": [
+  "acenaphthylene",
+  "naphthalene"
+ ],
+ "pooled_ch_oop_deciding": 138.7317866588253,
+ "branch_with_reference": "b",
+ "pooled_ch_oop_all": 140.6967625346213,
+ "reference_differs": false,
+ "ch_oop_mean_d": {
+  "benzene": 109.88734944043546,
+  "naphthalene": 111.24382588394313,
+  "acenaphthylene": 102.6479649921047
+ },
+ "ch_oop_spread": 8.595860891838427,
+ "solo_class_first": true,
+ "dbar_f": {
+  "CH-oop": 107.74811016595436,
+  "ring-ip": -0.3554197811437409,
+  "other": 31.74294311754909
+ },
+ "curve": {
+  "1": {
+   "e": 49.419809262574574,
+   "se": 1.7510944527686374,
+   "subsets": 3,
+   "unseen_family_modes": 0
+  },
+  "2": {
+   "e": 49.88744399393357,
+   "se": 3.5858672245414316,
+   "subsets": 3,
+   "unseen_family_modes": 0
+  },
+  "still_learning": false
+ },
+ "transfers": {},
+ "reference_read": {
+  "n_modes": 14,
+  "rms": 93.39124050405258,
+  "max": 267.4428367289179,
+  "line": 6.89,
+  "within_published_spread": false,
+  "modes_9_19": {
+   "9": {
+    "d_T": -34.39104358965142,
+    "d_semi": -17
+   },
+   "19": {
+    "d_T": 159.48058965910815,
+    "d_semi": -17
+   }
+  }
+ }
+}

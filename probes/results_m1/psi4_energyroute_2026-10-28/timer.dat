@@ -1,0 +1,456 @@
+
+Host: Asus18
+
+Timers On : Wed Oct 28 08:30:07 2026
+Timers Off: Wed Oct 28 08:30:26 2026
+
+Wall Time:       18.67 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+V: Grid                             :     26.683u      2.083s      2.433w      7 calls
+build grid                          :     14.150u      0.650s      1.111w      7 calls
+post-process grid                   :     12.533u      1.433s      1.321w      7 calls
+DFH: sparsity prep                  :      0.017u      0.000s      0.030w      7 calls
+Libint2ERI::Libint2ERI              :      1.500u      0.250s      0.154w    105 calls
+DFH: initialize()                   :      5.367u      0.483s      0.494w      7 calls
+DFH: AO Construction                :      0.533u      0.017s      0.040w      7 calls
+DFH: AO-Met. Contraction            :      0.467u      0.017s      0.035w      7 calls
+HF: Form core H                     :      0.633u      0.033s      0.060w      7 calls
+HF: Form S/X                        :      0.200u      0.017s      0.015w      7 calls
+HF: Guess                           :      2.550u      0.700s      0.244w      7 calls
+SAD Guess                           :      2.467u      0.683s      0.235w      7 calls
+HF: Form G                          :    125.417u      0.383s      9.440w     91 calls
+RV: Form V                          :    111.917u      0.117s      8.418w     91 calls
+Properties                          :     17.721p                         421499 calls
+Functional                          :     30.263p                         421499 calls
+V_xc                                :     18.827p                         421499 calls
+JK: D                               :      0.000u      0.000s      0.002w     91 calls
+JK: USO2AO                          :      0.000u      0.000s      0.000w     91 calls
+JK: JK                              :     13.317u      0.267s      1.013w     91 calls
+DFH: compute_JK()                   :      0.850u      0.017s      0.068w     56 calls
+DFH: Grabbing AOs                   :      0.000u      0.000s      0.000w     56 calls
+DFH: compute_J                      :      0.083u      0.000s      0.013w     56 calls
+DFH: compute_K                      :      0.617u      0.017s      0.045w     56 calls
+build_JK_matrices()                 :     10.433u      0.000s      0.786w     35 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w     91 calls
+HF: Form F                          :      0.017u      0.000s      0.002w     91 calls
+HF: Form D                          :      0.000u      0.000s      0.001w     91 calls
+HF: DIIS                            :      4.717u      0.733s      0.710w     84 calls
+HF: Form C                          :      0.483u      0.050s      0.037w     84 calls
+
+--------------------------------------------------------------------------------------
+V: Grid                             :     26.683u      2.083s      2.433w      7 calls
+| build grid                        :     14.150u      0.650s      1.111w      7 calls
+| post-process grid                 :     12.533u      1.433s      1.321w      7 calls
+DFH: sparsity prep                  :      0.017u      0.000s      0.030w      7 calls
+| Libint2ERI::Libint2ERI            :      0.017u      0.000s      0.020w      7 calls
+DFH: initialize()                   :      5.367u      0.483s      0.494w      7 calls
+| Libint2ERI::Libint2ERI            :      0.250u      0.033s      0.035w     63 calls
+| DFH: AO Construction              :      0.533u      0.017s      0.040w      7 calls
+| DFH: AO-Met. Contraction          :      0.467u      0.017s      0.035w      7 calls
+HF: Form core H                     :      0.633u      0.033s      0.060w      7 calls
+HF: Form S/X                        :      0.200u      0.017s      0.015w      7 calls
+HF: Guess                           :      2.550u      0.700s      0.244w      7 calls
+| SAD Guess                         :      2.467u      0.683s      0.235w      7 calls
+HF: Form G                          :    125.417u      0.383s      9.440w     91 calls
+| RV: Form V                        :    111.917u      0.117s      8.418w     91 calls
+| | Properties                      :     17.721p                         421499 calls
+| | Functional                      :     30.263p                         421499 calls
+| | V_xc                            :     18.827p                         421499 calls
+| JK: D                             :      0.000u      0.000s      0.002w     91 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.000w     91 calls
+| JK: JK                            :     13.317u      0.267s      1.013w     91 calls
+| | DFH: compute_JK()               :      0.850u      0.017s      0.068w     56 calls
+| | | DFH: Grabbing AOs             :      0.000u      0.000s      0.000w     56 calls
+| | | DFH: compute_J                :      0.083u      0.000s      0.013w     56 calls
+| | | DFH: compute_K                :      0.617u      0.017s      0.045w     56 calls
+| | Libint2ERI::Libint2ERI          :      1.233u      0.217s      0.098w     35 calls
+| | build_JK_matrices()             :     10.433u      0.000s      0.786w     35 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w     91 calls
+HF: Form F                          :      0.017u      0.000s      0.002w     91 calls
+HF: Form D                          :      0.000u      0.000s      0.001w     91 calls
+HF: DIIS                            :      4.717u      0.733s      0.710w     84 calls
+HF: Form C                          :      0.483u      0.050s      0.037w     84 calls
+
+**************************************************************************************
+
+Host: Asus18
+
+Timers On : Wed Oct 28 08:31:47 2026
+Timers Off: Wed Oct 28 08:34:06 2026
+
+Wall Time:      139.87 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+V: Grid                             :     79.550u      3.217s     13.331w     28 calls
+build grid                          :     53.233u      0.633s      8.076w     28 calls
+post-process grid                   :     26.283u      2.583s      5.251w     28 calls
+DFH: sparsity prep                  :      0.283u      0.000s      0.153w     28 calls
+Libint2ERI::Libint2ERI              :      4.433u      0.400s      0.816w    308 calls
+DFH: initialize()                   :     21.867u      0.967s      3.503w     28 calls
+DFH: AO Construction                :      3.483u      0.000s      0.522w     28 calls
+DFH: AO-Met. Contraction            :      2.333u      0.033s      0.357w     28 calls
+HF: Form core H                     :      1.400u      0.200s      0.302w     28 calls
+HF: Form S/X                        :      0.400u      0.083s      0.089w     28 calls
+HF: Guess                           :      4.433u      0.833s      0.798w     28 calls
+SAD Guess                           :      4.117u      0.817s      0.742w     28 calls
+HF: Form G                          :    600.067u      0.783s     90.157w    366 calls
+RV: Form V                          :    528.150u      0.150s     79.357w    366 calls
+Properties                          :     81.239p                         1448857 calls
+Functional                          :    143.896p                         1448857 calls
+V_xc                                :     89.915p                         1448857 calls
+JK: D                               :      0.167u      0.017s      0.025w    366 calls
+JK: USO2AO                          :      0.000u      0.000s      0.002w    366 calls
+JK: JK                              :     70.767u      0.617s     10.729w    366 calls
+DFH: compute_JK()                   :      3.283u      0.150s      0.543w    226 calls
+DFH: Grabbing AOs                   :      0.000u      0.000s      0.001w    226 calls
+DFH: compute_J                      :      0.233u      0.000s      0.073w    226 calls
+DFH: compute_K                      :      2.583u      0.150s      0.420w    226 calls
+build_JK_matrices()                 :     62.350u      0.000s      9.356w    140 calls
+JK: AO2USO                          :      0.017u      0.000s      0.001w    366 calls
+HF: Form F                          :      0.083u      0.000s      0.014w    366 calls
+HF: Form D                          :      0.017u      0.017s      0.005w    366 calls
+HF: DIIS                            :      8.717u      1.033s      1.573w    338 calls
+HF: Form C                          :      1.083u      0.167s      0.220w    338 calls
+
+--------------------------------------------------------------------------------------
+V: Grid                             :     79.550u      3.217s     13.331w     28 calls
+| build grid                        :     53.233u      0.633s      8.076w     28 calls
+| post-process grid                 :     26.283u      2.583s      5.251w     28 calls
+DFH: sparsity prep                  :      0.283u      0.000s      0.153w     28 calls
+| Libint2ERI::Libint2ERI            :      0.167u      0.000s      0.091w     28 calls
+DFH: initialize()                   :     21.867u      0.967s      3.503w     28 calls
+| Libint2ERI::Libint2ERI            :      0.717u      0.083s      0.141w    140 calls
+| DFH: AO Construction              :      3.483u      0.000s      0.522w     28 calls
+| DFH: AO-Met. Contraction          :      2.333u      0.033s      0.357w     28 calls
+HF: Form core H                     :      1.400u      0.200s      0.302w     28 calls
+HF: Form S/X                        :      0.400u      0.083s      0.089w     28 calls
+HF: Guess                           :      4.433u      0.833s      0.798w     28 calls
+| SAD Guess                         :      4.117u      0.817s      0.742w     28 calls
+HF: Form G                          :    600.067u      0.783s     90.157w    366 calls
+| RV: Form V                        :    528.150u      0.150s     79.357w    366 calls
+| | Properties                      :     81.239p                         1448857 calls
+| | Functional                      :    143.896p                         1448857 calls
+| | V_xc                            :     89.915p                         1448857 calls
+| JK: D                             :      0.167u      0.017s      0.025w    366 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.002w    366 calls
+| JK: JK                            :     70.767u      0.617s     10.729w    366 calls
+| | DFH: compute_JK()               :      3.283u      0.150s      0.543w    226 calls
+| | | DFH: Grabbing AOs             :      0.000u      0.000s      0.001w    226 calls
+| | | DFH: compute_J                :      0.233u      0.000s      0.073w    226 calls
+| | | DFH: compute_K                :      2.583u      0.150s      0.420w    226 calls
+| | Libint2ERI::Libint2ERI          :      3.550u      0.317s      0.584w    140 calls
+| | build_JK_matrices()             :     62.350u      0.000s      9.356w    140 calls
+| JK: AO2USO                        :      0.017u      0.000s      0.001w    366 calls
+HF: Form F                          :      0.083u      0.000s      0.014w    366 calls
+HF: Form D                          :      0.017u      0.017s      0.005w    366 calls
+HF: DIIS                            :      8.717u      1.033s      1.573w    338 calls
+HF: Form C                          :      1.083u      0.167s      0.220w    338 calls
+
+**************************************************************************************
+
+Host: Asus18
+
+Timers On : Wed Oct 28 08:34:35 2026
+Timers Off: Wed Oct 28 08:44:37 2026
+
+Wall Time:      602.10 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+V: Grid                             :    297.967u     10.700s     71.287w     21 calls
+build grid                          :    234.233u      3.600s     36.001w     21 calls
+post-process grid                   :     63.733u      7.100s     35.284w     21 calls
+DFH: sparsity prep                  :      0.167u      0.000s      0.119w     21 calls
+Libint2ERI::Libint2ERI              :      3.300u      0.250s      0.613w    231 calls
+DFH: initialize()                   :     17.633u      1.000s      2.863w     21 calls
+DFH: AO Construction                :      3.000u      0.117s      0.474w     63 calls
+DFH: AO-Met. Contraction            :      2.033u      0.033s      0.313w     63 calls
+HF: Form core H                     :      1.033u      0.167s      0.231w     21 calls
+HF: Form S/X                        :      0.350u      0.050s      0.068w     21 calls
+HF: Guess                           :      3.750u      0.850s      0.695w     21 calls
+SAD Guess                           :      3.550u      0.833s      0.651w     21 calls
+HF: Form G                          :   3336.850u      0.817s    500.717w    273 calls
+RV: Form V                          :   3282.800u      0.300s    492.610w    273 calls
+Properties                          :    996.838p                         5645900 calls
+Functional                          :    576.891p                         5645900 calls
+V_xc                                :    388.230p                         5645900 calls
+JK: D                               :      0.050u      0.000s      0.006w    273 calls
+JK: USO2AO                          :      0.000u      0.000s      0.002w    273 calls
+JK: JK                              :     53.250u      0.483s      8.072w    273 calls
+DFH: compute_JK()                   :      2.950u      0.117s      0.466w    168 calls
+DFH: Grabbing AOs                   :      0.000u      0.000s      0.001w    336 calls
+DFH: compute_J                      :      0.317u      0.000s      0.067w    336 calls
+DFH: compute_K                      :      2.217u      0.083s      0.350w    336 calls
+build_JK_matrices()                 :     46.500u      0.017s      6.963w    105 calls
+JK: AO2USO                          :      0.017u      0.000s      0.001w    273 calls
+HF: Form F                          :      0.083u      0.000s      0.012w    273 calls
+HF: Form D                          :      0.000u      0.017s      0.004w    273 calls
+HF: DIIS                            :      7.417u      0.900s      1.371w    252 calls
+HF: Form C                          :      1.000u      0.100s      0.169w    252 calls
+
+--------------------------------------------------------------------------------------
+V: Grid                             :    297.967u     10.700s     71.287w     21 calls
+| build grid                        :    234.233u      3.600s     36.001w     21 calls
+| post-process grid                 :     63.733u      7.100s     35.284w     21 calls
+DFH: sparsity prep                  :      0.167u      0.000s      0.119w     21 calls
+| Libint2ERI::Libint2ERI            :      0.100u      0.000s      0.071w     21 calls
+DFH: initialize()                   :     17.633u      1.000s      2.863w     21 calls
+| Libint2ERI::Libint2ERI            :      0.483u      0.000s      0.097w    105 calls
+| DFH: AO Construction              :      3.000u      0.117s      0.474w     63 calls
+| DFH: AO-Met. Contraction          :      2.033u      0.033s      0.313w     63 calls
+HF: Form core H                     :      1.033u      0.167s      0.231w     21 calls
+HF: Form S/X                        :      0.350u      0.050s      0.068w     21 calls
+HF: Guess                           :      3.750u      0.850s      0.695w     21 calls
+| SAD Guess                         :      3.550u      0.833s      0.651w     21 calls
+HF: Form G                          :   3336.850u      0.817s    500.717w    273 calls
+| RV: Form V                        :   3282.800u      0.300s    492.610w    273 calls
+| | Properties                      :    996.838p                         5645900 calls
+| | Functional                      :    576.891p                         5645900 calls
+| | V_xc                            :    388.230p                         5645900 calls
+| JK: D                             :      0.050u      0.000s      0.006w    273 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.002w    273 calls
+| JK: JK                            :     53.250u      0.483s      8.072w    273 calls
+| | DFH: compute_JK()               :      2.950u      0.117s      0.466w    168 calls
+| | | DFH: Grabbing AOs             :      0.000u      0.000s      0.001w    336 calls
+| | | DFH: compute_J                :      0.317u      0.000s      0.067w    336 calls
+| | | DFH: compute_K                :      2.217u      0.083s      0.350w    336 calls
+| | Libint2ERI::Libint2ERI          :      2.717u      0.250s      0.444w    105 calls
+| | build_JK_matrices()             :     46.500u      0.017s      6.963w    105 calls
+| JK: AO2USO                        :      0.017u      0.000s      0.001w    273 calls
+HF: Form F                          :      0.083u      0.000s      0.012w    273 calls
+HF: Form D                          :      0.000u      0.017s      0.004w    273 calls
+HF: DIIS                            :      7.417u      0.900s      1.371w    252 calls
+HF: Form C                          :      1.000u      0.100s      0.169w    252 calls
+
+**************************************************************************************
+
+Host: Asus18
+
+Timers On : Wed Oct 28 08:30:29 2026
+Timers Off: Wed Oct 28 08:45:30 2026
+
+Wall Time:      900.63 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+V: Grid                             :    108.233u      6.817s     10.539w     25 calls
+build grid                          :     63.000u      2.217s      4.896w     25 calls
+post-process grid                   :     45.133u      4.583s      5.636w     25 calls
+DFH: sparsity prep                  :      1.783u      0.067s      1.128w     25 calls
+Libint2ERI::Libint2ERI              :     89.333u      9.783s      8.143w    400 calls
+DFH: initialize()                   :    167.483u     39.083s     15.580w     25 calls
+DFH: AO Construction                :     75.700u      7.250s      6.249w    425 calls
+DFH: AO-Met. Contraction            :     59.983u     29.267s      6.709w    425 calls
+HF: Form core H                     :      3.867u      0.483s      0.352w     25 calls
+HF: Form S/X                        :      3.150u      0.217s      0.258w     25 calls
+HF: Guess                           :     12.683u      1.717s      1.079w     25 calls
+SAD Guess                           :     12.067u      1.633s      1.030w     25 calls
+HF: Form G                          :  11114.983u     15.700s    834.930w    425 calls
+RV: Form V                          :   6337.583u      2.000s    475.533w    425 calls
+Properties                          :   2060.228p                         1981996 calls
+Functional                          :    232.818p                         1981996 calls
+V_xc                                :   1497.836p                         1981996 calls
+JK: D                               :      0.500u      0.033s      0.056w    425 calls
+JK: USO2AO                          :      0.083u      0.000s      0.004w    425 calls
+JK: JK                              :   4775.300u     13.583s    359.206w    425 calls
+DFH: compute_JK()                   :    148.450u      2.150s     11.294w    275 calls
+DFH: Grabbing AOs                   :      0.017u      0.000s      0.001w    550 calls
+DFH: compute_J                      :     31.067u      0.383s      2.360w    550 calls
+DFH: compute_K                      :    110.983u      1.033s      8.435w    550 calls
+build_JK_matrices()                 :   4528.050u      0.283s    339.677w    150 calls
+JK: AO2USO                          :      0.000u      0.000s      0.001w    425 calls
+HF: Form F                          :      0.483u      0.033s      0.036w    425 calls
+HF: Form D                          :      0.383u      0.000s      0.036w    425 calls
+HF: DIIS                            :     31.933u      2.983s      2.694w    400 calls
+HF: Form C                          :     43.400u      3.150s      3.496w    400 calls
+
+--------------------------------------------------------------------------------------
+V: Grid                             :    108.233u      6.817s     10.539w     25 calls
+| build grid                        :     63.000u      2.217s      4.896w     25 calls
+| post-process grid                 :     45.133u      4.583s      5.636w     25 calls
+DFH: sparsity prep                  :      1.783u      0.067s      1.128w     25 calls
+| Libint2ERI::Libint2ERI            :      1.150u      0.067s      0.759w     25 calls
+DFH: initialize()                   :    167.483u     39.083s     15.580w     25 calls
+| Libint2ERI::Libint2ERI            :     11.683u      1.250s      1.009w    225 calls
+| DFH: AO Construction              :     75.700u      7.250s      6.249w    425 calls
+| DFH: AO-Met. Contraction          :     59.983u     29.267s      6.709w    425 calls
+HF: Form core H                     :      3.867u      0.483s      0.352w     25 calls
+HF: Form S/X                        :      3.150u      0.217s      0.258w     25 calls
+HF: Guess                           :     12.683u      1.717s      1.079w     25 calls
+| SAD Guess                         :     12.067u      1.633s      1.030w     25 calls
+HF: Form G                          :  11114.983u     15.700s    834.930w    425 calls
+| RV: Form V                        :   6337.583u      2.000s    475.533w    425 calls
+| | Properties                      :   2060.228p                         1981996 calls
+| | Functional                      :    232.818p                         1981996 calls
+| | V_xc                            :   1497.836p                         1981996 calls
+| JK: D                             :      0.500u      0.033s      0.056w    425 calls
+| JK: USO2AO                        :      0.083u      0.000s      0.004w    425 calls
+| JK: JK                            :   4775.300u     13.583s    359.206w    425 calls
+| | DFH: compute_JK()               :    148.450u      2.150s     11.294w    275 calls
+| | | DFH: Grabbing AOs             :      0.017u      0.000s      0.001w    550 calls
+| | | DFH: compute_J                :     31.067u      0.383s      2.360w    550 calls
+| | | DFH: compute_K                :    110.983u      1.033s      8.435w    550 calls
+| | Libint2ERI::Libint2ERI          :     76.500u      8.467s      6.375w    150 calls
+| | build_JK_matrices()             :   4528.050u      0.283s    339.677w    150 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.001w    425 calls
+HF: Form F                          :      0.483u      0.033s      0.036w    425 calls
+HF: Form D                          :      0.383u      0.000s      0.036w    425 calls
+HF: DIIS                            :     31.933u      2.983s      2.694w    400 calls
+HF: Form C                          :     43.400u      3.150s      3.496w    400 calls
+
+**************************************************************************************
+
+Host: Asus18
+
+Timers On : Wed Oct 28 08:47:09 2026
+Timers Off: Wed Oct 28 08:47:28 2026
+
+Wall Time:       18.62 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+V: Grid                             :     26.833u      1.900s      2.456w      7 calls
+build grid                          :     14.383u      0.683s      1.128w      7 calls
+post-process grid                   :     12.450u      1.217s      1.327w      7 calls
+DFH: sparsity prep                  :      0.033u      0.000s      0.029w      7 calls
+Libint2ERI::Libint2ERI              :      1.400u      0.200s      0.153w    105 calls
+DFH: initialize()                   :      5.367u      0.500s      0.484w      7 calls
+DFH: AO Construction                :      0.533u      0.017s      0.042w      7 calls
+DFH: AO-Met. Contraction            :      0.500u      0.033s      0.038w      7 calls
+HF: Form core H                     :      0.700u      0.083s      0.066w      7 calls
+HF: Form S/X                        :      0.167u      0.017s      0.015w      7 calls
+HF: Guess                           :      3.650u      0.800s      0.334w      7 calls
+SAD Guess                           :      3.550u      0.767s      0.324w      7 calls
+HF: Form G                          :    123.517u      0.500s      9.298w     91 calls
+RV: Form V                          :    110.033u      0.183s      8.277w     91 calls
+Properties                          :     17.387p                         421499 calls
+Functional                          :     29.840p                         421499 calls
+V_xc                                :     18.502p                         421499 calls
+JK: D                               :      0.017u      0.000s      0.002w     91 calls
+JK: USO2AO                          :      0.000u      0.017s      0.000w     91 calls
+JK: JK                              :     13.150u      0.300s      1.013w     91 calls
+DFH: compute_JK()                   :      0.850u      0.067s      0.071w     56 calls
+DFH: Grabbing AOs                   :      0.000u      0.000s      0.000w     56 calls
+DFH: compute_J                      :      0.067u      0.000s      0.013w     56 calls
+DFH: compute_K                      :      0.567u      0.033s      0.044w     56 calls
+build_JK_matrices()                 :     10.450u      0.017s      0.791w     35 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w     91 calls
+HF: Form F                          :      0.017u      0.000s      0.001w     91 calls
+HF: Form D                          :      0.000u      0.000s      0.001w     91 calls
+HF: DIIS                            :      4.717u      0.567s      0.706w     84 calls
+HF: Form C                          :      0.450u      0.050s      0.035w     84 calls
+
+--------------------------------------------------------------------------------------
+V: Grid                             :     26.833u      1.900s      2.456w      7 calls
+| build grid                        :     14.383u      0.683s      1.128w      7 calls
+| post-process grid                 :     12.450u      1.217s      1.327w      7 calls
+DFH: sparsity prep                  :      0.033u      0.000s      0.029w      7 calls
+| Libint2ERI::Libint2ERI            :      0.033u      0.000s      0.020w      7 calls
+DFH: initialize()                   :      5.367u      0.500s      0.484w      7 calls
+| Libint2ERI::Libint2ERI            :      0.267u      0.067s      0.038w     63 calls
+| DFH: AO Construction              :      0.533u      0.017s      0.042w      7 calls
+| DFH: AO-Met. Contraction          :      0.500u      0.033s      0.038w      7 calls
+HF: Form core H                     :      0.700u      0.083s      0.066w      7 calls
+HF: Form S/X                        :      0.167u      0.017s      0.015w      7 calls
+HF: Guess                           :      3.650u      0.800s      0.334w      7 calls
+| SAD Guess                         :      3.550u      0.767s      0.324w      7 calls
+HF: Form G                          :    123.517u      0.500s      9.298w     91 calls
+| RV: Form V                        :    110.033u      0.183s      8.277w     91 calls
+| | Properties                      :     17.387p                         421499 calls
+| | Functional                      :     29.840p                         421499 calls
+| | V_xc                            :     18.502p                         421499 calls
+| JK: D                             :      0.017u      0.000s      0.002w     91 calls
+| JK: USO2AO                        :      0.000u      0.017s      0.000w     91 calls
+| JK: JK                            :     13.150u      0.300s      1.013w     91 calls
+| | DFH: compute_JK()               :      0.850u      0.067s      0.071w     56 calls
+| | | DFH: Grabbing AOs             :      0.000u      0.000s      0.000w     56 calls
+| | | DFH: compute_J                :      0.067u      0.000s      0.013w     56 calls
+| | | DFH: compute_K                :      0.567u      0.033s      0.044w     56 calls
+| | Libint2ERI::Libint2ERI          :      1.100u      0.133s      0.095w     35 calls
+| | build_JK_matrices()             :     10.450u      0.017s      0.791w     35 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w     91 calls
+HF: Form F                          :      0.017u      0.000s      0.001w     91 calls
+HF: Form D                          :      0.000u      0.000s      0.001w     91 calls
+HF: DIIS                            :      4.717u      0.567s      0.706w     84 calls
+HF: Form C                          :      0.450u      0.050s      0.035w     84 calls
+
+**************************************************************************************
+
+Host: Asus18
+
+Timers On : Wed Oct 28 08:47:31 2026
+Timers Off: Wed Oct 28 10:07:26 2026
+
+Wall Time:     4794.18 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+V: Grid                             :    470.550u      9.417s     76.762w     25 calls
+build grid                          :    385.300u      6.033s     34.436w     25 calls
+post-process grid                   :     85.183u      3.383s     42.322w     25 calls
+DFH: sparsity prep                  :      1.567u      0.033s      0.963w     25 calls
+Libint2ERI::Libint2ERI              :     85.617u      9.950s      7.776w    400 calls
+DFH: initialize()                   :    148.300u     36.067s     13.895w     25 calls
+DFH: AO Construction                :     67.217u      6.150s      5.507w    425 calls
+DFH: AO-Met. Contraction            :     53.933u     27.767s      6.161w    425 calls
+HF: Form core H                     :      4.517u      0.383s      0.386w     25 calls
+HF: Form S/X                        :      3.400u      0.433s      0.292w     25 calls
+HF: Guess                           :     20.000u      4.200s      1.819w     25 calls
+SAD Guess                           :     19.333u      4.167s      1.762w     25 calls
+HF: Form G                          :  62180.733u     28.400s   4665.878w    425 calls
+RV: Form V                          :  57621.350u      2.250s   4321.944w    425 calls
+Properties                          :  20793.400p                         14880117 calls
+Functional                          :   1834.767p                         14880117 calls
+V_xc                                :  11888.020p                         14880117 calls
+JK: D                               :      0.183u      0.000s      0.034w    425 calls
+JK: USO2AO                          :      0.033u      0.000s      0.004w    425 calls
+JK: JK                              :   4557.983u     26.133s    343.802w    425 calls
+DFH: compute_JK()                   :    137.833u      1.550s     10.433w    275 calls
+DFH: Grabbing AOs                   :      0.017u      0.000s      0.001w    550 calls
+DFH: compute_J                      :     29.333u      0.217s      2.238w    550 calls
+DFH: compute_K                      :    105.117u      1.100s      7.978w    550 calls
+build_JK_matrices()                 :   4276.900u      0.683s    320.833w    150 calls
+JK: AO2USO                          :      0.000u      0.000s      0.001w    425 calls
+HF: Form F                          :      0.200u      0.000s      0.027w    425 calls
+HF: Form D                          :      0.250u      0.000s      0.029w    425 calls
+HF: DIIS                            :     31.450u      3.183s      2.597w    400 calls
+HF: Form C                          :     39.150u      2.683s      3.131w    400 calls
+
+--------------------------------------------------------------------------------------
+V: Grid                             :    470.550u      9.417s     76.762w     25 calls
+| build grid                        :    385.300u      6.033s     34.436w     25 calls
+| post-process grid                 :     85.183u      3.383s     42.322w     25 calls
+DFH: sparsity prep                  :      1.567u      0.033s      0.963w     25 calls
+| Libint2ERI::Libint2ERI            :      1.033u      0.033s      0.650w     25 calls
+DFH: initialize()                   :    148.300u     36.067s     13.895w     25 calls
+| Libint2ERI::Libint2ERI            :      9.350u      0.983s      0.811w    225 calls
+| DFH: AO Construction              :     67.217u      6.150s      5.507w    425 calls
+| DFH: AO-Met. Contraction          :     53.933u     27.767s      6.161w    425 calls
+HF: Form core H                     :      4.517u      0.383s      0.386w     25 calls
+HF: Form S/X                        :      3.400u      0.433s      0.292w     25 calls
+HF: Guess                           :     20.000u      4.200s      1.819w     25 calls
+| SAD Guess                         :     19.333u      4.167s      1.762w     25 calls
+HF: Form G                          :  62180.733u     28.400s   4665.878w    425 calls
+| RV: Form V                        :  57621.350u      2.250s   4321.944w    425 calls
+| | Properties                      :  20793.400p                         14880117 calls
+| | Functional                      :   1834.767p                         14880117 calls
+| | V_xc                            :  11888.020p                         14880117 calls
+| JK: D                             :      0.183u      0.000s      0.034w    425 calls
+| JK: USO2AO                        :      0.033u      0.000s      0.004w    425 calls
+| JK: JK                            :   4557.983u     26.133s    343.802w    425 calls
+| | DFH: compute_JK()               :    137.833u      1.550s     10.433w    275 calls
+| | | DFH: Grabbing AOs             :      0.017u      0.000s      0.001w    550 calls
+| | | DFH: compute_J                :     29.333u      0.217s      2.238w    550 calls
+| | | DFH: compute_K                :    105.117u      1.100s      7.978w    550 calls
+| | Libint2ERI::Libint2ERI          :     75.233u      8.933s      6.315w    150 calls
+| | build_JK_matrices()             :   4276.900u      0.683s    320.833w    150 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.001w    425 calls
+HF: Form F                          :      0.200u      0.000s      0.027w    425 calls
+HF: Form D                          :      0.250u      0.000s      0.029w    425 calls
+HF: DIIS                            :     31.450u      3.183s      2.597w    400 calls
+HF: Form C                          :     39.150u      2.683s      3.131w    400 calls
+
+**************************************************************************************

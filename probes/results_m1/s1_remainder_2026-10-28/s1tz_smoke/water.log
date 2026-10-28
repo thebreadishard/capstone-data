@@ -1,0 +1,21 @@
+=== (S1) start: 1 settings, step 0.10, 4 threads, geometry probes/results_m1/water_dipole_fd_2026-10-02/geometry.json 2026-10-18 10:08:51
+=== (S1) T: optimising (B3LYP/def2-tzvp, grid 75,302) 2026-10-18 10:08:51
+BFGS: E = -76.4629956266, max |g_internal| = 6.9e-05 after 6 evaluations
+  Newton 0: E = -76.4629956266, max |g_internal| = 6.9e-05, net force 1.0e-05
+  Newton 1: E = -76.4629956362, max |g_internal| = 3.9e-08, net force 1.0e-05
+[10:09:11] 1/1 ref.json E = -76.46299564 in 4 s
+done: 1 Hessians in 0.1 min
+[10:09:19] 1/1 ref.json E = -76.46299558 in 8 s
+done: 1 Hessians in 0.1 min
+=== (S1) T: grid gate: max |Δω| 0.05 cm⁻¹ over 1 modes in 550–2000 (line 1) → PASS 2026-10-18 10:09:20
+7 stubs in /root/s1tz_smoke/water/T/stubs; step 0.1; omega (cm-1): 1616.9, 3785.7, 3890.9
+=== (S1) T: 7 Hessians to compute 2026-10-18 10:09:20
+[10:09:24] 1/7 mode00_m.json E = -76.46295893 in 4 s
+[10:09:28] 2/7 mode00_p.json E = -76.46295866 in 4 s
+[10:09:32] 3/7 mode01_m.json E = -76.46291078 in 4 s
+[10:09:37] 4/7 mode01_p.json E = -76.46290798 in 4 s
+[10:09:41] 5/7 mode02_m.json E = -76.46290698 in 4 s
+[10:09:45] 6/7 mode02_p.json E = -76.46290698 in 4 s
+done: 7 Hessians in 0.4 min
+=== (S1) T: NOISY — quartic route disagreement max 12.1 cm⁻¹; assembled with --allow-noisy for the record 2026-10-18 10:09:45
+=== (S1) all settings done (one setting: no comparison) 2026-10-18 10:09:46

@@ -1,0 +1,32 @@
+=== (S1) start: 1 settings, step 0.10, 4 threads, geometry probes/results_m1/water_dipole_fd_2026-10-02/geometry.json 2026-10-19 19:15:13
+=== (S1) G: optimising (B3LYP/6-31g*, grid 75,302) 2026-10-19 19:15:13
+optimising: pyscf's own log in /root/s2_smoke_dpir_s2b_dryrun2/water/G/refstub/pyscf.log
+  BFGS evaluation 1: E = -76.4068093511, max |g_internal| = 1.3e-02, 1 s
+  BFGS evaluation 2: E = -76.4070219852, max |g_internal| = 9.5e-04, 1 s
+  BFGS evaluation 3: E = -76.4070237460, max |g_internal| = 2.3e-04, 1 s
+  BFGS evaluation 4: E = -76.4070238706, max |g_internal| = 1.7e-04, 1 s
+  BFGS evaluation 5: E = -76.4070240462, max |g_internal| = 1.3e-04, 1 s
+  BFGS evaluation 6: E = -76.4070240901, max |g_internal| = 2.9e-05, 1 s
+BFGS: E = -76.4070240901, max |g_internal| = 2.9e-05 after 6 evaluations
+  Newton 0: E = -76.4070240901, max |g_internal| = 2.9e-05, net force 8.7e-06
+  Newton 1: E = -76.4070240909, max |g_internal| = 9.2e-09, net force 8.7e-06
+[19:15:24] start 1/1 ref.json
+[19:15:26] 1/1 ref.json E = -76.40702409 in 2 s
+done: 1 Hessians in 0.0 min
+7 stubs in /root/s2_smoke_dpir_s2b_dryrun2/water/G/stubs; step 0.1; omega (cm-1): 1710.8, 3721.1, 3844.9
+=== (S1) G: 7 Hessians to compute 2026-10-19 19:15:26
+[19:15:26] start 1/7 mode00_m.json
+[19:15:28] 1/7 mode00_m.json E = -76.40698528 in 2 s
+[19:15:28] start 2/7 mode00_p.json
+[19:15:30] 2/7 mode00_p.json E = -76.40698495 in 2 s
+[19:15:30] start 3/7 mode01_m.json
+[19:15:31] 3/7 mode01_m.json E = -76.40693789 in 1 s
+[19:15:31] start 4/7 mode01_p.json
+[19:15:33] 4/7 mode01_p.json E = -76.40694072 in 2 s
+[19:15:33] start 5/7 mode02_m.json
+[19:15:34] 5/7 mode02_m.json E = -76.40693648 in 2 s
+[19:15:34] start 6/7 mode02_p.json
+[19:15:36] 6/7 mode02_p.json E = -76.40693648 in 2 s
+done: 7 Hessians in 0.2 min
+=== (S1) G: NOISY — quartic route disagreement max 14.8 cm⁻¹; assembled with --allow-noisy for the record 2026-10-19 19:15:36
+=== (S1) all settings done (one setting: no comparison) 2026-10-19 19:15:36

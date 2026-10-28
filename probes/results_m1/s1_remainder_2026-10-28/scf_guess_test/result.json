@@ -1,0 +1,36 @@
+{
+ "A": {
+  "start": "default guess",
+  "fallback": true,
+  "converged": true,
+  "stub": "mode00_p.json",
+  "energy": -462.2520383361705,
+  "seconds": 2402.2,
+  "diis_cycles": 1
+ },
+ "B1": {
+  "start": "default guess",
+  "fallback": true,
+  "converged": true,
+  "stub": "mode01_m.json",
+  "energy": -462.25203547755154,
+  "seconds": 2426.4,
+  "diis_cycles": 1
+ },
+ "B2": {
+  "start": "neighbour's density",
+  "fallback": false,
+  "converged": true,
+  "stub": "mode01_m.json",
+  "energy": -462.252035477542,
+  "seconds": 255.8,
+  "diis_cycles": 15
+ },
+ "energy_difference_B2_B1": 9.549694368615746e-12,
+ "settings": {
+  "basis": "def2-tzvp",
+  "grid": "75,302",
+  "conv_tol": 1e-11,
+  "threads": 5
+ }
+}

@@ -1,0 +1,36 @@
+=== (S1) start: 1 settings, step 0.10, 4 threads, geometry probes/results_m1/water_dipole_fd_2026-10-02/geometry.json 2026-10-19 18:00:50
+=== (S1) T: optimising (B3LYP/def2-tzvp, grid 75,302) 2026-10-19 18:00:50
+optimising: pyscf's own log in /root/s1tz_smoke_dpir_s1tz_e/water/T/refstub/pyscf.log
+  BFGS evaluation 1: E = -76.4629279410, max |g_internal| = 5.2e-03, 1 s
+  BFGS evaluation 2: E = -76.4629746915, max |g_internal| = 1.8e-03, 1 s
+  BFGS evaluation 3: E = -76.4629825377, max |g_internal| = 1.4e-03, 1 s
+  BFGS evaluation 4: E = -76.4629926898, max |g_internal| = 1.4e-03, 1 s
+  BFGS evaluation 5: E = -76.4629952847, max |g_internal| = 5.6e-04, 1 s
+  BFGS evaluation 6: E = -76.4629956266, max |g_internal| = 6.9e-05, 1 s
+BFGS: E = -76.4629956266, max |g_internal| = 6.9e-05 after 6 evaluations
+  Newton 0: E = -76.4629956266, max |g_internal| = 6.9e-05, net force 1.0e-05
+  Newton 1: E = -76.4629956362, max |g_internal| = 3.9e-08, net force 1.0e-05
+[18:01:07] start 1/1 ref.json
+[18:01:12] 1/1 ref.json E = -76.46299564 in 5 s
+done: 1 Hessians in 0.1 min
+[18:01:13] start 1/1 ref.json
+[18:01:21] 1/1 ref.json E = -76.46299558 in 8 s
+done: 1 Hessians in 0.1 min
+=== (S1) T: grid gate: max |Δω| 0.05 cm⁻¹ over 1 modes in 550–2000 (line 1) → PASS 2026-10-19 18:01:21
+7 stubs in /root/s1tz_smoke_dpir_s1tz_e/water/T/stubs; step 0.1; omega (cm-1): 1616.9, 3785.7, 3890.9
+=== (S1) T: 7 Hessians to compute 2026-10-19 18:01:21
+[18:01:22] start 1/7 mode00_m.json
+[18:01:26] 1/7 mode00_m.json E = -76.46295893 in 5 s
+[18:01:26] start 2/7 mode00_p.json
+[18:01:31] 2/7 mode00_p.json E = -76.46295866 in 5 s
+[18:01:31] start 3/7 mode01_m.json
+[18:01:36] 3/7 mode01_m.json E = -76.46290798 in 5 s
+[18:01:36] start 4/7 mode01_p.json
+[18:01:41] 4/7 mode01_p.json E = -76.46291078 in 5 s
+[18:01:41] start 5/7 mode02_m.json
+[18:01:45] 5/7 mode02_m.json E = -76.46290698 in 5 s
+[18:01:45] start 6/7 mode02_p.json
+[18:01:50] 6/7 mode02_p.json E = -76.46290698 in 4 s
+done: 7 Hessians in 0.5 min
+=== (S1) T: NOISY — quartic route disagreement max 12.1 cm⁻¹; assembled with --allow-noisy for the record 2026-10-19 18:01:50
+=== (S1) all settings done (one setting: no comparison) 2026-10-19 18:01:50
