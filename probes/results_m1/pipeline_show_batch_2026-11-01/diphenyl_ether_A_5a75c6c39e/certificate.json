@@ -1,0 +1,1452 @@
+{
+ "kind": "live certificate",
+ "date": "2026-11-01 21:10",
+ "pipeline_version": "0.9",
+ "molecule": {
+  "name": "diphenyl_ether_A_5a75c6c39e",
+  "smiles": "c1ccc(Oc2ccccc2)cc1",
+  "formula": "C12H10O",
+  "n_atoms": 23,
+  "elements": [
+   "C",
+   "H",
+   "O"
+  ],
+  "training_atoms": [
+   8,
+   30
+  ],
+  "inside_training_sizes": true,
+  "listed": {
+   "id": "A_5a75c6c39e",
+   "name": "diphenyl_ether",
+   "rung": 1,
+   "source": "website export catalog.json, molecules/A_5a75c6c39e.json",
+   "b3lyp_max_abs_diff_cm": 0.8
+  },
+  "seen": {
+   "role": "catalogue",
+   "ids": [
+    "A_5a75c6c39e"
+   ],
+   "text": "in the catalogue (A_5a75c6c39e) but not among the molecules the network trained on"
+  },
+  "truth": {
+   "source": "corpus/molecules/A_5a75c6c39e/hessian_wb97x_analytic.npz",
+   "n_bands": 63,
+   "rms_by_rank_cm": 3.09,
+   "overlap": 0.973
+  }
+ },
+ "network": {
+  "name": "ΔH-network",
+  "version": "1.3",
+  "models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed0.pt",
+    "sha16": "f930db4af9268a00",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed1.pt",
+    "sha16": "87734859e866d6f7",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed2.pt",
+    "sha16": "023b8c142ad5fa52",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   }
+  ],
+  "predicts": "ωB97X/6-31G* (the DFT proxy: the network's ΔH is trained on ωB97X − B3LYP Hessians)"
+ },
+ "accuracy": {
+  "higher_level": "ωB97X/6-31G* (the DFT proxy: the network's ΔH is trained on ωB97X − B3LYP Hessians)",
+  "holdouts": {
+   "a": {
+    "description": "hold-out (a) without its two trained twins (2-naphthoic acid and benzonitrile were trained on as layer-B molecules; TASKS 157): eight layer-A molecules held out on 19 Sep 2026, never trained on under any id",
+    "n_molecules": 8,
+    "readouts": {
+     "ring-ip": {
+      "mean": 1.77,
+      "seeds": [
+       1.95,
+       1.68,
+       1.7
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-stretch": {
+      "mean": 1.19,
+      "seeds": [
+       0.91,
+       1.74,
+       0.91
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-oop": {
+      "mean": 2.17,
+      "seeds": [
+       2.47,
+       2.06,
+       1.99
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "other": {
+      "mean": 3.62,
+      "seeds": [
+       4.09,
+       3.27,
+       3.51
+      ],
+      "target": 3.0,
+      "within_target": false
+     },
+     "coupling_ratio": {
+      "mean": 0.184,
+      "seeds": [
+       0.193,
+       0.176,
+       0.183
+      ],
+      "target": 0.25,
+      "within_target": true
+     }
+    },
+    "shape": {
+     "n_molecules": 8,
+     "cheap": {
+      "spectrum_overlap": 0.277,
+      "intensity_error": 0.227
+     },
+     "corrected": {
+      "spectrum_overlap": 0.979,
+      "intensity_error": 0.097
+     }
+    }
+   },
+   "b": {
+    "description": "hold-out (b): every substituted molecule of two scaffold cores, frozen on 8 Oct 2026 — scaffolds the network never saw",
+    "n_molecules": 39,
+    "readouts": {
+     "ring-ip": {
+      "mean": 2.12,
+      "seeds": [
+       2.25,
+       2.02,
+       2.11
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-stretch": {
+      "mean": 2.5,
+      "seeds": [
+       1.91,
+       3.51,
+       2.08
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-oop": {
+      "mean": 2.7,
+      "seeds": [
+       2.44,
+       2.95,
+       2.72
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "other": {
+      "mean": 3.89,
+      "seeds": [
+       3.65,
+       4.51,
+       3.52
+      ],
+      "target": 3.0,
+      "within_target": false
+     },
+     "coupling_ratio": {
+      "mean": 0.263,
+      "seeds": [
+       0.282,
+       0.243,
+       0.265
+      ],
+      "target": 0.25,
+      "within_target": false
+     }
+    },
+    "shape": {
+     "n_molecules": 31,
+     "cheap": {
+      "spectrum_overlap": 0.366,
+      "intensity_error": 0.511
+     },
+     "corrected": {
+      "spectrum_overlap": 0.967,
+      "intensity_error": 0.236
+     }
+    }
+   }
+  },
+  "target_source": "3 cm⁻¹ per family — decision 53's line for ring-ip, CH-oop and 'other', every family's under decision 65 (the licence) — and the coupling ratio ≤ 0.25 of chain 35's T1 line (probes/chain35_read.py)",
+  "sources": [
+   "E7_rungC_chain35_analytic_eval_frozenb_seed0.json",
+   "E7_rungC_chain35_analytic_eval_frozenb_seed1.json",
+   "E7_rungC_chain35_analytic_eval_frozenb_seed2.json",
+   "E7_rungC_chain35_analytic_a8read_seed0.json",
+   "E7_rungC_chain35_analytic_a8read_seed1.json",
+   "E7_rungC_chain35_analytic_a8read_seed2.json"
+  ],
+  "definitions": {
+   "family": "rms over the family's modes of the corrected frequency's error against the higher level (cm⁻¹); families by module 05's rule (m05/learning_curve_layerA.molecule_features)",
+   "coupling_ratio": "rms of the predicted mode couplings' error over the rms of the couplings themselves; 0 = exact, 1 = no better than none",
+   "spectrum_overlap": "cosine similarity of the two Lorentzian-broadened spectra (FWHM 10 cm⁻¹, 500–3500 cm⁻¹); 1 = identical shape",
+   "intensity_error": "intensity-weighted rms of the relative height error per band, bands paired by the shape of the motion (eigenvector overlap); 0 = identical heights"
+  },
+  "coupled_cluster": "not measured for this network version: the coupled-cluster reads (T3) were made on chain 34, and tests on the 9–11 existing anchors wait for the anchor decision of November 2026"
+ },
+ "bands": [
+  {
+   "network_cm": 52.1,
+   "km_mol": 0.14,
+   "seed_range_cm": [
+    50.1,
+    54.5
+   ],
+   "b3lyp_cm": 43.9,
+   "baseline_cm": 42.0,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 54.9,
+   "km_mol": 1.2,
+   "seed_range_cm": [
+    52.0,
+    57.2
+   ],
+   "b3lyp_cm": 25.1,
+   "baseline_cm": 24.0,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 94.0,
+   "km_mol": 0.14,
+   "seed_range_cm": [
+    93.4,
+    94.3
+   ],
+   "b3lyp_cm": 90.2,
+   "baseline_cm": 86.2,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 236.9,
+   "km_mol": 0.86,
+   "seed_range_cm": [
+    234.4,
+    238.4
+   ],
+   "b3lyp_cm": 220.3,
+   "baseline_cm": 210.6,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 248.0,
+   "km_mol": 0.11,
+   "seed_range_cm": [
+    247.1,
+    248.9
+   ],
+   "b3lyp_cm": 238.6,
+   "baseline_cm": 228.1,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 319.6,
+   "km_mol": 0.34,
+   "seed_range_cm": [
+    318.7,
+    320.1
+   ],
+   "b3lyp_cm": 315.2,
+   "baseline_cm": 301.3,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 402.6,
+   "km_mol": 3.9,
+   "seed_range_cm": [
+    400.8,
+    403.5
+   ],
+   "b3lyp_cm": 383.1,
+   "baseline_cm": 366.2,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 434.2,
+   "km_mol": 0.68,
+   "seed_range_cm": [
+    431.6,
+    435.2
+   ],
+   "b3lyp_cm": 422.5,
+   "baseline_cm": 403.9,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 436.7,
+   "km_mol": 0.05,
+   "seed_range_cm": [
+    432.9,
+    443.2
+   ],
+   "b3lyp_cm": 426.2,
+   "baseline_cm": 407.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 500.3,
+   "km_mol": 5.91,
+   "seed_range_cm": [
+    498.9,
+    501.0
+   ],
+   "b3lyp_cm": 489.2,
+   "baseline_cm": 467.7,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 535.0,
+   "km_mol": 16.19,
+   "seed_range_cm": [
+    531.6,
+    538.0
+   ],
+   "b3lyp_cm": 511.6,
+   "baseline_cm": 489.1,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 583.3,
+   "km_mol": 0.22,
+   "seed_range_cm": [
+    582.8,
+    584.3
+   ],
+   "b3lyp_cm": 578.3,
+   "baseline_cm": 552.9,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 624.7,
+   "km_mol": 0.04,
+   "seed_range_cm": [
+    623.3,
+    625.8
+   ],
+   "b3lyp_cm": 616.5,
+   "baseline_cm": 589.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 634.7,
+   "km_mol": 0.6,
+   "seed_range_cm": [
+    634.6,
+    634.9
+   ],
+   "b3lyp_cm": 631.2,
+   "baseline_cm": 603.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 643.4,
+   "km_mol": 0.26,
+   "seed_range_cm": [
+    642.3,
+    644.2
+   ],
+   "b3lyp_cm": 637.2,
+   "baseline_cm": 609.2,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12
+  },
+  {
+   "network_cm": 714.3,
+   "km_mol": 25.85,
+   "seed_range_cm": [
+    713.4,
+    715.1
+   ],
+   "b3lyp_cm": 701.5,
+   "baseline_cm": 670.6,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 718.2,
+   "km_mol": 11.75,
+   "seed_range_cm": [
+    717.6,
+    718.7
+   ],
+   "b3lyp_cm": 706.5,
+   "baseline_cm": 675.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 773.6,
+   "km_mol": 4.51,
+   "seed_range_cm": [
+    773.2,
+    773.9
+   ],
+   "b3lyp_cm": 763.4,
+   "baseline_cm": 729.8,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 785.0,
+   "km_mol": 60.77,
+   "seed_range_cm": [
+    784.0,
+    786.4
+   ],
+   "b3lyp_cm": 766.2,
+   "baseline_cm": 732.5,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 823.3,
+   "km_mol": 18.43,
+   "seed_range_cm": [
+    822.9,
+    823.9
+   ],
+   "b3lyp_cm": 805.9,
+   "baseline_cm": 770.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 859.2,
+   "km_mol": 0.33,
+   "seed_range_cm": [
+    855.1,
+    860.5
+   ],
+   "b3lyp_cm": 844.8,
+   "baseline_cm": 807.6,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 859.4,
+   "km_mol": 0.25,
+   "seed_range_cm": [
+    857.2,
+    862.1
+   ],
+   "b3lyp_cm": 840.1,
+   "baseline_cm": 803.1,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 896.7,
+   "km_mol": 37.02,
+   "seed_range_cm": [
+    895.6,
+    897.8
+   ],
+   "b3lyp_cm": 887.5,
+   "baseline_cm": 848.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 934.7,
+   "km_mol": 8.08,
+   "seed_range_cm": [
+    932.9,
+    937.0
+   ],
+   "b3lyp_cm": 909.7,
+   "baseline_cm": 869.7,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 941.5,
+   "km_mol": 4.01,
+   "seed_range_cm": [
+    939.7,
+    943.7
+   ],
+   "b3lyp_cm": 915.6,
+   "baseline_cm": 875.3,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 3.62,
+    "b": 3.89
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61
+  },
+  {
+   "network_cm": 992.7,
+   "km_mol": 0.35,
+   "seed_range_cm": [
+    991.3,
+    993.9
+   ],
+   "b3lyp_cm": 961.1,
+   "baseline_cm": 918.8,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 993.9,
+   "km_mol": 0.03,
+   "seed_range_cm": [
+    992.8,
+    995.2
+   ],
+   "b3lyp_cm": 963.6,
+   "baseline_cm": 921.2,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1013.1,
+   "km_mol": 0.36,
+   "seed_range_cm": [
+    1012.4,
+    1013.9
+   ],
+   "b3lyp_cm": 985.7,
+   "baseline_cm": 942.3,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1013.9,
+   "km_mol": 0.08,
+   "seed_range_cm": [
+    1012.9,
+    1014.4
+   ],
+   "b3lyp_cm": 986.3,
+   "baseline_cm": 942.9,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1024.8,
+   "km_mol": 1.75,
+   "seed_range_cm": [
+    1023.1,
+    1026.5
+   ],
+   "b3lyp_cm": 1018.2,
+   "baseline_cm": 973.4,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1025.4,
+   "km_mol": 0.23,
+   "seed_range_cm": [
+    1023.8,
+    1027.1
+   ],
+   "b3lyp_cm": 1018.5,
+   "baseline_cm": 973.7,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1062.0,
+   "km_mol": 0.65,
+   "seed_range_cm": [
+    1061.5,
+    1063.0
+   ],
+   "b3lyp_cm": 1052.3,
+   "baseline_cm": 1006.0,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1063.2,
+   "km_mol": 9.14,
+   "seed_range_cm": [
+    1062.6,
+    1064.1
+   ],
+   "b3lyp_cm": 1053.2,
+   "baseline_cm": 1006.9,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1113.6,
+   "km_mol": 5.83,
+   "seed_range_cm": [
+    1113.3,
+    1113.8
+   ],
+   "b3lyp_cm": 1106.2,
+   "baseline_cm": 1057.5,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1116.0,
+   "km_mol": 6.91,
+   "seed_range_cm": [
+    1115.5,
+    1116.4
+   ],
+   "b3lyp_cm": 1109.2,
+   "baseline_cm": 1060.4,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1182.6,
+   "km_mol": 0.49,
+   "seed_range_cm": [
+    1182.3,
+    1183.1
+   ],
+   "b3lyp_cm": 1189.5,
+   "baseline_cm": 1132.4,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1184.5,
+   "km_mol": 0.39,
+   "seed_range_cm": [
+    1184.1,
+    1185.0
+   ],
+   "b3lyp_cm": 1189.5,
+   "baseline_cm": 1132.4,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1198.1,
+   "km_mol": 2.1,
+   "seed_range_cm": [
+    1198.0,
+    1198.2
+   ],
+   "b3lyp_cm": 1196.0,
+   "baseline_cm": 1138.6,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1200.4,
+   "km_mol": 12.24,
+   "seed_range_cm": [
+    1199.4,
+    1201.2
+   ],
+   "b3lyp_cm": 1198.6,
+   "baseline_cm": 1141.1,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1246.4,
+   "km_mol": 5.47,
+   "seed_range_cm": [
+    1245.9,
+    1247.0
+   ],
+   "b3lyp_cm": 1231.1,
+   "baseline_cm": 1172.0,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64
+  },
+  {
+   "network_cm": 1297.8,
+   "km_mol": 197.94,
+   "seed_range_cm": [
+    1296.6,
+    1298.9
+   ],
+   "b3lyp_cm": 1287.0,
+   "baseline_cm": 1225.2,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1314.2,
+   "km_mol": 300.4,
+   "seed_range_cm": [
+    1311.5,
+    1316.2
+   ],
+   "b3lyp_cm": 1330.4,
+   "baseline_cm": 1266.5,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1322.5,
+   "km_mol": 0.13,
+   "seed_range_cm": [
+    1321.4,
+    1323.3
+   ],
+   "b3lyp_cm": 1349.9,
+   "baseline_cm": 1285.1,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1358.0,
+   "km_mol": 20.38,
+   "seed_range_cm": [
+    1357.0,
+    1358.7
+   ],
+   "b3lyp_cm": 1364.8,
+   "baseline_cm": 1299.3,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1361.3,
+   "km_mol": 0.57,
+   "seed_range_cm": [
+    1360.0,
+    1362.1
+   ],
+   "b3lyp_cm": 1365.7,
+   "baseline_cm": 1300.1,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87
+  },
+  {
+   "network_cm": 1511.5,
+   "km_mol": 1.22,
+   "seed_range_cm": [
+    1510.9,
+    1512.1
+   ],
+   "b3lyp_cm": 1498.8,
+   "baseline_cm": 1426.9,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch (6.2 um)",
+   "u_band_cm": 16.09
+  },
+  {
+   "network_cm": 1521.3,
+   "km_mol": 1.0,
+   "seed_range_cm": [
+    1520.8,
+    1522.0
+   ],
+   "b3lyp_cm": 1507.6,
+   "baseline_cm": 1435.2,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch (6.2 um)",
+   "u_band_cm": 16.09
+  },
+  {
+   "network_cm": 1551.7,
+   "km_mol": 267.12,
+   "seed_range_cm": [
+    1550.9,
+    1552.1
+   ],
+   "b3lyp_cm": 1537.5,
+   "baseline_cm": 1463.7,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch (6.2 um)",
+   "u_band_cm": 16.09
+  },
+  {
+   "network_cm": 1556.3,
+   "km_mol": 12.42,
+   "seed_range_cm": [
+    1555.9,
+    1556.8
+   ],
+   "b3lyp_cm": 1543.5,
+   "baseline_cm": 1469.4,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "CC-stretch (6.2 um)",
+   "u_band_cm": 16.09
+  },
+  {
+   "network_cm": 1678.8,
+   "km_mol": 6.38,
+   "seed_range_cm": [
+    1678.4,
+    1679.0
+   ],
+   "b3lyp_cm": 1644.0,
+   "baseline_cm": 1565.1,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "overtone / combination region",
+   "u_band_cm": 15.98
+  },
+  {
+   "network_cm": 1687.6,
+   "km_mol": 129.52,
+   "seed_range_cm": [
+    1686.8,
+    1687.9
+   ],
+   "b3lyp_cm": 1650.8,
+   "baseline_cm": 1571.6,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "overtone / combination region",
+   "u_band_cm": 15.98
+  },
+  {
+   "network_cm": 1688.3,
+   "km_mol": 29.67,
+   "seed_range_cm": [
+    1688.3,
+    1688.6
+   ],
+   "b3lyp_cm": 1652.3,
+   "baseline_cm": 1573.0,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "overtone / combination region",
+   "u_band_cm": 15.98
+  },
+  {
+   "network_cm": 1703.3,
+   "km_mol": 1.26,
+   "seed_range_cm": [
+    1702.5,
+    1704.4
+   ],
+   "b3lyp_cm": 1667.2,
+   "baseline_cm": 1587.2,
+   "family": "ring-ip",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.77,
+    "b": 2.12
+   },
+   "lab_region": "overtone / combination region",
+   "u_band_cm": 15.98
+  },
+  {
+   "network_cm": 3227.3,
+   "km_mol": 3.32,
+   "seed_range_cm": [
+    3226.9,
+    3227.6
+   ],
+   "b3lyp_cm": 3185.0,
+   "baseline_cm": 3057.6,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3227.4,
+   "km_mol": 0.94,
+   "seed_range_cm": [
+    3227.0,
+    3227.7
+   ],
+   "b3lyp_cm": 3185.2,
+   "baseline_cm": 3057.8,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3235.8,
+   "km_mol": 13.85,
+   "seed_range_cm": [
+    3235.5,
+    3236.4
+   ],
+   "b3lyp_cm": 3193.4,
+   "baseline_cm": 3065.7,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3235.9,
+   "km_mol": 15.95,
+   "seed_range_cm": [
+    3235.6,
+    3236.4
+   ],
+   "b3lyp_cm": 3193.5,
+   "baseline_cm": 3065.8,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3250.8,
+   "km_mol": 55.78,
+   "seed_range_cm": [
+    3249.4,
+    3251.9
+   ],
+   "b3lyp_cm": 3208.0,
+   "baseline_cm": 3079.7,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3251.1,
+   "km_mol": 10.1,
+   "seed_range_cm": [
+    3249.7,
+    3252.2
+   ],
+   "b3lyp_cm": 3208.3,
+   "baseline_cm": 3080.0,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3261.8,
+   "km_mol": 14.28,
+   "seed_range_cm": [
+    3260.7,
+    3262.9
+   ],
+   "b3lyp_cm": 3218.4,
+   "baseline_cm": 3089.7,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3262.3,
+   "km_mol": 8.81,
+   "seed_range_cm": [
+    3261.3,
+    3263.6
+   ],
+   "b3lyp_cm": 3218.7,
+   "baseline_cm": 3090.0,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3263.1,
+   "km_mol": 0.2,
+   "seed_range_cm": [
+    3262.0,
+    3264.3
+   ],
+   "b3lyp_cm": 3220.6,
+   "baseline_cm": 3091.8,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  },
+  {
+   "network_cm": 3263.7,
+   "km_mol": 0.48,
+   "seed_range_cm": [
+    3262.4,
+    3264.6
+   ],
+   "b3lyp_cm": 3221.1,
+   "baseline_cm": 3092.3,
+   "family": "CH-stretch",
+   "licensed": true,
+   "error_cm": {
+    "a": 1.19,
+    "b": 2.5
+   },
+   "lab_region": "above 3200",
+   "u_band_cm": 16.05
+  }
+ ],
+ "tolerance": {
+  "per_region": {
+   "CC-stretch (6.2 um)": {
+    "u_band": 16.09,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "CC-stretch/CH-ip (7.7 um)": {
+    "u_band": 15.87,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   },
+   "CH-ip-bend (8.6 um)": {
+    "u_band": 8.64,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "CH-oop (10.5-15 um; benzene nu11 at 673 included)": {
+    "u_band": 9.61,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   },
+   "CH-stretch": {
+    "u_band": 11.38,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   },
+   "above 3200": {
+    "u_band": 16.05,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "low / skeletal": {
+    "u_band": 16.12,
+    "source": "module 03 u_band_by_record_family.csv, median over 7 records (family default)",
+    "kind": "family default"
+   },
+   "overtone / combination region": {
+    "u_band": 15.98,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "ring / CH-ip (9-10.5 um)": {
+    "u_band": 15.87,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   }
+  },
+  "rule": "modules/03_lab_scoreboard/build_lab_tables.py FAMILY_RULE (12 Sep 2026)"
+ },
+ "licence": {
+  "statement": "licensed at the DFT proxy: ring-ip (1.77 / 2.12), CH-stretch (1.19 / 2.5), CH-oop (2.17 / 2.7); not licensed: other (3.62 / 3.89) — seed-mean error on hold-outs (a) / (b) in cm⁻¹ against 3; no coupled-cluster licence",
+  "rule_source": "README.md, decision 65",
+  "licensed_families": [
+   "ring-ip",
+   "CH-stretch",
+   "CH-oop"
+  ]
+ },
+ "cost": {
+  "steps_s": {
+   "reuse": 0.2,
+   "correction_and_spectra": 1.4
+  },
+  "machine": "Asus18",
+  "machine_class": "laptop",
+  "seconds": 1.6,
+  "hours": 0.0,
+  "eur_ex_vat": 0.0,
+  "source": "corpus ledger machine column 'Asus18'"
+ },
+ "provenance": {
+  "result": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_show_batch_2026-11-01\\diphenyl_ether_A_5a75c6c39e",
+  "run_commit": "360c88f7082019fbf1884300b50220aeb17b0375",
+  "run_dirty": "yes",
+  "certificate_commit": "360c88f7",
+  "deck_sha16": "9e27bf8e934893f3",
+  "low_level_software": {
+   "pyscf": "2.14.0",
+   "pyscf_git": null,
+   "numpy": "2.5.3",
+   "python": "3.12.14",
+   "sha256": {
+    "analytic_hessians.py": "fcd373fcd45c",
+    "apt.py": "35bb49dfb46f"
+   }
+  },
+  "host": "Asus18",
+  "note": "harmonic positions: the anharmonic shift is not in this version (backlog; TASKS 53)",
+  "reused_from": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\molecules\\A_5a75c6c39e"
+ },
+ "statement": "diphenyl_ether_A_5a75c6c39e: the harmonic infrared spectrum of ΔH-network v1.3 (3 seeds) — B3LYP/6-31G* corrected toward ωB97X/6-31G* — with the error measured on molecules the network never saw; licensed for ring-ip, CH-stretch, CH-oop (decision 65), each band marked; at the coupled-cluster level not measured for this network version: the coupled-cluster reads (T3) were made on chain 34, and tests on the 9–11 existing anchors wait for the anchor decision of November 2026. The scaled B3LYP spectrum is shown as the baseline only. This molecule: in the catalogue (A_5a75c6c39e) but not among the molecules the network trained on."
+}
