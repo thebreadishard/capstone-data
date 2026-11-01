@@ -1,0 +1,13 @@
+Overwritten attributes  get_hcore  of <class 'pyscf.dft.rks.RKS'>
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/p=== (L5F) STOPPED: T_c874e3c6cf F=1e-3 failed (exit 1) 2026-10-31 10:10:04
+        ^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_field_route.py", line 141, in main
+    P0, P1 = apt_field(mol, settings, a.field, checkpoint=a.checkpoint)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_field_route.py", line 102, in apt_field
+    dm0 = scf_in_field(mol, settings, np.zeros(3)).make_rdm1()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_field_route.py", line 67, in scf_in_field
+    raise RuntimeError(f"SCF in field {F} not converged")
+RuntimeError: SCF in field [0. 0. 0.] not converged
