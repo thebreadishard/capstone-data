@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 116, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 106, in main
+    row = recompute(src, out_dir, stamp=stamp, max_memory=a.max_memory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 76, in recompute
+    new = np.load(os.path.join(out_dir, AH.APT_FILE))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/holdout_a_apt_2026-11-01/A_428228e5a5/dipole_b3lyp_cphf.npz'
