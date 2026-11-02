@@ -1,0 +1,1261 @@
+{
+ "pipeline_version": "0.9",
+ "name": "phenanthrene_A_541c53d1a5",
+ "input": {
+  "smiles": "c1ccc2c(c1)ccc1ccccc12",
+  "xyz": null,
+  "xyz_atom_order": null
+ },
+ "settings": {
+  "name": "phenanthrene_A_541c53d1a5",
+  "out_root": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_holdout_a_2026-11-02",
+  "smiles": "c1ccc2c(c1)ccc1ccccc12",
+  "xyz": null,
+  "charge": 0,
+  "multiplicity": 1,
+  "models": [
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed0.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed1.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed2.pt"
+  ],
+  "psi4_python": "C:\\Users\\thebr\\.conda\\envs\\qc\\python.exe",
+  "pyscf_python": "~/qc05/bin/python",
+  "threads": 4,
+  "psi4_memory_gb": 4,
+  "wsl_cap_mb": 6144,
+  "reuse_corpus": true,
+  "reuse_only": true,
+  "corpus": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus"
+ },
+ "admission": {
+  "smiles": "c1ccc2c(c1)ccc1ccccc12",
+  "formula": "C14H10",
+  "elements": [
+   "C",
+   "H"
+  ],
+  "n_atoms": 24,
+  "training_elements": [
+   "C",
+   "CL",
+   "F",
+   "H",
+   "N",
+   "O",
+   "S"
+  ],
+  "training_atoms": [
+   8,
+   30
+  ],
+  "models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed0.pt",
+    "sha16": "f930db4af9268a00",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed1.pt",
+    "sha16": "87734859e866d6f7",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed2.pt",
+    "sha16": "023b8c142ad5fa52",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   }
+  ],
+  "inside_training_sizes": true
+ },
+ "deck": {
+  "file": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\decks\\deck_v1.json",
+  "sha16": "9e27bf8e934893f3"
+ },
+ "optimisation": {
+  "e_opt": -539.5385675504706,
+  "timings_s": {
+   "optimise": 34.1,
+   "hessian_b3lyp": 1252.0,
+   "hessian_wb97x": 2619.0,
+   "total": 3905.4
+  },
+  "opt_options": null
+ },
+ "low_level": {
+  "b3lyp": {
+   "freq_analytic": [
+    96.23623931921504,
+    102.95358780848846,
+    232.75947331168842,
+    245.40054534077842,
+    248.7556750765964,
+    401.7326759271138,
+    411.8498212652287,
+    440.23232447139605,
+    446.2677327905354,
+    505.66927774300854,
+    509.9625129827806,
+    549.8933393331196,
+    557.8099334158418,
+    598.2461377617883,
+    631.8809699018151,
+    725.1328425537067,
+    726.6475873332497,
+    727.6966367482115,
+    752.8751401879113,
+    769.289286553479,
+    806.1780229292779,
+    833.1451754298334,
+    843.6144422871528,
+    880.0482233968958,
+    886.1454436506377,
+    890.6302243927345,
+    936.7623018901573,
+    951.5670881891284,
+    970.1873909939665,
+    985.573951251442,
+    986.4068294477394,
+    1017.6225780125503,
+    1069.9862063521073,
+    1072.6537881266463,
+    1121.3654749790157,
+    1174.38347435768,
+    1187.001331233533,
+    1197.637395611813,
+    1199.2445400485988,
+    1237.951377235642,
+    1252.8547245602297,
+    1280.4991590203474,
+    1311.3548975822644,
+    1335.6720894916514,
+    1387.1459661803422,
+    1390.7648696857589,
+    1461.214675999992,
+    1468.09359587631,
+    1486.2904668002147,
+    1507.158066183313,
+    1553.3271102997182,
+    1581.324891745204,
+    1623.5582258856743,
+    1661.6192313940107,
+    1673.253663796851,
+    1678.1621131197528,
+    3174.0245974560808,
+    3177.358722654551,
+    3178.204292548628,
+    3187.379413769452,
+    3189.0998830575695,
+    3194.2742684747477,
+    3201.6548848276802,
+    3205.795386463171,
+    3211.3560720149685,
+    3223.22807729138
+   ],
+   "freq_corpus": [
+    96.33676681086159,
+    102.60265513829984,
+    232.8689879501304,
+    245.41101838606355,
+    248.74370645187017,
+    401.75012800608187,
+    411.3647273430782,
+    440.5691525730611,
+    446.2863138247633,
+    505.64806691772907,
+    509.8574829743476,
+    550.001034321558,
+    558.2532038673511,
+    598.1727805373094,
+    631.9532343297033,
+    725.6620248978779,
+    726.8877209056432,
+    727.7239941196283,
+    752.721753201241,
+    769.1252597157575,
+    805.9766472676571,
+    832.8643407421316,
+    843.7077319598942,
+    879.7636039284649,
+    885.9413897671999,
+    890.7545773773519,
+    936.52315642849,
+    951.3613415598437,
+    969.8779868993487,
+    985.2446438427785,
+    986.0669220548141,
+    1017.7799403738762,
+    1070.1984261829532,
+    1073.0537187300533,
+    1121.5788224140679,
+    1174.293573146261,
+    1187.1252925264578,
+    1197.6068334321553,
+    1199.1462733915369,
+    1238.2815702667608,
+    1253.2000089871037,
+    1280.6120769274446,
+    1311.2534628591636,
+    1335.5461724014087,
+    1387.0677566719603,
+    1390.8772618989358,
+    1461.2044234559537,
+    1468.1722249169773,
+    1486.4074755022643,
+    1507.3161256792941,
+    1553.442411979054,
+    1581.352368736653,
+    1623.4944926372232,
+    1661.6257886363608,
+    1673.2252694402673,
+    1678.1800257448724,
+    3174.072883496613,
+    3177.331588183611,
+    3178.314608498344,
+    3187.4524407360614,
+    3189.138753752208,
+    3194.670314505057,
+    3201.6104192213493,
+    3205.3316759159825,
+    3211.2985418406997,
+    3223.2752481279967
+   ],
+   "dH_max": 0.000836968458700434,
+   "dH_rms": 7.779856799475232e-05,
+   "energy": -539.5386324043947,
+   "energy_corpus": -539.538567546482,
+   "seconds": 3838
+  },
+  "wb97x": {
+   "freq_analytic": [
+    112.48337259135178,
+    117.25282152304536,
+    238.16943798026514,
+    255.35128115920386,
+    257.8888928027845,
+    415.0248090277428,
+    415.3314589954667,
+    449.27319995720177,
+    451.0167056463319,
+    510.1918398202759,
+    520.2631472516197,
+    556.4704208327314,
+    561.3340443546806,
+    613.9086639663661,
+    635.5350256407705,
+    732.153550323678,
+    732.3420033227817,
+    739.7583162731278,
+    762.823750823174,
+    782.9573179064005,
+    820.3250136945597,
+    846.7415580588461,
+    850.3311575897313,
+    900.0076487240727,
+    900.8012186896219,
+    903.6701252385794,
+    970.372263918105,
+    982.5416662270475,
+    1003.1869717836645,
+    1016.5033640860858,
+    1017.5161278054212,
+    1026.1134145285778,
+    1079.261810671992,
+    1079.8504899669374,
+    1129.8901502726453,
+    1165.5404249539065,
+    1179.8039988308547,
+    1197.8536481115455,
+    1201.74565252668,
+    1229.6338374565596,
+    1259.7365340863275,
+    1287.7119825044829,
+    1317.2803647826393,
+    1342.4421078022892,
+    1366.7439776139518,
+    1391.1895037613585,
+    1470.188021097718,
+    1479.3233395046855,
+    1503.1129451865913,
+    1516.880444839425,
+    1577.5661745682837,
+    1607.5290238098826,
+    1657.0887404896391,
+    1689.7818021131184,
+    1711.5907896874915,
+    1724.393282605123,
+    3218.557174350795,
+    3221.1226962441497,
+    3221.2983844127157,
+    3231.0262466506547,
+    3232.4976444717718,
+    3237.797716226251,
+    3245.658555059691,
+    3248.79696037308,
+    3255.3515067389203,
+    3268.9055017734427
+   ],
+   "freq_corpus": [
+    108.3040974140784,
+    112.46624091198692,
+    239.6203080859302,
+    254.18865571141447,
+    256.6336797298388,
+    413.01120695228514,
+    415.0614298021582,
+    446.2860260757793,
+    449.6430584395323,
+    509.528548530715,
+    520.3095473683088,
+    554.7895041786547,
+    561.5647708957933,
+    613.1479208089603,
+    635.2955245804757,
+    731.7522834662132,
+    732.1754079534936,
+    739.5082939193463,
+    761.4176995601149,
+    781.5876226058907,
+    817.7466535318074,
+    846.9711087203223,
+    850.0644375987997,
+    898.9396804513234,
+    899.1438377818628,
+    900.871537215468,
+    968.6446419683674,
+    979.77726380198,
+    1004.4057223465232,
+    1015.4748086202235,
+    1016.9097847732288,
+    1026.2088695649404,
+    1076.7937650623555,
+    1078.784085097989,
+    1129.2492231387318,
+    1163.36642916155,
+    1177.363841794946,
+    1195.4800085554216,
+    1199.660852548985,
+    1228.9941111869375,
+    1258.458675957184,
+    1285.595166734345,
+    1314.3764254013813,
+    1341.5484477409009,
+    1365.7396027112861,
+    1390.2784922510907,
+    1469.2246743729188,
+    1477.7138843758744,
+    1502.2120883470648,
+    1515.634708385706,
+    1576.8413381217756,
+    1606.8521680840126,
+    1656.385389981856,
+    1689.0726092017508,
+    1710.9000812178883,
+    1723.7934647703871,
+    3218.5436023215934,
+    3220.9241494456596,
+    3221.3045359425078,
+    3231.081272336331,
+    3232.512123557034,
+    3238.2259636841272,
+    3245.499705864803,
+    3248.356542492308,
+    3255.093006315628,
+    3269.0867275747287
+   ],
+   "dH_max": 0.0010232171336855833,
+   "dH_rms": 8.96042219876898e-05,
+   "energy": -539.3874847707099,
+   "energy_corpus": -539.3874381730883,
+   "seconds": 4575
+  }
+ },
+ "reuse": {
+  "reused": true,
+  "source": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\molecules\\A_541c53d1a5",
+  "order": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "start_rmsd_angstrom": 1.7e-05,
+  "sha256": {
+   "geometry.json": "93793880d51177a6f683222ccfa17722037a5fa150964e9a57a7dccdd43fd8a0",
+   "hessian_b3lyp_analytic.npz": "ce0ae219c9d85c37c7b4181dc783766abc6c9700a245a7c42e6f27a344155b35",
+   "dipole_b3lyp_cphf.npz": "7a8af4d28b2c0bd9ff4d7deae6bbf945c5ff309592080c23d0f4be25a57b0584",
+   "analytic_check.json": "fb6a4b70cdaa4a24bf90cfaca57e3074a9a5f6d08b32d11b4bb47bd22ba91876",
+   "result.json": "51a4608cd8ae5b61e041aa924d3a133d6d1f4f1bdc14337b35ecad505d15546c",
+   "job.json": "0bb467c217eb66e874b7ee9d6ff1dfc661835e08048f62cfa45331a0eb08fc03"
+  }
+ },
+ "seconds": {
+  "reuse": 0.2,
+  "correction_and_spectra": 1.1
+ },
+ "spectra": {
+  "network": {
+   "hessian_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/phenanthrene_A_541c53d1a5/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/phenanthrene_A_541c53d1a5/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 43,
+   "sticks": [
+    {
+     "omega_cm": 112.1,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      111.4,
+      112.8
+     ]
+    },
+    {
+     "omega_cm": 114.7,
+     "km_mol": 0.53,
+     "seed_range_cm": [
+      114.0,
+      115.2
+     ]
+    },
+    {
+     "omega_cm": 236.6,
+     "km_mol": 2.45,
+     "seed_range_cm": [
+      236.1,
+      236.9
+     ]
+    },
+    {
+     "omega_cm": 255.7,
+     "km_mol": 0.36,
+     "seed_range_cm": [
+      255.3,
+      256.1
+     ]
+    },
+    {
+     "omega_cm": 258.7,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      258.4,
+      259.4
+     ]
+    },
+    {
+     "omega_cm": 410.9,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      408.3,
+      414.1
+     ]
+    },
+    {
+     "omega_cm": 415.9,
+     "km_mol": 0.42,
+     "seed_range_cm": [
+      415.8,
+      416.0
+     ]
+    },
+    {
+     "omega_cm": 450.4,
+     "km_mol": 4.47,
+     "seed_range_cm": [
+      449.3,
+      451.0
+     ]
+    },
+    {
+     "omega_cm": 450.9,
+     "km_mol": 1.78,
+     "seed_range_cm": [
+      450.5,
+      451.9
+     ]
+    },
+    {
+     "omega_cm": 510.8,
+     "km_mol": 0.77,
+     "seed_range_cm": [
+      510.5,
+      511.3
+     ]
+    },
+    {
+     "omega_cm": 519.6,
+     "km_mol": 2.7,
+     "seed_range_cm": [
+      518.8,
+      520.5
+     ]
+    },
+    {
+     "omega_cm": 557.8,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      555.6,
+      560.2
+     ]
+    },
+    {
+     "omega_cm": 561.7,
+     "km_mol": 0.36,
+     "seed_range_cm": [
+      560.9,
+      562.1
+     ]
+    },
+    {
+     "omega_cm": 613.2,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      611.6,
+      614.7
+     ]
+    },
+    {
+     "omega_cm": 635.7,
+     "km_mol": 5.23,
+     "seed_range_cm": [
+      635.5,
+      636.0
+     ]
+    },
+    {
+     "omega_cm": 732.4,
+     "km_mol": 0.83,
+     "seed_range_cm": [
+      732.0,
+      732.4
+     ]
+    },
+    {
+     "omega_cm": 732.6,
+     "km_mol": 1.85,
+     "seed_range_cm": [
+      732.5,
+      733.2
+     ]
+    },
+    {
+     "omega_cm": 741.8,
+     "km_mol": 0.25,
+     "seed_range_cm": [
+      740.4,
+      743.1
+     ]
+    },
+    {
+     "omega_cm": 761.8,
+     "km_mol": 61.74,
+     "seed_range_cm": [
+      761.2,
+      762.2
+     ]
+    },
+    {
+     "omega_cm": 780.4,
+     "km_mol": 0.03,
+     "seed_range_cm": [
+      780.1,
+      780.6
+     ]
+    },
+    {
+     "omega_cm": 819.0,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      817.0,
+      820.4
+     ]
+    },
+    {
+     "omega_cm": 846.2,
+     "km_mol": 46.89,
+     "seed_range_cm": [
+      845.0,
+      848.5
+     ]
+    },
+    {
+     "omega_cm": 850.1,
+     "km_mol": 0.09,
+     "seed_range_cm": [
+      849.8,
+      850.6
+     ]
+    },
+    {
+     "omega_cm": 899.8,
+     "km_mol": 1.28,
+     "seed_range_cm": [
+      898.0,
+      899.8
+     ]
+    },
+    {
+     "omega_cm": 900.0,
+     "km_mol": 0.13,
+     "seed_range_cm": [
+      899.7,
+      902.2
+     ]
+    },
+    {
+     "omega_cm": 904.2,
+     "km_mol": 9.46,
+     "seed_range_cm": [
+      903.5,
+      904.8
+     ]
+    },
+    {
+     "omega_cm": 968.0,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      967.2,
+      968.6
+     ]
+    },
+    {
+     "omega_cm": 981.6,
+     "km_mol": 2.89,
+     "seed_range_cm": [
+      980.8,
+      982.7
+     ]
+    },
+    {
+     "omega_cm": 1000.9,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      999.2,
+      1001.7
+     ]
+    },
+    {
+     "omega_cm": 1015.5,
+     "km_mol": 0.05,
+     "seed_range_cm": [
+      1014.8,
+      1016.4
+     ]
+    },
+    {
+     "omega_cm": 1016.3,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1015.2,
+      1017.1
+     ]
+    },
+    {
+     "omega_cm": 1025.9,
+     "km_mol": 0.96,
+     "seed_range_cm": [
+      1025.7,
+      1026.0
+     ]
+    },
+    {
+     "omega_cm": 1078.9,
+     "km_mol": 4.71,
+     "seed_range_cm": [
+      1078.6,
+      1079.2
+     ]
+    },
+    {
+     "omega_cm": 1081.0,
+     "km_mol": 0.79,
+     "seed_range_cm": [
+      1080.8,
+      1081.2
+     ]
+    },
+    {
+     "omega_cm": 1130.0,
+     "km_mol": 1.09,
+     "seed_range_cm": [
+      1129.9,
+      1130.1
+     ]
+    },
+    {
+     "omega_cm": 1167.8,
+     "km_mol": 0.29,
+     "seed_range_cm": [
+      1167.1,
+      1168.7
+     ]
+    },
+    {
+     "omega_cm": 1179.8,
+     "km_mol": 1.58,
+     "seed_range_cm": [
+      1179.7,
+      1179.9
+     ]
+    },
+    {
+     "omega_cm": 1197.1,
+     "km_mol": 0.52,
+     "seed_range_cm": [
+      1197.0,
+      1197.3
+     ]
+    },
+    {
+     "omega_cm": 1201.8,
+     "km_mol": 0.18,
+     "seed_range_cm": [
+      1201.6,
+      1202.1
+     ]
+    },
+    {
+     "omega_cm": 1229.1,
+     "km_mol": 1.68,
+     "seed_range_cm": [
+      1228.9,
+      1229.4
+     ]
+    },
+    {
+     "omega_cm": 1260.9,
+     "km_mol": 0.48,
+     "seed_range_cm": [
+      1260.6,
+      1261.2
+     ]
+    },
+    {
+     "omega_cm": 1287.6,
+     "km_mol": 8.71,
+     "seed_range_cm": [
+      1287.4,
+      1287.9
+     ]
+    },
+    {
+     "omega_cm": 1317.4,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1316.7,
+      1318.1
+     ]
+    },
+    {
+     "omega_cm": 1344.6,
+     "km_mol": 3.88,
+     "seed_range_cm": [
+      1344.3,
+      1344.9
+     ]
+    },
+    {
+     "omega_cm": 1365.4,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1364.0,
+      1367.5
+     ]
+    },
+    {
+     "omega_cm": 1393.0,
+     "km_mol": 1.04,
+     "seed_range_cm": [
+      1392.1,
+      1393.7
+     ]
+    },
+    {
+     "omega_cm": 1470.8,
+     "km_mol": 0.03,
+     "seed_range_cm": [
+      1470.1,
+      1471.5
+     ]
+    },
+    {
+     "omega_cm": 1480.2,
+     "km_mol": 1.52,
+     "seed_range_cm": [
+      1479.3,
+      1480.7
+     ]
+    },
+    {
+     "omega_cm": 1503.3,
+     "km_mol": 2.38,
+     "seed_range_cm": [
+      1502.8,
+      1503.8
+     ]
+    },
+    {
+     "omega_cm": 1516.4,
+     "km_mol": 12.71,
+     "seed_range_cm": [
+      1515.8,
+      1517.4
+     ]
+    },
+    {
+     "omega_cm": 1579.7,
+     "km_mol": 4.78,
+     "seed_range_cm": [
+      1579.1,
+      1580.5
+     ]
+    },
+    {
+     "omega_cm": 1608.7,
+     "km_mol": 1.09,
+     "seed_range_cm": [
+      1608.5,
+      1608.9
+     ]
+    },
+    {
+     "omega_cm": 1656.3,
+     "km_mol": 0.03,
+     "seed_range_cm": [
+      1655.8,
+      1657.2
+     ]
+    },
+    {
+     "omega_cm": 1690.9,
+     "km_mol": 3.99,
+     "seed_range_cm": [
+      1690.6,
+      1691.5
+     ]
+    },
+    {
+     "omega_cm": 1711.0,
+     "km_mol": 0.39,
+     "seed_range_cm": [
+      1710.5,
+      1711.5
+     ]
+    },
+    {
+     "omega_cm": 1726.5,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      1724.9,
+      1727.4
+     ]
+    },
+    {
+     "omega_cm": 3218.5,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      3218.2,
+      3218.7
+     ]
+    },
+    {
+     "omega_cm": 3220.6,
+     "km_mol": 5.96,
+     "seed_range_cm": [
+      3220.4,
+      3220.8
+     ]
+    },
+    {
+     "omega_cm": 3221.7,
+     "km_mol": 3.9,
+     "seed_range_cm": [
+      3221.5,
+      3221.8
+     ]
+    },
+    {
+     "omega_cm": 3230.9,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      3230.4,
+      3231.2
+     ]
+    },
+    {
+     "omega_cm": 3232.5,
+     "km_mol": 18.42,
+     "seed_range_cm": [
+      3232.0,
+      3232.7
+     ]
+    },
+    {
+     "omega_cm": 3238.2,
+     "km_mol": 40.16,
+     "seed_range_cm": [
+      3237.8,
+      3238.7
+     ]
+    },
+    {
+     "omega_cm": 3245.7,
+     "km_mol": 51.77,
+     "seed_range_cm": [
+      3245.1,
+      3246.1
+     ]
+    },
+    {
+     "omega_cm": 3249.0,
+     "km_mol": 0.52,
+     "seed_range_cm": [
+      3248.7,
+      3249.3
+     ]
+    },
+    {
+     "omega_cm": 3255.3,
+     "km_mol": 22.42,
+     "seed_range_cm": [
+      3254.7,
+      3255.7
+     ]
+    },
+    {
+     "omega_cm": 3268.5,
+     "km_mol": 28.83,
+     "seed_range_cm": [
+      3267.6,
+      3269.1
+     ]
+    }
+   ]
+  },
+  "baseline": {
+   "hessian_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/phenanthrene_A_541c53d1a5/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/phenanthrene_A_541c53d1a5/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 44,
+   "sticks": [
+    {
+     "omega_cm": 92.0,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 98.5,
+     "km_mol": 0.55
+    },
+    {
+     "omega_cm": 222.6,
+     "km_mol": 2.32
+    },
+    {
+     "omega_cm": 234.6,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 237.9,
+     "km_mol": 0.37
+    },
+    {
+     "omega_cm": 384.0,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 393.7,
+     "km_mol": 0.42
+    },
+    {
+     "omega_cm": 420.8,
+     "km_mol": 4.03
+    },
+    {
+     "omega_cm": 426.7,
+     "km_mol": 1.8
+    },
+    {
+     "omega_cm": 483.4,
+     "km_mol": 0.72
+    },
+    {
+     "omega_cm": 487.6,
+     "km_mol": 2.83
+    },
+    {
+     "omega_cm": 525.7,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 533.3,
+     "km_mol": 0.35
+    },
+    {
+     "omega_cm": 571.9,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 604.1,
+     "km_mol": 5.19
+    },
+    {
+     "omega_cm": 693.2,
+     "km_mol": 0.07
+    },
+    {
+     "omega_cm": 694.6,
+     "km_mol": 1.56
+    },
+    {
+     "omega_cm": 695.7,
+     "km_mol": 2.62
+    },
+    {
+     "omega_cm": 719.8,
+     "km_mol": 60.65
+    },
+    {
+     "omega_cm": 735.5,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 770.7,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 796.4,
+     "km_mol": 46.05
+    },
+    {
+     "omega_cm": 806.5,
+     "km_mol": 0.11
+    },
+    {
+     "omega_cm": 841.3,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 847.1,
+     "km_mol": 9.84
+    },
+    {
+     "omega_cm": 851.4,
+     "km_mol": 1.5
+    },
+    {
+     "omega_cm": 895.6,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 909.7,
+     "km_mol": 3.61
+    },
+    {
+     "omega_cm": 927.5,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 942.2,
+     "km_mol": 0.03
+    },
+    {
+     "omega_cm": 943.0,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 972.8,
+     "km_mol": 1.02
+    },
+    {
+     "omega_cm": 1022.9,
+     "km_mol": 4.22
+    },
+    {
+     "omega_cm": 1025.5,
+     "km_mol": 0.7
+    },
+    {
+     "omega_cm": 1067.6,
+     "km_mol": 0.91
+    },
+    {
+     "omega_cm": 1118.0,
+     "km_mol": 1.38
+    },
+    {
+     "omega_cm": 1130.0,
+     "km_mol": 0.03
+    },
+    {
+     "omega_cm": 1140.1,
+     "km_mol": 0.3
+    },
+    {
+     "omega_cm": 1141.6,
+     "km_mol": 0.51
+    },
+    {
+     "omega_cm": 1178.6,
+     "km_mol": 1.85
+    },
+    {
+     "omega_cm": 1192.8,
+     "km_mol": 0.46
+    },
+    {
+     "omega_cm": 1219.0,
+     "km_mol": 9.82
+    },
+    {
+     "omega_cm": 1248.5,
+     "km_mol": 0.02
+    },
+    {
+     "omega_cm": 1271.6,
+     "km_mol": 1.59
+    },
+    {
+     "omega_cm": 1320.5,
+     "km_mol": 0.08
+    },
+    {
+     "omega_cm": 1324.0,
+     "km_mol": 1.58
+    },
+    {
+     "omega_cm": 1391.1,
+     "km_mol": 0.25
+    },
+    {
+     "omega_cm": 1397.6,
+     "km_mol": 1.34
+    },
+    {
+     "omega_cm": 1415.0,
+     "km_mol": 2.7
+    },
+    {
+     "omega_cm": 1434.9,
+     "km_mol": 11.95
+    },
+    {
+     "omega_cm": 1478.7,
+     "km_mol": 5.99
+    },
+    {
+     "omega_cm": 1505.4,
+     "km_mol": 1.55
+    },
+    {
+     "omega_cm": 1545.7,
+     "km_mol": 0.04
+    },
+    {
+     "omega_cm": 1581.8,
+     "km_mol": 3.95
+    },
+    {
+     "omega_cm": 1593.0,
+     "km_mol": 0.39
+    },
+    {
+     "omega_cm": 1597.6,
+     "km_mol": 0.37
+    },
+    {
+     "omega_cm": 3047.0,
+     "km_mol": 0.2
+    },
+    {
+     "omega_cm": 3050.3,
+     "km_mol": 5.51
+    },
+    {
+     "omega_cm": 3051.1,
+     "km_mol": 3.74
+    },
+    {
+     "omega_cm": 3059.9,
+     "km_mol": 0.01
+    },
+    {
+     "omega_cm": 3061.5,
+     "km_mol": 15.09
+    },
+    {
+     "omega_cm": 3066.5,
+     "km_mol": 43.05
+    },
+    {
+     "omega_cm": 3073.6,
+     "km_mol": 43.94
+    },
+    {
+     "omega_cm": 3077.6,
+     "km_mol": 1.09
+    },
+    {
+     "omega_cm": 3082.9,
+     "km_mol": 30.13
+    },
+    {
+     "omega_cm": 3094.3,
+     "km_mol": 29.05
+    }
+   ],
+   "label": "baseline only: B3LYP/6-31G* scaled by PAHdb's factors [0.956, 0.952, 0.96] per region (probes/scale_factor_baseline.py)"
+  },
+  "note": "harmonic positions: the anharmonic shift is not in this version (backlog; TASKS 53)"
+ },
+ "provenance": {
+  "timestamp_utc": "2026-11-02 04:46:36",
+  "host": "Asus18",
+  "python": "3.14.6",
+  "numpy": "2.5.1",
+  "command": "pipeline.py --name phenanthrene_A_541c53d1a5 --smiles c1ccc2c(c1)ccc1ccccc12 --out ../../probes/results_m1/pipeline_holdout_a_2026-11-02 --threads 4 --reuse-only",
+  "commit": "6ee3b3a15c0aaaf3c1ac5aa451ef153684c68be8",
+  "dirty": "yes"
+ },
+ "commit_at_end": "6ee3b3a15c0aaaf3c1ac5aa451ef153684c68be8"
+}

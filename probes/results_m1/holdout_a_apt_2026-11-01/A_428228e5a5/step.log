@@ -11,3 +11,48 @@ Traceback (most recent call last):
     fid = stack.enter_context(open(os.fspath(file), "rb"))
                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: '/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/holdout_a_apt_2026-11-01/A_428228e5a5/dipole_b3lyp_cphf.npz'
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 74, in recompute
+    message, error = AH.write_apt(out_dir, hobj, response, hz["H_projected"], np.array(g["masses_amu"]), grid, stamp or AH.software()), ""
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/analytic_hessians.py", line 219, in write_apt
+    mo1, info = refine_response(hobj, response.mo1, response.h1ao, bound=CPHF_BOUND)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/apt.py", line 117, in refine_response
+    r = residual(x)
+        ^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/apt.py", line 115, in residual
+    return b - xx - a_vo(xx).reshape(xx.shape)                               # zero on the occupied rows, which δ then leaves alone
+                    ^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/apt.py", line 109, in a_vo
+    w = fx(xx.reshape(-1, nmo, nocc)).reshape(-1, nmo, nocc)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/hessian/rhf.py", line 355, in fx
+    v1 = vresp(dm1)
+         ^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/scf/_response_functions.py", line 81, in vind
+    vj, vk = mf.get_jk(mol, dm1, hermi)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/scf/hf.py", line 2510, in get_jk
+    vj, vk = SCF.get_jk(self, mol, dm, hermi, with_j, with_k, omega)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/scf/hf.py", line 2158, in get_jk
+    logger.timer(self, 'vj and vk', *cpu0)
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/lib/logger.py", line 173, in timer
+    flush(rec, '    CPU time for %s %9.2f sec, wall time %9.2f sec'
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/lib/logger.py", line 115, in flush
+    rec.stdout.write(msg%args)
+ValueError: I/O operation on closed file.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 120, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 110, in main
+    row = recompute(src, out_dir, stamp=stamp, max_memory=a.max_memory)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/apt_recompute_refined.py", line 79, in recompute
+    raise RuntimeError(f"{src}: write_apt raised before writing {AH.APT_FILE}: {error}") from cause
+RuntimeError: /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus/molecules/A_428228e5a5: write_apt raised before writing dipole_b3lyp_cphf.npz: I/O operation on closed file.
+{"id": "A_428228e5a5", "passed": true, "error": "", "message": "APT from the Hessian's response: CPHF residual 5.8e-05 -> 2.7e-07 in 1 rounds, sum rule 5.3e-05, 1350.9 s", "residual_before": 5.814639107273867e-05, "residual_after": 2.65367278165507e-07, "rounds": 1, "apt_change_max": 0.00014901781350840082, "height_change_max": 0.17120110557404133, "sum_rule_old": 5.295106658706472e-05, "sum_rule_new": 5.292599493592065e-05, "seconds": 5137.0}

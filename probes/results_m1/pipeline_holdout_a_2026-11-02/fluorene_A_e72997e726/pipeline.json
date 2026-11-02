@@ -1,0 +1,1212 @@
+{
+ "pipeline_version": "0.9",
+ "name": "fluorene_A_e72997e726",
+ "input": {
+  "smiles": "c1ccc2c(c1)Cc1ccccc1-2",
+  "xyz": null,
+  "xyz_atom_order": null
+ },
+ "settings": {
+  "name": "fluorene_A_e72997e726",
+  "out_root": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_holdout_a_2026-11-02",
+  "smiles": "c1ccc2c(c1)Cc1ccccc1-2",
+  "xyz": null,
+  "charge": 0,
+  "multiplicity": 1,
+  "models": [
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed0.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed1.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed2.pt"
+  ],
+  "psi4_python": "C:\\Users\\thebr\\.conda\\envs\\qc\\python.exe",
+  "pyscf_python": "~/qc05/bin/python",
+  "threads": 4,
+  "psi4_memory_gb": 4,
+  "wsl_cap_mb": 6144,
+  "reuse_corpus": true,
+  "reuse_only": true,
+  "corpus": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus"
+ },
+ "admission": {
+  "smiles": "c1ccc2c(c1)Cc1ccccc1-2",
+  "formula": "C13H10",
+  "elements": [
+   "C",
+   "H"
+  ],
+  "n_atoms": 23,
+  "training_elements": [
+   "C",
+   "CL",
+   "F",
+   "H",
+   "N",
+   "O",
+   "S"
+  ],
+  "training_atoms": [
+   8,
+   30
+  ],
+  "models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed0.pt",
+    "sha16": "f930db4af9268a00",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed1.pt",
+    "sha16": "87734859e866d6f7",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\E7_rungC_chain35_analytic_model_n750_seed2.pt",
+    "sha16": "023b8c142ad5fa52",
+    "network": "ΔH-network",
+    "version": "1.3",
+    "status": "carried"
+   }
+  ],
+  "inside_training_sizes": true
+ },
+ "deck": {
+  "file": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\decks\\deck_v1.json",
+  "sha16": "9e27bf8e934893f3"
+ },
+ "optimisation": {
+  "e_opt": -501.42313769093954,
+  "timings_s": {
+   "optimise": 30.7,
+   "hessian_b3lyp": 1090.5,
+   "hessian_wb97x": 2165.4,
+   "total": 3287.0
+  },
+  "opt_options": null
+ },
+ "low_level": {
+  "b3lyp": {
+   "freq_analytic": [
+    99.9562146626464,
+    138.86615555442955,
+    216.32996908288823,
+    245.12702819962772,
+    279.8721653090689,
+    420.35186145746786,
+    426.0840237111598,
+    443.02445784042186,
+    483.5025803268544,
+    496.729138352618,
+    552.4224335592469,
+    577.1521465581399,
+    636.1853825304318,
+    643.8539203425777,
+    712.1827521992823,
+    745.7565718559629,
+    757.4424258351247,
+    759.3452681265233,
+    801.9338517484863,
+    816.5222194994384,
+    853.5445716122445,
+    875.3833736273289,
+    883.8734782909503,
+    928.0247264990244,
+    938.6482782029175,
+    977.5336972536827,
+    978.7999323963486,
+    982.570449557358,
+    1025.35275122922,
+    1054.8726334510584,
+    1059.1393060319908,
+    1122.9650361328083,
+    1138.4461745008061,
+    1168.0009253217672,
+    1186.7319365216622,
+    1190.5580250750504,
+    1202.0914056585148,
+    1214.1752585186744,
+    1232.6693343801867,
+    1264.6374884302872,
+    1331.6233733090828,
+    1341.455743953876,
+    1362.7700472065092,
+    1392.5437635200744,
+    1480.4601725941275,
+    1494.9152355501951,
+    1501.2173618324794,
+    1525.9539794946022,
+    1527.4404234570266,
+    1636.425960247229,
+    1640.7362036932223,
+    1665.513356130615,
+    1665.9513668119134,
+    3034.7566927580747,
+    3061.654215439633,
+    3176.217708893657,
+    3176.673692089314,
+    3182.105628074029,
+    3183.782905254139,
+    3193.4604762294102,
+    3194.8015616136327,
+    3206.1193242753216,
+    3206.939071169585
+   ],
+   "freq_corpus": [
+    99.74338340708688,
+    138.74532971655916,
+    215.64755174205092,
+    245.6186448684601,
+    279.76813676439366,
+    419.6006543354274,
+    425.9110805857235,
+    442.87731988335923,
+    483.512049301513,
+    496.74638178451954,
+    552.4357443059766,
+    577.084188195643,
+    636.1612420889875,
+    643.8638419468346,
+    711.9248840704961,
+    745.5178977845775,
+    757.6110973040174,
+    759.0248794634906,
+    801.6209052171001,
+    816.6464217657774,
+    853.5777215864911,
+    875.0774087818367,
+    883.5153357862465,
+    927.748039188982,
+    938.3041957677402,
+    977.423339846361,
+    978.4703921701955,
+    982.2548420583395,
+    1024.7025153534485,
+    1054.810026103568,
+    1059.0672544772515,
+    1122.8397990605672,
+    1138.297781749844,
+    1167.4164967651298,
+    1186.6671667209866,
+    1190.3020098159175,
+    1201.9996841739344,
+    1214.7934029059938,
+    1232.4436921868205,
+    1264.756611345173,
+    1331.8365857433141,
+    1341.4554148609589,
+    1362.7922275095607,
+    1392.629247582784,
+    1480.5192226420697,
+    1494.8664100345102,
+    1500.9986576473138,
+    1526.1342055949754,
+    1527.4937570917389,
+    1636.4877603147702,
+    1640.9374772920394,
+    1665.214253650983,
+    1666.0149305109421,
+    3034.7993590046776,
+    3061.7388855671406,
+    3176.292580668168,
+    3176.843850937114,
+    3182.131991297473,
+    3183.7655462582297,
+    3193.5072250907047,
+    3194.8250482266512,
+    3206.158053188776,
+    3207.1162003186705
+   ],
+   "dH_max": 0.000688381781189018,
+   "dH_rms": 7.408094328275603e-05,
+   "energy": -501.42318793882225,
+   "energy_corpus": -501.42313769228593,
+   "seconds": 3120
+  },
+  "wb97x": {
+   "freq_analytic": [
+    113.41748003899386,
+    152.07463558776416,
+    223.44510716377084,
+    256.810939624947,
+    288.7711130748763,
+    424.0652834118373,
+    436.12336309569207,
+    449.50165855817926,
+    495.3278507484965,
+    500.1960520262006,
+    556.3299270657,
+    589.6329987167729,
+    640.117386854743,
+    648.0009736345626,
+    727.1169050114121,
+    758.0756090612379,
+    764.3297149700052,
+    770.4053402601993,
+    815.5272997306868,
+    825.0389800884766,
+    860.6509370861131,
+    893.7554820438205,
+    904.4600174399519,
+    952.0110393312162,
+    970.1147095710049,
+    995.7712751182678,
+    1010.8076703944374,
+    1012.5490555270086,
+    1033.7237936067984,
+    1065.0611446906087,
+    1067.4856529747883,
+    1130.9689325114532,
+    1148.2058534967516,
+    1183.2781887677527,
+    1183.4454318953103,
+    1186.9906465639706,
+    1208.9002066577696,
+    1225.4809608416233,
+    1240.5917899866786,
+    1267.900644592166,
+    1324.3509117926997,
+    1334.6246328550342,
+    1362.892028802615,
+    1375.7976789668885,
+    1491.7535565503738,
+    1508.3357941736856,
+    1512.4366720246605,
+    1543.661094143832,
+    1549.9140410405919,
+    1667.7936522578998,
+    1674.9706441750347,
+    1703.7189134810405,
+    1711.3978823740304,
+    3078.2245724321133,
+    3116.5620603912366,
+    3219.6785074113736,
+    3219.9494780641735,
+    3225.844112838398,
+    3226.637516795353,
+    3236.9981293463993,
+    3237.582899799874,
+    3249.1006552480703,
+    3249.645653329183
+   ],
+   "freq_corpus": [
+    114.72916718333522,
+    151.67395366382024,
+    221.2547035394493,
+    265.9970643984265,
+    289.9070206326409,
+    423.1935743902811,
+    437.60120611781923,
+    451.59479863121953,
+    497.1208012882101,
+    500.44411782052765,
+    556.7879115086484,
+    588.2458458330319,
+    639.8894920810594,
+    647.564465714967,
+    728.564487273498,
+    759.278825326432,
+    762.7440925421265,
+    769.3669859689539,
+    815.4335149263616,
+    826.0146374830493,
+    860.1424688348097,
+    895.1594555234693,
+    905.5665324042002,
+    954.1086221220746,
+    970.8599958810022,
+    997.232252061466,
+    1009.9432280286137,
+    1011.9751916348238,
+    1033.103843558511,
+    1064.0868614568024,
+    1067.1803315996094,
+    1129.5974660852776,
+    1146.4307370811862,
+    1181.2628122723086,
+    1184.093507531141,
+    1190.6274315734638,
+    1210.6049553223827,
+    1225.6820408664803,
+    1241.867691037136,
+    1267.0658979004368,
+    1323.593026383123,
+    1334.352160217244,
+    1363.7731767900752,
+    1375.2165393775333,
+    1495.7814538390085,
+    1507.8324466779204,
+    1511.6245732035957,
+    1543.145496456399,
+    1549.6325849996676,
+    1667.390629631876,
+    1674.6420136215486,
+    1703.6606269956835,
+    1711.7245080140203,
+    3078.41628316535,
+    3116.679070127556,
+    3219.611001219865,
+    3219.9324001532227,
+    3225.955477568422,
+    3226.9860366440207,
+    3237.0722096054105,
+    3237.499064331655,
+    3249.1193197680564,
+    3249.8148531328475
+   ],
+   "dH_max": 0.000774562561223574,
+   "dH_rms": 9.690557540663389e-05,
+   "energy": -501.28672845914036,
+   "energy_corpus": -501.28675677767814,
+   "seconds": 3671
+  }
+ },
+ "reuse": {
+  "reused": true,
+  "source": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\molecules\\A_e72997e726",
+  "order": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22
+  ],
+  "start_rmsd_angstrom": 0.0,
+  "sha256": {
+   "geometry.json": "3525527f65de5aed4275e1d4158fd9350155d98bc7c307460ad2c385e37d7ff4",
+   "hessian_b3lyp_analytic.npz": "e7e8632f3c7dd825cdb4eb4b9929eda6f4b8a7df644fa544abd29a377ef20cb1",
+   "dipole_b3lyp_cphf.npz": "52572dba4f147749a978b87453548f0af77bbced22a55ab9f8344a6d65bfbb9b",
+   "analytic_check.json": "679667793ea25205a21bac2ae6132a6cb728f9ab214b923c42a42f1ceda64d3a",
+   "result.json": "87dcd01dccad55934428a24e7a82a8d5dd2da13cf0e3aecfb29a70f72b24ec9d",
+   "job.json": "4db87d80712d9d125e253cab03e62136d3ab33136c28f73a846e933d282d0643"
+  }
+ },
+ "seconds": {
+  "reuse": 0.2,
+  "correction_and_spectra": 1.0
+ },
+ "spectra": {
+  "network": {
+   "hessian_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/fluorene_A_e72997e726/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/fluorene_A_e72997e726/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 36,
+   "sticks": [
+    {
+     "omega_cm": 111.3,
+     "km_mol": 0.38,
+     "seed_range_cm": [
+      110.4,
+      111.9
+     ]
+    },
+    {
+     "omega_cm": 150.8,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      150.4,
+      151.1
+     ]
+    },
+    {
+     "omega_cm": 221.6,
+     "km_mol": 0.18,
+     "seed_range_cm": [
+      221.1,
+      221.9
+     ]
+    },
+    {
+     "omega_cm": 258.2,
+     "km_mol": 5.33,
+     "seed_range_cm": [
+      255.7,
+      261.2
+     ]
+    },
+    {
+     "omega_cm": 291.8,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      290.3,
+      293.4
+     ]
+    },
+    {
+     "omega_cm": 423.5,
+     "km_mol": 0.34,
+     "seed_range_cm": [
+      423.3,
+      423.8
+     ]
+    },
+    {
+     "omega_cm": 438.7,
+     "km_mol": 4.03,
+     "seed_range_cm": [
+      437.0,
+      441.1
+     ]
+    },
+    {
+     "omega_cm": 447.7,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      442.5,
+      454.5
+     ]
+    },
+    {
+     "omega_cm": 498.9,
+     "km_mol": 0.86,
+     "seed_range_cm": [
+      497.1,
+      500.7
+     ]
+    },
+    {
+     "omega_cm": 501.8,
+     "km_mol": 0.26,
+     "seed_range_cm": [
+      501.4,
+      502.1
+     ]
+    },
+    {
+     "omega_cm": 557.0,
+     "km_mol": 0.18,
+     "seed_range_cm": [
+      556.5,
+      557.3
+     ]
+    },
+    {
+     "omega_cm": 593.0,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      591.2,
+      594.1
+     ]
+    },
+    {
+     "omega_cm": 639.9,
+     "km_mol": 7.98,
+     "seed_range_cm": [
+      639.6,
+      640.1
+     ]
+    },
+    {
+     "omega_cm": 648.9,
+     "km_mol": 0.29,
+     "seed_range_cm": [
+      647.8,
+      650.3
+     ]
+    },
+    {
+     "omega_cm": 730.1,
+     "km_mol": 4.04,
+     "seed_range_cm": [
+      728.2,
+      731.2
+     ]
+    },
+    {
+     "omega_cm": 759.5,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      755.9,
+      762.1
+     ]
+    },
+    {
+     "omega_cm": 763.9,
+     "km_mol": 0.03,
+     "seed_range_cm": [
+      763.4,
+      764.6
+     ]
+    },
+    {
+     "omega_cm": 770.7,
+     "km_mol": 86.83,
+     "seed_range_cm": [
+      769.2,
+      771.5
+     ]
+    },
+    {
+     "omega_cm": 816.6,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      813.4,
+      821.1
+     ]
+    },
+    {
+     "omega_cm": 827.0,
+     "km_mol": 0.2,
+     "seed_range_cm": [
+      826.6,
+      827.6
+     ]
+    },
+    {
+     "omega_cm": 863.6,
+     "km_mol": 0.11,
+     "seed_range_cm": [
+      862.8,
+      864.5
+     ]
+    },
+    {
+     "omega_cm": 895.1,
+     "km_mol": 0.8,
+     "seed_range_cm": [
+      894.6,
+      895.8
+     ]
+    },
+    {
+     "omega_cm": 905.3,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      904.2,
+      906.0
+     ]
+    },
+    {
+     "omega_cm": 955.3,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      954.3,
+      956.6
+     ]
+    },
+    {
+     "omega_cm": 970.2,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      969.9,
+      970.7
+     ]
+    },
+    {
+     "omega_cm": 997.0,
+     "km_mol": 3.41,
+     "seed_range_cm": [
+      996.8,
+      997.4
+     ]
+    },
+    {
+     "omega_cm": 1011.3,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1010.0,
+      1012.2
+     ]
+    },
+    {
+     "omega_cm": 1012.7,
+     "km_mol": 0.1,
+     "seed_range_cm": [
+      1011.7,
+      1013.5
+     ]
+    },
+    {
+     "omega_cm": 1033.5,
+     "km_mol": 1.26,
+     "seed_range_cm": [
+      1033.0,
+      1034.1
+     ]
+    },
+    {
+     "omega_cm": 1065.1,
+     "km_mol": 0.54,
+     "seed_range_cm": [
+      1064.8,
+      1065.4
+     ]
+    },
+    {
+     "omega_cm": 1067.3,
+     "km_mol": 4.81,
+     "seed_range_cm": [
+      1067.1,
+      1067.6
+     ]
+    },
+    {
+     "omega_cm": 1131.2,
+     "km_mol": 1.8,
+     "seed_range_cm": [
+      1130.9,
+      1131.6
+     ]
+    },
+    {
+     "omega_cm": 1147.9,
+     "km_mol": 0.15,
+     "seed_range_cm": [
+      1147.4,
+      1148.6
+     ]
+    },
+    {
+     "omega_cm": 1176.6,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1174.5,
+      1178.1
+     ]
+    },
+    {
+     "omega_cm": 1183.4,
+     "km_mol": 1.72,
+     "seed_range_cm": [
+      1182.9,
+      1184.2
+     ]
+    },
+    {
+     "omega_cm": 1186.6,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      1186.2,
+      1187.1
+     ]
+    },
+    {
+     "omega_cm": 1212.1,
+     "km_mol": 2.82,
+     "seed_range_cm": [
+      1211.8,
+      1212.5
+     ]
+    },
+    {
+     "omega_cm": 1228.8,
+     "km_mol": 2.84,
+     "seed_range_cm": [
+      1228.4,
+      1229.5
+     ]
+    },
+    {
+     "omega_cm": 1238.6,
+     "km_mol": 2.85,
+     "seed_range_cm": [
+      1237.1,
+      1240.5
+     ]
+    },
+    {
+     "omega_cm": 1271.0,
+     "km_mol": 1.51,
+     "seed_range_cm": [
+      1270.2,
+      1272.0
+     ]
+    },
+    {
+     "omega_cm": 1327.1,
+     "km_mol": 5.22,
+     "seed_range_cm": [
+      1325.2,
+      1328.5
+     ]
+    },
+    {
+     "omega_cm": 1335.3,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1334.8,
+      1336.0
+     ]
+    },
+    {
+     "omega_cm": 1362.1,
+     "km_mol": 3.15,
+     "seed_range_cm": [
+      1360.2,
+      1363.9
+     ]
+    },
+    {
+     "omega_cm": 1371.5,
+     "km_mol": 1.11,
+     "seed_range_cm": [
+      1369.6,
+      1372.8
+     ]
+    },
+    {
+     "omega_cm": 1491.6,
+     "km_mol": 4.44,
+     "seed_range_cm": [
+      1484.0,
+      1495.6
+     ]
+    },
+    {
+     "omega_cm": 1509.0,
+     "km_mol": 11.49,
+     "seed_range_cm": [
+      1508.2,
+      1509.6
+     ]
+    },
+    {
+     "omega_cm": 1513.0,
+     "km_mol": 21.73,
+     "seed_range_cm": [
+      1512.1,
+      1513.5
+     ]
+    },
+    {
+     "omega_cm": 1543.6,
+     "km_mol": 5.14,
+     "seed_range_cm": [
+      1542.8,
+      1544.3
+     ]
+    },
+    {
+     "omega_cm": 1548.0,
+     "km_mol": 0.16,
+     "seed_range_cm": [
+      1547.7,
+      1548.4
+     ]
+    },
+    {
+     "omega_cm": 1668.4,
+     "km_mol": 0.77,
+     "seed_range_cm": [
+      1668.0,
+      1669.0
+     ]
+    },
+    {
+     "omega_cm": 1675.6,
+     "km_mol": 0.39,
+     "seed_range_cm": [
+      1675.2,
+      1675.9
+     ]
+    },
+    {
+     "omega_cm": 1704.3,
+     "km_mol": 3.41,
+     "seed_range_cm": [
+      1703.0,
+      1706.3
+     ]
+    },
+    {
+     "omega_cm": 1709.7,
+     "km_mol": 0.08,
+     "seed_range_cm": [
+      1707.8,
+      1711.4
+     ]
+    },
+    {
+     "omega_cm": 3075.6,
+     "km_mol": 16.46,
+     "seed_range_cm": [
+      3072.0,
+      3078.0
+     ]
+    },
+    {
+     "omega_cm": 3110.1,
+     "km_mol": 13.0,
+     "seed_range_cm": [
+      3104.4,
+      3114.4
+     ]
+    },
+    {
+     "omega_cm": 3219.4,
+     "km_mol": 3.28,
+     "seed_range_cm": [
+      3218.6,
+      3220.1
+     ]
+    },
+    {
+     "omega_cm": 3219.9,
+     "km_mol": 7.82,
+     "seed_range_cm": [
+      3219.0,
+      3220.6
+     ]
+    },
+    {
+     "omega_cm": 3225.7,
+     "km_mol": 2.58,
+     "seed_range_cm": [
+      3225.0,
+      3226.1
+     ]
+    },
+    {
+     "omega_cm": 3227.3,
+     "km_mol": 6.96,
+     "seed_range_cm": [
+      3226.3,
+      3228.0
+     ]
+    },
+    {
+     "omega_cm": 3236.9,
+     "km_mol": 8.29,
+     "seed_range_cm": [
+      3236.5,
+      3237.5
+     ]
+    },
+    {
+     "omega_cm": 3238.3,
+     "km_mol": 50.3,
+     "seed_range_cm": [
+      3238.0,
+      3238.8
+     ]
+    },
+    {
+     "omega_cm": 3249.1,
+     "km_mol": 63.81,
+     "seed_range_cm": [
+      3248.3,
+      3250.1
+     ]
+    },
+    {
+     "omega_cm": 3249.9,
+     "km_mol": 6.88,
+     "seed_range_cm": [
+      3249.1,
+      3250.9
+     ]
+    }
+   ]
+  },
+  "baseline": {
+   "hessian_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/fluorene_A_e72997e726/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_holdout_a_2026-11-02/fluorene_A_e72997e726/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 35,
+   "sticks": [
+    {
+     "omega_cm": 95.6,
+     "km_mol": 0.32
+    },
+    {
+     "omega_cm": 132.8,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 206.8,
+     "km_mol": 0.19
+    },
+    {
+     "omega_cm": 234.3,
+     "km_mol": 5.33
+    },
+    {
+     "omega_cm": 267.6,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 401.9,
+     "km_mol": 0.34
+    },
+    {
+     "omega_cm": 407.4,
+     "km_mol": 3.57
+    },
+    {
+     "omega_cm": 423.5,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 462.2,
+     "km_mol": 0.9
+    },
+    {
+     "omega_cm": 474.8,
+     "km_mol": 0.23
+    },
+    {
+     "omega_cm": 528.1,
+     "km_mol": 0.2
+    },
+    {
+     "omega_cm": 551.8,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 608.2,
+     "km_mol": 7.92
+    },
+    {
+     "omega_cm": 615.6,
+     "km_mol": 0.27
+    },
+    {
+     "omega_cm": 680.9,
+     "km_mol": 1.76
+    },
+    {
+     "omega_cm": 713.0,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 724.1,
+     "km_mol": 0.03
+    },
+    {
+     "omega_cm": 725.9,
+     "km_mol": 89.56
+    },
+    {
+     "omega_cm": 766.6,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 780.6,
+     "km_mol": 0.24
+    },
+    {
+     "omega_cm": 815.9,
+     "km_mol": 0.11
+    },
+    {
+     "omega_cm": 836.9,
+     "km_mol": 0.68
+    },
+    {
+     "omega_cm": 845.0,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 887.2,
+     "km_mol": 0.15
+    },
+    {
+     "omega_cm": 897.3,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 934.5,
+     "km_mol": 2.25
+    },
+    {
+     "omega_cm": 935.7,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 939.4,
+     "km_mol": 1.26
+    },
+    {
+     "omega_cm": 980.3,
+     "km_mol": 1.44
+    },
+    {
+     "omega_cm": 1008.5,
+     "km_mol": 0.5
+    },
+    {
+     "omega_cm": 1012.5,
+     "km_mol": 3.91
+    },
+    {
+     "omega_cm": 1069.1,
+     "km_mol": 1.41
+    },
+    {
+     "omega_cm": 1083.8,
+     "km_mol": 0.2
+    },
+    {
+     "omega_cm": 1111.9,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 1129.7,
+     "km_mol": 0.09
+    },
+    {
+     "omega_cm": 1133.5,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 1144.4,
+     "km_mol": 3.32
+    },
+    {
+     "omega_cm": 1155.9,
+     "km_mol": 2.13
+    },
+    {
+     "omega_cm": 1173.5,
+     "km_mol": 1.67
+    },
+    {
+     "omega_cm": 1203.9,
+     "km_mol": 3.33
+    },
+    {
+     "omega_cm": 1267.7,
+     "km_mol": 0.11
+    },
+    {
+     "omega_cm": 1277.1,
+     "km_mol": 0.55
+    },
+    {
+     "omega_cm": 1297.4,
+     "km_mol": 10.92
+    },
+    {
+     "omega_cm": 1325.7,
+     "km_mol": 0.23
+    },
+    {
+     "omega_cm": 1409.4,
+     "km_mol": 7.59
+    },
+    {
+     "omega_cm": 1423.1,
+     "km_mol": 8.07
+    },
+    {
+     "omega_cm": 1429.1,
+     "km_mol": 19.89
+    },
+    {
+     "omega_cm": 1452.8,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 1454.1,
+     "km_mol": 7.14
+    },
+    {
+     "omega_cm": 1557.9,
+     "km_mol": 1.18
+    },
+    {
+     "omega_cm": 1561.9,
+     "km_mol": 0.25
+    },
+    {
+     "omega_cm": 1585.6,
+     "km_mol": 0.09
+    },
+    {
+     "omega_cm": 1586.0,
+     "km_mol": 3.47
+    },
+    {
+     "omega_cm": 2913.4,
+     "km_mol": 16.54
+    },
+    {
+     "omega_cm": 2939.2,
+     "km_mol": 13.01
+    },
+    {
+     "omega_cm": 3049.2,
+     "km_mol": 3.28
+    },
+    {
+     "omega_cm": 3049.6,
+     "km_mol": 8.71
+    },
+    {
+     "omega_cm": 3054.8,
+     "km_mol": 2.74
+    },
+    {
+     "omega_cm": 3056.4,
+     "km_mol": 6.03
+    },
+    {
+     "omega_cm": 3065.8,
+     "km_mol": 8.0
+    },
+    {
+     "omega_cm": 3067.0,
+     "km_mol": 50.49
+    },
+    {
+     "omega_cm": 3077.9,
+     "km_mol": 63.87
+    },
+    {
+     "omega_cm": 3078.6,
+     "km_mol": 6.74
+    }
+   ],
+   "label": "baseline only: B3LYP/6-31G* scaled by PAHdb's factors [0.956, 0.952, 0.96] per region (probes/scale_factor_baseline.py)"
+  },
+  "note": "harmonic positions: the anharmonic shift is not in this version (backlog; TASKS 53)"
+ },
+ "provenance": {
+  "timestamp_utc": "2026-11-02 04:46:31",
+  "host": "Asus18",
+  "python": "3.14.6",
+  "numpy": "2.5.1",
+  "command": "pipeline.py --name fluorene_A_e72997e726 --smiles c1ccc2c(c1)Cc1ccccc1-2 --out ../../probes/results_m1/pipeline_holdout_a_2026-11-02 --threads 4 --reuse-only",
+  "commit": "6ee3b3a15c0aaaf3c1ac5aa451ef153684c68be8",
+  "dirty": "yes"
+ },
+ "commit_at_end": "6ee3b3a15c0aaaf3c1ac5aa451ef153684c68be8"
+}
