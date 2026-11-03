@@ -1,0 +1,23 @@
+{
+ "id": "water",
+ "layer": "smoke",
+ "labels": "analytic_only",
+ "optimisation": {
+  "engine": "geomeTRIC via pyscf.geomopt.geometric_solver.optimize",
+  "convergence_set": "GAU_TIGHT",
+  "maxsteps": 100,
+  "functional": "b3lyp",
+  "basis": "6-31g* (Cartesian d)",
+  "grid": [
+   99,
+   590
+  ],
+  "steps": 5,
+  "seconds": 11.2,
+  "e_opt": -76.40895391423513,
+  "max_force_au": 2.9132700207767925e-07,
+  "start": "textbook water, the smoke"
+ },
+ "n_imaginary_b3lyp": 0,
+ "n_imaginary_wb97x": 0
+}

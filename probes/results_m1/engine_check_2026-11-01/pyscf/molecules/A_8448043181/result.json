@@ -1,0 +1,23 @@
+{
+ "id": "A_8448043181",
+ "layer": "A",
+ "labels": "analytic_only",
+ "optimisation": {
+  "engine": "geomeTRIC via pyscf.geomopt.geometric_solver.optimize",
+  "convergence_set": "GAU_TIGHT",
+  "maxsteps": 100,
+  "functional": "b3lyp",
+  "basis": "6-31g* (Cartesian d)",
+  "grid": [
+   99,
+   590
+  ],
+  "steps": 5,
+  "seconds": 112.6,
+  "e_opt": -232.2486512320724,
+  "max_force_au": 6.9679639667086235e-06,
+  "start": "corpus A_8448043181/job.json (the psi4 run's start)"
+ },
+ "n_imaginary_b3lyp": 0,
+ "n_imaginary_wb97x": 0
+}
