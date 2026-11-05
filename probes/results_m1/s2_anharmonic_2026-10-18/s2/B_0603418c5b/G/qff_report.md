@@ -1,6 +1,6 @@
-# Quartic force field from 109 displaced Hessians — /root/s2/B_0603418c5b/G/hess
+# Quartic force field from 109 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\B_0603418c5b\G\hess
 
-Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.60e-14.
+Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 3.20e-14.
 Harmonic ω (cm⁻¹): 84.5, 128.2, 167.3, 214.5, 330.9, 336.1, 376.1, 428.9, 481.5, 487.9, 536.5, 564.5, 567.5, 599.5, 615.6, 679.7, 724.1, 729.8, 753.8, 766.1, 785.1, 831.0, 881.4, 906.0, 951.3, 978.3, 994.6, 997.4, 1008.0, 1062.4, 1159.4, 1162.3, 1246.8, 1257.3, 1306.6, 1336.1, 1363.8, 1418.3, 1445.1, 1499.4, 1524.6, 1532.5, 1597.4, 1646.0, 1657.2, 2218.6, 3154.3, 3156.7, 3163.9, 3181.9, 3190.8, 3249.6, 3250.9, 3496.1
 
 ## Noise diagnostics
@@ -30,7 +30,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 9 | 487.9 | 459.4 | -28.5 | 459.4 | -28.5 | — |  |
 | 10 | 536.5 | 531.0 | -5.5 | 531.0 | -5.5 | — |  |
 | 11 | 564.5 | 658.4 | +93.9 | 658.4 | +93.9 | — |  |
-| 12 | 567.5 | 557.4 | -10.2 | 557.4 | -10.2 | — |  |
+| 12 | 567.5 | 557.3 | -10.2 | 557.3 | -10.2 | — |  |
 | 13 | 599.5 | 589.5 | -10.0 | 589.5 | -10.0 | — |  |
 | 14 | 615.6 | 662.3 | +46.7 | 662.3 | +46.7 | — |  |
 | 15 | 679.7 | 649.8 | -29.8 | 649.8 | -29.8 | — |  |
@@ -75,8 +75,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-16 17:49:13`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s2/B_0603418c5b/G/hess --disp 0.10 --out /root/s2/B_0603418c5b/G/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:34`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\B_0603418c5b\G\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\B_0603418c5b\G\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

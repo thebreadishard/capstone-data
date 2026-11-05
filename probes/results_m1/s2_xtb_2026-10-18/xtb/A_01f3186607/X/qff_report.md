@@ -1,6 +1,6 @@
-# Quartic force field from 97 displaced Hessians — probes/results_m1/s2_xtb_2026-10-18/xtb/A_01f3186607/X/hess
+# Quartic force field from 97 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_01f3186607\X\hess
 
-Reference file `ref.json`; 48 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 9.17e-15.
+Reference file `ref.json`; 48 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 4.81e-14.
 Harmonic ω (cm⁻¹): 157.4, 166.1, 348.2, 356.2, 434.1, 448.7, 485.2, 501.8, 584.4, 586.1, 724.3, 728.7, 780.3, 800.8, 807.5, 871.1, 881.7, 896.0, 911.4, 921.3, 927.1, 930.9, 1074.4, 1084.3, 1138.5, 1172.9, 1179.6, 1179.9, 1228.8, 1229.1, 1260.1, 1354.3, 1361.0, 1402.6, 1433.8, 1451.7, 1512.0, 1568.9, 1610.6, 1614.7, 3065.8, 3066.4, 3068.0, 3070.6, 3077.5, 3079.1, 3087.1, 3089.6
 
 ## Noise diagnostics
@@ -71,7 +71,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 36 | 1512.0 | 1480.9 | -31.1 | 1480.9 | -31.1 | — |  |
 | 37 | 1568.9 | 1533.9 | -35.0 | 1533.9 | -35.0 | — |  |
 | 38 | 1610.6 | 1577.2 | -33.4 | 1577.2 | -33.4 | — |  |
-| 39 | 1614.7 | 1578.7 | -36.0 | 1578.7 | -36.0 | — |  |
+| 39 | 1614.7 | 1578.7 | -36.1 | 1578.7 | -36.1 | — |  |
 | 40 | 3065.8 | 2906.9 | -158.9 | 2906.9 | -158.9 | — |  |
 | 41 | 3066.4 | 2908.5 | -157.9 | 2908.5 | -157.9 | — |  |
 | 42 | 3068.0 | 2907.2 | -160.7 | 2907.2 | -160.7 | — |  |
@@ -83,8 +83,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-18 15:29:16`
+- timestamp_utc: `2026-11-04 07:38:47`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/s2_xtb_2026-10-18/xtb/A_01f3186607/X/hess --disp 0.10 --out probes/results_m1/s2_xtb_2026-10-18/xtb/A_01f3186607/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_01f3186607\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_01f3186607\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

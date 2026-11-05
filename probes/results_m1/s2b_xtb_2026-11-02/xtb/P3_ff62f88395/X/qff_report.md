@@ -1,6 +1,6 @@
-# Quartic force field from 139 displaced Hessians — probes/results_m1/s2b_xtb_2026-11-02/xtb/P3_ff62f88395/X/hess
+# Quartic force field from 139 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2b_xtb_2026-11-02\xtb\P3_ff62f88395\X\hess
 
-Reference file `ref.json`; 69 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.40e-14.
+Reference file `ref.json`; 69 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 2.83e-14.
 Harmonic ω (cm⁻¹): 95.1, 111.6, 145.6, 204.0, 212.4, 276.2, 352.1, 376.7, 400.9, 421.9, 458.2, 485.9, 540.8, 544.3, 551.0, 592.0, 592.1, 619.1, 672.7, 708.6, 734.9, 751.2, 780.7, 789.6, 802.6, 849.2, 878.5, 889.3, 895.5, 909.4, 924.8, 926.4, 931.3, 934.0, 1059.4, 1073.0, 1095.3, 1127.6, 1132.6, 1170.7, 1183.2, 1193.1, 1216.1, 1226.5, 1261.6, 1265.5, 1311.1, 1354.0, 1362.2, 1373.6, 1410.1, 1427.2, 1445.0, 1463.5, 1473.9, 1575.7, 1588.2, 1595.0, 1602.2, 1615.6, 3042.9, 3058.5, 3071.0, 3074.3, 3078.8, 3081.2, 3085.9, 3088.3, 3093.3
 
 ## Noise diagnostics
@@ -57,7 +57,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 2 | 145.6 | 144.6 | -1.1 | 144.6 | -1.1 | — |  |
 | 3 | 204.0 | 201.7 | -2.3 | 201.7 | -2.3 | — |  |
 | 4 | 212.4 | 208.8 | -3.7 | 208.8 | -3.7 | — |  |
-| 5 | 276.2 | 272.1 | -4.1 | 272.1 | -4.1 | — |  |
+| 5 | 276.2 | 272.2 | -4.1 | 272.2 | -4.1 | — |  |
 | 6 | 352.1 | 348.7 | -3.4 | 348.7 | -3.4 | — |  |
 | 7 | 376.7 | 370.8 | -5.9 | 370.8 | -5.9 | — |  |
 | 8 | 400.9 | 394.7 | -6.1 | 394.7 | -6.1 | — |  |
@@ -75,7 +75,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 20 | 734.9 | 726.0 | -8.9 | 726.0 | -8.9 | — |  |
 | 21 | 751.2 | 742.9 | -8.4 | 742.9 | -8.4 | — |  |
 | 22 | 780.7 | 769.2 | -11.6 | 769.2 | -11.6 | — |  |
-| 23 | 789.6 | 777.9 | -11.6 | 777.9 | -11.6 | — |  |
+| 23 | 789.6 | 778.0 | -11.6 | 778.0 | -11.6 | — |  |
 | 24 | 802.6 | 792.9 | -9.7 | 792.9 | -9.7 | — |  |
 | 25 | 849.2 | 835.1 | -14.1 | 835.1 | -14.1 | — |  |
 | 26 | 878.5 | 862.7 | -15.8 | 862.7 | -15.8 | — |  |
@@ -84,7 +84,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 29 | 909.4 | 893.1 | -16.3 | 893.1 | -16.3 | — |  |
 | 30 | 924.8 | 906.5 | -18.3 | 906.5 | -18.3 | — |  |
 | 31 | 926.4 | 908.0 | -18.4 | 908.0 | -18.4 | — |  |
-| 32 | 931.3 | 919.5 | -11.7 | 919.5 | -11.7 | — |  |
+| 32 | 931.3 | 919.5 | -11.8 | 919.5 | -11.8 | — |  |
 | 33 | 934.0 | 921.7 | -12.2 | 921.7 | -12.2 | — |  |
 | 34 | 1059.4 | 1045.1 | -14.4 | 1045.1 | -14.4 | — |  |
 | 35 | 1073.0 | 1057.0 | -16.1 | 1057.0 | -16.1 | — |  |
@@ -113,7 +113,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 58 | 1602.2 | 1568.0 | -34.2 | 1568.0 | -34.2 | — |  |
 | 59 | 1615.6 | 1583.2 | -32.4 | 1583.2 | -32.4 | — |  |
 | 60 | 3042.9 | 2881.8 | -161.1 | 2881.8 | -161.1 | — |  |
-| 61 | 3058.5 | 2897.7 | -160.9 | 2897.7 | -160.9 | — |  |
+| 61 | 3058.5 | 2897.7 | -160.8 | 2897.7 | -160.8 | — |  |
 | 62 | 3071.0 | 2913.5 | -157.6 | 2913.5 | -157.6 | — |  |
 | 63 | 3074.3 | 2916.6 | -157.7 | 2916.6 | -157.7 | — |  |
 | 64 | 3078.8 | 2923.6 | -155.3 | 2923.6 | -155.3 | — |  |
@@ -124,8 +124,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-11-03 12:36:00`
+- timestamp_utc: `2026-11-04 07:40:06`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/s2b_xtb_2026-11-02/xtb/P3_ff62f88395/X/hess --disp 0.10 --out probes/results_m1/s2b_xtb_2026-11-02/xtb/P3_ff62f88395/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2b_xtb_2026-11-02\xtb\P3_ff62f88395\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2b_xtb_2026-11-02\xtb\P3_ff62f88395\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

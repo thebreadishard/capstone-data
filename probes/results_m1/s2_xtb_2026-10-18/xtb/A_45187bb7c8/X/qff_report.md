@@ -1,6 +1,6 @@
-# Quartic force field from 109 displaced Hessians — probes/results_m1/s2_xtb_2026-10-18/xtb/A_45187bb7c8/X/hess
+# Quartic force field from 109 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_45187bb7c8\X\hess
 
-Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 9.87e-15.
+Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 2.36e-14.
 Harmonic ω (cm⁻¹): 150.3, 191.1, 216.5, 332.8, 411.7, 415.3, 458.7, 487.0, 535.8, 539.1, 573.4, 630.3, 671.0, 697.8, 717.8, 769.8, 795.6, 799.4, 824.0, 834.8, 856.4, 889.8, 893.2, 920.2, 926.6, 1025.3, 1050.1, 1078.3, 1098.2, 1101.7, 1182.8, 1199.3, 1199.8, 1233.7, 1247.5, 1278.2, 1346.4, 1381.6, 1392.8, 1449.5, 1454.9, 1482.4, 1529.3, 1596.2, 1613.4, 1618.0, 3065.3, 3066.3, 3072.8, 3074.4, 3081.3, 3083.8, 3123.4, 3137.5
 
 ## Noise diagnostics
@@ -66,7 +66,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 31 | 1199.3 | 1179.9 | -19.3 | 1180.3 | -19.0 | — | e |
 | 32 | 1199.8 | 1186.7 | -13.1 | 1186.3 | -13.4 | — | e |
 | 33 | 1233.7 | 1214.4 | -19.3 | 1214.4 | -19.3 | — |  |
-| 34 | 1247.5 | 1226.2 | -21.3 | 1226.2 | -21.3 | — |  |
+| 34 | 1247.5 | 1226.2 | -21.2 | 1226.2 | -21.2 | — |  |
 | 35 | 1278.2 | 1255.3 | -23.0 | 1255.3 | -23.0 | — |  |
 | 36 | 1346.4 | 1323.5 | -22.9 | 1323.5 | -22.9 | — |  |
 | 37 | 1381.6 | 1355.9 | -25.7 | 1355.9 | -25.7 | — |  |
@@ -89,8 +89,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-18 19:09:43`
+- timestamp_utc: `2026-11-04 07:38:49`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/s2_xtb_2026-10-18/xtb/A_45187bb7c8/X/hess --disp 0.10 --out probes/results_m1/s2_xtb_2026-10-18/xtb/A_45187bb7c8/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_45187bb7c8\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_45187bb7c8\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

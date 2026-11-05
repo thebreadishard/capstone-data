@@ -1,6 +1,6 @@
-# Quartic force field from 109 displaced Hessians — probes/results_m1/s2_xtb_2026-10-18/xtb/B_78f8233b4c/X/hess
+# Quartic force field from 109 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\B_78f8233b4c\X\hess
 
-Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.04e-14.
+Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 2.41e-14.
 Harmonic ω (cm⁻¹): 104.7, 141.4, 226.7, 239.2, 376.0, 377.4, 381.8, 394.7, 413.2, 449.9, 489.9, 546.0, 592.1, 613.2, 681.8, 736.3, 737.0, 767.3, 770.0, 776.1, 839.3, 851.2, 908.6, 922.4, 928.0, 989.8, 1001.1, 1020.6, 1093.3, 1156.7, 1169.2, 1212.2, 1249.8, 1281.5, 1298.2, 1376.0, 1376.9, 1408.6, 1453.9, 1469.4, 1512.1, 1535.2, 1562.4, 1591.8, 1592.0, 3028.7, 3028.7, 3034.6, 3045.1, 3055.4, 3128.9, 3130.5, 3467.1, 3523.9
 
 ## Noise diagnostics
@@ -53,7 +53,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | mode | ω | ν raw quartics | ν − ω | ν symmetry-averaged quartics | ν − ω | pyVPT2 ν | pair |
 |---|---|---|---|---|---|---|---|
 | 0 | 104.7 | 103.2 | -1.6 | 103.2 | -1.6 | — |  |
-| 1 | 141.4 | 137.9 | -3.6 | 137.9 | -3.6 | — |  |
+| 1 | 141.4 | 137.9 | -3.5 | 137.9 | -3.5 | — |  |
 | 2 | 226.7 | 221.8 | -4.9 | 221.8 | -4.9 | — |  |
 | 3 | 239.2 | 238.9 | -0.3 | 238.9 | -0.3 | — |  |
 | 4 | 376.0 | 372.3 | -3.7 | 372.3 | -3.7 | — |  |
@@ -69,7 +69,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 14 | 681.8 | 673.4 | -8.4 | 673.4 | -8.4 | — |  |
 | 15 | 736.3 | 728.4 | -7.9 | 728.4 | -7.9 | — |  |
 | 16 | 737.0 | 725.4 | -11.6 | 725.4 | -11.6 | — |  |
-| 17 | 767.3 | 753.3 | -13.9 | 753.3 | -13.9 | — |  |
+| 17 | 767.3 | 753.4 | -13.9 | 753.4 | -13.9 | — |  |
 | 18 | 770.0 | 760.2 | -9.7 | 760.2 | -9.7 | — |  |
 | 19 | 776.1 | 761.1 | -15.0 | 761.1 | -15.0 | — |  |
 | 20 | 839.3 | 823.7 | -15.6 | 823.7 | -15.6 | — |  |
@@ -93,7 +93,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 38 | 1453.9 | 1426.1 | -27.9 | 1426.1 | -27.9 | — |  |
 | 39 | 1469.4 | 1430.5 | -38.9 | 1430.5 | -38.9 | — |  |
 | 40 | 1512.1 | 1475.6 | -36.5 | 1475.6 | -36.5 | — |  |
-| 41 | 1535.2 | 1504.4 | -30.7 | 1504.4 | -30.7 | — |  |
+| 41 | 1535.2 | 1504.4 | -30.8 | 1504.4 | -30.8 | — |  |
 | 42 | 1562.4 | 1529.8 | -32.6 | 1529.8 | -32.6 | — |  |
 | 43 | 1591.8 | 1557.5 | -34.4 | 1558.1 | -33.7 | — | e |
 | 44 | 1592.0 | 1557.1 | -34.9 | 1556.4 | -35.6 | — | e |
@@ -109,8 +109,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-19 14:03:42`
+- timestamp_utc: `2026-11-04 07:39:06`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/s2_xtb_2026-10-18/xtb/B_78f8233b4c/X/hess --disp 0.10 --out probes/results_m1/s2_xtb_2026-10-18/xtb/B_78f8233b4c/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\B_78f8233b4c\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\B_78f8233b4c\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

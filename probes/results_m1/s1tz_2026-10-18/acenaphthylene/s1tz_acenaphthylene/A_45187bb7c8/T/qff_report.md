@@ -1,6 +1,6 @@
-# Quartic force field from 109 displaced Hessians — /root/s1tz_acenaphthylene/A_45187bb7c8/T/hess
+# Quartic force field from 109 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\acenaphthylene\s1tz_acenaphthylene\A_45187bb7c8\T\hess
 
-Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.11e-14.
+Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.19e-13.
 Harmonic ω (cm⁻¹): 161.6, 214.4, 230.4, 378.4, 424.6, 465.9, 472.0, 519.8, 562.0, 584.2, 620.8, 671.0, 678.6, 696.8, 742.7, 767.0, 791.5, 820.4, 858.1, 881.7, 911.7, 925.4, 926.5, 953.9, 961.4, 1029.8, 1036.7, 1057.9, 1105.2, 1116.4, 1177.7, 1205.3, 1226.9, 1249.2, 1276.0, 1336.2, 1387.8, 1422.1, 1452.0, 1458.3, 1490.6, 1518.0, 1540.4, 1635.9, 1651.4, 1659.4, 3163.8, 3164.1, 3172.7, 3173.4, 3186.9, 3187.8, 3207.6, 3226.8
 
 ## Noise diagnostics
@@ -34,7 +34,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 | mode | ω | ν raw quartics | ν − ω | ν symmetry-averaged quartics | ν − ω | pyVPT2 ν | pair |
 |---|---|---|---|---|---|---|---|
-| 0 | 161.6 | 162.5 | +1.0 | 162.5 | +1.0 | — |  |
+| 0 | 161.6 | 162.5 | +0.9 | 162.5 | +0.9 | — |  |
 | 1 | 214.4 | 212.5 | -1.9 | 212.5 | -1.9 | — |  |
 | 2 | 230.4 | 228.3 | -2.1 | 228.3 | -2.1 | — |  |
 | 3 | 378.4 | 379.7 | +1.3 | 379.7 | +1.3 | — |  |
@@ -51,7 +51,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 14 | 742.7 | 776.6 | +34.0 | 776.6 | +34.0 | — |  |
 | 15 | 767.0 | 782.9 | +15.9 | 782.9 | +15.9 | — |  |
 | 16 | 791.5 | 798.8 | +7.3 | 798.8 | +7.3 | — |  |
-| 17 | 820.4 | 810.8 | -9.7 | 810.8 | -9.7 | — |  |
+| 17 | 820.4 | 810.7 | -9.7 | 810.7 | -9.7 | — |  |
 | 18 | 858.1 | 961.0 | +103.0 | 961.0 | +103.0 | — |  |
 | 19 | 881.7 | 871.4 | -10.3 | 871.4 | -10.3 | — |  |
 | 20 | 911.7 | 972.3 | +60.6 | 972.3 | +60.6 | — |  |
@@ -73,7 +73,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 36 | 1387.8 | 1359.8 | -28.0 | 1359.8 | -28.0 | — |  |
 | 37 | 1422.1 | 1392.1 | -30.1 | 1392.1 | -30.1 | — |  |
 | 38 | 1452.0 | 1423.3 | -28.7 | 1423.3 | -28.7 | — |  |
-| 39 | 1458.3 | 1426.4 | -31.8 | 1426.4 | -31.8 | — |  |
+| 39 | 1458.3 | 1426.5 | -31.8 | 1426.5 | -31.8 | — |  |
 | 40 | 1490.6 | 1458.3 | -32.3 | 1458.3 | -32.3 | — |  |
 | 41 | 1518.0 | 1485.5 | -32.5 | 1485.5 | -32.5 | — |  |
 | 42 | 1540.4 | 1507.2 | -33.1 | 1507.2 | -33.1 | — |  |
@@ -82,7 +82,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 45 | 1659.4 | 1621.5 | -37.9 | 1621.5 | -37.9 | — |  |
 | 46 | 3163.8 | 3028.3 | -135.5 | 3028.3 | -135.4 | — | e |
 | 47 | 3164.1 | 3029.4 | -134.7 | 3029.4 | -134.8 | — | e |
-| 48 | 3172.7 | 3039.1 | -133.7 | 3039.1 | -133.7 | — |  |
+| 48 | 3172.7 | 3039.1 | -133.6 | 3039.1 | -133.6 | — |  |
 | 49 | 3173.4 | 3037.9 | -135.5 | 3037.9 | -135.5 | — |  |
 | 50 | 3186.9 | 3054.7 | -132.2 | 3054.7 | -132.2 | — |  |
 | 51 | 3187.8 | 3052.2 | -135.6 | 3052.2 | -135.6 | — |  |
@@ -91,8 +91,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-28 04:45:22`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s1tz_acenaphthylene/A_45187bb7c8/T/hess --disp 0.10 --out /root/s1tz_acenaphthylene/A_45187bb7c8/T/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:16`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\acenaphthylene\s1tz_acenaphthylene\A_45187bb7c8\T\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\acenaphthylene\s1tz_acenaphthylene\A_45187bb7c8\T\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

@@ -1,6 +1,6 @@
-# Quartic force field from 7 displaced Hessians — /root/s1tz_smoke_dpir_s1tz_dryrun/water/T/hess
+# Quartic force field from 7 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1_remainder_2026-10-28\s1tz_smoke_dpir_s1tz_dryrun\water\T\hess
 
-Reference file `ref.json`; 3 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 5.93e-16.
+Reference file `ref.json`; 3 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 6.46e-16.
 Harmonic ω (cm⁻¹): 1616.9, 3785.7, 3890.9
 
 ## Noise diagnostics
@@ -18,14 +18,16 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 | mode | ω | ν raw quartics | ν − ω | ν symmetry-averaged quartics | ν − ω | pyVPT2 ν | pair |
 |---|---|---|---|---|---|---|---|
-| 0 | 1616.9 | 1592.6 | -24.3 | 1592.6 | -24.3 | — |  |
+| 0 | 1616.9 | 1567.0 | -49.9 | 1567.0 | -49.9 | — |  |
 | 1 | 3785.7 | 3617.4 | -168.3 | 3617.4 | -168.3 | — |  |
-| 2 | 3890.9 | 3733.9 | -157.0 | 3733.9 | -157.0 | — |  |
+| 2 | 3890.9 | 3708.3 | -182.6 | 3708.3 | -182.6 | — |  |
 
 ## Provenance
 
-- timestamp_utc: `2026-10-19 19:17:09`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s1tz_smoke_dpir_s1tz_dryrun/water/T/hess --disp 0.10 --allow-noisy --out /root/s1tz_smoke_dpir_s1tz_dryrun/water/T/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:12`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1_remainder_2026-10-28\s1tz_smoke_dpir_s1tz_dryrun\water\T\hess --disp 0.10 --allow-noisy --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1_remainder_2026-10-28\s1tz_smoke_dpir_s1tz_dryrun\water\T\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

@@ -1,6 +1,6 @@
-# Quartic force field from 109 displaced Hessians — /root/s2/A_45187bb7c8/G/hess
+# Quartic force field from 109 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\A_45187bb7c8\G\hess
 
-Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.12e-14.
+Reference file `ref.json`; 54 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.22e-13.
 Harmonic ω (cm⁻¹): 166.3, 215.6, 233.6, 378.4, 423.5, 466.1, 471.9, 518.4, 559.7, 582.3, 621.8, 672.0, 683.1, 694.2, 748.6, 772.9, 796.0, 817.7, 862.0, 878.9, 914.4, 929.3, 931.8, 967.1, 977.4, 1031.5, 1043.5, 1065.4, 1115.5, 1117.8, 1188.2, 1213.2, 1235.5, 1255.2, 1282.6, 1348.5, 1398.4, 1437.8, 1463.7, 1473.8, 1505.7, 1532.6, 1559.6, 1650.8, 1667.1, 1676.5, 3181.0, 3181.6, 3190.2, 3191.1, 3204.8, 3205.9, 3226.9, 3246.8
 
 ## Noise diagnostics
@@ -25,13 +25,13 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 4 | 423.5 | 419.4 | -4.1 | 419.4 | -4.1 | — |  |
 | 5 | 466.1 | 458.2 | -8.0 | 458.2 | -8.0 | — |  |
 | 6 | 471.9 | 466.8 | -5.2 | 466.8 | -5.2 | — |  |
-| 7 | 518.4 | 512.8 | -5.7 | 512.8 | -5.7 | — |  |
+| 7 | 518.4 | 512.7 | -5.7 | 512.7 | -5.7 | — |  |
 | 8 | 559.7 | 553.6 | -6.1 | 553.6 | -6.1 | — |  |
 | 9 | 582.3 | 576.6 | -5.7 | 576.6 | -5.7 | — |  |
 | 10 | 621.8 | 611.1 | -10.7 | 611.1 | -10.7 | — |  |
 | 11 | 672.0 | 663.8 | -8.3 | 663.8 | -8.3 | — |  |
 | 12 | 683.1 | 668.3 | -14.8 | 668.3 | -14.8 | — |  |
-| 13 | 694.2 | 685.9 | -8.4 | 685.9 | -8.4 | — |  |
+| 13 | 694.2 | 685.8 | -8.4 | 685.8 | -8.4 | — |  |
 | 14 | 748.6 | 734.6 | -14.0 | 734.6 | -14.0 | — |  |
 | 15 | 772.9 | 759.8 | -13.1 | 759.8 | -13.1 | — |  |
 | 16 | 796.0 | 781.0 | -15.0 | 781.0 | -15.0 | — |  |
@@ -44,7 +44,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 23 | 967.1 | 963.3 | -3.8 | 963.3 | -3.8 | — |  |
 | 24 | 977.4 | 968.8 | -8.6 | 968.8 | -8.6 | — |  |
 | 25 | 1031.5 | 1016.7 | -14.8 | 1016.7 | -14.8 | — |  |
-| 26 | 1043.5 | 1027.5 | -15.9 | 1027.5 | -15.9 | — |  |
+| 26 | 1043.5 | 1027.6 | -15.9 | 1027.6 | -15.9 | — |  |
 | 27 | 1065.4 | 1048.7 | -16.8 | 1048.7 | -16.8 | — |  |
 | 28 | 1115.5 | 1098.6 | -16.9 | 1098.6 | -16.9 | — |  |
 | 29 | 1117.8 | 1101.1 | -16.7 | 1101.1 | -16.7 | — |  |
@@ -62,8 +62,8 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 41 | 1532.6 | 1499.8 | -32.9 | 1499.8 | -32.9 | — |  |
 | 42 | 1559.6 | 1526.6 | -32.9 | 1526.6 | -32.9 | — |  |
 | 43 | 1650.8 | 1614.6 | -36.2 | 1614.6 | -36.2 | — |  |
-| 44 | 1667.1 | 1631.4 | -35.8 | 1631.4 | -35.8 | — |  |
-| 45 | 1676.5 | 1638.3 | -38.2 | 1638.3 | -38.2 | — |  |
+| 44 | 1667.1 | 1631.4 | -35.7 | 1631.4 | -35.7 | — |  |
+| 45 | 1676.5 | 1638.2 | -38.3 | 1638.2 | -38.3 | — |  |
 | 46 | 3181.0 | 3042.5 | -138.5 | 3042.5 | -138.5 | — |  |
 | 47 | 3181.6 | 3043.9 | -137.7 | 3043.9 | -137.7 | — |  |
 | 48 | 3190.2 | 3052.3 | -137.9 | 3052.3 | -137.9 | — |  |
@@ -75,8 +75,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-15 09:47:36`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s2/A_45187bb7c8/G/hess --disp 0.10 --out /root/s2/A_45187bb7c8/G/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:22`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\A_45187bb7c8\G\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\A_45187bb7c8\G\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

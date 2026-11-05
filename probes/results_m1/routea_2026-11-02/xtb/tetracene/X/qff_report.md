@@ -1,6 +1,6 @@
-# Quartic force field from 169 displaced Hessians — probes/results_m1/routea_2026-11-02/xtb/tetracene/X/hess
+# Quartic force field from 169 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\routea_2026-11-02\xtb\tetracene\X\hess
 
-Reference file `ref.json`; 84 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.92e-14.
+Reference file `ref.json`; 84 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.21e-12.
 Harmonic ω (cm⁻¹): 50.0, 79.8, 135.0, 162.4, 173.7, 243.6, 294.9, 295.7, 316.3, 335.1, 426.5, 431.2, 437.7, 449.4, 473.4, 474.7, 524.7, 537.3, 588.5, 588.9, 592.4, 678.0, 713.5, 727.2, 738.1, 759.9, 761.6, 778.3, 794.5, 823.7, 860.3, 861.3, 863.0, 863.1, 872.8, 872.9, 888.4, 905.4, 916.1, 916.6, 925.9, 925.9, 1065.7, 1066.8, 1141.5, 1154.5, 1156.3, 1176.4, 1180.6, 1180.8, 1207.4, 1219.6, 1254.9, 1269.5, 1275.8, 1307.3, 1318.2, 1329.5, 1360.2, 1382.7, 1412.5, 1429.6, 1436.9, 1450.1, 1461.1, 1515.3, 1533.0, 1540.7, 1572.3, 1574.9, 1622.1, 1623.0, 3062.1, 3062.2, 3064.9, 3065.8, 3067.7, 3068.5, 3069.6, 3071.1, 3079.2, 3079.4, 3088.6, 3089.3
 
 ## Noise diagnostics
@@ -209,8 +209,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-11-02 12:48:49`
+- timestamp_utc: `2026-11-04 07:38:05`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/routea_2026-11-02/xtb/tetracene/X/hess --disp 0.10 --out probes/results_m1/routea_2026-11-02/xtb/tetracene/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\routea_2026-11-02\xtb\tetracene\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\routea_2026-11-02\xtb\tetracene\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

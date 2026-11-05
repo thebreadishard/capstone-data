@@ -1,6 +1,6 @@
-# Quartic force field from 73 displaced Hessians — /root/s2/A_a848c04a21/G/hess
+# Quartic force field from 73 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\A_a848c04a21\G\hess
 
-Reference file `ref.json`; 36 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 9.49e-15.
+Reference file `ref.json`; 36 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 2.16e-14.
 Harmonic ω (cm⁻¹): 146.3, 158.4, 377.7, 413.3, 472.3, 531.5, 548.2, 578.5, 627.4, 636.8, 706.1, 776.6, 777.8, 858.2, 931.2, 969.2, 998.3, 1016.6, 1056.3, 1109.7, 1193.7, 1210.2, 1232.3, 1330.9, 1364.6, 1489.7, 1539.9, 1629.0, 1660.0, 2225.3, 3186.5, 3195.6, 3206.7, 3215.5, 3219.2, 3496.3
 
 ## Noise diagnostics
@@ -24,7 +24,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 3 | 413.3 | 406.7 | -6.6 | 406.7 | -6.6 | — |  |
 | 4 | 472.3 | 467.1 | -5.2 | 467.1 | -5.2 | — |  |
 | 5 | 531.5 | 534.6 | +3.1 | 534.6 | +3.1 | — |  |
-| 6 | 548.2 | 595.2 | +47.0 | 595.2 | +47.0 | — |  |
+| 6 | 548.2 | 595.1 | +47.0 | 595.1 | +47.0 | — |  |
 | 7 | 578.5 | 604.7 | +26.3 | 604.7 | +26.3 | — |  |
 | 8 | 627.4 | 672.5 | +45.1 | 672.5 | +45.1 | — |  |
 | 9 | 636.8 | 634.3 | -2.5 | 634.3 | -2.5 | — |  |
@@ -47,7 +47,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 26 | 1539.9 | 1508.6 | -31.3 | 1508.6 | -31.3 | — |  |
 | 27 | 1629.0 | 1591.3 | -37.7 | 1591.3 | -37.7 | — |  |
 | 28 | 1660.0 | 1620.4 | -39.6 | 1620.4 | -39.6 | — |  |
-| 29 | 2225.3 | 2186.4 | -38.8 | 2186.4 | -38.8 | — |  |
+| 29 | 2225.3 | 2186.4 | -38.9 | 2186.4 | -38.9 | — |  |
 | 30 | 3186.5 | 3045.8 | -140.6 | 3045.8 | -140.6 | — |  |
 | 31 | 3195.6 | 3055.7 | -139.9 | 3055.7 | -139.9 | — |  |
 | 32 | 3206.7 | 3072.8 | -133.9 | 3072.8 | -133.9 | — |  |
@@ -57,8 +57,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-15 14:50:42`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s2/A_a848c04a21/G/hess --disp 0.10 --out /root/s2/A_a848c04a21/G/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:29`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\A_a848c04a21\G\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_anharmonic_2026-10-18\s2\A_a848c04a21\G\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

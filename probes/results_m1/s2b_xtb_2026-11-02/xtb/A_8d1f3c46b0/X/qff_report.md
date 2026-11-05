@@ -1,6 +1,6 @@
-# Quartic force field from 121 displaced Hessians — probes/results_m1/s2b_xtb_2026-11-02/xtb/A_8d1f3c46b0/X/hess
+# Quartic force field from 121 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2b_xtb_2026-11-02\xtb\A_8d1f3c46b0\X\hess
 
-Reference file `ref.json`; 60 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.04e-14.
+Reference file `ref.json`; 60 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 3.55e-14.
 Harmonic ω (cm⁻¹): 99.6, 152.4, 213.0, 220.1, 410.8, 413.1, 430.9, 445.1, 481.6, 526.7, 528.9, 580.8, 626.2, 679.5, 710.1, 770.3, 793.6, 809.9, 811.8, 825.9, 881.2, 891.3, 920.4, 927.1, 990.6, 1011.7, 1037.9, 1049.6, 1089.8, 1109.9, 1120.6, 1183.2, 1185.3, 1194.1, 1219.3, 1237.0, 1240.4, 1251.8, 1279.5, 1360.3, 1370.3, 1398.2, 1449.0, 1452.9, 1473.5, 1475.6, 1503.5, 1595.7, 1615.4, 1621.7, 2954.5, 2970.9, 2980.7, 2988.5, 3066.0, 3067.0, 3074.9, 3076.6, 3082.8, 3085.5
 
 ## Noise diagnostics
@@ -77,12 +77,14 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 56 | 3074.9 | 2919.1 | -155.8 | 2919.1 | -155.8 | — |  |
 | 57 | 3076.6 | 2919.3 | -157.3 | 2919.3 | -157.3 | — |  |
 | 58 | 3082.8 | 2924.4 | -158.3 | 2924.4 | -158.3 | — |  |
-| 59 | 3085.5 | 2927.2 | -158.3 | 2927.2 | -158.3 | — |  |
+| 59 | 3085.5 | 2927.2 | -158.2 | 2927.2 | -158.2 | — |  |
 
 ## Provenance
 
-- timestamp_utc: `2026-11-02 23:29:20`
+- timestamp_utc: `2026-11-04 07:39:17`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/s2b_xtb_2026-11-02/xtb/A_8d1f3c46b0/X/hess --disp 0.10 --out probes/results_m1/s2b_xtb_2026-11-02/xtb/A_8d1f3c46b0/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2b_xtb_2026-11-02\xtb\A_8d1f3c46b0\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2b_xtb_2026-11-02\xtb\A_8d1f3c46b0\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

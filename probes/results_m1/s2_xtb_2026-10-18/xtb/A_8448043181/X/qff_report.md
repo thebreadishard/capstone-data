@@ -1,6 +1,6 @@
-# Quartic force field from 61 displaced Hessians — probes/results_m1/s2_xtb_2026-10-18/xtb/A_8448043181/X/hess
+# Quartic force field from 61 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_8448043181\X\hess
 
-Reference file `ref.json`; 30 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 5.04e-15.
+Reference file `ref.json`; 30 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 1.11e-14.
 Harmonic ω (cm⁻¹): 368.5, 368.5, 579.3, 579.3, 657.8, 692.7, 882.2, 882.2, 930.6, 930.6, 937.0, 957.3, 1067.3, 1090.7, 1090.7, 1176.2, 1198.5, 1198.5, 1304.5, 1320.2, 1461.0, 1461.0, 1600.6, 1600.6, 3068.4, 3072.0, 3072.0, 3084.0, 3084.0, 3092.7
 
 ## Noise diagnostics
@@ -71,8 +71,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-18 15:48:04`
+- timestamp_utc: `2026-11-04 07:38:53`
 - host: `Asus18`
-- python: `3.13.15`
-- numpy: `2.5.3`
-- command: `qff.py probes/results_m1/s2_xtb_2026-10-18/xtb/A_8448043181/X/hess --disp 0.10 --out probes/results_m1/s2_xtb_2026-10-18/xtb/A_8448043181/X/qff_report.md`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_8448043181\X\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s2_xtb_2026-10-18\xtb\A_8448043181\X\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

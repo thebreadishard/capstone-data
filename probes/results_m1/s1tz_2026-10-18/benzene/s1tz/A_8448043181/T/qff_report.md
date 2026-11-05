@@ -1,6 +1,6 @@
-# Quartic force field from 61 displaced Hessians — /root/s1tz/A_8448043181/T/hess
+# Quartic force field from 61 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\benzene\s1tz\A_8448043181\T\hess
 
-Reference file `ref.json`; 30 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 5.10e-15.
+Reference file `ref.json`; 30 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 7.44e-14.
 Harmonic ω (cm⁻¹): 412.9, 413.3, 624.0, 624.6, 689.1, 717.4, 862.6, 862.7, 963.1, 963.2, 992.3, 1015.7, 1029.2, 1061.7, 1061.8, 1176.6, 1199.7, 1199.8, 1336.3, 1388.5, 1518.1, 1518.2, 1637.0, 1637.3, 3160.6, 3170.1, 3170.1, 3185.5, 3185.6, 3195.4
 
 ## Noise diagnostics
@@ -69,8 +69,10 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 
 ## Provenance
 
-- timestamp_utc: `2026-10-18 21:18:18`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s1tz/A_8448043181/T/hess --disp 0.10 --out /root/s1tz/A_8448043181/T/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:17`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\benzene\s1tz\A_8448043181\T\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\benzene\s1tz\A_8448043181\T\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`

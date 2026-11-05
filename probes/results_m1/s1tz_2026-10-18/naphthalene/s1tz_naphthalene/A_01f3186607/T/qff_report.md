@@ -1,6 +1,6 @@
-# Quartic force field from 97 displaced Hessians — /root/s1tz_naphthalene/A_01f3186607/T/hess
+# Quartic force field from 97 displaced Hessians — C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\naphthalene\s1tz_naphthalene\A_01f3186607\T\hess
 
-Reference file `ref.json`; 48 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 9.07e-15.
+Reference file `ref.json`; 48 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 4.34e-14.
 Harmonic ω (cm⁻¹): 173.5, 186.9, 367.1, 396.5, 481.5, 488.9, 520.0, 521.7, 632.6, 637.5, 728.8, 775.8, 788.6, 799.9, 811.3, 847.9, 901.4, 946.2, 955.4, 962.3, 967.7, 973.6, 1037.4, 1047.7, 1153.9, 1171.0, 1173.9, 1187.1, 1234.2, 1274.7, 1291.2, 1393.7, 1398.0, 1424.1, 1495.5, 1496.3, 1551.1, 1614.4, 1642.3, 1670.1, 3160.2, 3162.0, 3164.2, 3167.5, 3178.2, 3179.4, 3190.9, 3191.9
 
 ## Noise diagnostics
@@ -33,7 +33,7 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 12 | 788.6 | 881.7 | +93.1 | 881.7 | +93.1 | — |  |
 | 13 | 799.9 | 808.2 | +8.3 | 808.2 | +8.3 | — |  |
 | 14 | 811.3 | 802.0 | -9.4 | 802.0 | -9.4 | — |  |
-| 15 | 847.9 | 867.9 | +19.9 | 867.9 | +19.9 | — |  |
+| 15 | 847.9 | 867.9 | +20.0 | 867.9 | +20.0 | — |  |
 | 16 | 901.4 | 943.0 | +41.6 | 943.0 | +41.6 | — |  |
 | 17 | 946.2 | 1050.4 | +104.2 | 1050.4 | +104.2 | — |  |
 | 18 | 955.4 | 945.0 | -10.4 | 945.0 | -10.4 | — |  |
@@ -64,13 +64,15 @@ Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite
 | 43 | 3167.5 | 3031.7 | -135.8 | 3031.7 | -135.8 | — |  |
 | 44 | 3178.2 | 3042.7 | -135.5 | 3042.7 | -135.5 | — |  |
 | 45 | 3179.4 | 3043.2 | -136.2 | 3043.2 | -136.2 | — |  |
-| 46 | 3190.9 | 3054.3 | -136.7 | 3054.3 | -136.7 | — |  |
+| 46 | 3190.9 | 3054.2 | -136.7 | 3054.2 | -136.7 | — |  |
 | 47 | 3191.9 | 3055.8 | -136.1 | 3055.8 | -136.1 | — |  |
 
 ## Provenance
 
-- timestamp_utc: `2026-10-22 22:26:49`
-- host: `ubuntu-32gb-hel1-6`
-- python: `3.12.15`
-- numpy: `2.5.4`
-- command: `qff.py /root/s1tz_naphthalene/A_01f3186607/T/hess --disp 0.10 --out /root/s1tz_naphthalene/A_01f3186607/T/qff_report.md`
+- timestamp_utc: `2026-11-04 07:38:18`
+- host: `Asus18`
+- python: `3.14.6`
+- numpy: `2.5.1`
+- command: `qff.py C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\naphthalene\s1tz_naphthalene\A_01f3186607\T\hess --disp 0.10 --out C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\s1tz_2026-10-18\naphthalene\s1tz_naphthalene\A_01f3186607\T\qff_report.md`
+- commit: `648a001eb6cfa32df774b73c6e2f0d91dadb87c4`
+- dirty: `yes`
