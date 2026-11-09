@@ -1,0 +1,49 @@
+# Quartic force field from 43 displaced Hessians — /root/s2b/B_052693bd01/G/hess
+
+Reference file `ref.json`; 21 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 6.23e-15.
+Harmonic ω (cm⁻¹): 179.2, 180.0, 502.7, 560.3, 579.5, 636.5, 700.2, 794.7, 846.9, 930.3, 990.2, 1092.2, 1153.0, 1245.9, 1278.1, 1349.1, 1572.5, 1597.7, 2364.4, 3311.0, 3327.6
+
+## Noise diagnostics
+
+Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite-difference routes (displace j and read H_ii; displace i and read H_jj). Their difference is a direct estimate of the numerical error of that constant. Exactly degenerate pairs (a, b) must give equal φ_aa,jj and φ_bb,jj for every totally symmetric j; their difference is a second estimate.
+
+- route disagreement |φ_iijj(a) − φ_iijj(b)|: median 0.1, 90th percentile 0.4, max 4.3 cm⁻¹ (max |φ_iijj| 711.8)
+- cubic route spread (max − min of the three routes): median 0.06, max 1.8 cm⁻¹
+- totally symmetric modes (|φ_iii| > 5 cm⁻¹, non-degenerate): [(3, 560.3), (4, 579.5), (9, 930.3), (10, 990.2), (11, 1092.2), (12, 1153.0), (13, 1245.9), (14, 1278.1), (15, 1349.1), (16, 1572.5), (17, 1597.7), (18, 2364.4), (19, 3311.0), (20, 3327.6)]
+
+| degenerate pair (ω) | j (ω) | φ_aa,jj | φ_bb,jj | difference | route disagreement a / b |
+|---|---|---|---|---|---|
+
+## VPT2 fundamentals (deperturbation window 200.0 cm⁻¹, min K 0.0; 354 resonances deperturbed; polyad diagonalisation not applied)
+
+| mode | ω | ν raw quartics | ν − ω | ν symmetry-averaged quartics | ν − ω | pyVPT2 ν | pair |
+|---|---|---|---|---|---|---|---|
+| 0 | 179.2 | 178.9 | -0.3 | 178.9 | -0.3 | — |  |
+| 1 | 180.0 | 177.3 | -2.7 | 177.3 | -2.7 | — |  |
+| 2 | 502.7 | 492.0 | -10.6 | 492.0 | -10.6 | — |  |
+| 3 | 560.3 | 553.7 | -6.6 | 553.7 | -6.6 | — |  |
+| 4 | 579.5 | 573.0 | -6.5 | 573.0 | -6.5 | — |  |
+| 5 | 636.5 | 624.9 | -11.6 | 624.9 | -11.6 | — |  |
+| 6 | 700.2 | 687.5 | -12.7 | 687.5 | -12.7 | — |  |
+| 7 | 794.7 | 780.0 | -14.7 | 780.0 | -14.7 | — |  |
+| 8 | 846.9 | 830.2 | -16.8 | 830.2 | -16.8 | — |  |
+| 9 | 930.3 | 916.8 | -13.6 | 916.8 | -13.6 | — |  |
+| 10 | 990.2 | 975.5 | -14.7 | 975.5 | -14.7 | — |  |
+| 11 | 1092.2 | 1064.1 | -28.0 | 1064.1 | -28.0 | — |  |
+| 12 | 1153.0 | 1114.9 | -38.1 | 1114.9 | -38.1 | — |  |
+| 13 | 1245.9 | 1222.2 | -23.7 | 1222.2 | -23.7 | — |  |
+| 14 | 1278.1 | 1249.1 | -29.1 | 1249.1 | -29.1 | — |  |
+| 15 | 1349.1 | 1319.3 | -29.8 | 1319.3 | -29.8 | — |  |
+| 16 | 1572.5 | 1537.2 | -35.3 | 1537.2 | -35.3 | — |  |
+| 17 | 1597.7 | 1563.9 | -33.8 | 1563.9 | -33.8 | — |  |
+| 18 | 2364.4 | 2330.9 | -33.5 | 2330.9 | -33.5 | — |  |
+| 19 | 3311.0 | 3172.8 | -138.3 | 3172.8 | -138.3 | — |  |
+| 20 | 3327.6 | 3190.2 | -137.4 | 3190.2 | -137.4 | — |  |
+
+## Provenance
+
+- timestamp_utc: `2026-11-04 23:45:24`
+- host: `ubuntu-32gb-hel1-5`
+- python: `3.12.16`
+- numpy: `2.5.4`
+- command: `qff.py /root/s2b/B_052693bd01/G/hess --disp 0.10 --out /root/s2b/B_052693bd01/G/qff_report.md`

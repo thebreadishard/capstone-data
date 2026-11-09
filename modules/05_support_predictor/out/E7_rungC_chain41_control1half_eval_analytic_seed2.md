@@ -1,11 +1,11 @@
-# Saved model read on the hold-outs (2026-11-08 20:48)
+# Saved model read on the hold-outs (2026-11-09 18:09)
 
-Model `E7_rungC_chain41_control1half_model_n978_seed2.pt` ({'pattern': 'f', 'aux_mode': 'both', 'aux_target': 'projected', 'n': 978, 'seed': 2}); APTs on 528 molecules.
+Model `E7_rungC_chain41_control1half_model_n978_seed2.pt` ({'pattern': 'f', 'aux_mode': 'both', 'aux_target': 'projected', 'n': 978, 'seed': 2}); APTs on 526 molecules.
 
 | hold-out | n | ring-coupling ratio | ω rms (cm⁻¹) | ΔH residual | spectrum overlap (zero rule) | intensity rel. rms (zero rule) | with APT |
 |---|---|---|---|---|---|---|---|
 | (a) | 10 | 0.178 | 2.28 | 0.120 | 0.981 (0.270) | 0.15 (0.59) | 10 |
-| (b) | 39 | 0.241 | 2.98 | 0.179 | 0.972 (0.366) | 0.37 (1.25) | 31 |
+| (b) | 40 | 0.242 | 2.97 | 0.179 | 0.972 (0.366) | 0.37 (1.25) | 31 |
 | (b+) | 30 | 0.298 | 2.80 | 0.243 | — | — | 0 |
 | (s5) | 14 | 0.378 | 2.67 | 0.279 | 0.977 (0.322) | 0.55 (1.39) | 14 |
 
@@ -69,4 +69,4 @@ Per molecule with an APT:
 | P3_86e3432c8b (s5) | 0.28 | 2.51 | 0.936 | 0.222 | 0.67 | 0.43 | 102 |
 | P3_a48efac7c7 (s5) | 0.454 | 2.28 | 0.984 | 0.325 | 0.50 | 0.78 | 90 |
 
-103 s.
+111 s.

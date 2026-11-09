@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/e8_cc_hessian_fd.py", line 665, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/e8_cc_hessian_fd.py", line 661, in main
+    return run(a, log)
+           ^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/e8_cc_hessian_fd.py", line 643, in run
+    G, ediag = displaced_rows(job, ks, ref)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/e8_cc_hessian_fd.py", line 533, in displaced_rows
+    gs = displaced_pair(job, k, ref.energy)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/theb=== (AOC) pyridine_cc_tz: FAILED 2026-11-09 08:13:32
+=== (AOC) benzene_mp2_ccpvtz_k2: start 2026-11-09 08:13:32
+[08:17:23] mp2 cc-pvtz k=2: H_kk +0.125256 (230 s)
+→ probes/results_m1/anchor_oop_checks_2026-11-05/mp2_rows_benzene_planeframe_ccpvtz_k02.npz (1 displacements)
+=== (AOC) benzene_mp2_ccpvtz_k2: done 2026-11-09 08:17:23
+=== (AOC) benzene_mp2_ccpvtz_k20: start 2026-11-09 08:17:23
+[08:21:12] mp2 cc-pvtz k=20: H_kk +0.026582 (228 s)
+→ probes/results_m1/anchor_oop_checks_2026-11-05/mp2_rows_benzene_planeframe_ccpvtz_k20.npz (1 displacements)
+=== (AOC) benzene_mp2_ccpvtz_k20: done 2026-11-09 08:21:12
+→ probes/results_m1/anchor_oop_checks_2026-11-05/mp2_rows_benzene_planeframe_ccpvtz.npz: 2 displacements [2, 20] from 2 files
+=== (AOC) benzene_mp2_tz: done 2026-11-09 08:21:12
+=== (AOC) benzene_mp2_ccpvqz_k2: start 2026-11-09 08:21:12
+KILLED: over the cap of 12800 MB, or stopped from outside: journalctl -b | grep -E 'oom-kill|Killed process' tells which
+t2, l1, l2, eris)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/grad/ccsd.py", line 443, in kernel
+    de = self.grad_elec(t1, t2, l1, l2, eris, atmlst, verbose=log)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/grad/ccsd_t.py", line 38, in grad_elec
+    de = ccsd_grad.grad_elec(cc_grad, t1, t2, l1, l2, eris, atmlst,
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc05/lib/python3.12/site-packages/pyscf/grad/ccsd.py", line 107, in grad_elec
+    Imat += lib.einsum('ipx,iqx->pq', eri0.reshape(nf,nao,-1), dm2buf)
+                                      ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: cannot reshape array of size 0 into shape (0,250,newaxis)
+Terminated                 systemd-run "${MODE[@]}" --scope --quiet -p MemoryMax="${CAP}M" -p MemorySwapMax=0 "$@"

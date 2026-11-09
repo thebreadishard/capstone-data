@@ -1,0 +1,22 @@
+=== (S1) start: 1 settings, step 0.10, 5 threads, geometry modules/05_support_predictor/corpus/molecules/P3_97c2db1a08/geometry.json 2026-11-02 07:00:56
+=== (S1) G: optimising (B3LYP/6-31g*, grid 75,302) 2026-11-02 07:00:56
+optimising: pyscf's own log in /root/s2b/P3_97c2db1a08/G/refstub/pyscf.log
+  BFGS evaluation 1: E = -631.7956164926, max |g_internal| = 4.7e-04, 213 s
+  BFGS evaluation 2: E = -631.7956178612, max |g_internal| = 1.6e-04, 223 s
+  BFGS evaluation 3: E = -631.7956181453, max |g_internal| = 1.4e-04, 219 s
+  BFGS evaluation 4: E = -631.7956185700, max |g_internal| = 1.5e-04, 220 s
+  BFGS evaluation 5: E = -631.7956188867, max |g_internal| = 1.2e-04, 214 s
+  BFGS evaluation 6: E = -631.7956189965, max |g_internal| = 5.1e-05, 219 s
+BFGS: E = -631.7956189965, max |g_internal| = 5.1e-05 after 6 evaluations
+  Newton 0: E = -631.7956189965, max |g_internal| = 5.1e-05, net force 3.8e-05
+  Newton 1: E = -631.7956190643, max |g_internal| = 1.3e-06, net force 3.8e-05
+  Newton 2: E = -631.7956190648, max |g_internal| = 2.1e-08, net force 3.8e-05
+[10:43:02] start 1/1 ref.json
+[11:47:53] 1/1 ref.json E = -631.79561906 in 3891 s
+done: 1 Hessians in 64.9 min
+139 stubs in /root/s2b/P3_97c2db1a08/G/stubs; step 0.1; omega (cm-1): 101.7, 157.2, 216.6, 251.6, 267.0, 356.1, 393.9, 408.7, 467.1, 503.2, 508.3, 512.1, 519.4, 536.0, 573.6, 601.4, 612.4, 692.8, 695.1, 737.5, 759.8, 775.5, 817.3, 826.7, 832.4, 837.1, 860.3, 911.7, 918.6, 953.7, 974.0, 980.0, 988.2, 1000.9, 1029.5, 1109.5, 1141.5, 1175.0, 1179.5, 1185.7, 1213.4, 1246.5, 1276.3, 1289.6, 1294.2, 1337.7, 1366.8, 1407.7, 1432.8, 1450.6, 1469.9, 1479.2, 1498.8, 1503.4, 1544.9, 1599.6, 1636.2, 1642.6, 1654.9, 1685.8, 3160.5, 3164.8, 3181.7, 3182.0, 3183.8, 3191.3, 3200.1, 3200.5, 3208.0
+=== (S1) G: 139 Hessians to compute 2026-11-02 11:47:54
+[11:47:54] start 1/139 mode00_m.json
+[12:37:28] 1/139 mode00_m.json E = -631.79561715 in 2974 s
+STOP: the first Hessian took 2974 s > 2959 s — re-price before the rest
+=== (S1) G: STOPPED by the stop rule or a failure (first displaced Hessian > 2959 s?) — re-price 2026-11-02 12:37:29
