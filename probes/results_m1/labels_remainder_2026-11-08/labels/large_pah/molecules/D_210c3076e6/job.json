@@ -1,0 +1,252 @@
+{
+ "id": "D_210c3076e6",
+ "layer": "D",
+ "xyz_angstrom": [
+  [
+   "C",
+   -1.592067,
+   0.735011,
+   0.0
+  ],
+  [
+   "C",
+   -0.344448,
+   1.431539,
+   0.0
+  ],
+  [
+   "C",
+   0.895271,
+   0.713885,
+   0.0
+  ],
+  [
+   "C",
+   0.895278,
+   -0.713883,
+   0.0
+  ],
+  [
+   "C",
+   2.128669,
+   -1.418617,
+   0.0
+  ],
+  [
+   "C",
+   3.343366,
+   -0.687454,
+   0.0
+  ],
+  [
+   "C",
+   3.343366,
+   0.687452,
+   0.0
+  ],
+  [
+   "C",
+   2.128674,
+   1.418621,
+   0.0
+  ],
+  [
+   "C",
+   2.114048,
+   2.850303,
+   0.0
+  ],
+  [
+   "C",
+   0.939597,
+   3.541108,
+   0.0
+  ],
+  [
+   "C",
+   -0.322984,
+   2.86135,
+   0.0
+  ],
+  [
+   "C",
+   -1.538075,
+   3.570573,
+   0.0
+  ],
+  [
+   "C",
+   -2.744748,
+   2.888836,
+   0.0
+  ],
+  [
+   "C",
+   -2.770693,
+   1.491021,
+   0.0
+  ],
+  [
+   "C",
+   -1.592057,
+   -0.735013,
+   0.0
+  ],
+  [
+   "C",
+   -0.344453,
+   -1.431537,
+   0.0
+  ],
+  [
+   "C",
+   2.11405,
+   -2.850309,
+   0.0
+  ],
+  [
+   "C",
+   0.939605,
+   -3.541111,
+   0.0
+  ],
+  [
+   "C",
+   -0.322985,
+   -2.861351,
+   0.0
+  ],
+  [
+   "C",
+   -1.538066,
+   -3.570571,
+   0.0
+  ],
+  [
+   "C",
+   -2.744748,
+   -2.888829,
+   0.0
+  ],
+  [
+   "C",
+   -2.770695,
+   -1.491026,
+   0.0
+  ],
+  [
+   "H",
+   -3.681452,
+   3.439832,
+   0.0
+  ],
+  [
+   "H",
+   -1.517249,
+   4.657681,
+   0.0
+  ],
+  [
+   "H",
+   0.938895,
+   4.628491,
+   0.0
+  ],
+  [
+   "H",
+   4.282736,
+   -1.235316,
+   0.0
+  ],
+  [
+   "H",
+   4.282738,
+   1.235313,
+   0.0
+  ],
+  [
+   "H",
+   3.064853,
+   3.378125,
+   0.0
+  ],
+  [
+   "H",
+   -3.681441,
+   -3.439844,
+   0.0
+  ],
+  [
+   "H",
+   3.064863,
+   -3.378113,
+   0.0
+  ],
+  [
+   "H",
+   0.938889,
+   -4.628494,
+   0.0
+  ],
+  [
+   "H",
+   -1.517255,
+   -4.65768,
+   0.0
+  ],
+  [
+   "H",
+   -3.735505,
+   0.996157,
+   0.0
+  ],
+  [
+   "H",
+   -3.735497,
+   -0.996145,
+   0.0
+  ]
+ ],
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 8,
+  "memory_gb": 24,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "out_dir": "/root/labels/large_pah/molecules/D_210c3076e6",
+ "optimise": true,
+ "grid_check": false,
+ "hessians": false,
+ "source": {
+  "pahdb_uid": 284,
+  "formula": "C22H12",
+  "name": "",
+  "skeleton": "C1CC2CCC3CCC4CCC5CCCC6C(C1)C2C3C4C56"
+ }
+}

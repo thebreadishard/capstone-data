@@ -1,0 +1,312 @@
+{
+ "id": "D_d9fa7459f3",
+ "layer": "D",
+ "xyz_angstrom": [
+  [
+   "H",
+   -4.479857,
+   0.892712,
+   0.478277
+  ],
+  [
+   "H",
+   -3.901284,
+   3.253303,
+   0.589738
+  ],
+  [
+   "H",
+   0.334973,
+   -2.437978,
+   -0.624364
+  ],
+  [
+   "H",
+   1.871295,
+   4.132228,
+   -0.322132
+  ],
+  [
+   "H",
+   0.101138,
+   5.782432,
+   -0.002937
+  ],
+  [
+   "H",
+   -2.246556,
+   5.057122,
+   0.374431
+  ],
+  [
+   "H",
+   5.016243,
+   1.196475,
+   -0.900168
+  ],
+  [
+   "H",
+   3.198088,
+   2.817773,
+   -0.853806
+  ],
+  [
+   "H",
+   -5.438242,
+   -3.384934,
+   -0.040297
+  ],
+  [
+   "H",
+   -3.624826,
+   -4.987491,
+   -0.650653
+  ],
+  [
+   "H",
+   -1.284808,
+   -4.18863,
+   -0.809885
+  ],
+  [
+   "H",
+   -4.936958,
+   -1.035419,
+   0.364022
+  ],
+  [
+   "H",
+   1.387067,
+   -2.470492,
+   1.135334
+  ],
+  [
+   "H",
+   3.292097,
+   -3.965322,
+   1.38604
+  ],
+  [
+   "H",
+   5.556895,
+   -3.289896,
+   0.576081
+  ],
+  [
+   "H",
+   5.882343,
+   -1.01195,
+   -0.352045
+  ],
+  [
+   "C",
+   -1.086098,
+   0.583629,
+   0.071844
+  ],
+  [
+   "C",
+   -0.036378,
+   -0.397649,
+   -0.085366
+  ],
+  [
+   "C",
+   1.36751,
+   0.035672,
+   -0.069622
+  ],
+  [
+   "C",
+   1.652796,
+   1.397051,
+   -0.279237
+  ],
+  [
+   "C",
+   0.591461,
+   2.40193,
+   -0.150766
+  ],
+  [
+   "C",
+   -0.752842,
+   1.977056,
+   0.078705
+  ],
+  [
+   "C",
+   -3.441134,
+   1.184794,
+   0.376193
+  ],
+  [
+   "C",
+   -2.445131,
+   0.179701,
+   0.165374
+  ],
+  [
+   "C",
+   -1.779637,
+   2.953365,
+   0.259491
+  ],
+  [
+   "C",
+   -3.123618,
+   2.509254,
+   0.435673
+  ],
+  [
+   "C",
+   -2.797437,
+   -1.210687,
+   0.008928
+  ],
+  [
+   "C",
+   -1.759988,
+   -2.138826,
+   -0.310406
+  ],
+  [
+   "C",
+   -0.412495,
+   -1.703801,
+   -0.350966
+  ],
+  [
+   "C",
+   0.858875,
+   3.775169,
+   -0.176075
+  ],
+  [
+   "C",
+   -0.150468,
+   4.72557,
+   0.017007
+  ],
+  [
+   "C",
+   -1.456047,
+   4.324384,
+   0.232989
+  ],
+  [
+   "C",
+   2.474494,
+   -0.882786,
+   0.130216
+  ],
+  [
+   "C",
+   3.802195,
+   -0.458456,
+   -0.202477
+  ],
+  [
+   "C",
+   4.014048,
+   0.884714,
+   -0.616498
+  ],
+  [
+   "C",
+   2.99019,
+   1.787673,
+   -0.590394
+  ],
+  [
+   "C",
+   -4.412789,
+   -3.034907,
+   -0.12204
+  ],
+  [
+   "C",
+   -3.386486,
+   -3.943688,
+   -0.465774
+  ],
+  [
+   "C",
+   -2.087573,
+   -3.499832,
+   -0.5573
+  ],
+  [
+   "C",
+   -4.124389,
+   -1.705578,
+   0.106411
+  ],
+  [
+   "C",
+   2.345698,
+   -2.163725,
+   0.737471
+  ],
+  [
+   "C",
+   3.429489,
+   -3.00336,
+   0.899489
+  ],
+  [
+   "C",
+   4.71293,
+   -2.615214,
+   0.462141
+  ],
+  [
+   "C",
+   4.891557,
+   -1.354774,
+   -0.062949
+  ]
+ ],
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 8,
+  "memory_gb": 24,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "out_dir": "/root/labels/large_pah/molecules/D_d9fa7459f3",
+ "optimise": true,
+ "grid_check": false,
+ "hessians": false,
+ "source": {
+  "pahdb_uid": 2221,
+  "formula": "C28H16",
+  "name": "",
+  "skeleton": "C1CCC2C(C1)CC1C3C4CCCCC4CCC3C3CCCC4CCC2C1C43"
+ }
+}
