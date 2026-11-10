@@ -1,5 +1,5 @@
-=== (AOC) pyridine_cc_tz: start 2026-11-09 18:16:49
-[2026-11-09 18:16:50] E8 FD Hessian: 11 atoms, cc-pvtz, frozen 6 (derived from the elements: 6), step 0.005 bohr, 66 displacements, 8 threads, max_memory 10000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+Terminated                 systemd-run "${MODE[@]}" --scope --quiet -p MemoryMax="${CAP}M" -p MemorySwapMax=0 "$@"
+6 (derived from the elements: 6), step 0.005 bohr, 66 displacements, 8 threads, max_memory 10000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
 [2026-11-09 18:16:50] symmetry: 4 operations, orbits [[0], [1, 5], [2, 4], [3], [6], [7, 10], [8, 9]], 21 displacements (42 gradients) instead of 66
 [2026-11-09 18:16:50] partial run: displacement indices [2, 5, 8, 11, 20, 23, 26]
 [2026-11-09 18:16:50] pair check coordinate  2: max |mean(g+, g−) − g0| = 1.4e-06 a.u. (limit 1e-04)
@@ -8,3 +8,26 @@
 [2026-11-09 19:18:21] (T) lambda 2715 s, gradient 219 s
 [2026-11-09 19:18:21] coordinate 11 m: E − E0 =     +1.12 µE_h, 3691 s  (8/66 gradients)
 [2026-11-09 19:18:21] pair check coordinate 11: max |mean(g+, g−) − g0| = 1.7e-06 a.u. (limit 1e-04)
+[2026-11-09 20:19:59] (T) lambda 2745 s, gradient 267 s
+[2026-11-09 20:19:59] coordinate 20 p: E − E0 =     +0.34 µE_h, 3698 s  (9/66 gradients)
+[2026-11-09 21:19:41] (T) lambda 2625 s, gradient 241 s
+[2026-11-09 21:19:43] coordinate 20 m: E − E0 =     +0.34 µE_h, 3584 s  (10/66 gradients)
+[2026-11-09 21:19:43] pair check coordinate 20: max |mean(g+, g−) − g0| = 1.9e-06 a.u. (limit 1e-04)
+[2026-11-09 22:18:42] (T) lambda 2621 s, gradient 228 s
+[2026-11-09 22:18:42] coordinate 23 p: E − E0 =     +0.33 µE_h, 3539 s  (11/66 gradients)
+[2026-11-09 23:18:04] (T) lambda 2632 s, gradient 240 s
+[2026-11-09 23:18:05] coordinate 23 m: E − E0 =     +0.33 µE_h, 3562 s  (12/66 gradients)
+[2026-11-09 23:18:05] pair check coordinate 23: max |mean(g+, g−) − g0| = 1.7e-06 a.u. (limit 1e-04)
+[2026-11-10 00:17:33] (T) lambda 2641 s, gradient 239 s
+[2026-11-10 00:17:33] coordinate 26 p: E − E0 =     +0.35 µE_h, 3568 s  (13/66 gradients)
+[2026-11-10 01:16:05] (T) lambda 2593 s, gradient 230 s
+[2026-11-10 01:16:06] coordinate 26 m: E − E0 =     +0.35 µE_h, 3513 s  (14/66 gradients)
+[2026-11-10 01:16:06] pair check coordinate 26: max |mean(g+, g−) − g0| = 1.5e-06 a.u. (limit 1e-04)
+[2026-11-10 01:16:06] partial run done; merge grad_*.npy files and rerun without --ks to assemble the Hessian
+=== (AOC) pyridine_cc_tz: done 2026-11-10 01:16:06
+=== (AOC) benzene_mp2_ccpvtz_k2: already done, skipped 2026-11-10 01:16:06
+=== (AOC) benzene_mp2_ccpvtz_k20: already done, skipped 2026-11-10 01:16:06
+→ probes/results_m1/anchor_oop_checks_2026-11-05/mp2_rows_benzene_planeframe_ccpvtz.npz: 2 displacements [2, 20] from 2 files
+=== (AOC) benzene_mp2_tz: done 2026-11-10 01:16:06
+=== (AOC) benzene_mp2_ccpvqz_k2: start 2026-11-10 01:16:06
+KILLED: over the cap of 18500 MB, or stopped from outside: journalctl -b | grep -E 'oom-kill|Killed process' tells which
