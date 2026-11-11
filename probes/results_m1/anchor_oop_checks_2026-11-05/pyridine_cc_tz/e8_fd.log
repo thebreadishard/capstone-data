@@ -58,3 +58,6 @@
 [2026-11-10 01:16:06] pair check coordinate 26: max |mean(g+, g−) − g0| = 1.5e-06 a.u. (limit 1e-04)
 [2026-11-10 01:16:06] partial run done; merge grad_*.npy files and rerun without --ks to assemble the Hessian
 [2026-11-10 01:33:42] E8 FD Hessian: 11 atoms, cc-pvtz, frozen 6 (derived from the elements: 6), step 0.005 bohr, 66 displacements, 8 threads, max_memory 10000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+[2026-11-10 03:44:07] fast (T) lambda two-route check: max |kernel − pyscf| = 2.3e-17 (l2_t; limit 1e-10; 7113 s)
+[2026-11-10 08:40:19] E8 FD Hessian: 11 atoms, cc-pvtz, frozen 6 (derived from the elements: 6), step 0.005 bohr, 66 displacements, 16 threads, max_memory 26000 MB, explicit (T) lambda
+[2026-11-10 08:40:19] two-route check (energy route) PASSED: reference gradient vs (E(+h) − E(−h)) / 2h over 7 coordinates, max |Δ| 2.0e-09 a.u. at coordinate 8 (limit 2e-05); max |g0| 4.3e-03

@@ -1,2 +1,4 @@
-=== (AOK) start 2026-11-10 01:33:41
-[2026-11-10 01:33:42] E8 FD Hessian: 11 atoms, cc-pvtz, frozen 6 (derived from the elements: 6), step 0.005 bohr, 66 displacements, 8 threads, max_memory 10000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+Terminated                 systemd-run "${MODE[@]}" --scope --quiet -p MemoryMax="${CAP}M" -p MemorySwapMax=0 "$@"
+the elements: 6), step 0.005 bohr, 66 displacements, 8 threads, max_memory 10000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+[2026-11-10 03:44:07] fast (T) lambda two-route check: max |kernel − pyscf| = 2.3e-17 (l2_t; limit 1e-10; 7113 s)
+KILLED: over the cap of 18500 MB, or stopped from outside: journalctl -b | grep -E 'oom-kill|Killed process' tells which

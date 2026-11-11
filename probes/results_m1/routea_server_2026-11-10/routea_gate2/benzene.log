@@ -1,0 +1,19 @@
+=== (S1) start: 1 settings, step 0.10, 8 threads, geometry modules/05_support_predictor/corpus/molecules/A_8448043181/geometry.json 2026-11-02 07:54:42
+=== (S1) G: optimising (B3LYP/6-31g*, grid 75,302) 2026-11-02 07:54:42
+optimising: pyscf's own log in /root/routea_gate2/benzene/G/refstub/pyscf.log
+  BFGS evaluation 1: E = -232.2438206513, max |g_internal| = 1.6e-04, 12 s
+  BFGS evaluation 2: E = -232.2438207376, max |g_internal| = 3.1e-05, 14 s
+BFGS: E = -232.2438207376, max |g_internal| = 3.1e-05 after 2 evaluations
+  Newton 0: E = -232.2438207376, max |g_internal| = 3.1e-05, net force 6.0e-11
+  Newton 1: E = -232.2438207516, max |g_internal| = 3.8e-08, net force 2.1e-12
+=== (S1) G: reference averaged over its group: {"group_order": 24, "max_move_bohr": 5.046961609578987e-05, "routine": "probes/qff_pm_saving.py"} 2026-11-02 07:57:59
+[07:58:00] start 1/1 ref.json
+[07:59:14] 1/1 ref.json E = -232.24382075 in 74 s
+done: 1 Hessians in 1.2 min
+61 stubs in /root/routea_gate2/benzene/G/stubs; step 0.1; omega (cm-1): 414.8, 415.5, 621.2, 621.9, 695.0, 718.3, 864.9, 865.2, 969.6, 969.8, 1011.3, 1019.1, 1020.9, 1069.0, 1069.3, 1185.3, 1207.5, 1207.5, 1356.7, 1387.8, 1531.6, 1531.8, 1655.8, 1656.2, 3176.2, 3185.9, 3186.0, 3201.9, 3201.9, 3212.6
+=== (S1) G: ± saving: {"stubs": 61, "computed": 46, "images": 15, "grid_compatible": 15, "max_geometry_residual_bohr": 7.673329527335682e-06} 2026-11-02 07:59:15
+=== (S1) G: 46 Hessians to compute 2026-11-02 07:59:15
+=== (S1) G: lanes 12 12 11 11 Hessians, 8 threads each 2026-11-02 07:59:15
+=== (S1) G: 15 image Hessians written 2026-11-02 08:26:33
+=== (S1) G: QFF and VPT2 done 2026-11-02 08:26:34
+=== (S1) all settings done (one setting: no comparison) 2026-11-02 08:26:34
