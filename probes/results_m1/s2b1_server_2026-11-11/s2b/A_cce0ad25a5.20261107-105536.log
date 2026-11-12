@@ -1,0 +1,21 @@
+=== (S1) start: 1 settings, step 0.10, 5 threads, geometry modules/05_support_predictor/corpus/molecules/A_cce0ad25a5/geometry.json 2026-11-02 07:00:40
+=== (S1) G: optimising (B3LYP/6-31g*, grid 75,302) 2026-11-02 07:00:40
+optimising: pyscf's own log in /root/s2b/A_cce0ad25a5/G/refstub/pyscf.log
+  BFGS evaluation 1: E = -615.7602527594, max |g_internal| = 4.7e-04, 228 s
+  BFGS evaluation 2: E = -615.7602545850, max |g_internal| = 1.6e-04, 241 s
+  BFGS evaluation 3: E = -615.7602549109, max |g_internal| = 1.4e-04, 250 s
+  BFGS evaluation 4: E = -615.7602553801, max |g_internal| = 1.4e-04, 232 s
+  BFGS evaluation 5: E = -615.7602556734, max |g_internal| = 1.1e-04, 227 s
+  BFGS evaluation 6: E = -615.7602558138, max |g_internal| = 5.1e-05, 214 s
+BFGS: E = -615.7602558138, max |g_internal| = 5.1e-05 after 6 evaluations
+  Newton 0: E = -615.7602558138, max |g_internal| = 5.1e-05, net force 9.1e-10
+  Newton 1: E = -615.7602558978, max |g_internal| = 8.6e-08, net force 2.2e-12
+[09:26:04] start 1/1 ref.json
+[10:20:32] 1/1 ref.json E = -615.76025590 in 3268 s
+done: 1 Hessians in 54.5 min
+145 stubs in /root/s2b/A_cce0ad25a5/G/stubs; step 0.1; omega (cm-1): 100.1, 154.2, 218.3, 252.3, 266.4, 358.7, 404.3, 411.9, 462.3, 501.7, 506.9, 507.7, 517.6, 545.1, 554.0, 586.8, 598.4, 692.1, 704.4, 729.9, 749.4, 764.3, 789.5, 814.7, 822.0, 835.7, 851.2, 867.0, 900.9, 917.3, 965.5, 973.0, 974.4, 985.8, 985.9, 1014.4, 1100.4, 1123.0, 1131.9, 1177.5, 1179.2, 1207.1, 1214.9, 1242.8, 1271.6, 1276.8, 1278.1, 1361.3, 1362.8, 1417.5, 1442.0, 1450.8, 1473.5, 1473.9, 1498.2, 1532.2, 1552.1, 1613.5, 1640.3, 1651.5, 1662.7, 1686.3, 3177.3, 3177.6, 3180.2, 3180.8, 3187.6, 3188.3, 3196.9, 3196.9, 3205.9, 3206.4
+=== (S1) G: 145 Hessians to compute 2026-11-02 10:20:32
+[10:20:33] start 1/145 mode00_m.json
+[11:21:30] 1/145 mode00_m.json E = -615.76025358 in 3657 s
+STOP: the first Hessian took 3657 s > 3446 s — re-price before the rest
+=== (S1) G: STOPPED by the stop rule or a failure (first displaced Hessian > 3446 s?) — re-price 2026-11-02 11:21:30

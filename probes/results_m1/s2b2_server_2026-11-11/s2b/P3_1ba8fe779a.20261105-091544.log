@@ -1,0 +1,20 @@
+=== (S1) start: 1 settings, step 0.10, 5 threads, geometry modules/05_support_predictor/corpus/molecules/P3_1ba8fe779a/geometry.json 2026-11-02 07:00:48
+=== (S1) G: optimising (B3LYP/6-31g*, grid 75,302) 2026-11-02 07:00:48
+optimising: pyscf's own log in /root/s2b/P3_1ba8fe779a/G/refstub/pyscf.log
+  BFGS evaluation 1: E = -631.7709935836, max |g_internal| = 3.2e-04, 209 s
+  BFGS evaluation 2: E = -631.7709942564, max |g_internal| = 1.2e-04, 216 s
+  BFGS evaluation 3: E = -631.7709944778, max |g_internal| = 1.1e-04, 217 s
+  BFGS evaluation 4: E = -631.7709948194, max |g_internal| = 1.0e-04, 216 s
+  BFGS evaluation 5: E = -631.7709950164, max |g_internal| = 7.1e-05, 215 s
+BFGS: E = -631.7709950164, max |g_internal| = 7.1e-05 after 5 evaluations
+  Newton 0: E = -631.7709950164, max |g_internal| = 7.1e-05, net force 3.3e-05
+  Newton 1: E = -631.7709951152, max |g_internal| = 2.6e-07, net force 3.3e-05
+[09:09:03] start 1/1 ref.json
+[09:59:54] 1/1 ref.json E = -631.77099512 in 3051 s
+done: 1 Hessians in 50.9 min
+139 stubs in /root/s2b/P3_1ba8fe779a/G/stubs; step 0.1; omega (cm-1): 104.3, 127.3, 172.1, 205.1, 262.3, 301.0, 358.0, 438.1, 448.9, 473.8, 478.8, 497.9, 568.9, 574.2, 576.9, 643.4, 648.1, 681.0, 688.4, 765.0, 771.4, 786.3, 808.2, 822.9, 831.7, 861.9, 896.7, 919.9, 924.0, 949.9, 974.4, 982.1, 986.8, 996.0, 1045.2, 1049.5, 1081.6, 1114.6, 1136.6, 1173.4, 1191.5, 1199.7, 1235.0, 1270.5, 1308.0, 1320.2, 1338.0, 1400.1, 1405.7, 1455.3, 1462.5, 1475.8, 1499.4, 1516.3, 1531.7, 1636.9, 1638.2, 1660.9, 1665.1, 1674.0, 3184.3, 3184.4, 3185.5, 3194.3, 3197.0, 3205.5, 3206.3, 3208.5, 3215.9
+=== (S1) G: 139 Hessians to compute 2026-11-02 09:59:55
+[09:59:55] start 1/139 mode00_m.json
+[10:50:58] 1/139 mode00_m.json E = -631.77099237 in 3063 s
+STOP: the first Hessian took 3063 s > 2959 s — re-price before the rest
+=== (S1) G: STOPPED by the stop rule or a failure (first displaced Hessian > 2959 s?) — re-price 2026-11-02 10:50:58

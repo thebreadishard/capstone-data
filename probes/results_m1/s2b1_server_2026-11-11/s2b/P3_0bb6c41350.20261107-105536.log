@@ -1,0 +1,21 @@
+=== (S1) start: 1 settings, step 0.10, 5 threads, geometry modules/05_support_predictor/corpus/molecules/P3_0bb6c41350/geometry.json 2026-11-02 07:00:40
+=== (S1) G: optimising (B3LYP/6-31g*, grid 75,302) 2026-11-02 07:00:40
+optimising: pyscf's own log in /root/s2b/P3_0bb6c41350/G/refstub/pyscf.log
+  BFGS evaluation 1: E = -631.7978975913, max |g_internal| = 5.7e-04, 217 s
+  BFGS evaluation 2: E = -631.7978995783, max |g_internal| = 1.7e-04, 201 s
+  BFGS evaluation 3: E = -631.7978999500, max |g_internal| = 1.5e-04, 197 s
+  BFGS evaluation 4: E = -631.7979004534, max |g_internal| = 1.5e-04, 184 s
+  BFGS evaluation 5: E = -631.7979007488, max |g_internal| = 1.2e-04, 176 s
+  BFGS evaluation 6: E = -631.7979008844, max |g_internal| = 6.8e-05, 185 s
+BFGS: E = -631.7979008844, max |g_internal| = 6.8e-05 after 6 evaluations
+  Newton 0: E = -631.7979008844, max |g_internal| = 6.8e-05, net force 1.3e-05
+  Newton 1: E = -631.7979009970, max |g_internal| = 9.0e-08, net force 1.3e-05
+[09:11:04] start 1/1 ref.json
+[09:58:30] 1/1 ref.json E = -631.79790100 in 2846 s
+done: 1 Hessians in 47.4 min
+139 stubs in /root/s2b/P3_0bb6c41350/G/stubs; step 0.1; omega (cm-1): 102.7, 156.0, 212.4, 253.3, 270.5, 364.9, 407.5, 415.0, 460.1, 503.2, 503.5, 518.1, 524.8, 552.4, 553.9, 599.0, 604.2, 702.8, 713.7, 741.5, 749.6, 775.8, 822.2, 825.6, 842.8, 849.8, 856.0, 882.3, 918.0, 973.7, 979.3, 986.0, 989.4, 995.8, 1013.8, 1098.9, 1122.2, 1142.2, 1166.6, 1179.1, 1212.8, 1249.0, 1276.5, 1276.7, 1287.8, 1329.2, 1360.4, 1406.3, 1427.5, 1449.9, 1460.0, 1478.5, 1499.0, 1528.8, 1546.8, 1591.7, 1633.9, 1644.0, 1657.9, 1684.1, 3169.9, 3181.1, 3183.0, 3186.2, 3190.6, 3199.3, 3201.8, 3208.6, 3220.4
+=== (S1) G: 139 Hessians to compute 2026-11-02 09:58:30
+[09:58:31] start 1/139 mode00_m.json
+[10:47:54] 1/139 mode00_m.json E = -631.79789869 in 2964 s
+STOP: the first Hessian took 2964 s > 2959 s — re-price before the rest
+=== (S1) G: STOPPED by the stop rule or a failure (first displaced Hessian > 2959 s?) — re-price 2026-11-02 10:47:54
