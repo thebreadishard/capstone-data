@@ -1,0 +1,16 @@
+=== (BFD) start: D_ac28161d06, cap 9216 MB (pyscf 8632 MB), 8 threads, pyscf 2.15.0 2026-11-12 08:18:43
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 281, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 270, in main
+    points = run_points(geometry, mode, cfg, lib_log)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 189, in run_points
+    rec, dm0 = point_record(geometry, x0 + q * unit, cfg, grid, dm0, lib_log)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 161, in point_record
+    raise RuntimeError(f"SCF not converged at grid {grid}")
+RuntimeError: SCF not converged at grid (99, 590)
+Command exited with non-zero status 1
+(BFD) D_ac28161d06 max RSS 2103944 kB, wall 3982.04 s
+=== (BFD) RUN FAILED: the gradient differences of D_ac28161d06 (exit 1) 2026-11-12 09:25:05

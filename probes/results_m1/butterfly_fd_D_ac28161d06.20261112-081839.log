@@ -1,0 +1,19 @@
+=== (BFD) start: D_ac28161d06, cap 9216 MB (pyscf 8632 MB), 8 threads, pyscf 2.15.0 2026-11-12 08:06:38
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 280, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 269, in main
+    points = run_points(geometry, mode, cfg, lib_log)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 188, in run_points
+    rec, dm0 = point_record(geometry, x0 + q * unit, cfg, grid, dm0, lib_log)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/butterfly_fd.py", line 162, in point_record
+    with_response = mf.Gradients().set(grid_response=True).kernel()
+                    ^^^^^^^^^^^^^^
+  File "/home/thebreadishard/qc215/lib/python3.12/site-packages/pyscf/scf/hf.py", line 2368, in Gradients
+    raise NotImplementedError
+NotImplementedError
+Command exited with non-zero status 1
+(BFD) D_ac28161d06 max RSS 1543160 kB, wall 428.90 s
+=== (BFD) RUN FAILED: the gradient differences of D_ac28161d06 (exit 1) 2026-11-12 08:13:48

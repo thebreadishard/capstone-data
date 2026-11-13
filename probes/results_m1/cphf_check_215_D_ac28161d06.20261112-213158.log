@@ -1,0 +1,20 @@
+=== (WAIT) waiting for /^=== \(GRF\) (done|RUN FAILED|STOPPED)/ in hessian_grf_step2.log 2026-11-12 19:56:44
+=== (WAIT) condition met 2026-11-12 19:56:45
+=== (CPHF) start: D_ac28161d06, cap 9216 MB (pyscf 4608 MB), 8 threads, pyscf 2.15.0 2026-11-12 19:56:45
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/cphf_check_215.py", line 167, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/cphf_check_215.py", line 155, in main
+    _dm, H_215 = reference(geometry, grf_cfg, XC, lib_log)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/hessian_grid_response_fd.py", line 101, in reference
+    mf = converged_scf(mol, xc_tag, cfg.grid, None)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/hessian_grid_response_fd.py", line 85, in converged_scf
+    raise RuntimeError(f"{xc_tag} SCF not converged")
+RuntimeError: b3lyp SCF not converged
+Command exited with non-zero status 1
+(CPHF) D_ac28161d06 max RSS 2104772 kB, wall 5536.89 s
+=== (CPHF) RUN FAILED: the 2.15.0 Hessian of D_ac28161d06 (exit 1) 2026-11-12 21:29:02
+=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 772166 bytes (+7422) 2026-11-12 21:29:06
+=== (CPHP) command ended rc=1 2026-11-12 21:29:06

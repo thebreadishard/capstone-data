@@ -1,0 +1,10 @@
+=== (BFD) start: D_ac28161d06, cap 12288 MB (pyscf 6144 MB), 8 threads, pyscf 2.15.0 2026-11-12 10:53:38
+Terminated                 systemd-run "${MODE[@]}" --scope --quiet -p MemoryMax="${CAP}M" -p MemorySwapMax=0 "$@"
+ment 340.42
+(BFD) point (99, 590) h 0.000 sign +0: kept
+(BFD) point (99, 590) h 0.010 sign +1: kept
+(BFD) point (99, 590) h 0.010 sign -1: kept
+(BFD) point (99, 590) h 0.020 sign +1: kept
+(BFD) point (99, 590) h 0.020 sign -1: kept
+KILLED: over the cap of 12288 MB, or stopped from outside: journalctl -b | grep -E 'oom-kill|Killed process' tells which
+=== (BFD) RUN FAILED: the gradient differences of D_ac28161d06 (exit 143) 2026-11-12 11:08:04
