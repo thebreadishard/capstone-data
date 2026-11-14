@@ -13035,3 +13035,27 @@ Extra cycle  E= -923.059315596965  delta_E= -9.09e-13  |g|= 5.67e-07  |ddm|= 1.4
 converged SCF energy = -923.059315596965
     CPU time for RHF partial hessian  17468.02 sec, wall time   2221.08 sec
     CPU time for RKS partial hessian  88079.94 sec, wall time  12322.69 sec
+    CPU time for vj and vk   3788.43 sec, wall time    484.46 sec
+krylov cycle 0  r = 0.493106, subspace=114
+    CPU time for vj and vk   3557.11 sec, wall time    458.04 sec
+krylov cycle 1  r = 0.0506206, subspace=227
+    CPU time for vj and vk   3267.64 sec, wall time    416.75 sec
+krylov cycle 2  r = 0.00512102, subspace=338
+    CPU time for vj and vk   3019.59 sec, wall time    386.49 sec
+krylov cycle 3  r = 0.000201841, subspace=449
+    CPU time for vj and vk   2512.05 sec, wall time    323.08 sec
+krylov cycle 4  r = 6.73334e-06, subspace=558
+    CPU time for vj and vk    631.56 sec, wall time     81.83 sec
+krylov cycle 5  r = 0, subspace=606
+krylov iteration stopped for linear dependence.
+
+WARN: Krylov solver reached subspace convergence but true residual |aop(x)+x-b| = 1.150e-04 exceeds tolerance 3.8e-07. Falling back to per-root solve.
+
+unconverged RHS=114
+Starting krylov per-RHS fallback
+    CPU time for vj and vk   4075.74 sec, wall time    525.90 sec
+    CPU time for vj and vk   2600.93 sec, wall time    333.26 sec
+krylov: 606 matvecs
+    CPU time for krylov solver in CPHF 146919.85 sec, wall time  22037.39 sec
+    CPU time for vj and vk   4016.72 sec, wall time    518.12 sec
+    CPU time for RHF hessian 270740.55 sec, wall time  39734.01 sec

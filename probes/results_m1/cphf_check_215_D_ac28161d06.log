@@ -1,6 +1,18 @@
 === (WAIT) waiting for /^=== \(GRF\) (done|RUN FAILED|STOPPED)/ in hessian_grf_step2.log 2026-11-12 21:32:10
 === (WAIT) condition met 2026-11-12 21:32:10
 === (CPHF) start: D_ac28161d06, cap 9216 MB (pyscf 4608 MB), 8 threads, pyscf 2.15.0 2026-11-12 21:32:10
-=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 862524 bytes (+90358) 2026-11-12 21:42:24
-=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 862600 bytes (+76) 2026-11-12 22:23:11
-=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 862676 bytes (+76) 2026-11-13 01:17:08
+(CPHF) D_ac28161d06: pyscf 2.15.0 analytic Hessian done
+# CPHF check, D_ac28161d06 (b3lyp, grid (99, 590), pyscf 2.15.0)
+
+Verdict: **NOT CPHF** (tolera(CPHF) D_ac28161d06 max RSS 5031660 kB, wall 40299.56 s
+=== (CPHF) done: verdict NOT CPHF 2026-11-13 08:43:50
+=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 863950 bytes (+134) 2026-11-13 08:43:56
+=== (CPHP) command ended rc=0 2026-11-13 08:43:56
+1.
+Per mode, 2.15.0 minus label: rms 0.003, max |Δ| 0.018 cm-1; below 100 cm-1 (3 modes) rms 0.0018079992989443762 cm-1.
+Translation residual max|H t|: label 8.70e-05, analytic_215 8.69e-05.
+
+(CPHF) verdict NOT CPHF
+D_ac28161d06_2026-11-12 at 863006 bytes (+111) 2026-11-13 04:21:06
+=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 863118 bytes (+112) 2026-11-13 05:12:11
+=== (CPHP) progress: pyscf.log under cphf_check_215_D_ac28161d06_2026-11-12 at 863230 bytes (+112) 2026-11-13 06:03:18
