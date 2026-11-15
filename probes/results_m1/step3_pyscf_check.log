@@ -1,0 +1,15 @@
+=== (S3P) start: probes/results_m1/pipeline_benzene_computed_2026-11-03/benzene -> probes/results_m1/step3_pyscf_2026-11-14/fresh on pyscf 2.15.0, grid 99,590, 6 threads, cap 6144 MB (pyscf 5560 MB) 2026-11-14 19:46:36
+WARN: Krylov solver reached subspace convergence but true residual |aop(x)+x-b| = 1.936e-04 exceeds tolerance 1.2e-07. Falling back to per-root solve.
+/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/step3_pyscf_2026-11-14/fresh b3lyp: APT from the Hessian's response: CPHF residual 1.5e-08 -> 1.5e-08 in 0 rounds, sum rule 1.1e-04, 33.3 s
+/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/step3_pyscf_2026-11-14/fresh b3lyp: 461 s; no corpus psi4 file to compare with; lowest vib [415.4, 415.4, 621.9] cm-1
+/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/step3_pyscf_2026-11-14/fresh: analytic-only folder, imaginary modes {'b3lyp': 0} written to result.json
+(S3P) max RSS 1601760 kB, wall 462.09 s
+# Step 3 on pyscf 2.14.0 against 2.15.0 (TASKS 225)
+
+The same label route on the same folder, so the pyscf version is the only difference.
+
+- Hessian, largest element: **2.236e-05** hartree/bohr²
+- frequencies, largest shift: **0.0656** cm⁻¹ (rms 0.0173)
+- lowest mode: 415.40 → 415.40 cm⁻¹
+- APT: one of the two folders has no APT file
+=== (S3P) done 2026-11-14 19:54:23

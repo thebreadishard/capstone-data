@@ -1,0 +1,32 @@
+=== (LMP) start: 58 molecules from probes/results_m1/low_mode_patch_2026-11-13/ids_below20.txt, cap 4096 MB (pyscf 2048 MB), 8 threads, pyscf 2.15.0 2026-11-14 05:53:07
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/low_mode_patch_run.py", line 177, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/low_mode_patch_run.py", line 171, in main
+    rec = patch_molecule(cfg.molecules / mol_id, cfg, lib_log)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/low_mode_patch_run.py", line 136, in patch_molecule
+    record["functionals"] = {tag: write_patch(label, tag, U, measured_columns(label, U, cfg, tag, lib_log), cfg) for tag in XC_TAGS}
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/low_mode_patch_run.py", line 106, in measured_columns
+    dm0 = converged_scf(mol, tag, LABEL_GRID, None).make_rdm1()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/hessian_grid_response_fd.py", line 85, in converged_scf
+    raise RuntimeError(f"{xc_tag} SCF not converged")
+RuntimeError: wb97x SCF not converged
+Command exited with non-zero status 1
+(LMP) max RSS 3505812 kB, wall 26560.97 s
+=== (LMP) RUN FAILED: the low-mode patch (exit 1) 2026-11-14 13:15:49
+a5a90: kept
+(LMP) 49/58 B_5fdd3e3bba: kept
+(LMP) 50/58 B_60bb32ab8d: kept
+(LMP) 51/58 B_62b726b2a6: kept
+(LMP) 52/58 B_63f41681c1: kept
+(LMP) 53/58 B_84485091e3: kept
+(LMP) 54/58 D_ac28161d06: kept
+(LMP) 55/58 P3_082a4af67e: kept
+(LMP) 56/58 P3_2aa4adcc95: kept
+(LMP) 57/58 P3_4d14684fda: kept
+(LMP) point T_76dfc434db b3lyp dir_0_minus: E -1611.5203907089 (6230 s)
+(LMP) point T_76dfc434db b3lyp dir_1_plus: E -1611.5203907065 (1915 s)
+(LMP) point T_76dfc434db b3lyp dir_1_minus: E -1611.5203907090 (3196 s)
