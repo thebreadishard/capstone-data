@@ -1,0 +1,29 @@
+=== (L5S) armed: 8 molecules (0 without a job file); 8 to optimise, 8 to label; 4 lanes × 8 threads, cap 26624 MB, label arguments '--max-memory 24000 --reuse-existing'; waiting for /^=== \(CX\) all done/ in 1 of /root/cations_c/cations_ccx53.log; ids from ids_small.tsv 2026-10-25 16:36:48
+=== (L5S) start: the wait condition is met 2026-10-29 16:21:51
+=== (L5S) optimisations 2026-10-29 16:21:51
+  D_ea2ba4fc5a optimised 112 s
+  T_c874e3c6cf optimised 127 s
+  D_e1a31cd772 optimised 147 s
+  D_d9fa7459f3 optimised 174 s
+  D_ac28161d06 optimised 68 s
+  T_2f846bd4a9 optimised 88 s
+  T_94b3a9d13a optimised 62 s
+  D_210c3076e6 optimised 47 s
+=== (L5S) labels 2026-10-29 16:25:32
+  D_d9fa7459f3 labels started 2026-10-29 16:25:32
+  T_c874e3c6cf labels started 2026-10-29 16:25:32
+  D_ea2ba4fc5a labels started 2026-10-29 16:25:32
+  D_e1a31cd772 labels started 2026-10-29 16:25:32
+  D_e1a31cd772 labelled 82141 s - (L5S) D_e1a31cd772 max RSS 8011388 kB, wall 82141.61 s
+  T_2f846bd4a9 labels started 2026-10-30 15:14:33
+  D_d9fa7459f3 labelled 116873 s - (L5S) D_d9fa7459f3 max RSS 8795400 kB, wall 116873.17 s
+  D_ac28161d06 labels started 2026-10-31 00:53:25
+  D_ea2ba4fc5a labelled 116886 s - (L5S) D_ea2ba4fc5a max RSS 10360440 kB, wall 116886.13 s
+  T_94b3a9d13a labels started 2026-10-31 00:53:38
+  T_c874e3c6cf LABELS FAILED 135499 s (molecules/T_c874e3c6cf/labels.log)
+  D_210c3076e6 labels started 2026-10-31 06:03:51
+  T_2f846bd4a9 LABELS FAILED 80282 s (molecules/T_2f846bd4a9/labels.log)
+  T_94b3a9d13a LABELS FAILED 63222 s (molecules/T_94b3a9d13a/labels.log)
+  D_210c3076e6 labelled 45957 s - (L5S) D_210c3076e6 max RSS 20402632 kB, wall 45956.17 s
+  D_ac28161d06 labelled 66716 s - (L5S) D_ac28161d06 max RSS 7267696 kB, wall 66716.55 s
+=== (L5S) all done: 3 failures or skips 2026-10-31 19:25:21

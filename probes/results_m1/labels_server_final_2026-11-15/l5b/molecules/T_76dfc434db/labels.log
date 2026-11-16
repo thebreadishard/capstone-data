@@ -1,0 +1,33 @@
+/root/l5b/molecules/T_76dfc434db b3lyp: APT FAILED: APT sum rule 9.2e-04 > 0.0005
+/root/l5b/molecules/T_76dfc434db b3lyp: 71841 s; no corpus psi4 file to compare with; lowest vib [1.2, 5.1, 20.3] cm-1
+Traceback (most recent call last):
+  File "/root/l5b/modules/05_support_predictor/corpus/analytic_hessians.py", line 211, in compute_hessian
+    mf, e = labels_scf(mol, xc, run.grid)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/l5b/modules/05_support_predictor/corpus/analytic_hessians.py", line 171, in labels_scf
+    raise RuntimeError(f"{xc}: SCF not converged")
+RuntimeError: wb97x: SCF not converged
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/l5b/modules/05_support_predictor/corpus/analytic_hessians.py", line 318, in <module>
+    main()
+  File "/root/l5b/modules/05_support_predictor/corpus/analytic_hessians.py", line 312, in main
+    apt_errors += process_molecule(d, run, lib_log)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/l5b/modules/05_support_predictor/corpus/analytic_hessians.py", line 265, in process_molecule
+    Hc, e, hobj, response = compute_hessian(d, mol, tag, xc, run)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/l5b/modules/05_support_predictor/corpus/analytic_hessians.py", line 213, in compute_hessian
+    raise RuntimeError(f"{d} {tag}: SCF not converged") from exc
+RuntimeError: /root/l5b/molecules/T_76dfc434db wb97x: SCF not converged
+Command exited with non-zero status 1
+(L5L) T_76dfc434db max RSS 42224428 kB, wall 73371.66 s
+run-raa544e93e0544da0b93a80f8ad5eb405.scope: not an oom-kill
+/root/l5b/molecules/T_76dfc434db b3lyp: analytic Hessian reused from hessian_b3lyp_analytic.npz
+/root/l5b/molecules/T_76dfc434db b3lyp: 0 s; no corpus psi4 file to compare with; lowest vib [1.2, 5.1, 20.3] cm-1
+wb97x: DIIS stopped unconverged at E = -1611.106517734236; finishing by the second-order solver
+/root/l5b/molecules/T_76dfc434db wb97x: 66046 s; no corpus psi4 file to compare with; lowest vib [28.9, 33.5, 40.6] cm-1
+/root/l5b/molecules/T_76dfc434db: analytic-only folder, imaginary modes {'b3lyp': 0, 'wb97x': 0} written to result.json
+(HBC) T_76dfc434db max RSS 34890524 kB, wall 66047.98 s
