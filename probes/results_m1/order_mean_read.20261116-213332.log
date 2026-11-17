@@ -1,0 +1,27 @@
+=== (ORDERMEAN) start
+round trip on benzene: {'molecule': 'A_8448043181', 'presentations': 32, 'tolerance': 1e-12, 'hessian_round_trip_max_abs': 1.1102230246251565e-15, 'b3lyp_wavenumbers_max_cm': 4.035882739117369e-12, 'corrected_in_frame_vs_mapped_back_max_cm': 4.206412995699793e-12}
+reference row reproduced: {'a8': [1.4289053660722633, 0.94618844906101, 1.6376190414914262, 2.7803758691626337], 'b': [1.914598115322138, 2.186380697837924, 1.8798256032145801, 2.767707270120052]}
+kept from an earlier run: 0 molecules; to read: 48
+every presentation drawn: 48 molecules
+order-mean 1/48 A_08dde334d8 250 s in the network
+order-mean 2/48 A_428228e5a5 434 s in the network
+order-mean 3/48 A_541c53d1a5 339 s in the network
+order-mean 4/48 A_72b86c2331 272 s in the network
+order-mean 5/48 A_8448043181 65 s in the network
+order-mean 6/48 A_bce5bae234 273 s in the network
+order-mean 7/48 A_e72997e726 305 s in the network
+order-mean 8/48 A_fdc27f1bd1 253 s in the network
+order-mean 9/48 A2_00b0ff5a24 536 s in the network
+order-mean 10/48 A2_0101e57296 509 s in the network
+order-mean 11/48 A2_02c8833bd5 468 s in the network
+order-mean 12/48 A2_041da590e8 441 s in the network
+order-mean 13/48 A2_043da5bed2 284 s in the network
+order-mean 14/48 A2_048ea73dab 332 s in the network
+order-mean 15/48 A2_05f5ff045c 221 s in the network
+order-mean 16/48 A2_06222c33e3 296 s in the network
+order-mean 17/48 A2_066237c4f5 206 s in the network
+order-mean 18/48 A2_06873ee7ad 253 s in the network
+order-mean 19/48 A2_097651503c 339 s in the network
+order-mean 20/48 A2_0dc3aa4eb9 276 s in the network
+Terminated                 systemd-run "${MODE[@]}" --scope --quiet -p MemoryMax="${CAP}M" -p MemorySwapMax=0 "$@"
+KILLED: over the cap of 1024 MB, or stopped from outside: journalctl -b | grep -E 'oom-kill|Killed process' tells which

@@ -1,0 +1,84 @@
+=== (ORDERMEAN) start
+round trip on benzene: {'molecule': 'A_8448043181', 'presentations': 32, 'tolerance': 1e-12, 'hessian_round_trip_max_abs': 1.1102230246251565e-15, 'b3lyp_wavenumbers_max_cm': 4.035882739117369e-12, 'corrected_in_frame_vs_mapped_back_max_cm': 4.206412995699793e-12}
+reference row reproduced: {'a8': [1.4289053660722633, 0.94618844906101, 1.6376190414914262, 2.7803758691626337], 'b': [1.914598115322138, 2.186380697837924, 1.8798256032145801, 2.767707270120052]}
+order-mean 1/48 a8 A_08dde334d8 129 s in the network
+order-mean 2/48 a8 A_428228e5a5 227 s in the network
+order-mean 3/48 a8 A_541c53d1a5 180 s in the network
+order-mean 4/48 a8 A_72b86c2331 171 s in the network
+order-mean 5/48 a8 A_8448043181 36 s in the network
+order-mean 6/48 a8 A_bce5bae234 174 s in the network
+order-mean 7/48 a8 A_e72997e726 202 s in the network
+order-mean 8/48 a8 A_fdc27f1bd1 176 s in the network
+order-mean 9/48 b A2_00b0ff5a24 361 s in the network
+order-mean 10/48 b A2_0101e57296 345 s in the network
+order-mean 11/48 b A2_02c8833bd5 456 s in the network
+order-mean 12/48 b A2_041da590e8 502 s in the network
+order-mean 13/48 b A2_043da5bed2 443 s in the network
+order-mean 14/48 b A2_048ea73dab 550 s in the network
+order-mean 15/48 b A2_05f5ff045c 381 s in the network
+order-mean 16/48 b A2_06222c33e3 503 s in the network
+order-mean 17/48 b A2_066237c4f5 355 s in the network
+order-mean 18/48 b A2_06873ee7ad 389 s in the network
+order-mean 19/48 b A2_097651503c 517 s in the network
+order-mean 20/48 b A2_0dc3aa4eb9 374 s in the network
+order-mean 21/48 b A2_0e1c741b76 404 s in the network
+order-mean 22/48 b A2_10d7d03408 400 s in the network
+order-mean 23/48 b A2_11c681aefb 385 s in the network
+order-mean 24/48 b A2_1543119d9d 429 s in the network
+order-mean 25/48 b A2_16521f2764 359 s in the network
+order-mean 26/48 b A2_1b389dc1d8 336 s in the network
+order-mean 27/48 b A2_1bb2e3fbf1 313 s in the network
+order-mean 28/48 b A2_1c2781e93a 343 s in the network
+order-mean 29/48 b A2_20d3215ce3 394 s in the network
+order-mean 30/48 b A2_210c322595 282 s in the network
+order-mean 31/48 b A2_21b688db0c 359 s in the network
+order-mean 32/48 b A2_27130c4c79 359 s in the network
+order-mean 33/48 b A2_27370742a0 463 s in the network
+order-mean 34/48 b A2_27edf7297c 341 s in the network
+order-mean 35/48 b A2_2931e48c62 440 s in the network
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/thebreadishard/aromir_v13/lib/python3.12/site-packages/aromir/admission.py", line 80, in parse_xyz
+    rdDetermineBonds.DetermineBonds(molecule, charge=0)
+ValueError: Final molecular charge (0) does not match input (-1); could not find valid bond ordering
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/thebreadishard/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 277, in read_presented
+    plist = presentations(molecule.molecule_id, molecule.geometry, kind, set_index, max(ks))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 199, in presentations
+    return [draw(kind, geometry, rng, Path(scratch)) for _ in range(count)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 186, in draw
+    order = front_door_order(geometry, order, scratch)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 176, in front_door_order
+    return shuffle[np.array(aromir_geometry.canonical_order(admission.parse_xyz(path)))]
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/aromir_v13/lib/python3.12/site-packages/aromir/admission.py", line 82, in parse_xyz
+    raise RefusedError([f"{path}: no neutral bonding pattern fits the geometry"]) from error
+aromir.errors.RefusedError: /tmp/tmpwr5cncq3/molecule.xyz: no neutral bonding pattern fits the geometry
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 492, in <module>
+    main()
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 483, in main
+    record = run(config)
+             ^^^^^^^^^^^
+  File "/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/order_mean_2026-11-16/order_mean.py", line 454, in run
+    for (key, molecule, row), (reads, seconds) in zip(flat, results, strict=True):
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/thebreadishard/.local/share/uv/python/cpython-3.12.14-linux-x86_64-gnu/lib/python3.12/multiprocessing/pool.py", line 873, in next
+    raise value
+aromir.errors.RefusedError: /; t; m; p; /; t; m; p; w; r; 5; c; n; c; q; 3; /; m; o; l; e; c; u; l; e; .; x; y; z; :;  ; n; o;  ; n; e; u; t; r; a; l;  ; b; o; n; d; i; n; g;  ; p; a; t; t; e; r; n;  ; f; i; t; s;  ; t; h; e;  ; g; e; o; m; e; t; r; y
+Command exited with non-zero status 1
+(ORDERMEAN) max RSS 438312 kB, wall 6289.29 s
