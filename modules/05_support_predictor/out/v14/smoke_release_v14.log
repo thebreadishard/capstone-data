@@ -1,0 +1,12 @@
+analytic second-route Hessians substituted for 1154 molecules
+atomic polar tensors found for 757 molecules: intensity read-outs on (lever 5, registered 2 Oct 2026 06:5x)
+release networks (decision 66): pool 1132 = 1082 pool molecules (2 of them hold-out twins, kept) + hold-out (a) 10 + hold-out (b) 40; 30 hold-out molecules without analytic labels are not trained on; no hold-out is read; each of the 1 networks is fitted on a random 85 % of the molecules and stopped on the other 15 %, a different 15 % per seed, so not every molecule is fitted by every network (with 1 networks about 0.15¹ ≈ 15 % by none)
+1181 molecules; pool 1132 (release networks: the hold-outs are in the pool, none is read); sizes [1132]; seeds [0]; epochs 2; threads 8; model 172,194 parameters, sum aggregation
+  rung B's 66 pair features added to the hybrid head (standardised on the fit molecules)
+  hybrid head: 304,276 parameters; F_low input scales 0.0321, 0.279, 0.117; SQM α per class on
+  fresh sum body pre-flight: worst |output| 48.1 on the training molecules
+    seed 0 epoch 1/2: loss main 9.782e-07 aux 0.4517 val 0.3871 val_main 8.67e-07 (46 s)
+    seed 0 epoch 2/2: loss main 6.91e-07 aux 0.3438 val 0.2732 val_main 4.655e-07 (92 s)
+  model saved: out\v14\smoke_release_v14_model_n1132_seed0.pt
+  n=1132 seed 0: inner validation internal term 0.2732, main term 4.655e-07 on 170 molecules (fit on 962)
+wrote out/v14/smoke_release_v14.json/.md in 493 s

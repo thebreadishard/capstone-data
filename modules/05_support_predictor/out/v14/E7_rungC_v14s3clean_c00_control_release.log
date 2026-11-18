@@ -1,0 +1,25 @@
+analytic second-route Hessians substituted for 1154 molecules
+atomic polar tensors found for 757 molecules: intensity read-outs on (lever 5, registered 2 Oct 2026 06:5x)
+release networks (decision 66): pool 1132 = 1082 pool molecules (2 of them hold-out twins, kept) + hold-out (a) 10 + hold-out (b) 40; 30 hold-out molecules without analytic labels are not trained on; no hold-out is read; each of the 3 networks is fitted on a random 85 % of the molecules and stopped on the other 15 %, a different 15 % per seed, so not every molecule is fitted by every network (with 3 networks about 0.15³ ≈ 0.3 % by none)
+1181 molecules; pool 1132 (release networks: the hold-outs are in the pool, none is read); sizes [1132]; seeds [0, 1, 2]; epochs 300; threads 8; model 172,194 parameters, sum aggregation
+  rung B's 66 pair features added to the hybrid head (standardised on the fit molecules)
+  hybrid head: 304,276 parameters; F_low input scales 0.0321, 0.279, 0.117; SQM α per class on
+  fresh sum body pre-flight: worst |output| 48.1 on the training molecules
+    seed 0 epoch 1/300: loss main 9.782e-07 aux 0.4517 val 0.3871 val_main 8.67e-07 (47 s)
+    seed 0 epoch 10/300: loss main 3.563e-07 aux 0.1282 val 0.1216 val_main 2.594e-07 (454 s)
+    seed 0 epoch 20/300: loss main 2.03e-07 aux 0.08508 val 0.08504 val_main 1.953e-07 (903 s)
+    seed 0 epoch 30/300: loss main 1.605e-07 aux 0.06466 val 0.07139 val_main 1.601e-07 (1346 s)
+    seed 0 epoch 40/300: loss main 1.379e-07 aux 0.05312 val 0.06349 val_main 1.53e-07 (1792 s)
+    seed 0 epoch 50/300: loss main 1.198e-07 aux 0.04244 val 0.06823 val_main 1.68e-07 (2241 s)
+    seed 0 epoch 60/300: loss main 1.161e-07 aux 0.03835 val 0.05618 val_main 1.496e-07 (2685 s)
+    seed 0 epoch 70/300: loss main 9.967e-08 aux 0.03239 val 0.05516 val_main 1.403e-07 (3151 s)
+    seed 0 epoch 80/300: loss main 8.94e-08 aux 0.02937 val 0.05421 val_main 1.404e-07 (3598 s)
+    seed 0 epoch 90/300: loss main 8.196e-08 aux 0.02613 val 0.05122 val_main 1.263e-07 (4041 s)
+    seed 0 epoch 100/300: loss main 7.765e-08 aux 0.02323 val 0.048 val_main 1.212e-07 (4489 s)
+    seed 0 epoch 110/300: loss main 7.07e-08 aux 0.02082 val 0.04962 val_main 1.227e-07 (4938 s)
+    seed 0 epoch 120/300: loss main 6.875e-08 aux 0.02021 val 0.0512 val_main 1.315e-07 (5384 s)
+    seed 0 epoch 130/300: loss main 7.068e-08 aux 0.01957 val 0.04993 val_main 1.21e-07 (5834 s)
+    seed 0 epoch 140/300: loss main 6.355e-08 aux 0.01762 val 0.04764 val_main 1.134e-07 (6283 s)
+    seed 0 epoch 150/300: loss main 6.716e-08 aux 0.0191 val 0.04707 val_main 1.166e-07 (6730 s)
+    seed 0 epoch 160/300: loss main 6.338e-08 aux 0.01782 val 0.04389 val_main 1.106e-07 (7179 s)
+    seed 0 epoch 170/300: loss main 5.659e-08 aux 0.01533 val 0.0462 val_main 1.168e-07 (7630 s)
