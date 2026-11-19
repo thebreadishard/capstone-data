@@ -1,0 +1,28 @@
+"""Count the measurement and release pools from the training project's run records (read-only), to test the card's
+'1132 labelled entries ... a molecule may be an entry under more than one identifier' against the ids themselves."""
+import csv
+import json
+from collections import Counter
+from pathlib import Path
+
+from rdkit import Chem
+
+MOD = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor")
+smiles = {r["id"]: r["smiles"] for r in csv.DictReader((MOD / "corpus" / "manifest.csv").open())}
+for name in ("E7_rungC_v14s3clean_c00_control.json", "E7_rungC_v14s3clean_c00_control_release.json"):
+    rec = json.loads((MOD / "out" / "v14" / name).read_text())
+    print("==", name)
+    for k, v in rec.items():
+        if isinstance(v, list) and v and isinstance(v[0], str) and len(v) > 20:
+            print(f"   list {k}: {len(v)}")
+        elif isinstance(v, (int, float, str)) and not isinstance(v, bool):
+            if "n_" in k or "pool" in k or "train" in k:
+                print(f"   {k}: {v}")
+    for key in ("train_ids", "pool_ids", "trained_ids", "ids"):
+        if key in rec and isinstance(rec[key], list):
+            ids = rec[key]
+            neutral = [i for i in ids if not i.startswith("P3c_")]
+            cations = [i for i in ids if i.startswith("P3c_")]
+            canon = Counter(Chem.MolToSmiles(Chem.MolFromSmiles(smiles[i])) for i in neutral)
+            print(f"   {key}: {len(ids)} ids, {len(neutral)} neutral ids -> {len(canon)} distinct SMILES,"
+                  f" {sum(c - 1 for c in canon.values())} duplicate ids; {len(cations)} cation ids")

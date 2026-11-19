@@ -1,0 +1,47 @@
+"""Set relations between v1.4's training.json (release) and measurement.json, and scaffold leaks."""
+import json
+from pathlib import Path
+
+import numpy as np
+from rdkit import Chem
+
+import aromir
+from aromir import vibrations
+from aromir.molecule import Geometry
+
+root = Path(aromir.__file__).parent / "releases" / "v1.4"
+rel = json.loads((root / "training.json").read_text())
+mea = json.loads((root / "measurement.json").read_text())
+R, M = set(rel["trained_smiles"]), set(mea["trained_smiles"])
+HA, HB = set(mea["held_out_smiles"]["a"]), set(mea["held_out_smiles"]["b"])
+print("release trained", len(R), "measurement trained", len(M), "M<=R", M <= R)
+extra = R - M - HA - HB
+print("release-only, not a hold-out:", len(extra), sorted(extra))
+print("hold-outs in M:", sorted((HA | HB) & M))
+print("hold-outs in R:", len((HA | HB) & R), "of", len(HA | HB))
+RC, MC = set(rel["cation_parent_smiles"]), set(mea["cation_parent_smiles"])
+print("cation parents release", len(RC), "measurement", len(MC), "MC<=RC", MC <= RC)
+print("release cation parents not in release trained_smiles:", sorted(RC - R))
+print("measurement cation parents that are hold-outs:", sorted(MC & (HA | HB)))
+print("release-only cation parents:", sorted(RC - MC))
+for s in sorted(RC - MC):
+    print("   ", s, "in M:", s in M, "in HA:", s in HA, "in HB:", s in HB)
+
+scaffolds = {
+    "fluorene": Chem.MolFromSmarts("c1cccc2c1-c1ccccc1C2"),
+    "fluoranthene": Chem.MolFromSmiles("c1ccc2c(c1)-c1cccc3cccc-2c13"),
+}
+for name, patt in scaffolds.items():
+    for label, pool in (("measurement trained", M), ("measurement cation parents", MC)):
+        hits = sorted(s for s in pool if Chem.MolFromSmiles(s).HasSubstructMatch(patt))
+        print(f"{name} scaffold in {label}: {len(hits)}", hits[:12])
+    hits_b = [s for s in HB if Chem.MolFromSmiles(s).HasSubstructMatch(patt)]
+    print(f"   hold-out (b) members with {name}: {len(hits_b)}")
+print("(b) members with neither scaffold:", [s for s in HB if not any(Chem.MolFromSmiles(s).HasSubstructMatch(p) for p in scaffolds.values())])
+
+nitro = Chem.MolToSmiles(Chem.MolFromSmiles("O=[N+]([O-])C1c2ccccc2-c2ccccc21"))
+print("9-nitrofluorene canonical", nitro, "in R", nitro in R, "in M", nitro in M, "in HB", nitro in HB)
+
+corpus = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor/corpus/molecules/A2_2c22216564")
+g = json.loads((corpus / "geometry.json").read_text())
+print("geometry keys", list(g)[:10])

@@ -1,0 +1,43 @@
+"""Summarise the v1.4 release records: keys, list lengths, scalars; compare training vs measurement."""
+import json
+import sys
+from pathlib import Path
+
+import aromir
+
+print("aromir from", aromir.__file__)
+root = Path(aromir.__file__).parent / "releases" / sys.argv[1]
+
+
+def summ(obj, pre=""):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            summ(v, f"{pre}.{k}")
+    elif isinstance(obj, list):
+        if obj and all(isinstance(x, (str, int, float)) for x in obj) and len(obj) > 8:
+            print(f"{pre}: list[{len(obj)}] first={obj[:2]}")
+        else:
+            for i, x in enumerate(obj):
+                summ(x, f"{pre}[{i}]")
+    else:
+        print(f"{pre}: {obj!r}")
+
+
+recs = {}
+for f in sorted(root.glob("*.json")):
+    recs[f.stem] = json.loads(f.read_text())
+    print("=====", f.name)
+    summ(recs[f.stem])
+
+if "measurement" in recs:
+    t, m = recs["training"], recs["measurement"]
+    for key in sorted(set(t) | set(m)):
+        tv, mv = t.get(key), m.get(key)
+        if tv != mv:
+            if isinstance(tv, list) and isinstance(mv, list):
+                ts, ms = set(map(str, tv)), set(map(str, mv))
+                print(f"DIFF {key}: train {len(tv)} meas {len(mv)}; only-train {len(ts - ms)} only-meas {len(ms - ts)}")
+                print("   only-train sample", sorted(ts - ms)[:60])
+                print("   only-meas sample", sorted(ms - ts)[:20])
+            else:
+                print(f"DIFF {key}: train={tv!r} meas={mv!r}"[:600])

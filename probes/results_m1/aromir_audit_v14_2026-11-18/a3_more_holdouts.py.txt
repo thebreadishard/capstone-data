@@ -1,0 +1,98 @@
+"""Band error of the seeds' mean on the molecules v1.4's evaluation leaves out, with aromir's own code.
+
+Sets (corpus ids from the measurement networks' own record E7_rungC_v14s3clean_c00_control_eval_clean_seed0.json):
+  a10   the ten (a) molecules of that record: the eight of evaluation.json plus benzonitrile and 2-naphthoic acid,
+        whose B-layer twins the measurement run dropped ("holdout_twins_dropped")
+  b41   the forty of (b) plus A2_2c22216564 (9-nitrofluorene) of the frozen (b) list
+  bplus the thirty fluoranthene children of "b+" (semi-numerical Hessians only: hessian_*.npz, H_projected)
+Networks: the converted measurement networks (capstone probes/results_m1/aromir_v14_release_2026-11-18/measurement,
+read only) and the shipped release networks (bundled). The release networks are scored with evaluation.molecule_errors
+directly (aromir evaluate refuses them on (a)/(b), rightly; b+ is outside their training data).
+"""
+import json
+import sys
+import tempfile
+from pathlib import Path
+
+import numpy as np
+
+import aromir
+from aromir import admission, evaluation, release
+from aromir import geometry as aromir_geometry
+from aromir.constants import ANGSTROM_PER_BOHR
+from aromir.molecule import Geometry
+
+PLAN = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline")
+MOD = PLAN / "modules" / "05_support_predictor"
+MEAS = PLAN / "probes" / "results_m1" / "aromir_v14_release_2026-11-18" / "measurement"
+print("aromir", aromir.__file__)
+
+rec = json.loads((MOD / "out" / "v14" / "E7_rungC_v14s3clean_c00_control_eval_clean_seed0.json").read_text())
+SETS = {
+    "a10": list(rec["a"]["per_molecule"]),
+    "b41": list(rec["b"]["per_molecule"]) + ["A2_2c22216564"],
+    "bplus": list(rec["b+"]["per_molecule"]),
+}
+
+
+def load(mid: str):
+    d = MOD / "corpus" / "molecules" / mid
+    g = json.loads((d / "geometry.json").read_text())
+    symbols = tuple(s[0].upper() + s[1:].lower() for s in g["symbols"])
+    out = []
+    for level in ("b3lyp", "wb97x"):
+        p = d / f"hessian_{level}_analytic.npz"
+        kind = "analytic"
+        if not p.exists():
+            p, kind = d / f"hessian_{level}.npz", "semi-numerical"
+        with np.load(p) as z:
+            out.append(np.array(z["H_projected"], float))
+    return Geometry(symbols, np.array(g["coords_bohr"], float)), out[0], out[1], kind
+
+
+def order_of(geometry, scratch):
+    lines = [str(geometry.n_atoms), "x"]
+    for s, r in zip(geometry.symbols, geometry.coords_bohr * ANGSTROM_PER_BOHR, strict=True):
+        lines.append(f"{s} {r[0]:.10f} {r[1]:.10f} {r[2]:.10f}")
+    p = scratch / "m.xyz"
+    p.write_text("\n".join(lines) + "\n")
+    return list(aromir_geometry.canonical_order(admission.parse_xyz(p)))
+
+
+def references(ids, scratch):
+    refs, kinds = [], set()
+    for mid in ids:
+        g, low, ref, kind = load(mid)
+        kinds.add(kind)
+        o = order_of(g, scratch)
+        idx = (3 * np.array(o)[:, None] + np.arange(3)).ravel()
+        refs.append(evaluation.Reference(mid, g.reordered(o), low[np.ix_(idx, idx)], ref[np.ix_(idx, idx)]))
+    return refs, kinds
+
+
+def score(name, refs, rel):
+    mols, skipped = [], []
+    for r in refs:
+        try:
+            mols.append(evaluation.molecule_errors(r, rel))
+        except Exception as e:  # noqa: BLE001  report and continue
+            skipped.append(f"{r.name}: {type(e).__name__}: {str(e)[:120]}")
+    out = evaluation.holdout_errors(mols, rel.evaluation.licence_line_cm)
+    band = {f: (v["rms_cm"], v["n_modes"], v.get("interval_cm"), v.get("share_of_resamples_within_line"))
+            for f, v in out["band_error_seed_mean"].items()}
+    print(f"  {name}: n={out['n_molecules']} skipped={skipped}")
+    for f, v in band.items():
+        print(f"     {f:10s} band rms {v[0]}  n_modes {v[1]}  interval {v[2]}  share<=line {v[3]}"
+              f"  first-order per seed {out['first_order_error_per_seed'][f]}")
+
+
+if __name__ == "__main__":
+    meas = release.load(MEAS)
+    rel = release.load(release.bundled())
+    which = sys.argv[1:] or list(SETS)
+    with tempfile.TemporaryDirectory() as t:
+        for s in which:
+            refs, kinds = references(SETS[s], Path(t))
+            print(f"== {s}: {len(refs)} molecules, Hessian kinds {sorted(kinds)}")
+            score("measurement networks", refs, meas)
+            score("release networks (shipped)", refs, rel)

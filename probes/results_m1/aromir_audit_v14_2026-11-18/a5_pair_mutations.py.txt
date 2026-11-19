@@ -1,0 +1,80 @@
+"""Does release.load accept a copy of the bundled v1.4 folder whose records disagree?  Each case edits one record of a
+fresh copy in a temporary folder (the package is not touched), loads it, and, where it loads, prints the sentence of
+the card or certificate that the edit reaches."""
+import json
+import shutil
+import tempfile
+from pathlib import Path
+
+from aromir import card, release
+from aromir.errors import RefusedError
+
+SRC = release.bundled()
+
+
+def edit(folder: Path, name: str, change) -> None:
+    path = folder / name
+    record = json.loads(path.read_text(encoding="utf-8"))
+    change(record)
+    path.write_text(json.dumps(record, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def setkey(key, value):
+    def f(r):
+        r[key] = value
+    return f
+
+
+CASES = {
+    "measurement soft_mode_repair true, release false": [("measurement.json", setkey("soft_mode_repair", True))],
+    "measurement max_atoms 30, release 40": [("measurement.json", setkey("max_atoms", 30))],
+    "measurement elements C,H only": [("measurement.json", setkey("elements", ["C", "H"]))],
+    "measurement cation parent the release lacks": [
+        ("measurement.json", lambda r: r["cation_parent_smiles"].append("c1ccc2ccccc2c1"))],
+    "measurement cation_test differs from release's": [
+        ("measurement.json", lambda r: r["cation_test"].update(with_cm=0.5, molecule="pyridine"))],
+    "release.json measurement checkpoints not those of evaluation.sources": [
+        ("release.json", setkey("measurement_checkpoints", {"some_other_model.pt": "0000000000000000"}))],
+    "release.json n_entries 5": [("release.json", setkey("n_entries", 5))],
+    "release.json checks {'anything': true}": [("release.json", setkey("checks", {"anything": True}))],
+    "release.json release_checkpoint hash not hex": [
+        ("release.json", lambda r: r.update(release_checkpoints={f"x{i}.pt": "zz" for i in range(3)}))],
+    "measured.json disagrees with evaluation.json": [
+        ("measured.json", lambda r: r["a"]["band_error_seed_mean"]["other"].update(rms_cm=9.99))],
+    "evaluation.json holdout (a) n_modes and rms changed, measured.json not": [
+        ("evaluation.json", lambda r: r["band_error_seed_mean_cm"]["other"]["a"].update(rms_cm=0.10))],
+    "measurement network_version 1.3": [("measurement.json", setkey("network_version", "1.3"))],
+    "release.json fitted_share 0.5": [("release.json", setkey("fitted_share", 0.5))],
+    "BandError n_modes 1 for (a) other": [
+        ("evaluation.json", lambda r: r["band_error_seed_mean_cm"]["other"]["a"].update(n_modes=1))],
+    "interval not containing rms (a) other [0.1,0.2] rms 2.38": [
+        ("evaluation.json", lambda r: r["band_error_seed_mean_cm"]["other"]["a"].update(interval_cm=[0.1, 0.2]))],
+    "share_within_line 1.0 with interval above line": [
+        ("evaluation.json", lambda r: r["band_error_seed_mean_cm"]["other"]["a"].update(
+            interval_cm=[3.5, 4.0], share_of_resamples_within_line=1.0))],
+}
+
+for name, edits in CASES.items():
+    with tempfile.TemporaryDirectory() as t:
+        folder = Path(t) / "v1.4"
+        shutil.copytree(SRC, folder)
+        for file, change in edits:
+            edit(folder, file, change)
+        try:
+            loaded = release.load(folder)
+        except RefusedError as e:
+            print(f"REFUSED  {name}: {e.reasons[0][len(str(folder)) + 2:][:150]}")
+            continue
+        text = card.to_markdown(loaded)
+        hint = ""
+        if "n_entries" in name:
+            hint = [line for line in text.splitlines() if "**Networks:**" in line][0][:200]
+        if "soft_mode" in name:
+            hint = [line for line in text.splitlines() if "training Hessians were used" in line][0][:120]
+        if "max_atoms" in name:
+            hint = [line for line in text.splitlines() if line.startswith("- Sizes")][0]
+        if "elements" in name:
+            hint = [line for line in text.splitlines() if line.startswith("- Elements")][0]
+        if "(a) other" in name or "evaluation.json holdout" in name or "share_within" in name:
+            hint = [line for line in text.splitlines() if line.startswith("| other |")][0]
+        print(f"ACCEPTED {name}" + (f"\n         card: {hint}" if hint else ""))

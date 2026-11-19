@@ -1,0 +1,42 @@
+"""How much of b+'s error can be label noise: on the (b) molecules, which have both analytic and semi-numerical
+Hessians, score the measurement networks once against each kind (low level and reference of the same kind)."""
+import json
+import tempfile
+from pathlib import Path
+
+import numpy as np
+
+import aromir
+from aromir import evaluation, release
+
+import a3_more_holdouts as a3
+
+print("aromir file:", repr(aromir.__file__))
+meas = release.load(a3.MEAS)
+ids = [m for m in a3.SETS["b41"][:40] if (a3.MOD / "corpus" / "molecules" / m / "hessian_wb97x.npz").exists()
+       and (a3.MOD / "corpus" / "molecules" / m / "hessian_b3lyp.npz").exists()]
+print(len(ids), "of (b) have semi-numerical Hessians too")
+
+
+def load_kind(mid, kind):
+    d = a3.MOD / "corpus" / "molecules" / mid
+    g = json.loads((d / "geometry.json").read_text())
+    symbols = tuple(s[0].upper() + s[1:].lower() for s in g["symbols"])
+    hs = []
+    for level in ("b3lyp", "wb97x"):
+        name = f"hessian_{level}_analytic.npz" if kind == "analytic" else f"hessian_{level}.npz"
+        with np.load(d / name) as z:
+            hs.append(np.array(z["H_projected"], float))
+    return a3.Geometry(symbols, np.array(g["coords_bohr"], float)), hs[0], hs[1]
+
+
+with tempfile.TemporaryDirectory() as t:
+    for kind in ("analytic", "semi-numerical"):
+        refs = []
+        for mid in ids:
+            g, low, ref = load_kind(mid, kind)
+            o = a3.order_of(g, Path(t))
+            idx = (3 * np.array(o)[:, None] + np.arange(3)).ravel()
+            refs.append(evaluation.Reference(mid, g.reordered(o), low[np.ix_(idx, idx)], ref[np.ix_(idx, idx)]))
+        print("==", kind)
+        a3.score("measurement networks", refs, meas)

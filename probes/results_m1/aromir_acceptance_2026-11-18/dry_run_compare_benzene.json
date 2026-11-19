@@ -1,0 +1,37 @@
+{
+ "release": "/home/thebreadishard/aromir_clean_269/lib/python3.12/site-packages/aromir/releases/v1.4",
+ "n_molecules": 1,
+ "n_compared": 1,
+ "passed": {
+  "same_input": true,
+  "b3lyp": true,
+  "corrected": false
+ },
+ "molecules": {
+  "A_8448043181": {
+   "smiles": "c1ccccc1",
+   "group": "benzene",
+   "same_input": {
+    "max_dH": 2.1730860080143577e-09,
+    "max_band_cm": 0.0,
+    "passed": true
+   },
+   "b3lyp": {
+    "rms_cm": 0.4,
+    "max_above_200_cm": 1.1,
+    "max_any_cm": 1.1,
+    "passed": true
+   },
+   "corrected": {
+    "rms_cm": 1.384,
+    "max_above_200_cm": 2.8,
+    "max_any_cm": 2.8,
+    "passed": false
+   },
+   "against_wb97x": {
+    "rms_cm": 1.281,
+    "max_cm": 3.201
+   }
+  }
+ }
+}

@@ -1,0 +1,42 @@
+"""Read the measurement networks' own evaluation records (capstone, read-only): which sets exist, which molecules,
+and whether those molecules are in v1.4's measurement.json as trained or held out."""
+import csv
+import json
+from pathlib import Path
+
+import aromir
+
+PLAN = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline")
+MOD = PLAN / "modules" / "05_support_predictor"
+root = Path(aromir.__file__).parent / "releases" / "v1.4"
+mea = json.loads((root / "measurement.json").read_text())
+rel = json.loads((root / "training.json").read_text())
+M, R = set(mea["trained_smiles"]), set(rel["trained_smiles"])
+H = {s for v in mea["held_out_smiles"].values() for s in v}
+smiles = {}
+with (MOD / "corpus" / "manifest.csv").open() as f:
+    for row in csv.DictReader(f):
+        smiles[row["id"]] = row["smiles"]
+from rdkit import Chem
+
+
+def canon(s):
+    return Chem.MolToSmiles(Chem.MolFromSmiles(s))
+
+
+for seed in range(3):
+    rec = json.loads((MOD / "out" / "v14" / f"E7_rungC_v14s3clean_c00_control_eval_clean_seed{seed}.json").read_text())
+    print("seed", seed, "n_train_ids", rec.get("n_train_ids"))
+    for key in ("a", "b", "b+", "a8"):
+        s = rec[key]
+        ids = list(s.get("per_molecule", {}))
+        cs = [canon(smiles[i]) for i in ids]
+        print(f"  set {key}: {len(ids)} molecules; diag_rms", {k: round(v, 2) for k, v in s["diag_rms"].items()},
+              f"| in measurement trained: {sum(c in M for c in cs)}, in held_out lists: {sum(c in H for c in cs)},"
+              f" in release trained: {sum(c in R for c in cs)}")
+        if seed == 0 and key in ("a", "b+"):
+            print("     ids", ids[:40])
+            if key == "b+":
+                for i in ids[:3]:
+                    d = MOD / "corpus" / "molecules" / i
+                    print("     ", i, smiles[i], sorted(p.name for p in d.glob("hessian_*")))

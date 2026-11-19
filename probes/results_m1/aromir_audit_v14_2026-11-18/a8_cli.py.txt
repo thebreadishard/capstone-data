@@ -1,0 +1,77 @@
+"""CLI refusals and failures that compute nothing: `check`, `card`, `evaluate`, and the size gate of `spectrum`
+called directly (so no quantum chemistry can start)."""
+import contextlib
+import io
+import shutil
+import tempfile
+from pathlib import Path
+
+import numpy as np
+
+from aromir import admission, certificate, cli, evaluation, pipeline, release, response
+from aromir import geometry as geo
+from aromir.lowlevel import LowLevel
+
+
+def run(label, argv):
+    out, err = io.StringIO(), io.StringIO()
+    try:
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            code = cli.main(argv)
+        result = f"exit {code}"
+    except BaseException as error:  # noqa: BLE001
+        result = f"TRACEBACK {type(error).__name__}: {str(error)[:110]}"
+    text = (err.getvalue() or out.getvalue()).strip().replace("\n", " / ")[:200]
+    print(f"{label:45s} -> {result} {text}")
+
+
+T = Path(tempfile.mkdtemp())
+for s in ("[2H]c1ccccc1", "[13cH]1ccccc1", "c1ccccc1 benzene", "c1ccccc1é", "c1ccccc1\t", " c1ccccc1",
+          "C1#CC=CC=C1", "", "c1ccccc1.c1ccccc1", "[CH2]c1ccccc1", "c1ccccc1[O-]", "[nH+]1ccccc1",
+          "C(=Cc1ccccc1)c1ccccc1", "c1cc[se]c1", "B1=CC=CC=C1"):
+    run(f"check {s!r}", ["check", s])
+(T / "latin1.xyz").write_bytes("1\ncafé\nC 0 0 0\n".encode("latin-1"))
+run("check --xyz latin-1 comment", ["check", "--xyz", str(T / "latin1.xyz")])
+(T / "dup.xyz").write_text("2\nx\nC 0 0 0\nC 0 0 0\n")
+run("check --xyz duplicated atom", ["check", "--xyz", str(T / "dup.xyz")])
+(T / "exists.md").write_text("precious")
+run("card --out existing", ["card", "--out", str(T / "exists.md")])
+run("card --out missing folder", ["card", "--out", str(T / "no" / "card.md")])
+run("evaluate bundled (release networks)", ["evaluate", str(T)])
+
+meas = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/"
+            "aromir_v14_release_2026-11-18/measurement")
+mcopy = T / "measurement"
+shutil.copytree(meas, mcopy)
+hold = T / "holdouts" / "a"
+hold.mkdir(parents=True)
+(hold / "000_bad.npz").write_bytes(b"not a zip")
+run("evaluate: a damaged .npz", ["evaluate", str(T / "holdouts"), "--release", str(mcopy)])
+(hold / "000_bad.npz").unlink()
+src = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/"
+           "aromir_v14_release_2026-11-18/holdouts/a/004_A_8448043181.npz")
+shutil.copy(src, hold / "000_benzene.npz")
+run("evaluate measurement on benzene alone", ["evaluate", str(T / "holdouts"), "--release", str(mcopy)])
+
+# spectrum's gates, called as run_spectrum calls them (no computation can start here)
+rel = release.load(release.bundled())
+for s in ("c1ccc2cc3cc4cc5cc6ccccc6cc5cc4cc3cc2c1", "c1ccc2ccccc2c1"):
+    a, start = pipeline.admit(pipeline.MoleculeInput(smiles=s, xyz=None))
+    print(f"spectrum gate {s}: n_atoms {start.n_atoms}: size {pipeline._untrained_size(start, rel)}"
+          f" elements {pipeline._untrained_elements(start, rel)} network {pipeline._no_network_inputs(start, rel)}")
+
+# full certificate text for one stored molecule, to read the sentences around the pair
+CORPUS = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/"
+              "05_support_predictor/corpus/molecules/A_01f3186607")
+import json
+g = json.loads((CORPUS / "geometry.json").read_text())
+from aromir.molecule import Geometry
+geom = Geometry(tuple(x[0].upper() + x[1:].lower() for x in g["symbols"]), np.array(g["coords_bohr"], float))
+with np.load(CORPUS / "hessian_b3lyp_analytic.npz") as z:
+    h = np.array(z["H_projected"], float)
+apt = np.zeros((3, h.shape[0]))  # heights are not read here: only the sentences
+low = LowLevel(0.0, h, apt, response.Refinement(0, 0, 0, 0), 0.0, 0.0)
+adm = admission.admit(admission.parse_smiles("c1ccc2ccccc2c1"))
+rec = certificate.build(adm, geom, low, rel.corrections(geom, h), rel)
+(Path.home() / "audit_v14_tmp" / "naphthalene_certificate.md").write_text(certificate.to_markdown(rec))
+print("certificate written")

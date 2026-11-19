@@ -1,0 +1,24 @@
+{
+ "recipe": {
+  "network_version": "1.4",
+  "seed": 1,
+  "architecture": {
+   "aggregation": "sum",
+   "n_features": 64,
+   "n_blocks": 3,
+   "hidden": 256,
+   "n_pair_features": 66,
+   "sqm_scale": true,
+   "parity_odd": false
+  },
+  "inputs": {
+   "pattern": "f",
+   "primitives": {
+    "angle_choice": "geometric",
+    "dihedral_encoding": "raw"
+   },
+   "parity": false
+  }
+ },
+ "sha256": "84885494daed9ac738bd958419f63623cfd39545ac60a8de1b6bfbe6190ab727"
+}

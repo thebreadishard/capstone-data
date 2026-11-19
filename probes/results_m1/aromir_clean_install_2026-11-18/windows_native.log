@@ -1,0 +1,43 @@
+Python 3.14.6
+=== 1. a Windows wheel of pyscf 2.15.0?
+   ---------------------------------------- 75.1/75.1 MB 8.7 MB/s  0:00:08
+Saved c:\users\thebr\appdata\local\temp\claude\6e282d7a6878e314\c5dbb1e0-2cd9-4510-b8b4-ed55f355285e\scratchpad\win_venv\dl\pyscf-2.15.0-py3-none-win_amd64.whl
+Successfully downloaded pyscf
+=== 2. pyscf 2.15.0 from its sdist
+Collecting pyscf==2.15.0
+  Using cached pyscf-2.15.0-py3-none-win_amd64.whl.metadata (7.5 kB)
+Using cached pyscf-2.15.0-py3-none-win_amd64.whl (75.1 MB)
+Installing collected packages: pyscf
+Successfully installed pyscf-2.15.0
+exit 0
+=== torch (CPU wheel)
+ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: 'C:\\Users\\thebr\\AppData\\Local\\Temp\\claude\\6e282d7a6878e314\\c5dbb1e0-2cd9-4510-b8b4-ed55f355285e\\scratchpad\\win_venv\\Lib\\site-packages\\torch-2.15.0+cpu.dist-info\\licenses\\third_party\\cudnn_frontend\\python\\cudnn\\moe_ep\\_megamoe_backend\\cutedsl_src\\LICENSE.Apache-2.0'
+HINT: This error might have occurred since this system does not have Windows Long Path support enabled. You can find information on how to enable this at https://pip.pypa.io/warnings/enable-long-paths
+
+=== aromir from GitHub at 6047467
+pip exit 0
+aromir 0.1.0.dev0
+admitted: c1ccc2ccccc2c1 (C10H8, 18 atoms)
+check exit 0
+=== rerun in a short path (the first attempt's torch hit Windows' 260-character path limit in the scratchpad)
+Python 3.14.6
+=== 1. a Windows wheel of pyscf 2.15.0?
+Using cached pyscf-2.15.0-py3-none-win_amd64.whl (75.1 MB)
+Saved c:\users\thebr\aromir_win269\dl\pyscf-2.15.0-py3-none-win_amd64.whl
+Successfully downloaded pyscf
+=== 2. pyscf 2.15.0 from its sdist
+Collecting pyscf==2.15.0
+  Using cached pyscf-2.15.0-py3-none-win_amd64.whl.metadata (7.5 kB)
+Using cached pyscf-2.15.0-py3-none-win_amd64.whl (75.1 MB)
+Installing collected packages: pyscf
+Successfully installed pyscf-2.15.0
+exit 0
+=== torch (CPU wheel)
+pyscf 2.15.0 requires numpy!=1.16,!=1.17,>=1.13, which is not installed.
+pyscf 2.15.0 requires psutil; sys_platform == "win32", which is not installed.
+pyscf 2.15.0 requires scipy>=1.6.0, which is not installed.
+=== aromir from GitHub at 6047467
+pip exit 0
+aromir 0.1.0.dev0
+admitted: c1ccc2ccccc2c1 (C10H8, 18 atoms)
+check exit 0

@@ -1,0 +1,86 @@
+"""v1.4 certificates on stored corpus molecules (analytic B3LYP Hessian + CPHF polar tensor, no quantum chemistry):
+range/position consistency, imaginary bands, X-H stretches, acquaintance sentences, sizes, release vs measurement."""
+import csv
+import json
+from collections import Counter
+from pathlib import Path
+
+import numpy as np
+import torch
+
+from aromir import admission, certificate, release, response
+from aromir.lowlevel import LowLevel
+from aromir.molecule import Geometry
+
+torch.set_num_threads(2)
+MOD = Path("/mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/modules/05_support_predictor")
+CORPUS = MOD / "corpus" / "molecules"
+REL = release.load(release.bundled())
+MEAS = release.load(MOD.parents[1] / "probes/results_m1/aromir_v14_release_2026-11-18/measurement")
+
+
+def load(mid):
+    d = CORPUS / mid
+    g = json.loads((d / "geometry.json").read_text())
+    geom = Geometry(tuple(s[0].upper() + s[1:].lower() for s in g["symbols"]), np.array(g["coords_bohr"], float))
+    with np.load(d / "hessian_b3lyp_analytic.npz") as z:
+        h = np.array(z["H_projected"], float)
+    with np.load(d / "dipole_b3lyp_cphf.npz") as z:
+        apt = np.array(z["apt"], float)
+    return geom, h, apt
+
+
+def cert(row, rel=REL):
+    g, h, apt = load(row["id"])
+    low = LowLevel(0.0, h, apt, response.Refinement(0, 0, 0, 0), 0.0, 0.0)
+    admitted = admission.admit(admission.parse_smiles(row["smiles"]))
+    return certificate.build(admitted, g, low, rel.corrections(g, h), rel), admitted
+
+
+rows = [r for r in csv.DictReader((MOD / "corpus" / "manifest.csv").open())
+        if r["status"] == "done" and "+" not in r["name"][-1:]
+        and (CORPUS / r["id"] / "hessian_b3lyp_analytic.npz").is_file()
+        and (CORPUS / r["id"] / "dipole_b3lyp_cphf.npz").is_file()]
+by_smiles = {}
+for r in rows:
+    by_smiles.setdefault(r["smiles"], r)
+print(len(by_smiles), "distinct corpus molecules with analytic Hessian and APT")
+
+print("--- acquaintance sentences")
+for s in ("c1ccccc1", "N#Cc1ccccc1", "O=C(O)c1ccc2ccccc2c1", "Cc1cccc(F)n1", "O=[N+]([O-])c1c2ccccc2cc2ccccc12",
+          "c1ccc2ccccc2c1", "C#Cc1ccc2cccc3c2c1-c1ccccc1-3"):
+    a = admission.admit(admission.parse_smiles(s))
+    print(f"  {s}: release -> {certificate.acquaintance(a.smiles, REL.training, REL.measurement)[:170]}")
+
+rng = np.random.default_rng(18)
+sample = list(by_smiles.values())
+picked = [sample[k] for k in rng.choice(len(sample), size=60, replace=False)]
+stats = Counter()
+worst_outside = 0.0
+notes = Counter()
+diff_rm = []
+for row in picked:
+    try:
+        rec, adm = cert(row)
+    except Exception as e:  # noqa: BLE001
+        stats[f"failed {type(e).__name__}: {str(e)[:80]}"] += 1
+        continue
+    recm, _ = cert(row, MEAS)
+    for b, bm in zip(rec["bands"], recm["bands"], strict=True):
+        stats["bands"] += 1
+        lo, hi = b["seed_range_cm"]
+        miss = max(lo - b["wavenumber_cm"], b["wavenumber_cm"] - hi)
+        if miss > 0.05:
+            stats["outside range"] += 1
+            worst_outside = max(worst_outside, miss)
+        notes[b["licence_note"] or "licensed"] += 1
+        if b["family"] == "CH-stretch" and b["b3lyp_cm"] > 3300 and b["licensed"]:
+            stats["X-H above 3300 licensed"] += 1
+        diff_rm.append(b["wavenumber_cm"] - bm["wavenumber_cm"])
+    stats["in release training"] += rec["molecule"]["seen"] == certificate.RELEASE_TRAINED
+print("--- 60 random corpus molecules, v1.4 shipped")
+print(" ", dict(stats), f"worst outside {worst_outside:.2f}")
+print("  licence notes:", dict(notes))
+d = np.abs(np.array(diff_rm))
+print(f"  |release - measurement| band position: rms {np.sqrt(np.mean(d**2)):.2f}, max {d.max():.2f}, "
+      f"share > 3 cm-1 {np.mean(d > 3):.3f}  (n={d.size})")
