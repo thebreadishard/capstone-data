@@ -1,0 +1,1530 @@
+{
+ "kind": "live certificate",
+ "date": "2026-11-19 20:38",
+ "pipeline_version": "0.14",
+ "molecule": {
+  "name": "benzonitrile",
+  "smiles": "N#Cc1ccccc1",
+  "formula": "C7H5N",
+  "n_atoms": 13,
+  "elements": [
+   "C",
+   "H",
+   "N"
+  ],
+  "training_atoms": [
+   8,
+   40
+  ],
+  "inside_training_sizes": true,
+  "listed": {
+   "id": "A_3100da3761",
+   "name": "benzonitrile",
+   "rung": 4,
+   "source": "website export catalog.json, molecules/A_3100da3761.json",
+   "export_b3lyp_source": "psi4 1.11 (conda env qc, Windows), modules/05_support_predictor/corpus/molecules/A_3100da3761/hessian_b3lyp.npz",
+   "b3lyp_max_abs_diff_cm": 1.9,
+   "analytic_b3lyp_max_abs_diff_cm": 1.9,
+   "analytic_b3lyp_source": "corpus/molecules/A_3100da3761/hessian_b3lyp_analytic.npz"
+  },
+  "seen": {
+   "role": "release_trained",
+   "ids": [
+    "A_3100da3761",
+    "B_3100da3761"
+   ],
+   "text": "in the release networks' training data: the error bars are not an out-of-sample error for this molecule; expect it to be smaller"
+  },
+  "truth": {
+   "source": "corpus/molecules/A_3100da3761/hessian_wb97x_analytic.npz",
+   "n_bands": 33,
+   "rms_by_rank_cm": 1.01,
+   "overlap": 0.983
+  }
+ },
+ "network": {
+  "name": "ΔH-network",
+  "version": "1.4",
+  "models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed0.pt",
+    "sha16": "6f52c9d8570fbcf5",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed1.pt",
+    "sha16": "1e820b8755078b90",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed2.pt",
+    "sha16": "bc4de0b6458e44f2",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   }
+  ],
+  "predicts": "ωB97X/6-31G* (the DFT proxy: the network's ΔH is trained on ωB97X − B3LYP Hessians)",
+  "kind": "release",
+  "trained_on_molecules": 1132,
+  "inner_validation": 0.15,
+  "measurement_models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed0.pt",
+    "sha16": "89574ed1b69c4e10",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed1.pt",
+    "sha16": "03dbbf9f29b59186",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed2.pt",
+    "sha16": "8dd85f3f1ba5bbeb",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   }
+  ]
+ },
+ "accuracy": {
+  "higher_level": "ωB97X/6-31G* (the DFT proxy: the network's ΔH is trained on ωB97X − B3LYP Hessians)",
+  "holdouts": {
+   "a": {
+    "description": "hold-out (a) on its eight molecules never trained on in any version (the set fixed on 30 Oct 2026): eight layer-A molecules held out on 19 Sep 2026; this version's training left out the twins of the hold-out molecules, so the other two, 2-naphthoic acid and benzonitrile, are clean too, and the eight are kept for comparability with v1.3",
+    "n_molecules": 8,
+    "readouts": {
+     "ring-ip": {
+      "mean": 1.55,
+      "seeds": [
+       1.77,
+       1.52,
+       1.37
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-stretch": {
+      "mean": 1.15,
+      "seeds": [
+       1.34,
+       1.19,
+       0.92
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-oop": {
+      "mean": 2.22,
+      "seeds": [
+       2.22,
+       2.1,
+       2.35
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "other": {
+      "mean": 2.91,
+      "seeds": [
+       2.79,
+       3.1,
+       2.84
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "coupling_ratio": {
+      "mean": 0.147,
+      "seeds": [
+       0.15,
+       0.147,
+       0.143
+      ],
+      "target": 0.25,
+      "within_target": true
+     }
+    },
+    "product": {
+     "ring-ip": {
+      "rms": 1.17,
+      "n_modes": 199,
+      "n_molecules": 8,
+      "n_molecules_with_modes": 8,
+      "interval": [
+       0.9,
+       1.41
+      ],
+      "share_below_line": 1.0,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": false
+     },
+     "CH-stretch": {
+      "rms": 0.8,
+      "n_modes": 73,
+      "n_molecules": 8,
+      "n_molecules_with_modes": 8,
+      "interval": [
+       0.44,
+       1.2
+      ],
+      "share_below_line": 1.0,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": false
+     },
+     "CH-oop": {
+      "rms": 1.86,
+      "n_modes": 46,
+      "n_molecules": 8,
+      "n_molecules_with_modes": 5,
+      "interval": [
+       0.93,
+       3.2
+      ],
+      "share_below_line": 0.96,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": true
+     },
+     "other": {
+      "rms": 2.38,
+      "n_modes": 156,
+      "n_molecules": 8,
+      "n_molecules_with_modes": 8,
+      "interval": [
+       1.45,
+       3.19
+      ],
+      "share_below_line": 0.93,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": true
+     }
+    },
+    "shape": {
+     "n_molecules": 8,
+     "cheap": {
+      "spectrum_overlap": 0.277,
+      "intensity_error": 0.227
+     },
+     "corrected": {
+      "spectrum_overlap": 0.977,
+      "intensity_error": 0.109
+     }
+    }
+   },
+   "b": {
+    "description": "hold-out (b): every substituted molecule of two scaffold cores, frozen on 8 Oct 2026 — scaffolds the measurement networks never saw",
+    "n_molecules": 40,
+    "readouts": {
+     "ring-ip": {
+      "mean": 1.64,
+      "seeds": [
+       1.53,
+       1.49,
+       1.89
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-stretch": {
+      "mean": 2.02,
+      "seeds": [
+       2.32,
+       2.2,
+       1.55
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "CH-oop": {
+      "mean": 1.72,
+      "seeds": [
+       1.8,
+       1.96,
+       1.41
+      ],
+      "target": 3.0,
+      "within_target": true
+     },
+     "other": {
+      "mean": 3.68,
+      "seeds": [
+       3.2,
+       4.15,
+       3.7
+      ],
+      "target": 3.0,
+      "within_target": false
+     },
+     "coupling_ratio": {
+      "mean": 0.17,
+      "seeds": [
+       0.168,
+       0.164,
+       0.177
+      ],
+      "target": 0.25,
+      "within_target": true
+     }
+    },
+    "product": {
+     "ring-ip": {
+      "rms": 1.22,
+      "n_modes": 1194,
+      "n_molecules": 40,
+      "n_molecules_with_modes": 40,
+      "interval": [
+       1.09,
+       1.34
+      ],
+      "share_below_line": 1.0,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": false
+     },
+     "CH-stretch": {
+      "rms": 1.67,
+      "n_modes": 410,
+      "n_molecules": 40,
+      "n_molecules_with_modes": 40,
+      "interval": [
+       1.37,
+       1.95
+      ],
+      "share_below_line": 1.0,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": false
+     },
+     "CH-oop": {
+      "rms": 1.26,
+      "n_modes": 84,
+      "n_molecules": 40,
+      "n_molecules_with_modes": 8,
+      "interval": [
+       0.98,
+       1.59
+      ],
+      "share_below_line": 1.0,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": false
+     },
+     "other": {
+      "rms": 2.1,
+      "n_modes": 1258,
+      "n_molecules": 40,
+      "n_molecules_with_modes": 40,
+      "interval": [
+       1.88,
+       2.34
+      ],
+      "share_below_line": 1.0,
+      "target": 3.0,
+      "within_target": true,
+      "interval_crosses_line": false
+     }
+    },
+    "shape": {
+     "n_molecules": 31,
+     "cheap": {
+      "spectrum_overlap": 0.366,
+      "intensity_error": 0.511
+     },
+     "corrected": {
+      "spectrum_overlap": 0.975,
+      "intensity_error": 0.216
+     }
+    }
+   }
+  },
+  "quantities": {
+   "readouts": "first-order diagonal error of each seed's correction, averaged over the seeds",
+   "product": "error of the corrected band positions of the seed-mean correction"
+  },
+  "licence_quantity": "product",
+  "target_source": "3 cm⁻¹ per family — decision 53's line for ring-ip, CH-oop and 'other', every family's under decision 65 (the licence) — and the coupling ratio ≤ 0.25 of chain 35's T1 line (probes/chain35_read.py)",
+  "sources": [
+   "E7_rungC_v14s3clean_c00_control_eval_clean_seed0.json",
+   "E7_rungC_v14s3clean_c00_control_eval_clean_seed1.json",
+   "E7_rungC_v14s3clean_c00_control_eval_clean_seed2.json",
+   "E7_rungC_v14s3clean_c00_control_a8read_seed0.json",
+   "E7_rungC_v14s3clean_c00_control_a8read_seed1.json",
+   "E7_rungC_v14s3clean_c00_control_a8read_seed2.json",
+   "E7_rungC_v14s3clean_c00_control_product_error.json"
+  ],
+  "definitions": {
+   "family": "rms over the family's B3LYP modes of the first-order diagonal error of a seed's ΔH against the higher level, per seed, and the seeds' mean (cm⁻¹); families by module 05's rule (m05/learning_curve_layerA.molecule_features)",
+   "product": "rms over the family's bands of the corrected band position's error against the higher level (cm⁻¹): the seeds' mean ΔH added to the B3LYP Hessian and diagonalised, each corrected band paired to its higher-level band by mode overlap and counted in the family of its B3LYP partner — what the pipeline prints; with the 95 % interval of a bootstrap over whole molecules",
+   "coupling_ratio": "rms of the predicted mode couplings' error over the rms of the couplings themselves; 0 = exact, 1 = no better than none",
+   "spectrum_overlap": "cosine similarity of the two Lorentzian-broadened spectra (FWHM 10 cm⁻¹, 500–3500 cm⁻¹); 1 = identical shape",
+   "intensity_error": "intensity-weighted rms of the relative height error per band, bands paired by the shape of the motion (eigenvector overlap); 0 = identical heights"
+  },
+  "coupled_cluster": "not measured for this network version: the coupled-cluster reads (T3) were made on an earlier network (chain 34)"
+ },
+ "bands": [
+  {
+   "network_cm": 167.5,
+   "km_mol": 1.86,
+   "seed_range_cm": [
+    166.5,
+    168.7
+   ],
+   "b3lyp_cm": 147.1,
+   "baseline_cm": 144.0,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 167.5,
+   "printed": "harmonic ω",
+   "nu_cm": null,
+   "delta_anh_cm": null,
+   "step_bar_cm": null,
+   "step_error_measured": null,
+   "step_family": "other",
+   "no_step_reason": "unmeasured",
+   "position_note": "harmonic position, no anharmonic step: no model was measured for this family in this range",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 189.7,
+   "km_mol": 4.43,
+   "seed_range_cm": [
+    189.5,
+    189.8
+   ],
+   "b3lyp_cm": 164.6,
+   "baseline_cm": 161.1,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 189.7,
+   "printed": "harmonic ω",
+   "nu_cm": null,
+   "delta_anh_cm": null,
+   "step_bar_cm": null,
+   "step_error_measured": null,
+   "step_family": "other",
+   "no_step_reason": "unmeasured",
+   "position_note": "harmonic position, no anharmonic step: no model was measured for this family in this range",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 410.9,
+   "km_mol": 0.92,
+   "seed_range_cm": [
+    410.2,
+    411.6
+   ],
+   "b3lyp_cm": 392.1,
+   "baseline_cm": 383.9,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 410.9,
+   "printed": "harmonic ω",
+   "nu_cm": null,
+   "delta_anh_cm": null,
+   "step_bar_cm": null,
+   "step_error_measured": null,
+   "step_family": "other",
+   "no_step_reason": "unmeasured",
+   "position_note": "harmonic position, no anharmonic step: no model was measured for this family in this range",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 422.0,
+   "km_mol": 0.0,
+   "seed_range_cm": [
+    421.9,
+    422.1
+   ],
+   "b3lyp_cm": 411.0,
+   "baseline_cm": 402.4,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 422.0,
+   "printed": "harmonic ω",
+   "nu_cm": null,
+   "delta_anh_cm": null,
+   "step_bar_cm": null,
+   "step_error_measured": null,
+   "step_family": "other",
+   "no_step_reason": "unmeasured",
+   "position_note": "harmonic position, no anharmonic step: no model was measured for this family in this range",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 467.9,
+   "km_mol": 0.0,
+   "seed_range_cm": [
+    467.8,
+    468.1
+   ],
+   "b3lyp_cm": 465.4,
+   "baseline_cm": 455.6,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 467.9,
+   "printed": "harmonic ω",
+   "nu_cm": null,
+   "delta_anh_cm": null,
+   "step_bar_cm": null,
+   "step_error_measured": null,
+   "step_family": "other",
+   "no_step_reason": "unmeasured",
+   "position_note": "harmonic position, no anharmonic step: no model was measured for this family in this range",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 576.1,
+   "km_mol": 0.22,
+   "seed_range_cm": [
+    575.9,
+    576.5
+   ],
+   "b3lyp_cm": 558.8,
+   "baseline_cm": 547.1,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 571.1,
+   "printed": "anharmonic ν",
+   "nu_cm": 571.1,
+   "delta_anh_cm": -5.0,
+   "step_bar_cm": 3.84,
+   "step_error_measured": true,
+   "step_family": "other",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.84 cm⁻¹ (rms of Δ_anh against its VPT2 label, family other); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 582.4,
+   "km_mol": 14.92,
+   "seed_range_cm": [
+    580.2,
+    584.1
+   ],
+   "b3lyp_cm": 569.9,
+   "baseline_cm": 557.9,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 574.1,
+   "printed": "anharmonic ν",
+   "nu_cm": 574.1,
+   "delta_anh_cm": -8.3,
+   "step_bar_cm": null,
+   "step_error_measured": false,
+   "step_family": "other",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh, printed without an error bar: the step's error is not measured for this kind of mode (family 'other' with an out-of-plane share of 0.8 or more); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 643.8,
+   "km_mol": 0.14,
+   "seed_range_cm": [
+    643.5,
+    644.0
+   ],
+   "b3lyp_cm": 638.3,
+   "baseline_cm": 624.9,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "low / skeletal",
+   "u_band_cm": 16.12,
+   "printed_cm": 637.4,
+   "printed": "anharmonic ν",
+   "nu_cm": 637.4,
+   "delta_anh_cm": -6.4,
+   "step_bar_cm": 3.84,
+   "step_error_measured": true,
+   "step_family": "other",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.84 cm⁻¹ (rms of Δ_anh against its VPT2 label, family other); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 716.6,
+   "km_mol": 26.79,
+   "seed_range_cm": [
+    716.0,
+    717.5
+   ],
+   "b3lyp_cm": 704.1,
+   "baseline_cm": 689.3,
+   "family": "CH-oop",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.86,
+    "b": 1.26
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61,
+   "printed_cm": 705.9,
+   "printed": "anharmonic ν",
+   "nu_cm": 705.9,
+   "delta_anh_cm": -10.7,
+   "step_bar_cm": 8.38,
+   "step_error_measured": true,
+   "step_family": "CH-oop",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 782.1,
+   "km_mol": 2.19,
+   "seed_range_cm": [
+    782.0,
+    782.1
+   ],
+   "b3lyp_cm": 774.5,
+   "baseline_cm": 758.2,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61,
+   "printed_cm": 773.5,
+   "printed": "anharmonic ν",
+   "nu_cm": 773.5,
+   "delta_anh_cm": -8.6,
+   "step_bar_cm": 3.84,
+   "step_error_measured": true,
+   "step_family": "other",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.84 cm⁻¹ (rms of Δ_anh against its VPT2 label, family other); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 792.9,
+   "km_mol": 30.26,
+   "seed_range_cm": [
+    791.0,
+    794.0
+   ],
+   "b3lyp_cm": 777.5,
+   "baseline_cm": 761.2,
+   "family": "CH-oop",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.86,
+    "b": 1.26
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61,
+   "printed_cm": 780.4,
+   "printed": "anharmonic ν",
+   "nu_cm": 780.4,
+   "delta_anh_cm": -12.5,
+   "step_bar_cm": 8.38,
+   "step_error_measured": true,
+   "step_family": "CH-oop",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 879.5,
+   "km_mol": 0.0,
+   "seed_range_cm": [
+    878.6,
+    880.4
+   ],
+   "b3lyp_cm": 861.4,
+   "baseline_cm": 843.3,
+   "family": "CH-oop",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.86,
+    "b": 1.26
+   },
+   "lab_region": "CH-oop (10.5-15 um; benzene nu11 at 673 included)",
+   "u_band_cm": 9.61,
+   "printed_cm": 870.7,
+   "printed": "anharmonic ν",
+   "nu_cm": 870.7,
+   "delta_anh_cm": -8.8,
+   "step_bar_cm": 8.38,
+   "step_error_measured": true,
+   "step_family": "CH-oop",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 965.5,
+   "km_mol": 2.39,
+   "seed_range_cm": [
+    964.6,
+    966.4
+   ],
+   "b3lyp_cm": 941.7,
+   "baseline_cm": 921.9,
+   "family": "CH-oop",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.86,
+    "b": 1.26
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 955.2,
+   "printed": "anharmonic ν",
+   "nu_cm": 955.2,
+   "delta_anh_cm": -10.3,
+   "step_bar_cm": 8.38,
+   "step_error_measured": true,
+   "step_family": "CH-oop",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1007.1,
+   "km_mol": 0.0,
+   "seed_range_cm": [
+    1006.7,
+    1007.6
+   ],
+   "b3lyp_cm": 976.3,
+   "baseline_cm": 955.8,
+   "family": "CH-oop",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.86,
+    "b": 1.26
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 995.2,
+   "printed": "anharmonic ν",
+   "nu_cm": 995.2,
+   "delta_anh_cm": -11.9,
+   "step_bar_cm": 8.38,
+   "step_error_measured": true,
+   "step_family": "CH-oop",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1025.8,
+   "km_mol": 0.51,
+   "seed_range_cm": [
+    1025.7,
+    1025.9
+   ],
+   "b3lyp_cm": 1017.9,
+   "baseline_cm": 996.5,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 1010.9,
+   "printed": "anharmonic ν",
+   "nu_cm": 1010.9,
+   "delta_anh_cm": -14.9,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1036.0,
+   "km_mol": 0.02,
+   "seed_range_cm": [
+    1035.4,
+    1036.4
+   ],
+   "b3lyp_cm": 1007.8,
+   "baseline_cm": 986.6,
+   "family": "CH-oop",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.86,
+    "b": 1.26
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 1022.3,
+   "printed": "anharmonic ν",
+   "nu_cm": 1022.3,
+   "delta_anh_cm": -13.7,
+   "step_bar_cm": 8.38,
+   "step_error_measured": true,
+   "step_family": "CH-oop",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1065.6,
+   "km_mol": 2.56,
+   "seed_range_cm": [
+    1065.3,
+    1065.8
+   ],
+   "b3lyp_cm": 1055.8,
+   "baseline_cm": 1033.6,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "ring / CH-ip (9-10.5 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 1048.5,
+   "printed": "anharmonic ν",
+   "nu_cm": 1048.5,
+   "delta_anh_cm": -17.1,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1120.8,
+   "km_mol": 2.89,
+   "seed_range_cm": [
+    1120.6,
+    1121.0
+   ],
+   "b3lyp_cm": 1112.9,
+   "baseline_cm": 1078.4,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64,
+   "printed_cm": 1104.8,
+   "printed": "anharmonic ν",
+   "nu_cm": 1104.8,
+   "delta_anh_cm": -16.0,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1190.7,
+   "km_mol": 0.37,
+   "seed_range_cm": [
+    1190.1,
+    1191.1
+   ],
+   "b3lyp_cm": 1197.4,
+   "baseline_cm": 1160.3,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64,
+   "printed_cm": 1178.0,
+   "printed": "anharmonic ν",
+   "nu_cm": 1178.0,
+   "delta_anh_cm": -12.7,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1215.1,
+   "km_mol": 0.9,
+   "seed_range_cm": [
+    1214.7,
+    1215.6
+   ],
+   "b3lyp_cm": 1211.5,
+   "baseline_cm": 1173.9,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64,
+   "printed_cm": 1199.0,
+   "printed": "anharmonic ν",
+   "nu_cm": 1199.0,
+   "delta_anh_cm": -16.1,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1247.0,
+   "km_mol": 0.53,
+   "seed_range_cm": [
+    1246.7,
+    1247.6
+   ],
+   "b3lyp_cm": 1226.9,
+   "baseline_cm": 1188.9,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CH-ip-bend (8.6 um)",
+   "u_band_cm": 8.64,
+   "printed_cm": 1226.7,
+   "printed": "anharmonic ν",
+   "nu_cm": 1226.7,
+   "delta_anh_cm": -20.3,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1307.2,
+   "km_mol": 1.7,
+   "seed_range_cm": [
+    1306.8,
+    1307.5
+   ],
+   "b3lyp_cm": 1338.6,
+   "baseline_cm": 1297.1,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 1281.5,
+   "printed": "anharmonic ν",
+   "nu_cm": 1281.5,
+   "delta_anh_cm": -25.7,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1364.6,
+   "km_mol": 0.46,
+   "seed_range_cm": [
+    1364.5,
+    1364.7
+   ],
+   "b3lyp_cm": 1367.7,
+   "baseline_cm": 1325.3,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 1339.5,
+   "printed": "anharmonic ν",
+   "nu_cm": 1339.5,
+   "delta_anh_cm": -25.1,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1504.6,
+   "km_mol": 6.36,
+   "seed_range_cm": [
+    1504.3,
+    1504.7
+   ],
+   "b3lyp_cm": 1491.8,
+   "baseline_cm": 1445.6,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CC-stretch/CH-ip (7.7 um)",
+   "u_band_cm": 15.87,
+   "printed_cm": 1475.9,
+   "printed": "anharmonic ν",
+   "nu_cm": 1475.9,
+   "delta_anh_cm": -28.7,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1555.2,
+   "km_mol": 8.2,
+   "seed_range_cm": [
+    1554.9,
+    1555.6
+   ],
+   "b3lyp_cm": 1540.5,
+   "baseline_cm": 1492.7,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CC-stretch (6.2 um)",
+   "u_band_cm": 16.09,
+   "printed_cm": 1524.2,
+   "printed": "anharmonic ν",
+   "nu_cm": 1524.2,
+   "delta_anh_cm": -31.0,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1665.7,
+   "km_mol": 0.79,
+   "seed_range_cm": [
+    1665.1,
+    1666.0
+   ],
+   "b3lyp_cm": 1633.3,
+   "baseline_cm": 1582.7,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "CC-stretch (6.2 um)",
+   "u_band_cm": 16.09,
+   "printed_cm": 1627.4,
+   "printed": "anharmonic ν",
+   "nu_cm": 1627.4,
+   "delta_anh_cm": -38.3,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 1698.3,
+   "km_mol": 0.88,
+   "seed_range_cm": [
+    1697.9,
+    1698.7
+   ],
+   "b3lyp_cm": 1660.0,
+   "baseline_cm": 1608.5,
+   "family": "ring-ip",
+   "licensed": false,
+   "error_cm": {
+    "a": 1.17,
+    "b": 1.22
+   },
+   "lab_region": "overtone / combination region",
+   "u_band_cm": 15.98,
+   "printed_cm": 1659.9,
+   "printed": "anharmonic ν",
+   "nu_cm": 1659.9,
+   "delta_anh_cm": -38.4,
+   "step_bar_cm": 3.37,
+   "step_error_measured": true,
+   "step_family": "ring-ip",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 2386.3,
+   "km_mol": 26.72,
+   "seed_range_cm": [
+    2385.8,
+    2386.9
+   ],
+   "b3lyp_cm": 2349.3,
+   "baseline_cm": 2276.5,
+   "family": "other",
+   "licensed": false,
+   "error_cm": {
+    "a": 2.38,
+    "b": 2.1
+   },
+   "lab_region": "overtone / combination region",
+   "u_band_cm": 15.98,
+   "printed_cm": 2386.3,
+   "printed": "harmonic ω",
+   "nu_cm": null,
+   "delta_anh_cm": null,
+   "step_bar_cm": null,
+   "step_error_measured": null,
+   "step_family": "other",
+   "no_step_reason": "unmeasured",
+   "position_note": "harmonic position, no anharmonic step: no model was measured for this family in this range",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 3233.8,
+   "km_mol": 0.19,
+   "seed_range_cm": [
+    3233.6,
+    3233.9
+   ],
+   "b3lyp_cm": 3191.5,
+   "baseline_cm": 3063.8,
+   "family": "CH-stretch",
+   "licensed": false,
+   "error_cm": {
+    "a": 0.8,
+    "b": 1.67
+   },
+   "lab_region": "CH-stretch",
+   "u_band_cm": 11.38,
+   "printed_cm": 3087.5,
+   "printed": "anharmonic ν",
+   "nu_cm": 3087.5,
+   "delta_anh_cm": -146.3,
+   "step_bar_cm": 6.21,
+   "step_error_measured": true,
+   "step_family": "CH-stretch",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 6.21 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-stretch); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 3245.2,
+   "km_mol": 5.19,
+   "seed_range_cm": [
+    3244.8,
+    3245.5
+   ],
+   "b3lyp_cm": 3202.8,
+   "baseline_cm": 3074.7,
+   "family": "CH-stretch",
+   "licensed": false,
+   "error_cm": {
+    "a": 0.8,
+    "b": 1.67
+   },
+   "lab_region": "CH-stretch",
+   "u_band_cm": 11.38,
+   "printed_cm": 3110.7,
+   "printed": "anharmonic ν",
+   "nu_cm": 3110.7,
+   "delta_anh_cm": -134.5,
+   "step_bar_cm": 6.21,
+   "step_error_measured": true,
+   "step_family": "CH-stretch",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 6.21 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-stretch); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 3252.3,
+   "km_mol": 15.18,
+   "seed_range_cm": [
+    3251.7,
+    3252.7
+   ],
+   "b3lyp_cm": 3210.1,
+   "baseline_cm": 3081.7,
+   "family": "CH-stretch",
+   "licensed": false,
+   "error_cm": {
+    "a": 0.8,
+    "b": 1.67
+   },
+   "lab_region": "CH-stretch",
+   "u_band_cm": 11.38,
+   "printed_cm": 3117.2,
+   "printed": "anharmonic ν",
+   "nu_cm": 3117.2,
+   "delta_anh_cm": -135.1,
+   "step_bar_cm": 6.21,
+   "step_error_measured": true,
+   "step_family": "CH-stretch",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 6.21 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-stretch); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 3262.1,
+   "km_mol": 13.37,
+   "seed_range_cm": [
+    3261.1,
+    3262.7
+   ],
+   "b3lyp_cm": 3220.0,
+   "baseline_cm": 3091.2,
+   "family": "CH-stretch",
+   "licensed": false,
+   "error_cm": {
+    "a": 0.8,
+    "b": 1.67
+   },
+   "lab_region": "CH-stretch",
+   "u_band_cm": 11.38,
+   "printed_cm": 3140.3,
+   "printed": "anharmonic ν",
+   "nu_cm": 3140.3,
+   "delta_anh_cm": -121.8,
+   "step_bar_cm": 6.21,
+   "step_error_measured": true,
+   "step_family": "CH-stretch",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 6.21 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-stretch); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  },
+  {
+   "network_cm": 3264.8,
+   "km_mol": 3.18,
+   "seed_range_cm": [
+    3264.3,
+    3265.1
+   ],
+   "b3lyp_cm": 3222.9,
+   "baseline_cm": 3094.0,
+   "family": "CH-stretch",
+   "licensed": false,
+   "error_cm": {
+    "a": 0.8,
+    "b": 1.67
+   },
+   "lab_region": "CH-stretch",
+   "u_band_cm": 11.38,
+   "printed_cm": 3126.3,
+   "printed": "anharmonic ν",
+   "nu_cm": 3126.3,
+   "delta_anh_cm": -138.5,
+   "step_bar_cm": 6.21,
+   "step_error_measured": true,
+   "step_family": "CH-stretch",
+   "no_step_reason": null,
+   "position_note": "anharmonic estimate ν = ω + Δ_anh; the step's error is ± 6.21 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-stretch); no licence is claimed for ν",
+   "licence_note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line"
+  }
+ ],
+ "tolerance": {
+  "per_region": {
+   "CC-stretch (6.2 um)": {
+    "u_band": 16.09,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "CC-stretch/CH-ip (7.7 um)": {
+    "u_band": 15.87,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   },
+   "CH-ip-bend (8.6 um)": {
+    "u_band": 8.64,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "CH-oop (10.5-15 um; benzene nu11 at 673 included)": {
+    "u_band": 9.61,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   },
+   "CH-stretch": {
+    "u_band": 11.38,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   },
+   "above 3200": {
+    "u_band": 16.05,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "low / skeletal": {
+    "u_band": 16.12,
+    "source": "module 03 u_band_by_record_family.csv, median over 7 records (family default)",
+    "kind": "family default"
+   },
+   "overtone / combination region": {
+    "u_band": 15.98,
+    "source": "module 03 u_band_by_record_family.csv, median over 8 records (family default)",
+    "kind": "family default"
+   },
+   "ring / CH-ip (9-10.5 um)": {
+    "u_band": 15.87,
+    "source": "module 03 u_band_by_record_family.csv, median over 9 records (family default)",
+    "kind": "family default"
+   }
+  },
+  "rule": "modules/03_lab_scoreboard/build_lab_tables.py FAMILY_RULE (12 Sep 2026)"
+ },
+ "licence": {
+  "statement": "licensed at the DFT proxy: ring-ip (1.17 / 1.22), CH-stretch (0.8 / 1.67), CH-oop (1.86 / 1.26), other (2.38 / 2.1); not licensed: none — error of the corrected band positions of the seed-mean correction on hold-outs (a) / (b) in cm⁻¹ against 3 (decision 65 as amended on 16 Nov 2026); CH-oop on hold-out (a) rests on 5 of the hold-out's 8 molecules (the others have no such band): the 95 % interval of a bootstrap over molecules is 0.93–3.2 cm⁻¹ and crosses the line (96 % of the resamples lie under it); other on hold-out (a) rests on 8 molecules: the 95 % interval of a bootstrap over molecules is 1.45–3.19 cm⁻¹ and crosses the line (93 % of the resamples lie under it); the first-order diagonal error of each seed's correction, averaged over the seeds, which the licence read until then: ring-ip (1.55 / 1.64), CH-stretch (1.15 / 2.02), CH-oop (2.22 / 1.72), other (2.91 / 3.68); no coupled-cluster licence",
+  "rule_source": "README.md, decision 65 as amended on 16 Nov 2026",
+  "licensed_families": [
+   "ring-ip",
+   "CH-stretch",
+   "CH-oop",
+   "other"
+  ],
+  "quantity": "product",
+  "quantity_name": "error of the corrected band positions of the seed-mean correction",
+  "caveats": [
+   "CH-oop on hold-out (a) rests on 5 of the hold-out's 8 molecules (the others have no such band): the 95 % interval of a bootstrap over molecules is 0.93–3.2 cm⁻¹ and crosses the line (96 % of the resamples lie under it)",
+   "other on hold-out (a) rests on 8 molecules: the 95 % interval of a bootstrap over molecules is 1.45–3.19 cm⁻¹ and crosses the line (93 % of the resamples lie under it)"
+  ],
+  "withheld": {
+   "spread_cm": 11.2,
+   "note": "the molecule has a linear group, and molecules with one moved by up to 11.20 cm⁻¹ under a rotation, a mirror image or another xyz listing, more than the licence line",
+   "reason": "the molecule has a linear group (an angle near 180°, as in a nitrile or an alkyne), and the measured spread under a rotation, a mirror image or another xyz listing of the atoms for molecules with one (11.20 cm⁻¹, from the release's invariance record) exceeds the licence line of 3 cm⁻¹, so the network's correction for this molecule is not licensed; the corrected positions are still printed",
+   "n_bands": 33
+  },
+  "concerns": "the licence (decision 65) is on the harmonic position ω against the DFT proxy (ωB97X); it says nothing about the anharmonic position ν"
+ },
+ "positions": {
+  "note": "each band is printed at its best estimate — the anharmonic position ν = ω + Δ_anh for 27 of 33 bands (Δ_anh from the model x2* on the molecule's GFN2-xTB force field; for 1 of them the step's error is not measured for that kind of mode, and no bar is printed), the harmonic position ω for the other 6, each with its reason; ω stands beside every ν; the licence (decision 65) is on the harmonic position ω against the DFT proxy (ωB97X); it says nothing about the anharmonic position ν; no licence is claimed for ν",
+  "cautions": {
+   "nu_error": "the bar beside a step is the step's error alone — the rms of Δ_anh against its B3LYP VPT2 label — and not the error of ν: ν carries ω's error too, the harmonic position's error against the DFT proxy (ωB97X), which is what the licence is about; neither of the two is an error against experiment",
+   "targets": "the bars rest on 2 target molecules, coronene and tetracene, both hydrocarbons — target modes: CH-oop 22, other 23, ring-ip 56, CH-stretch 20; the step's rms per molecule, coronene / tetracene, in cm⁻¹: CH-oop 11.91 / 4.55; other 5.69 / 1.09; ring-ip 4.25 / 2.35; CH-stretch 6.92 / 5.67; coronene carries the larger error in every family. They are the best numbers there are and they are thin: nothing here says the step helps a molecule unlike the targets, and a bar is a family's rms, not a prediction interval for one band. The bars were measured with one stored force field per molecule; between two GFN2-xTB force fields of the same molecule the step itself also varies, by 1.7 cm⁻¹ on a C–H stretch pair in the one case measured (benzene, 17 Nov 2026), and the bars do not contain that",
+   "seen": "the anharmonic model x2* has not seen this molecule: it is neither in its training table (37 molecules) nor a target",
+   "composition": null
+  },
+  "anharmonic": {
+   "status": "applied",
+   "reason": null,
+   "model": "x2*",
+   "artefact": {
+    "file": "probes/anharmonic_step/x2star_v3.json",
+    "sha16": "0bc87e653fb05d6d",
+    "commit": "46c7ba6d5c895d56d41e1eac57da81adcc01d470",
+    "written": "2026-11-17 09:43",
+    "bars_cm": {
+     "CH-oop": 8.38,
+     "other": 3.84,
+     "ring-ip": 3.37,
+     "CH-stretch": 6.21
+    },
+    "training_molecules": 37,
+    "elements": [
+     "C",
+     "H",
+     "N",
+     "O"
+    ],
+    "target_composition": {
+     "coronene": "C,H",
+     "tetracene": "C,H"
+    },
+    "targets": {
+     "CH-oop": {
+      "rows": 22,
+      "per_target_rms_cm": {
+       "tetracene": 4.546330872687248,
+       "coronene": 11.909623221842617
+      }
+     },
+     "other": {
+      "rows": 23,
+      "per_target_rms_cm": {
+       "tetracene": 1.0941842192899551,
+       "coronene": 5.68649375625257
+      }
+     },
+     "ring-ip": {
+      "rows": 56,
+      "per_target_rms_cm": {
+       "tetracene": 2.3492021498087086,
+       "coronene": 4.252574924957105
+      }
+     },
+     "CH-stretch": {
+      "rows": 20,
+      "per_target_rms_cm": {
+       "tetracene": 5.665739878351328,
+       "coronene": 6.923199117512889
+      }
+     }
+    }
+   },
+   "bands": {
+    "stepped": 27,
+    "error_not_measured": 1,
+    "no_step": {
+     "unmeasured": 6
+    }
+   },
+   "seen": {
+    "role": "unseen",
+    "id": null
+   },
+   "composition": {
+    "elements": "C,H,N",
+    "training_molecules": 18,
+    "of": 37,
+    "few": false,
+    "targets": {
+     "coronene": "C,H",
+     "tetracene": "C,H"
+    }
+   },
+   "field": {
+    "seconds": 1830.9,
+    "peak_memory_mb": 1003,
+    "shards": 2,
+    "omp_threads": 2,
+    "cap_mb": 1536,
+    "budget_minutes": 120.0,
+    "unit": "m08-anharmonic-benzonitrile-1f513cabca.scope",
+    "software": "GFN2-xTB: the minimum by xtb, the Hessians by dxtb (central differences of its forces) at ±0.10 along every mode, dpir.qff; GVPT2 by probes/gvpt2_labels.py with pyVPT2's polyad solver (probes/xtb_field_for_step.sh)",
+    "log": "anharmonic_field.log"
+   }
+  },
+  "drawn": "curves are drawn at the harmonic positions ω, so that the network, B3LYP and ωB97X are compared like with like; the certificate lists each band's anharmonic estimate ν beside its ω"
+ },
+ "deliveries": [
+  {
+   "number": 1,
+   "delivery": "first: harmonic, the anharmonic step is running",
+   "at": "2026-11-19 20:07:26",
+   "seconds_since_start": 14.6,
+   "final_by": "2026-11-19 22:09"
+  },
+  {
+   "number": 2,
+   "delivery": "second: with the anharmonic positions",
+   "at": "2026-11-19 20:38:13",
+   "seconds_since_start": 1861.0,
+   "final_by": null
+  }
+ ],
+ "delivery": 2,
+ "cost": {
+  "steps_s": {
+   "reuse": 0.5,
+   "correction_and_spectra": 1.4,
+   "anharmonic": 1831.2
+  },
+  "machine": "Asus18",
+  "machine_class": "laptop",
+  "seconds": 1833.1,
+  "hours": 0.509,
+  "eur_ex_vat": 0.0,
+  "source": "corpus ledger machine column 'Asus18'"
+ },
+ "provenance": {
+  "result": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_benzonitrile_anharmonic_v3_2026-11-19\\benzonitrile",
+  "run_commit": "aa3fa3ceac0369ec4600e79a5e2b8c183aed3584",
+  "run_dirty": "no",
+  "certificate_commit": "f63fd264",
+  "deck_sha16": "9e27bf8e934893f3",
+  "low_level_software": {
+   "pyscf": "2.14.0",
+   "pyscf_git": null,
+   "numpy": "2.5.3",
+   "python": "3.12.14",
+   "sha256": {
+    "analytic_hessians.py": "0ea113dae1df",
+    "apt.py": "b22c29d0575f"
+   }
+  },
+  "host": "Asus18",
+  "note": "each band is printed at its best estimate — the anharmonic position ν = ω + Δ_anh for 27 of 33 bands (Δ_anh from the model x2* on the molecule's GFN2-xTB force field; for 1 of them the step's error is not measured for that kind of mode, and no bar is printed), the harmonic position ω for the other 6, each with its reason; ω stands beside every ν; the licence (decision 65) is on the harmonic position ω against the DFT proxy (ωB97X); it says nothing about the anharmonic position ν; no licence is claimed for ν",
+  "reused_from": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\molecules\\B_3100da3761"
+ },
+ "statement": "benzonitrile: the infrared spectrum of ΔH-network v1.4 (3 seeds) — B3LYP/6-31G* corrected toward ωB97X/6-31G*. The spectrum is made by the release networks of version 1.4, trained on the 1132 labelled entries of their training pool, hold-outs (a) and (b) included: each of the 3 networks is fitted on a random 85 % of the molecules and stopped on the other 15 %, a different 15 % per seed, so not every molecule is fitted by every network (with 3 networks about 0.15³ ≈ 0.3 % by none). Its error bars were measured on the measurement networks of the same version — the same recipe trained without the hold-out molecules — on molecules those networks never saw; the release networks themselves have seen the molecules of hold-outs (a) and (b), so they have no held-out error of their own. The error stated is the measurement networks' error of the corrected band positions of the seed-mean correction; the 0 of 33 bands are licensed: the version's harmonic positions ω are licensed for ring-ip, CH-stretch, CH-oop, other (decision 65), and for this molecule that licence is withheld — the molecule has a linear group (an angle near 180°, as in a nitrile or an alkyne), and the measured spread under a rotation, a mirror image or another xyz listing of the atoms for molecules with one (11.20 cm⁻¹, from the release's invariance record) exceeds the licence line of 3 cm⁻¹, so the network's correction for this molecule is not licensed; the corrected positions are still printed — each band marked; at the coupled-cluster level not measured for this network version: the coupled-cluster reads (T3) were made on an earlier network (chain 34). The scaled B3LYP spectrum is shown as the baseline only. This molecule and the ΔH network: in the release networks' training data: the error bars are not an out-of-sample error for this molecule; expect it to be smaller."
+}

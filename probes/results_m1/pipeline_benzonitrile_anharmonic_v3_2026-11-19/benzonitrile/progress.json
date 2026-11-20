@@ -1,0 +1,42 @@
+{
+ "name": "benzonitrile",
+ "pipeline_version": "0.14",
+ "molecule": {
+  "smiles": "N#Cc1ccccc1",
+  "formula": "C7H5N",
+  "n_atoms": 13
+ },
+ "finished": true,
+ "steps": {
+  "molecule": {
+   "state": "done",
+   "seconds": 0.0
+  },
+  "geometry": {
+   "state": "done",
+   "seconds": 0.1
+  },
+  "optimise": {
+   "state": "reused",
+   "seconds_then": 43.2
+  },
+  "hessian": {
+   "state": "reused",
+   "seconds_then": 647.0
+  },
+  "network": {
+   "state": "done",
+   "seconds": 1.4
+  },
+  "spectrum": {
+   "state": "done",
+   "seconds": 0.0
+  }
+ },
+ "updated": "2026-11-19T20:38:14",
+ "delivery": {
+  "number": 2,
+  "state": "final: with the anharmonic positions",
+  "final": true
+ }
+}

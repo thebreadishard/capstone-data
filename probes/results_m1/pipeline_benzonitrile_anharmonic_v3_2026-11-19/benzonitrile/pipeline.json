@@ -1,0 +1,1212 @@
+{
+ "pipeline_version": "0.14",
+ "name": "benzonitrile",
+ "input": {
+  "smiles": "N#Cc1ccccc1",
+  "xyz": null,
+  "xyz_atom_order": null
+ },
+ "settings": {
+  "name": "benzonitrile",
+  "out_root": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_benzonitrile_anharmonic_v3_2026-11-19",
+  "smiles": "N#Cc1ccccc1",
+  "xyz": null,
+  "charge": 0,
+  "multiplicity": 1,
+  "models": [
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed0.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed1.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed2.pt"
+  ],
+  "psi4_python": "C:\\Users\\thebr\\.conda\\envs\\qc\\python.exe",
+  "pyscf_python": "~/qc215/bin/python",
+  "threads": 4,
+  "psi4_memory_gb": 4,
+  "wsl_cap_mb": 6144,
+  "reuse_corpus": true,
+  "reuse_only": true,
+  "corpus": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus",
+  "anharmonic_minutes": 120.0,
+  "anharmonic_shards": 2,
+  "anharmonic_cap_mb": 1536
+ },
+ "admission": {
+  "smiles": "N#Cc1ccccc1",
+  "formula": "C7H5N",
+  "elements": [
+   "C",
+   "H",
+   "N"
+  ],
+  "n_atoms": 13,
+  "training_elements": [
+   "C",
+   "CL",
+   "F",
+   "H",
+   "N",
+   "O",
+   "S"
+  ],
+  "training_atoms": [
+   8,
+   40
+  ],
+  "models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed0.pt",
+    "sha16": "6f52c9d8570fbcf5",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed1.pt",
+    "sha16": "1e820b8755078b90",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed2.pt",
+    "sha16": "bc4de0b6458e44f2",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   }
+  ],
+  "measurement_models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed0.pt",
+    "sha16": "89574ed1b69c4e10",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed1.pt",
+    "sha16": "03dbbf9f29b59186",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed2.pt",
+    "sha16": "8dd85f3f1ba5bbeb",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   }
+  ],
+  "inside_training_sizes": true
+ },
+ "deck": {
+  "file": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\decks\\deck_v1.json",
+  "sha16": "9e27bf8e934893f3"
+ },
+ "optimisation": {
+  "e_opt": -324.492145576055,
+  "timings_s": {
+   "optimise": 43.2,
+   "hessian_b3lyp": 276.5,
+   "hessian_wb97x": 403.5,
+   "total": 723.6
+  },
+  "opt_options": {
+   "opt_coordinates": "cartesian",
+   "geom_maxiter": 200
+  }
+ },
+ "low_level": {
+  "b3lyp": {
+   "freq_analytic": [
+    147.0775864847593,
+    164.6130170099059,
+    392.05519349345894,
+    411.0112069096858,
+    465.4288986324338,
+    558.8120326979504,
+    569.8962452196307,
+    638.2859142407418,
+    704.1255013125574,
+    774.5247871804903,
+    777.5087263096278,
+    861.4003248323045,
+    941.6740832740733,
+    976.2583724961038,
+    1007.8203122973302,
+    1017.8738205704926,
+    1055.7632072288652,
+    1112.8891419361776,
+    1197.4036238152855,
+    1211.4699504611203,
+    1226.9298381622639,
+    1338.6021301067606,
+    1367.6879650366413,
+    1491.8003765332026,
+    1540.5150263217542,
+    1633.2785749234117,
+    1659.9696626912357,
+    2349.2998747688403,
+    3191.4631993969265,
+    3202.819371332534,
+    3210.08427530988,
+    3220.0366831834817,
+    3222.878364822775
+   ],
+   "freq_corpus": [
+    147.0093035993701,
+    164.37660848193505,
+    391.9958254941132,
+    411.04382200990875,
+    465.4266121428757,
+    558.341748642107,
+    569.5634265275371,
+    638.3366903264832,
+    703.9782403008498,
+    774.5463384523079,
+    777.1666283107612,
+    861.0917174669355,
+    941.3223045069687,
+    975.8955127092552,
+    1007.4504104312343,
+    1017.9189393842001,
+    1055.8957966773635,
+    1112.9470668795552,
+    1197.3903728459575,
+    1211.4909113517951,
+    1227.057367019969,
+    1338.5360346582324,
+    1367.7169387945796,
+    1491.825316605827,
+    1540.6300390960364,
+    1633.1682423696448,
+    1660.0611597550344,
+    2349.3831010241956,
+    3191.544993489263,
+    3202.8293571804033,
+    3210.097093871697,
+    3220.0923271845068,
+    3222.881303429119
+   ],
+   "dH_max": 0.00027000854388279657,
+   "dH_rms": 3.754098833830026e-05,
+   "energy": -324.4922100357787,
+   "energy_corpus": -324.49214557562163,
+   "seconds": 647,
+   "software": {
+    "pyscf": "2.14.0",
+    "pyscf_git": null,
+    "numpy": "2.5.3",
+    "python": "3.12.14",
+    "sha256": {
+     "analytic_hessians.py": "0ea113dae1df",
+     "apt.py": "b22c29d0575f"
+    }
+   }
+  },
+  "wb97x": {
+   "freq_analytic": [
+    167.6073796117959,
+    190.102619940516,
+    410.4878946473715,
+    420.1110766775702,
+    467.86557529397095,
+    575.8317784661584,
+    581.8385101724483,
+    643.5287207337948,
+    715.1121319713113,
+    782.0782738114965,
+    791.5445632017336,
+    878.1067277681617,
+    964.5937256343851,
+    1006.5466684801039,
+    1025.8021485893375,
+    1035.352792417104,
+    1065.4118024246707,
+    1120.6767327542318,
+    1190.6557149550172,
+    1214.7520630850595,
+    1247.0232915612876,
+    1307.387085934156,
+    1364.6177611031299,
+    1504.2236309711855,
+    1554.694139620055,
+    1665.6433496736338,
+    1698.2055358113798,
+    2387.0522461284963,
+    3233.6669030295075,
+    3244.7829488853613,
+    3252.044312317495,
+    3261.8049523957347,
+    3264.6983816788315
+   ],
+   "freq_corpus": [
+    167.95380607243186,
+    187.70036476236163,
+    410.97220687337943,
+    422.5870092017044,
+    469.0352453279652,
+    575.0872945962828,
+    582.8794277092079,
+    643.0783372553275,
+    716.3147865572059,
+    781.8745697570746,
+    792.2810722346842,
+    881.0693338090725,
+    966.1331671507003,
+    1008.7078090857889,
+    1025.6960326824235,
+    1035.6067640706071,
+    1063.851705227702,
+    1119.240224714818,
+    1188.3653999064122,
+    1212.0986914770808,
+    1246.31678099309,
+    1306.5722330947406,
+    1362.6561300199003,
+    1503.2363289529824,
+    1553.4728599479529,
+    1665.2642799546093,
+    1697.7203115919242,
+    2388.771201381139,
+    3233.6266335700266,
+    3244.7836892417386,
+    3252.03607902244,
+    3261.8114029270982,
+    3264.58997309669
+   ],
+   "dH_max": 0.004439558973724722,
+   "dH_rms": 0.00013969778331245924,
+   "energy": -324.3987458385609,
+   "energy_corpus": -324.3987058713448,
+   "seconds": 659,
+   "software": {
+    "pyscf": "2.14.0",
+    "pyscf_git": null,
+    "numpy": "2.5.3",
+    "python": "3.12.14",
+    "sha256": {
+     "analytic_hessians.py": "0ea113dae1df",
+     "apt.py": "b22c29d0575f"
+    }
+   }
+  }
+ },
+ "reuse": {
+  "reused": true,
+  "source": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\molecules\\B_3100da3761",
+  "order": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "start_rmsd_angstrom": 0.0,
+  "sha256": {
+   "geometry.json": "abfab72ab3f6eb217af07e54c3b1518d9f3ea5c5b77bac51d38fe27f158cc61d",
+   "hessian_b3lyp_analytic.npz": "be7df1ead091dbf9a26da59cd700ee630695f63af3c70679791cd36432b1dedc",
+   "dipole_b3lyp_cphf.npz": "30c3d8bc0b8d5c9cfa423414e7f3a895d160fbd1f82be52272ed862244990d90",
+   "analytic_check.json": "46cd5b14d41765ad8a3eb2ab1da6c02b64a8b7cc67ec7b8c2566c327a6003f5d",
+   "result.json": "385d4338be46a158cf1b7ef415fc1595ce4701d93941f489ced4c647e889b992",
+   "job.json": "81fbe8f0503be30114fd5183375757a97cb966edc3e5ccf4689c7b8eb30f8f71"
+  }
+ },
+ "seconds": {
+  "reuse": 0.5,
+  "correction_and_spectra": 1.4,
+  "anharmonic": 1831.2
+ },
+ "spectra": {
+  "network": {
+   "hessian_source": "probes/results_m1/pipeline_benzonitrile_anharmonic_v3_2026-11-19/benzonitrile/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_benzonitrile_anharmonic_v3_2026-11-19/benzonitrile/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 27,
+   "sticks": [
+    {
+     "omega_cm": 167.5,
+     "km_mol": 1.86,
+     "seed_range_cm": [
+      166.5,
+      168.7
+     ],
+     "nu_cm": null,
+     "anharmonic": {
+      "delta_anh_cm": null,
+      "bar_cm": null,
+      "reason": "unmeasured",
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 0,
+      "overlap": 0.998
+     }
+    },
+    {
+     "omega_cm": 189.7,
+     "km_mol": 4.43,
+     "seed_range_cm": [
+      189.5,
+      189.8
+     ],
+     "nu_cm": null,
+     "anharmonic": {
+      "delta_anh_cm": null,
+      "bar_cm": null,
+      "reason": "unmeasured",
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 1,
+      "overlap": 0.998
+     }
+    },
+    {
+     "omega_cm": 410.9,
+     "km_mol": 0.92,
+     "seed_range_cm": [
+      410.2,
+      411.6
+     ],
+     "nu_cm": null,
+     "anharmonic": {
+      "delta_anh_cm": null,
+      "bar_cm": null,
+      "reason": "unmeasured",
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 2,
+      "overlap": 0.996
+     }
+    },
+    {
+     "omega_cm": 422.0,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      421.9,
+      422.1
+     ],
+     "nu_cm": null,
+     "anharmonic": {
+      "delta_anh_cm": null,
+      "bar_cm": null,
+      "reason": "unmeasured",
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 3,
+      "overlap": 0.999
+     }
+    },
+    {
+     "omega_cm": 467.9,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      467.8,
+      468.1
+     ],
+     "nu_cm": null,
+     "anharmonic": {
+      "delta_anh_cm": null,
+      "bar_cm": null,
+      "reason": "unmeasured",
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 4,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 576.1,
+     "km_mol": 0.22,
+     "seed_range_cm": [
+      575.9,
+      576.5
+     ],
+     "nu_cm": 571.1,
+     "anharmonic": {
+      "delta_anh_cm": -5.0,
+      "bar_cm": 3.84,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 5,
+      "overlap": 0.992
+     }
+    },
+    {
+     "omega_cm": 582.4,
+     "km_mol": 14.92,
+     "seed_range_cm": [
+      580.2,
+      584.1
+     ],
+     "nu_cm": 574.1,
+     "anharmonic": {
+      "delta_anh_cm": -8.3,
+      "bar_cm": null,
+      "reason": null,
+      "error_not_measured": true,
+      "family": "other",
+      "b3lyp_mode": 6,
+      "overlap": 0.996
+     }
+    },
+    {
+     "omega_cm": 643.8,
+     "km_mol": 0.14,
+     "seed_range_cm": [
+      643.5,
+      644.0
+     ],
+     "nu_cm": 637.4,
+     "anharmonic": {
+      "delta_anh_cm": -6.4,
+      "bar_cm": 3.84,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 7,
+      "overlap": 0.995
+     }
+    },
+    {
+     "omega_cm": 716.6,
+     "km_mol": 26.79,
+     "seed_range_cm": [
+      716.0,
+      717.5
+     ],
+     "nu_cm": 705.9,
+     "anharmonic": {
+      "delta_anh_cm": -10.7,
+      "bar_cm": 8.38,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-oop",
+      "b3lyp_mode": 8,
+      "overlap": 0.995
+     }
+    },
+    {
+     "omega_cm": 782.1,
+     "km_mol": 2.19,
+     "seed_range_cm": [
+      782.0,
+      782.1
+     ],
+     "nu_cm": 773.5,
+     "anharmonic": {
+      "delta_anh_cm": -8.6,
+      "bar_cm": 3.84,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 9,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 792.9,
+     "km_mol": 30.26,
+     "seed_range_cm": [
+      791.0,
+      794.0
+     ],
+     "nu_cm": 780.4,
+     "anharmonic": {
+      "delta_anh_cm": -12.5,
+      "bar_cm": 8.38,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-oop",
+      "b3lyp_mode": 10,
+      "overlap": 0.996
+     }
+    },
+    {
+     "omega_cm": 879.5,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      878.6,
+      880.4
+     ],
+     "nu_cm": 870.7,
+     "anharmonic": {
+      "delta_anh_cm": -8.8,
+      "bar_cm": 8.38,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-oop",
+      "b3lyp_mode": 11,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 965.5,
+     "km_mol": 2.39,
+     "seed_range_cm": [
+      964.6,
+      966.4
+     ],
+     "nu_cm": 955.2,
+     "anharmonic": {
+      "delta_anh_cm": -10.3,
+      "bar_cm": 8.38,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-oop",
+      "b3lyp_mode": 12,
+      "overlap": 0.998
+     }
+    },
+    {
+     "omega_cm": 1007.1,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      1006.7,
+      1007.6
+     ],
+     "nu_cm": 995.2,
+     "anharmonic": {
+      "delta_anh_cm": -11.9,
+      "bar_cm": 8.38,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-oop",
+      "b3lyp_mode": 13,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 1025.8,
+     "km_mol": 0.51,
+     "seed_range_cm": [
+      1025.7,
+      1025.9
+     ],
+     "nu_cm": 1010.9,
+     "anharmonic": {
+      "delta_anh_cm": -14.9,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 15,
+      "overlap": 0.997
+     }
+    },
+    {
+     "omega_cm": 1036.0,
+     "km_mol": 0.02,
+     "seed_range_cm": [
+      1035.4,
+      1036.4
+     ],
+     "nu_cm": 1022.3,
+     "anharmonic": {
+      "delta_anh_cm": -13.7,
+      "bar_cm": 8.38,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-oop",
+      "b3lyp_mode": 14,
+      "overlap": 0.998
+     }
+    },
+    {
+     "omega_cm": 1065.6,
+     "km_mol": 2.56,
+     "seed_range_cm": [
+      1065.3,
+      1065.8
+     ],
+     "nu_cm": 1048.5,
+     "anharmonic": {
+      "delta_anh_cm": -17.1,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 16,
+      "overlap": 0.997
+     }
+    },
+    {
+     "omega_cm": 1120.8,
+     "km_mol": 2.89,
+     "seed_range_cm": [
+      1120.6,
+      1121.0
+     ],
+     "nu_cm": 1104.8,
+     "anharmonic": {
+      "delta_anh_cm": -16.0,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 17,
+      "overlap": 0.996
+     }
+    },
+    {
+     "omega_cm": 1190.7,
+     "km_mol": 0.37,
+     "seed_range_cm": [
+      1190.1,
+      1191.1
+     ],
+     "nu_cm": 1178.0,
+     "anharmonic": {
+      "delta_anh_cm": -12.7,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 18,
+      "overlap": 0.975
+     }
+    },
+    {
+     "omega_cm": 1215.1,
+     "km_mol": 0.9,
+     "seed_range_cm": [
+      1214.7,
+      1215.6
+     ],
+     "nu_cm": 1199.0,
+     "anharmonic": {
+      "delta_anh_cm": -16.1,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 19,
+      "overlap": 0.946
+     }
+    },
+    {
+     "omega_cm": 1247.0,
+     "km_mol": 0.53,
+     "seed_range_cm": [
+      1246.7,
+      1247.6
+     ],
+     "nu_cm": 1226.7,
+     "anharmonic": {
+      "delta_anh_cm": -20.3,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 20,
+      "overlap": 0.945
+     }
+    },
+    {
+     "omega_cm": 1307.2,
+     "km_mol": 1.7,
+     "seed_range_cm": [
+      1306.8,
+      1307.5
+     ],
+     "nu_cm": 1281.5,
+     "anharmonic": {
+      "delta_anh_cm": -25.7,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 21,
+      "overlap": 0.86
+     }
+    },
+    {
+     "omega_cm": 1364.6,
+     "km_mol": 0.46,
+     "seed_range_cm": [
+      1364.5,
+      1364.7
+     ],
+     "nu_cm": 1339.5,
+     "anharmonic": {
+      "delta_anh_cm": -25.1,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 22,
+      "overlap": 0.88
+     }
+    },
+    {
+     "omega_cm": 1504.6,
+     "km_mol": 6.36,
+     "seed_range_cm": [
+      1504.3,
+      1504.7
+     ],
+     "nu_cm": 1475.9,
+     "anharmonic": {
+      "delta_anh_cm": -28.7,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 23,
+      "overlap": 0.997
+     }
+    },
+    {
+     "omega_cm": 1555.2,
+     "km_mol": 8.2,
+     "seed_range_cm": [
+      1554.9,
+      1555.6
+     ],
+     "nu_cm": 1524.2,
+     "anharmonic": {
+      "delta_anh_cm": -31.0,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 24,
+      "overlap": 0.998
+     }
+    },
+    {
+     "omega_cm": 1665.7,
+     "km_mol": 0.79,
+     "seed_range_cm": [
+      1665.1,
+      1666.0
+     ],
+     "nu_cm": 1627.4,
+     "anharmonic": {
+      "delta_anh_cm": -38.3,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 25,
+      "overlap": 0.998
+     }
+    },
+    {
+     "omega_cm": 1698.3,
+     "km_mol": 0.88,
+     "seed_range_cm": [
+      1697.9,
+      1698.7
+     ],
+     "nu_cm": 1659.9,
+     "anharmonic": {
+      "delta_anh_cm": -38.4,
+      "bar_cm": 3.37,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "ring-ip",
+      "b3lyp_mode": 26,
+      "overlap": 0.999
+     }
+    },
+    {
+     "omega_cm": 2386.3,
+     "km_mol": 26.72,
+     "seed_range_cm": [
+      2385.8,
+      2386.9
+     ],
+     "nu_cm": null,
+     "anharmonic": {
+      "delta_anh_cm": null,
+      "bar_cm": null,
+      "reason": "unmeasured",
+      "error_not_measured": false,
+      "family": "other",
+      "b3lyp_mode": 27,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 3233.8,
+     "km_mol": 0.19,
+     "seed_range_cm": [
+      3233.6,
+      3233.9
+     ],
+     "nu_cm": 3087.5,
+     "anharmonic": {
+      "delta_anh_cm": -146.3,
+      "bar_cm": 6.21,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-stretch",
+      "b3lyp_mode": 28,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 3245.2,
+     "km_mol": 5.19,
+     "seed_range_cm": [
+      3244.8,
+      3245.5
+     ],
+     "nu_cm": 3110.7,
+     "anharmonic": {
+      "delta_anh_cm": -134.5,
+      "bar_cm": 6.21,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-stretch",
+      "b3lyp_mode": 29,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 3252.3,
+     "km_mol": 15.18,
+     "seed_range_cm": [
+      3251.7,
+      3252.7
+     ],
+     "nu_cm": 3117.2,
+     "anharmonic": {
+      "delta_anh_cm": -135.1,
+      "bar_cm": 6.21,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-stretch",
+      "b3lyp_mode": 30,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 3262.1,
+     "km_mol": 13.37,
+     "seed_range_cm": [
+      3261.1,
+      3262.7
+     ],
+     "nu_cm": 3140.3,
+     "anharmonic": {
+      "delta_anh_cm": -121.8,
+      "bar_cm": 6.21,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-stretch",
+      "b3lyp_mode": 31,
+      "overlap": 1.0
+     }
+    },
+    {
+     "omega_cm": 3264.8,
+     "km_mol": 3.18,
+     "seed_range_cm": [
+      3264.3,
+      3265.1
+     ],
+     "nu_cm": 3126.3,
+     "anharmonic": {
+      "delta_anh_cm": -138.5,
+      "bar_cm": 6.21,
+      "reason": null,
+      "error_not_measured": false,
+      "family": "CH-stretch",
+      "b3lyp_mode": 32,
+      "overlap": 1.0
+     }
+    }
+   ]
+  },
+  "baseline": {
+   "hessian_source": "probes/results_m1/pipeline_benzonitrile_anharmonic_v3_2026-11-19/benzonitrile/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_benzonitrile_anharmonic_v3_2026-11-19/benzonitrile/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 25,
+   "sticks": [
+    {
+     "omega_cm": 144.0,
+     "km_mol": 2.21
+    },
+    {
+     "omega_cm": 161.1,
+     "km_mol": 4.5
+    },
+    {
+     "omega_cm": 383.9,
+     "km_mol": 1.21
+    },
+    {
+     "omega_cm": 402.4,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 455.6,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 547.1,
+     "km_mol": 0.14
+    },
+    {
+     "omega_cm": 557.9,
+     "km_mol": 13.61
+    },
+    {
+     "omega_cm": 624.9,
+     "km_mol": 0.1
+    },
+    {
+     "omega_cm": 689.3,
+     "km_mol": 23.12
+    },
+    {
+     "omega_cm": 758.2,
+     "km_mol": 2.17
+    },
+    {
+     "omega_cm": 761.2,
+     "km_mol": 34.48
+    },
+    {
+     "omega_cm": 843.3,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 921.9,
+     "km_mol": 2.5
+    },
+    {
+     "omega_cm": 955.8,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 986.6,
+     "km_mol": 0.06
+    },
+    {
+     "omega_cm": 996.5,
+     "km_mol": 0.4
+    },
+    {
+     "omega_cm": 1033.6,
+     "km_mol": 2.43
+    },
+    {
+     "omega_cm": 1078.4,
+     "km_mol": 2.83
+    },
+    {
+     "omega_cm": 1160.3,
+     "km_mol": 0.09
+    },
+    {
+     "omega_cm": 1173.9,
+     "km_mol": 1.23
+    },
+    {
+     "omega_cm": 1188.9,
+     "km_mol": 0.2
+    },
+    {
+     "omega_cm": 1297.1,
+     "km_mol": 0.86
+    },
+    {
+     "omega_cm": 1325.3,
+     "km_mol": 1.28
+    },
+    {
+     "omega_cm": 1445.6,
+     "km_mol": 6.6
+    },
+    {
+     "omega_cm": 1492.7,
+     "km_mol": 8.29
+    },
+    {
+     "omega_cm": 1582.7,
+     "km_mol": 0.99
+    },
+    {
+     "omega_cm": 1608.5,
+     "km_mol": 1.04
+    },
+    {
+     "omega_cm": 2276.5,
+     "km_mol": 26.76
+    },
+    {
+     "omega_cm": 3063.8,
+     "km_mol": 0.21
+    },
+    {
+     "omega_cm": 3074.7,
+     "km_mol": 5.38
+    },
+    {
+     "omega_cm": 3081.7,
+     "km_mol": 15.2
+    },
+    {
+     "omega_cm": 3091.2,
+     "km_mol": 13.14
+    },
+    {
+     "omega_cm": 3094.0,
+     "km_mol": 3.11
+    }
+   ],
+   "label": "baseline only: B3LYP/6-31G* scaled by PAHdb's 6-31G* factors [0.979, 0.969, 0.96] per region (Bauschlicher et al. 2018, Table 2; probes/scale_factor_baseline.py)"
+  },
+  "anharmonic": {
+   "status": "applied",
+   "reason": null,
+   "model": "x2*",
+   "artefact": {
+    "file": "probes/anharmonic_step/x2star_v3.json",
+    "sha16": "0bc87e653fb05d6d",
+    "commit": "46c7ba6d5c895d56d41e1eac57da81adcc01d470",
+    "written": "2026-11-17 09:43",
+    "bars_cm": {
+     "CH-oop": 8.38,
+     "other": 3.84,
+     "ring-ip": 3.37,
+     "CH-stretch": 6.21
+    },
+    "training_molecules": 37,
+    "elements": [
+     "C",
+     "H",
+     "N",
+     "O"
+    ],
+    "target_composition": {
+     "coronene": "C,H",
+     "tetracene": "C,H"
+    },
+    "targets": {
+     "CH-oop": {
+      "rows": 22,
+      "per_target_rms_cm": {
+       "tetracene": 4.546330872687248,
+       "coronene": 11.909623221842617
+      }
+     },
+     "other": {
+      "rows": 23,
+      "per_target_rms_cm": {
+       "tetracene": 1.0941842192899551,
+       "coronene": 5.68649375625257
+      }
+     },
+     "ring-ip": {
+      "rows": 56,
+      "per_target_rms_cm": {
+       "tetracene": 2.3492021498087086,
+       "coronene": 4.252574924957105
+      }
+     },
+     "CH-stretch": {
+      "rows": 20,
+      "per_target_rms_cm": {
+       "tetracene": 5.665739878351328,
+       "coronene": 6.923199117512889
+      }
+     }
+    }
+   },
+   "bands": {
+    "stepped": 27,
+    "error_not_measured": 1,
+    "no_step": {
+     "unmeasured": 6
+    }
+   },
+   "seen": {
+    "role": "unseen",
+    "id": null
+   },
+   "composition": {
+    "elements": "C,H,N",
+    "training_molecules": 18,
+    "of": 37,
+    "few": false,
+    "targets": {
+     "coronene": "C,H",
+     "tetracene": "C,H"
+    }
+   },
+   "field": {
+    "seconds": 1830.9,
+    "peak_memory_mb": 1003,
+    "shards": 2,
+    "omp_threads": 2,
+    "cap_mb": 1536,
+    "budget_minutes": 120.0,
+    "unit": "m08-anharmonic-benzonitrile-1f513cabca.scope",
+    "software": "GFN2-xTB: the minimum by xtb, the Hessians by dxtb (central differences of its forces) at ±0.10 along every mode, dpir.qff; GVPT2 by probes/gvpt2_labels.py with pyVPT2's polyad solver (probes/xtb_field_for_step.sh)",
+    "log": "anharmonic_field.log"
+   }
+  },
+  "note": "each band is printed at its best estimate — the anharmonic position ν = ω + Δ_anh for 27 of 33 bands (Δ_anh from the model x2* on the molecule's GFN2-xTB force field; for 1 of them the step's error is not measured for that kind of mode, and no bar is printed), the harmonic position ω for the other 6, each with its reason; ω stands beside every ν; the licence (decision 65) is on the harmonic position ω against the DFT proxy (ωB97X); it says nothing about the anharmonic position ν; no licence is claimed for ν"
+ },
+ "provenance": {
+  "timestamp_utc": "2026-11-19 19:07:24",
+  "host": "Asus18",
+  "python": "3.14.6",
+  "numpy": "2.5.1",
+  "command": "pipeline.py --name benzonitrile --smiles N#Cc1ccccc1 --out ../../probes/results_m1/pipeline_benzonitrile_anharmonic_v3_2026-11-19 --threads 4 --reuse-only --anharmonic-minutes 120",
+  "commit": "aa3fa3ceac0369ec4600e79a5e2b8c183aed3584",
+  "dirty": "no"
+ },
+ "deliveries": [
+  {
+   "number": 1,
+   "delivery": "first: harmonic, the anharmonic step is running",
+   "at": "2026-11-19 20:07:26",
+   "seconds_since_start": 14.6,
+   "final_by": "2026-11-19 22:09"
+  },
+  {
+   "number": 2,
+   "delivery": "second: with the anharmonic positions",
+   "at": "2026-11-19 20:38:13",
+   "seconds_since_start": 1861.0,
+   "final_by": null
+  }
+ ],
+ "commit_at_end": "f63fd264a858d9e514de3e8774a1aa6887ab3489"
+}
