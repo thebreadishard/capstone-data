@@ -1,0 +1,541 @@
+{
+ "points": 16,
+ "molecules": 7,
+ "flagged_overlap": 1,
+ "flagged_step": 0,
+ "step_checked": 0,
+ "turned_imaginary": [],
+ "groups": [
+  {
+   "tag": "b3lyp",
+   "sample": "unbiased",
+   "registered": true,
+   "n": 6,
+   "bands": [
+    {
+     "group": "20–30",
+     "n": 2,
+     "median_abs_cm": 1.0550004663601307,
+     "max_abs_cm": 1.7256120049610928,
+     "moved": 1,
+     "fraction": 0.5,
+     "se": 0.3535533905932738,
+     "median_noise_cm": 1.4270408549234577
+    },
+    {
+     "group": "30–40",
+     "n": 2,
+     "median_abs_cm": 0.3953491014408286,
+     "max_abs_cm": 0.5318614659750764,
+     "moved": 1,
+     "fraction": 0.5,
+     "se": 0.3535533905932738,
+     "median_noise_cm": 0.5815616530792445
+    },
+    {
+     "group": "40–50",
+     "n": 1,
+     "median_abs_cm": 1.44961704146003,
+     "max_abs_cm": 1.44961704146003,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.15201841268505117
+    },
+    {
+     "group": "50–60",
+     "n": 1,
+     "median_abs_cm": 0.05658497382948724,
+     "max_abs_cm": 0.05658497382948724,
+     "moved": 0,
+     "fraction": 0.0,
+     "se": 0.0,
+     "median_noise_cm": 0.0938565174430755
+    },
+    {
+     "group": "60–80",
+     "n": 0,
+     "median_abs_cm": null,
+     "max_abs_cm": null,
+     "moved": 0,
+     "fraction": null,
+     "se": null,
+     "median_noise_cm": null
+    },
+    {
+     "group": "80–100",
+     "n": 0,
+     "median_abs_cm": null,
+     "max_abs_cm": null,
+     "moved": 0,
+     "fraction": null,
+     "se": null,
+     "median_noise_cm": null
+    }
+   ],
+   "quartiles": [
+    {
+     "group": "Q1: 5.35e-05 to 5.74e-05",
+     "n": 2,
+     "median_abs_cm": 1.0550004663601307,
+     "max_abs_cm": 1.7256120049610928,
+     "moved": 1,
+     "fraction": 0.5,
+     "se": 0.3535533905932738,
+     "median_noise_cm": 1.4270408549234577
+    },
+    {
+     "group": "Q2: 1.13e-04 to 5.53e-04",
+     "n": 2,
+     "median_abs_cm": 0.3953491014408286,
+     "max_abs_cm": 0.5318614659750764,
+     "moved": 1,
+     "fraction": 0.5,
+     "se": 0.3535533905932738,
+     "median_noise_cm": 0.5815616530792445
+    },
+    {
+     "group": "Q3: 7.63e-04 to 7.63e-04",
+     "n": 1,
+     "median_abs_cm": 1.44961704146003,
+     "max_abs_cm": 1.44961704146003,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.15201841268505117
+    },
+    {
+     "group": "Q4: 1.33e-03 to 1.33e-03",
+     "n": 1,
+     "median_abs_cm": 0.05658497382948724,
+     "max_abs_cm": 0.05658497382948724,
+     "moved": 0,
+     "fraction": 0.0,
+     "se": 0.0,
+     "median_noise_cm": 0.0938565174430755
+    }
+   ],
+   "correlations": {
+    "n_frequency": 6,
+    "rho_frequency": -0.4285714285714286,
+    "n_log_k": 6,
+    "rho_log_k": -0.4285714285714286,
+    "rho_frequency_log_k": 1.0
+   },
+   "ordering": "Spearman of abs Δ against the label frequency: -0.43 (n = 6); against log k: -0.43 (n = 6). Frequency against log k on the same points: +1.00; as far as these two are one ordering the points cannot tell a frequency trigger from a force-constant trigger, and the read names none.",
+   "rms_change_cm": 0.9643612861168702,
+   "rule": {
+    "n": 6,
+    "moved": 3,
+    "p": 0.5,
+    "se": 0.2041241452319315,
+    "outcome": "undecided",
+    "statement": "n = 6, 3 moved more than 0.5 cm⁻¹: fewer than the 16 points the rule needs, so it reads nothing from them. Outcome 3: undecided."
+   }
+  },
+  {
+   "tag": "wb97x",
+   "sample": "unbiased",
+   "registered": false,
+   "n": 4,
+   "bands": [
+    {
+     "group": "20–30",
+     "n": 0,
+     "median_abs_cm": null,
+     "max_abs_cm": null,
+     "moved": 0,
+     "fraction": null,
+     "se": null,
+     "median_noise_cm": null
+    },
+    {
+     "group": "30–40",
+     "n": 0,
+     "median_abs_cm": null,
+     "max_abs_cm": null,
+     "moved": 0,
+     "fraction": null,
+     "se": null,
+     "median_noise_cm": null
+    },
+    {
+     "group": "40–50",
+     "n": 0,
+     "median_abs_cm": null,
+     "max_abs_cm": null,
+     "moved": 0,
+     "fraction": null,
+     "se": null,
+     "median_noise_cm": null
+    },
+    {
+     "group": "50–60",
+     "n": 2,
+     "median_abs_cm": 1.3105324841588875,
+     "max_abs_cm": 1.8333047286465813,
+     "moved": 2,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.6697457894881917
+    },
+    {
+     "group": "60–80",
+     "n": 1,
+     "median_abs_cm": 7.034697235446934,
+     "max_abs_cm": 7.034697235446934,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.5821755842282975
+    },
+    {
+     "group": "80–100",
+     "n": 1,
+     "median_abs_cm": 1.410812104200474,
+     "max_abs_cm": 1.410812104200474,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.08338238109108388
+    }
+   ],
+   "quartiles": [
+    {
+     "group": "Q1: 2.73e-04 to 2.73e-04",
+     "n": 1,
+     "median_abs_cm": 1.8333047286465813,
+     "max_abs_cm": 1.8333047286465813,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.6780649483696474
+    },
+    {
+     "group": "Q2: 2.99e-04 to 2.99e-04",
+     "n": 1,
+     "median_abs_cm": 0.7877602396711936,
+     "max_abs_cm": 0.7877602396711936,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.6614266306067362
+    },
+    {
+     "group": "Q3: 3.84e-04 to 3.84e-04",
+     "n": 1,
+     "median_abs_cm": 7.034697235446934,
+     "max_abs_cm": 7.034697235446934,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.5821755842282975
+    },
+    {
+     "group": "Q4: 2.61e-03 to 2.61e-03",
+     "n": 1,
+     "median_abs_cm": 1.410812104200474,
+     "max_abs_cm": 1.410812104200474,
+     "moved": 1,
+     "fraction": 1.0,
+     "se": 0.0,
+     "median_noise_cm": 0.08338238109108388
+    }
+   ],
+   "correlations": {
+    "n_frequency": 4,
+    "rho_frequency": 0.0,
+    "n_log_k": 4,
+    "rho_log_k": 0.0,
+    "rho_frequency_log_k": 1.0
+   },
+   "ordering": "Spearman of abs Δ against the label frequency: +0.00 (n = 4); against log k: +0.00 (n = 4). Frequency against log k on the same points: +1.00; as far as these two are one ordering the points cannot tell a frequency trigger from a force-constant trigger, and the read names none.",
+   "rms_change_cm": 3.723537579072086,
+   "rule": {
+    "n": 2,
+    "moved": 2,
+    "p": 1.0,
+    "se": 0.0,
+    "outcome": "undecided",
+    "statement": "n = 2, 2 moved more than 0.5 cm⁻¹: fewer than the 16 points the rule needs, so it reads nothing from them. Outcome 3: undecided."
+   }
+  }
+ ],
+ "decision": {
+  "n": 6,
+  "moved": 3,
+  "p": 0.5,
+  "se": 0.2041241452319315,
+  "outcome": "not stated",
+  "statement": "No outcome is stated: 13 molecule(s) have no second step of this measurement (A2_05e08111d2: no second step; A2_3ac24b6972: no second step; B_0d1c7f83df: no second step; B_1139ae8d01: no second step; B_14cf57747b: no second step; B_15207e9ed5: no second step; B_16769b963f: no second step; B_19c3319693: no second step; B_1b434d2cd0: no second step; B_2326ac497c: no second step; B_477b567fed: no second step; B_4f6ebdb30b: no second step; B_863cdaad7a: no second step). That is a missing measurement; the rule is read when every molecule has both steps.",
+  "bounds": {
+   "flagged": 2,
+   "n": 8,
+   "as_moved": {
+    "moved": 5,
+    "outcome": "undecided"
+   },
+   "as_unmoved": {
+    "moved": 3,
+    "outcome": "undecided"
+   }
+  },
+  "ordering": "Spearman of abs Δ against the label frequency: -0.43 (n = 6); against log k: -0.43 (n = 6). Frequency against log k on the same points: +1.00; as far as these two are one ordering the points cannot tell a frequency trigger from a force-constant trigger, and the read names none.",
+  "strata": [
+   {
+    "band": "20–30",
+    "eligible": 41,
+    "n": 2,
+    "moved": 1,
+    "fraction": 0.5
+   },
+   {
+    "band": "30–40",
+    "eligible": 41,
+    "n": 2,
+    "moved": 1,
+    "fraction": 0.5
+   },
+   {
+    "band": "40–50",
+    "eligible": 54,
+    "n": 1,
+    "moved": 1,
+    "fraction": 1.0
+   },
+   {
+    "band": "50–60",
+    "eligible": 146,
+    "n": 1,
+    "moved": 0,
+    "fraction": 0.0
+   }
+  ],
+  "weighted_fraction": 0.33687943262411346,
+  "points": [
+   {
+    "id": "B_0af11315e3",
+    "mode": 0,
+    "label_cm": 45.73986297816136,
+    "patched_cm": 44.29024593670133,
+    "change_cm": -1.44961704146003,
+    "noise_cm": 0.15201841268505117,
+    "step_check_cm": null,
+    "flags": [],
+    "small_step_change_cm": -1.373899303677355,
+    "bias_removed_cm": 0.07571773778267499,
+    "two_step_cm": 0.2263603149326059
+   },
+   {
+    "id": "B_0c6c144a7f",
+    "mode": 0,
+    "label_cm": 23.727957085396827,
+    "patched_cm": 23.34356815763766,
+    "change_cm": -0.38438892775916855,
+    "noise_cm": 1.4617104856432404,
+    "step_check_cm": null,
+    "flags": [],
+    "small_step_change_cm": -0.1900928539550577,
+    "bias_removed_cm": 0.19429607380411085,
+    "two_step_cm": 0.5727901379600162
+   },
+   {
+    "id": "B_1428bc8164",
+    "mode": 0,
+    "label_cm": 50.49952271310491,
+    "patched_cm": 50.556107686934396,
+    "change_cm": 0.05658497382948724,
+    "noise_cm": 0.0938565174430755,
+    "step_check_cm": null,
+    "flags": [],
+    "small_step_change_cm": 0.15491785071251485,
+    "bias_removed_cm": 0.09833287688302761,
+    "two_step_cm": 0.2937193264490361
+   },
+   {
+    "id": "B_1726105aae",
+    "mode": 0,
+    "label_cm": 34.30371237250227,
+    "patched_cm": 34.56254910940885,
+    "change_cm": 0.2588367369065807,
+    "noise_cm": 0.18401248379478805,
+    "step_check_cm": null,
+    "flags": [],
+    "small_step_change_cm": 0.3989377940609913,
+    "bias_removed_cm": 0.14010105715441057,
+    "two_step_cm": 0.4169451907702495
+   },
+   {
+    "id": "B_3dcbd985e3",
+    "mode": 0,
+    "label_cm": 23.711685926136024,
+    "patched_cm": 23.788173501920628,
+    "change_cm": 0.07648757578460419,
+    "noise_cm": 0.24323202647051761,
+    "step_check_cm": null,
+    "flags": [
+     "directions differ"
+    ],
+    "small_step_change_cm": 0.07648757578460419,
+    "bias_removed_cm": null,
+    "two_step_cm": 0.43569307959394976
+   },
+   {
+    "id": "B_3dcbd985e3",
+    "mode": 1,
+    "label_cm": 30.282548185913615,
+    "patched_cm": 29.928329180543948,
+    "change_cm": -0.3542190053696679,
+    "noise_cm": 0.7125352901478915,
+    "step_check_cm": null,
+    "flags": [
+     "directions differ"
+    ],
+    "small_step_change_cm": -0.3542190053696679,
+    "bias_removed_cm": null,
+    "two_step_cm": 0.26625377804804984
+   },
+   {
+    "id": "B_4ff67f9ea2",
+    "mode": 0,
+    "label_cm": 32.99045425496757,
+    "patched_cm": 32.45859278899249,
+    "change_cm": -0.5318614659750764,
+    "noise_cm": 0.979110822363701,
+    "step_check_cm": null,
+    "flags": [],
+    "small_step_change_cm": -0.4314370402743819,
+    "bias_removed_cm": 0.10042442570069454,
+    "two_step_cm": 0.2985521822015542
+   },
+   {
+    "id": "B_55cca3aaf2",
+    "mode": 0,
+    "label_cm": 23.826018976806616,
+    "patched_cm": 22.100406971845523,
+    "change_cm": -1.7256120049610928,
+    "noise_cm": 1.3923712242036752,
+    "step_check_cm": null,
+    "flags": [],
+    "small_step_change_cm": -1.5596058960692964,
+    "bias_removed_cm": 0.16600610889179634,
+    "two_step_cm": 0.48944221471381155
+   }
+  ]
+ },
+ "flagged_step_bias": 0,
+ "flagged_directions": 4,
+ "unread": [
+  {
+   "id": "A2_05e08111d2",
+   "reason": "no second step"
+  },
+  {
+   "id": "A2_3ac24b6972",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_0d1c7f83df",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_1139ae8d01",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_14cf57747b",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_15207e9ed5",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_16769b963f",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_19c3319693",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_1b434d2cd0",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_2326ac497c",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_477b567fed",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_4f6ebdb30b",
+   "reason": "no second step"
+  },
+  {
+   "id": "B_863cdaad7a",
+   "reason": "no second step"
+  }
+ ],
+ "q2_test": null,
+ "inputs": {
+  "sources": [
+   [
+    "probes/results_m1/low_mode_threshold_2026-11-20/patch_below60",
+    "modules/05_support_predictor/corpus/molecules"
+   ]
+  ],
+  "step_checks": [],
+  "sample": "probes/results_m1/low_mode_threshold_2026-11-20/sample/sample.json",
+  "exploratory": "A demonstration of the extrapolated read on the seven molecules that had both steps on 20 November, run before the step-0.02 data of the other 13 were read; it states no outcome.",
+  "second_steps": [
+   [
+    "probes/results_m1/low_mode_threshold_2026-11-20/patch_step02_below60",
+    "modules/05_support_predictor/corpus/molecules"
+   ]
+  ]
+ },
+ "constants": {
+  "band_edges_cm": [
+   20.0,
+   30.0,
+   40.0,
+   50.0,
+   60.0,
+   80.0,
+   100.0
+  ],
+  "move_line_cm": 0.5,
+  "overlap_min": 0.9,
+  "step_agreement_cm": 0.15,
+  "decision_window_cm": [
+   20.0,
+   60.0
+  ],
+  "rule_min_points": 16,
+  "near_line_cm": [
+   0.25,
+   1.0
+  ],
+  "step_failures_stop": 2,
+  "gradient_noise_unit": 1e-07,
+  "step_ratio": 2.0,
+  "weight_small": 1.3333333333333333,
+  "weight_large": -0.3333333333333333,
+  "extrapolated_noise_factor": 1.3437096247164249,
+  "step_bias_limit_cm": 1.0,
+  "directions_tol": 1e-12,
+  "span_tol": 1e-10,
+  "rebuild_tol_cm": 1e-06,
+  "q2_molecules": [
+   "B_1726105aae",
+   "B_1428bc8164"
+  ],
+  "q2_interval": [
+   4.0,
+   6.0
+  ]
+ }
+}

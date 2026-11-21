@@ -1,0 +1,118 @@
+{
+ "verdict": "holds",
+ "reason": null,
+ "interval": [
+  4.0,
+  6.0
+ ],
+ "predicted": 5.0,
+ "sigma": 2e-08,
+ "ratios": [
+  {
+   "id": "B_1428bc8164",
+   "tag": "b3lyp",
+   "direction": 0,
+   "curvature_cm2": [
+    2566.485293673673,
+    2596.3518802091035,
+    2715.6045438382093
+   ],
+   "ratio": 4.99284543239105,
+   "noise_sd": 0.22277327394155721,
+   "inside": true,
+   "zero_two_step_cm2": 2556.5297648285296,
+   "zero_three_step_cm2": 2556.525016328249
+  },
+  {
+   "id": "B_1428bc8164",
+   "tag": "wb97x",
+   "direction": 0,
+   "curvature_cm2": [
+    12988.582742402175,
+    13019.39016590764,
+    13142.612345642081
+   ],
+   "ratio": 4.99975608841758,
+   "noise_sd": 0.21632169894955056,
+   "inside": true,
+   "zero_two_step_cm2": 12978.313601233685,
+   "zero_three_step_cm2": 12978.313434249523
+  },
+  {
+   "id": "B_1726105aae",
+   "tag": "b3lyp",
+   "direction": 0,
+   "curvature_cm2": [
+    1204.3388561985823,
+    1233.455045403012,
+    1349.666259439591
+   ],
+   "ratio": 4.991292034154616,
+   "noise_sd": 0.304222838855657,
+   "inside": true,
+   "zero_two_step_cm2": 1194.6334597971058,
+   "zero_three_step_cm2": 1194.6278255130803
+  },
+  {
+   "id": "B_1726105aae",
+   "tag": "wb97x",
+   "direction": 0,
+   "curvature_cm2": [
+    12470.124128956453,
+    12500.143610219753,
+    12620.11070914205
+   ],
+   "ratio": 4.996308193005409,
+   "noise_sd": 0.29541768465626644,
+   "inside": true,
+   "zero_two_step_cm2": 12460.11763520202,
+   "zero_three_step_cm2": 12460.11517239911
+  }
+ ],
+ "files": {
+  "small": {
+   "B_1726105aae": {
+    "b3lyp": "0b4c2927ef2a208575346031c671e75c86509cb85d161d677e17e250be1f6267",
+    "wb97x": "d466bab9b2077d5ab1a37ede6d9ccdc9631b310e7aeeff610b88ad6a819d4848"
+   },
+   "B_1428bc8164": {
+    "b3lyp": "99ed3386e6ea18a74415b5ebe8f2d4dd10fde5080896670115f43a14de308166",
+    "wb97x": "d22e84f152f3386623e7de3376cb725c9d45b99973cadf812bec10f54a3b5320"
+   }
+  },
+  "large": {
+   "B_1726105aae": {
+    "b3lyp": "a2cf9b3d5fb451b0a30cad33eff7a752549ff8e8527930fb816733b90a174bb0",
+    "wb97x": "b5da609c7e7968d60a13eb9a1804decc599ec2d4e7db3f0d6856bf895bc112ba"
+   },
+   "B_1428bc8164": {
+    "b3lyp": "dc999724d94dfcabf05e3c0f91bdac24181e19b720fa8dfb9535af7d5fdcdc6c",
+    "wb97x": "cede149fc2c65dd39eea45e300dac6a60afc64f23e654cfe87aa8106fac30159"
+   }
+  },
+  "third": {
+   "B_1726105aae": {
+    "b3lyp": "84306ae561307b7a4ab05884e1184fba188ce1473ca63d6fe6cff95d98a74801",
+    "wb97x": "c65468067eadceea4db146fa655d9339fcb2e67e8f11956e6ba7f7e907292ec9"
+   },
+   "B_1428bc8164": {
+    "b3lyp": "93546faa48b681f942c6ef7f74d9156c082ff08dceb6518fdcebe1c5a7696c21",
+    "wb97x": "20569994dec579ae809704ec44d7e9d731be6842b43d9e38df6d184f4cd3a0ba"
+   }
+  }
+ },
+ "inputs": {
+  "small": [
+   "probes/results_m1/low_mode_threshold_2026-11-20/patch_below60",
+   "modules/05_support_predictor/corpus/molecules"
+  ],
+  "large": [
+   "probes/results_m1/low_mode_threshold_2026-11-20/patch_step02_below60",
+   "modules/05_support_predictor/corpus/molecules"
+  ],
+  "third": [
+   "probes/results_m1/low_mode_threshold_2026-11-20/patch_step04_q2test",
+   "modules/05_support_predictor/corpus/molecules"
+  ]
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "run": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_benzonitrile_anharmonic_v3_2026-11-19\\benzonitrile",
+ "reference": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\anharmonic_step_substituted_2026-11-20\\reference\\benzonitrile",
+ "status": "applied",
+ "reason": null,
+ "1_steps_within_tolerance": {
+  "passed": true,
+  "tolerance": {
+   "fraction_of_the_family_bar": 0.3,
+   "cap_cm": 2.0,
+   "rounding_cm": 0.1,
+   "bars_cm": {
+    "CH-oop": 8.38,
+    "other": 3.84,
+    "ring-ip": 3.37,
+    "CH-stretch": 6.21
+   }
+  },
+  "closest_to_its_line": {
+   "difference_cm": 0.2,
+   "of_tolerance": 0.18,
+   "omega_cm": 1698.3,
+   "family": "ring-ip",
+   "tolerance_cm": 1.11
+  },
+  "bands_beyond": []
+ },
+ "2_no_band_lost": {
+  "passed": true,
+  "stepped": {
+   "run": 27,
+   "reference": 27,
+   "of": 33
+  },
+  "bands_lost": []
+ },
+ "3_degenerate_pairs_equal": {
+  "passed": false,
+  "pairs": 0,
+  "unequal": []
+ },
+ "4_time_and_memory_recorded": {
+  "passed": true,
+  "seconds": 1830.9,
+  "peak_memory_mb": 1003,
+  "unit": "m08-anharmonic-benzonitrile-1f513cabca.scope"
+ },
+ "passed": false
+}

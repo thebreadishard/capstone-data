@@ -1,0 +1,33 @@
+{
+ "registration": "GoalGathering/notes/PreRegistration_2026-11-20_Anharmonic_Step_Substituted_Molecule.md, sections 4 and 7",
+ "force_field": {
+  "place": "the rented Hetzner CCX53 'night20' (tools/hosts.tsv; 32 dedicated cores, 122 GB), not the laptop",
+  "call": "env MAX_FIRST=1800 LANES=4 PY=/root/miniforge3/envs/qc05/bin/python bash probes/s1_anharmonic_level.sh <corpus B_3100da3761 geometry.json> /root/night20_211/g_label/g/benzonitrile 4 G:6-31g*:75,302",
+  "environment": "qc05 by tools/bootstrap_qc05_env.sh: pyscf 2.14.0, python 3.12.16",
+  "code": "git archive of commit 90cb5e23 (/root/dpir_90cb5e23)",
+  "unset": [
+   "PM_SAVING",
+   "GUESS_FROM_PREVIOUS",
+   "GATE_GRID",
+   "DISP"
+  ],
+  "threads": "minimum and reference Hessian at 16 threads; the 66 displaced Hessians in 4 processes of 4 threads (17, 17, 17, 16)",
+  "started_utc": "2026-11-20 13:55:04",
+  "ended_utc": "2026-11-20 15:53:59",
+  "wall_seconds": 7135,
+  "first_displaced_hessian_seconds": 351,
+  "beside_it_on_the_server": "two to four 8-thread lanes of TASKS 218 throughout (the server at 24-32 busy threads)",
+  "noisy": false,
+  "run_spec": "probes/runspecs/night20_211_g_field.json",
+  "smoke": "the same call on water (run spec night20_211_smoke_water): omega 1710.8, 3721.1, 3844.9 cm-1; against the laptop's stored Hessians of 13 Oct assembled by today's dpir.qff, omega within 1.3e-5 cm-1 and nu within 8e-6 cm-1",
+  "fetch": "probes/fetch_night20.sh 211: FETCHED night20-211 332 files 15857368 bytes sha256-checked 2026-11-20 16:55:01 (laptop time); verbatim copy in probes/results_m1/night20_2026-11-20/fetch_211/"
+ },
+ "label": {
+  "place": "the laptop (WSL), from the fetched G folder",
+  "call": "the label step of probes/g_label_for_step.sh, and only it: its selection.json, then PYTHONPATH=~/pyvpt2-wt-polyad ~/miniforge3/envs/vpt2/bin/python probes/gvpt2_labels.py <g_label>/g --selection <g_label>/selection.json --setting G --out <g_label>/gvpt2_g",
+  "why_not_on_the_server": "the label step's env (conda env vpt2 with the pyVPT2 polyad fork, which imports psi4) is not part of any server recipe",
+  "made": "2026-11-20 16:56:11 laptop time, in under a minute, one thread",
+  "solver": "pyvpt2-wt-polyad/pyvpt2/fermi_solver.py sha256 937c176f1f10",
+  "summary_line": "benzonitrile: 12 resonances, 10 fundamentals moved (max 31.5 cm-1), 0 symmetry pairs, 0 resonances skipped beside them, 0 polyad bridges"
+ }
+}

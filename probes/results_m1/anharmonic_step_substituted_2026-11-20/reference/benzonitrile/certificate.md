@@ -1,0 +1,119 @@
+# Certificate — benzonitrile · pipeline 0.15 (step 6 from a stored force field, on steps 1-5 of a 0.14 result) · 2026-11-20 15:39
+
+<!-- delivery 2 -->
+
+benzonitrile: the infrared spectrum of ΔH-network v1.4 (3 seeds) — B3LYP/6-31G* corrected toward ωB97X/6-31G*. The spectrum is made by the release networks of version 1.4, trained on the 1132 labelled entries of their training pool, hold-outs (a) and (b) included: each of the 3 networks is fitted on a random 85 % of the molecules and stopped on the other 15 %, a different 15 % per seed, so not every molecule is fitted by every network (with 3 networks about 0.15³ ≈ 0.3 % by none). Its error bars were measured on the measurement networks of the same version — the same recipe trained without the hold-out molecules — on molecules those networks never saw; the release networks themselves have seen the molecules of hold-outs (a) and (b), so they have no held-out error of their own. The error stated is the measurement networks' error of the corrected band positions of the seed-mean correction; 0 of 33 bands are licensed: the version's harmonic positions ω are licensed for ring-ip, CH-stretch, CH-oop, other (decision 65) where a band's own position moved by no more than the licence line in the presentations tried (this molecule turned, mirrored or listed in another atom order), and for this molecule that licence is withheld — how far this molecule's bands move when it is turned, mirrored or listed in another order could not be measured (the result holds no own_spread.json: the pipeline writes it since 0.15, and python -m m08.own_spread measures an earlier result), so no band is licensed; the corrected positions are still printed — each band marked; at the coupled-cluster level not measured for this network version: the coupled-cluster reads (T3) were made on an earlier network (chain 34). The scaled B3LYP spectrum is shown as the baseline only. This molecule and the ΔH network: in the release networks' training data: the error bars are not an out-of-sample error for this molecule; expect it to be smaller.
+
+**Positions.** Each band is printed at its best estimate — the anharmonic position ν = ω + Δ_anh for 27 of 33 bands (Δ_anh from the model x2* on the molecule's GFN2-xTB force field; for 1 of them the step's error is not measured for that kind of mode, and no bar is printed), the harmonic position ω for the other 6, each with its reason; ω stands beside every ν; the licence (decision 65) is on the harmonic position ω against the DFT proxy (ωB97X); it says nothing about the anharmonic position ν; no licence is claimed for ν.
+
+**What the bar is, and what ν's error is.** The bar beside a step is the step's error alone — the rms of Δ_anh against its B3LYP VPT2 label — and not the error of ν: ν carries ω's error too, the harmonic position's error against the DFT proxy (ωB97X), which is what the licence is about; neither of the two is an error against experiment.
+
+**What the bars rest on.** The bars rest on 2 target molecules, coronene and tetracene, both hydrocarbons — target modes: CH-oop 22, other 23, ring-ip 56, CH-stretch 20; the step's rms per molecule, coronene / tetracene, in cm⁻¹: CH-oop 11.91 / 4.55; other 5.69 / 1.09; ring-ip 4.25 / 2.35; CH-stretch 6.92 / 5.67; coronene carries the larger error in every family. They are the best numbers there are and they are thin: nothing here says the step helps a molecule unlike the targets, and a bar is a family's rms, not a prediction interval for one band. The bars were measured with one stored force field per molecule; between two GFN2-xTB force fields of the same molecule the step itself also varies, by 1.7 cm⁻¹ on a C–H stretch pair in the one case measured (benzene, 17 Nov 2026), and the bars do not contain that.
+
+## Molecule
+
+- N#Cc1ccccc1, C7H5N, 13 atoms (C, H, N); the network's training set spans 8–40 atoms: inside
+- catalogue: listed as A_3100da3761 (benzonitrile, rung 4; website export catalog.json, molecules/A_3100da3761.json); the export's B3LYP positions (psi4 1.11 (conda env qc, Windows), modules/05_support_predictor/corpus/molecules/A_3100da3761/hessian_b3lyp.npz) lie within 1.9 cm⁻¹ of this run's; the corpus's analytic B3LYP Hessian (corpus/molecules/A_3100da3761/hessian_b3lyp_analytic.npz), the route step 3 computes, within 1.9 cm⁻¹
+- the ΔH network: in the release networks' training data: the error bars are not an out-of-sample error for this molecule; expect it to be smaller
+- the anharmonic model x2* has not seen this molecule: it is neither in its training table (37 molecules) nor a target
+- the ωB97X truth is in the corpus (corpus/molecules/A_3100da3761/hessian_wb97x_analytic.npz, 33 bands): the network against it, spectrum overlap 0.983; positions paired by rank, rms 1.01 cm⁻¹ (both independent of the atom order)
+- delivery 1 — first: harmonic, the anharmonic step is running: 2026-11-19 20:07:26, 14.6 s after the start; final by 2026-11-19 22:09, and if no later delivery stands here by then, this one is final
+- delivery 2 — second: with the anharmonic positions: 2026-11-19 20:38:13, 1861.0 s after the start
+
+## Spectrum, band by band (ΔH-network v1.4, 3 seeds)
+
+| best estimate (cm⁻¹) | printed | harmonic ω, network | Δ_anh | ± of Δ_anh, against its VPT2 label (measured, not licensed) | height (km/mol) | seeds' range of ω | B3LYP ω | baseline ω | family | ω licensed | own spread of ω (cm⁻¹), under | error of the corrected band positions of the seed-mean correction of ω on (a) / (b), cm⁻¹ | laboratory region | u_band (cm⁻¹) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 167.5 | harmonic ω | 167.5 | — | — | 1.86 | 166.5–168.7 | 147.1 | 144.0 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 189.7 | harmonic ω | 189.7 | — | — | 4.43 | 189.5–189.8 | 164.6 | 161.1 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 410.9 | harmonic ω | 410.9 | — | — | 0.92 | 410.2–411.6 | 392.1 | 383.9 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 422.0 | harmonic ω | 422.0 | — | — | 0.0 | 421.9–422.1 | 411.0 | 402.4 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 467.9 | harmonic ω | 467.9 | — | — | 0.0 | 467.8–468.1 | 465.4 | 455.6 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 571.1 | anharmonic ν | 576.1 | -5.0 | 3.84 | 0.22 | 575.9–576.5 | 558.8 | 547.1 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 574.1 | anharmonic ν | 582.4 | -8.3 | not measured | 14.92 | 580.2–584.1 | 569.9 | 557.9 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 637.4 | anharmonic ν | 643.8 | -6.4 | 3.84 | 0.14 | 643.5–644.0 | 638.3 | 624.9 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | low / skeletal | 16.12 |
+| 705.9 | anharmonic ν | 716.6 | -10.7 | 8.38 | 26.79 | 716.0–717.5 | 704.1 | 689.3 | CH-oop | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.86 / 1.26 | CH-oop (10.5-15 um; benzene nu11 at 673 included) | 9.61 |
+| 773.5 | anharmonic ν | 782.1 | -8.6 | 3.84 | 2.19 | 782.0–782.1 | 774.5 | 758.2 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | CH-oop (10.5-15 um; benzene nu11 at 673 included) | 9.61 |
+| 780.4 | anharmonic ν | 792.9 | -12.5 | 8.38 | 30.26 | 791.0–794.0 | 777.5 | 761.2 | CH-oop | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.86 / 1.26 | CH-oop (10.5-15 um; benzene nu11 at 673 included) | 9.61 |
+| 870.7 | anharmonic ν | 879.5 | -8.8 | 8.38 | 0.0 | 878.6–880.4 | 861.4 | 843.3 | CH-oop | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.86 / 1.26 | CH-oop (10.5-15 um; benzene nu11 at 673 included) | 9.61 |
+| 955.2 | anharmonic ν | 965.5 | -10.3 | 8.38 | 2.39 | 964.6–966.4 | 941.7 | 921.9 | CH-oop | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.86 / 1.26 | ring / CH-ip (9-10.5 um) | 15.87 |
+| 995.2 | anharmonic ν | 1007.1 | -11.9 | 8.38 | 0.0 | 1006.7–1007.6 | 976.3 | 955.8 | CH-oop | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.86 / 1.26 | ring / CH-ip (9-10.5 um) | 15.87 |
+| 1010.9 | anharmonic ν | 1025.8 | -14.9 | 3.37 | 0.51 | 1025.7–1025.9 | 1017.9 | 996.5 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | ring / CH-ip (9-10.5 um) | 15.87 |
+| 1022.3 | anharmonic ν | 1036.0 | -13.7 | 8.38 | 0.02 | 1035.4–1036.4 | 1007.8 | 986.6 | CH-oop | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.86 / 1.26 | ring / CH-ip (9-10.5 um) | 15.87 |
+| 1048.5 | anharmonic ν | 1065.6 | -17.1 | 3.37 | 2.56 | 1065.3–1065.8 | 1055.8 | 1033.6 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | ring / CH-ip (9-10.5 um) | 15.87 |
+| 1104.8 | anharmonic ν | 1120.8 | -16.0 | 3.37 | 2.89 | 1120.6–1121.0 | 1112.9 | 1078.4 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CH-ip-bend (8.6 um) | 8.64 |
+| 1178.0 | anharmonic ν | 1190.7 | -12.7 | 3.37 | 0.37 | 1190.1–1191.1 | 1197.4 | 1160.3 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CH-ip-bend (8.6 um) | 8.64 |
+| 1199.0 | anharmonic ν | 1215.1 | -16.1 | 3.37 | 0.9 | 1214.7–1215.6 | 1211.5 | 1173.9 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CH-ip-bend (8.6 um) | 8.64 |
+| 1226.7 | anharmonic ν | 1247.0 | -20.3 | 3.37 | 0.53 | 1246.7–1247.6 | 1226.9 | 1188.9 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CH-ip-bend (8.6 um) | 8.64 |
+| 1281.5 | anharmonic ν | 1307.2 | -25.7 | 3.37 | 1.7 | 1306.8–1307.5 | 1338.6 | 1297.1 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CC-stretch/CH-ip (7.7 um) | 15.87 |
+| 1339.5 | anharmonic ν | 1364.6 | -25.1 | 3.37 | 0.46 | 1364.5–1364.7 | 1367.7 | 1325.3 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CC-stretch/CH-ip (7.7 um) | 15.87 |
+| 1475.9 | anharmonic ν | 1504.6 | -28.7 | 3.37 | 6.36 | 1504.3–1504.7 | 1491.8 | 1445.6 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CC-stretch/CH-ip (7.7 um) | 15.87 |
+| 1524.2 | anharmonic ν | 1555.2 | -31.0 | 3.37 | 8.2 | 1554.9–1555.6 | 1540.5 | 1492.7 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CC-stretch (6.2 um) | 16.09 |
+| 1627.4 | anharmonic ν | 1665.7 | -38.3 | 3.37 | 0.79 | 1665.1–1666.0 | 1633.3 | 1582.7 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | CC-stretch (6.2 um) | 16.09 |
+| 1660.1 | anharmonic ν | 1698.3 | -38.2 | 3.37 | 0.88 | 1697.9–1698.7 | 1660.0 | 1608.5 | ring-ip | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 1.17 / 1.22 | overtone / combination region | 15.98 |
+| 2386.3 | harmonic ω | 2386.3 | — | — | 26.72 | 2385.8–2386.9 | 2349.3 | 2276.5 | other | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 2.38 / 2.1 | overtone / combination region | 15.98 |
+| 3087.7 | anharmonic ν | 3233.8 | -146.1 | 6.21 | 0.19 | 3233.6–3233.9 | 3191.5 | 3063.8 | CH-stretch | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 0.8 / 1.67 | CH-stretch | 11.38 |
+| 3110.7 | anharmonic ν | 3245.2 | -134.5 | 6.21 | 5.19 | 3244.8–3245.5 | 3202.8 | 3074.7 | CH-stretch | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 0.8 / 1.67 | CH-stretch | 11.38 |
+| 3117.2 | anharmonic ν | 3252.3 | -135.1 | 6.21 | 15.18 | 3251.7–3252.7 | 3210.1 | 3081.7 | CH-stretch | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 0.8 / 1.67 | CH-stretch | 11.38 |
+| 3140.4 | anharmonic ν | 3262.1 | -121.7 | 6.21 | 13.37 | 3261.1–3262.7 | 3220.0 | 3091.2 | CH-stretch | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 0.8 / 1.67 | CH-stretch | 11.38 |
+| 3126.3 | anharmonic ν | 3264.8 | -138.5 | 6.21 | 3.18 | 3264.3–3265.1 | 3222.9 | 3094.0 | CH-stretch | no: how far this band moves when the molecule is turned, mirrored or listed in another order could not be measured | not measured | 0.8 / 1.67 | CH-stretch | 11.38 |
+
+*Licence caveat: CH-oop on hold-out (a) rests on 5 of the hold-out's 8 molecules (the others have no such band): the 95 % interval of a bootstrap over molecules is 0.93–3.2 cm⁻¹ and crosses the line (96 % of the resamples lie under it); other on hold-out (a) rests on 8 molecules: the 95 % interval of a bootstrap over molecules is 1.45–3.19 cm⁻¹ and crosses the line (93 % of the resamples lie under it).*
+
+Which position each band is printed at (the licence (decision 65) is on the harmonic position ω against the DFT proxy (ωB97X); it says nothing about the anharmonic position ν):
+
+- harmonic position, no anharmonic step: no model was measured for this family in this range — 6 band(s): 167.5, 189.7, 410.9, 422.0, 467.9, 2386.3 cm⁻¹
+- anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.84 cm⁻¹ (rms of Δ_anh against its VPT2 label, family other); no licence is claimed for ν — 3 band(s): 571.1, 637.4, 773.5 cm⁻¹
+- anharmonic estimate ν = ω + Δ_anh, printed without an error bar: the step's error is not measured for this kind of mode (family 'other' with an out-of-plane share of 0.8 or more); no licence is claimed for ν — 1 band(s): 574.1 cm⁻¹
+- anharmonic estimate ν = ω + Δ_anh; the step's error is ± 8.38 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-oop); no licence is claimed for ν — 6 band(s): 705.9, 780.4, 870.7, 955.2, 995.2, 1022.3 cm⁻¹
+- anharmonic estimate ν = ω + Δ_anh; the step's error is ± 3.37 cm⁻¹ (rms of Δ_anh against its VPT2 label, family ring-ip); no licence is claimed for ν — 12 band(s): 1010.9, 1048.5, 1104.8, 1178.0, 1199.0, 1226.7, 1281.5, 1339.5, 1475.9, 1524.2, 1627.4, 1660.1 cm⁻¹
+- anharmonic estimate ν = ω + Δ_anh; the step's error is ± 6.21 cm⁻¹ (rms of Δ_anh against its VPT2 label, family CH-stretch); no licence is claimed for ν — 5 band(s): 3087.7, 3110.7, 3117.2, 3140.4, 3126.3 cm⁻¹
+
+*Laboratory region and u_band:* modules/03_lab_scoreboard/build_lab_tables.py FAMILY_RULE (12 Sep 2026), read at the printed position.
+
+## How well the network is known (its product-error record and its evaluation records)
+
+Against ωB97X/6-31G* (the DFT proxy: the network's ΔH is trained on ωB97X − B3LYP Hessians); two quantities, each under its name.
+
+The licence reads the error of the corrected band positions of the seed-mean correction (rms over the family's bands of the corrected band position's error against the higher level (cm⁻¹): the seeds' mean ΔH added to the B3LYP Hessian and diagonalised, each corrected band paired to its higher-level band by mode overlap and counted in the family of its B3LYP partner — what the pipeline prints; with the 95 % interval of a bootstrap over whole molecules).
+
+| family | (a), 8 molecules | (b), 40 molecules | line |
+|---|---|---|---|
+| ring-ip | 1.17 (95 % interval over molecules 0.9–1.41; 199 bands) | 1.22 (95 % interval over molecules 1.09–1.34; 1194 bands) | 3 |
+| CH-stretch | 0.8 (95 % interval over molecules 0.44–1.2; 73 bands) | 1.67 (95 % interval over molecules 1.37–1.95; 410 bands) | 3 |
+| CH-oop | 1.86 (95 % interval over molecules 0.93–3.2; 46 bands) | 1.26 (95 % interval over molecules 0.98–1.59; 84 bands) | 3 |
+| other | 2.38 (95 % interval over molecules 1.45–3.19; 156 bands) | 2.1 (95 % interval over molecules 1.88–2.34; 1258 bands) | 3 |
+
+Beside it the evaluation records' read-outs — the first-order diagonal error of each seed's correction, averaged over the seeds (each seed's value in brackets), which the licence read until 16 Nov 2026 — and the coupling ratio; targets: 3 cm⁻¹ per family — decision 53's line for ring-ip, CH-oop and 'other', every family's under decision 65 (the licence) — and the coupling ratio ≤ 0.25 of chain 35's T1 line (probes/chain35_read.py).
+
+| read-out | (a), 8 molecules | (b), 40 molecules | target |
+|---|---|---|---|
+| ring-ip | 1.55 (1.77, 1.52, 1.37) | 1.64 (1.53, 1.49, 1.89) | 3.0 |
+| CH-stretch | 1.15 (1.34, 1.19, 0.92) | 2.02 (2.32, 2.2, 1.55) | 3.0 |
+| CH-oop | 2.22 (2.22, 2.1, 2.35) | 1.72 (1.8, 1.96, 1.41) | 3.0 |
+| other | 2.91 (2.79, 3.1, 2.84) | 3.68 (3.2, 4.15, 3.7) | 3.0 |
+| coupling_ratio | 0.147 (0.15, 0.147, 0.143) | 0.17 (0.168, 0.164, 0.177) | 0.25 |
+
+| spectral shape | (a), 8 with an APT | (b), 31 with an APT |
+|---|---|---|
+| overlap, uncorrected → corrected | 0.277 → 0.977 | 0.366 → 0.975 |
+| height error, uncorrected → corrected | 0.227 → 0.109 | 0.511 → 0.216 |
+
+*Read-outs:* rms over the family's B3LYP modes of the first-order diagonal error of a seed's ΔH against the higher level, per seed, and the seeds' mean (cm⁻¹); families by module 05's rule (m05/learning_curve_layerA.molecule_features).
+*Hold-outs:* hold-out (a) on its eight molecules never trained on in any version (the set fixed on 30 Oct 2026): eight layer-A molecules held out on 19 Sep 2026; this version's training left out the twins of the hold-out molecules, so the other two, 2-naphthoic acid and benzonitrile, are clean too, and the eight are kept for comparability with v1.3; hold-out (b): every substituted molecule of two scaffold cores, frozen on 8 Oct 2026 — scaffolds the measurement networks never saw. *Coupled cluster:* not measured for this network version: the coupled-cluster reads (T3) were made on an earlier network (chain 34).
+*Sources:* E7_rungC_v14s3clean_c00_control_eval_clean_seed0.json; E7_rungC_v14s3clean_c00_control_eval_clean_seed1.json; E7_rungC_v14s3clean_c00_control_eval_clean_seed2.json; E7_rungC_v14s3clean_c00_control_a8read_seed0.json; E7_rungC_v14s3clean_c00_control_a8read_seed1.json; E7_rungC_v14s3clean_c00_control_a8read_seed2.json; E7_rungC_v14s3clean_c00_control_product_error.json.
+
+*Licence:* licensed at the DFT proxy: ring-ip (1.17 / 1.22), CH-stretch (0.8 / 1.67), CH-oop (1.86 / 1.26), other (2.38 / 2.1); not licensed: none — error of the corrected band positions of the seed-mean correction on hold-outs (a) / (b) in cm⁻¹ against 3 (decision 65 as amended on 16 Nov 2026); CH-oop on hold-out (a) rests on 5 of the hold-out's 8 molecules (the others have no such band): the 95 % interval of a bootstrap over molecules is 0.93–3.2 cm⁻¹ and crosses the line (96 % of the resamples lie under it); other on hold-out (a) rests on 8 molecules: the 95 % interval of a bootstrap over molecules is 1.45–3.19 cm⁻¹ and crosses the line (93 % of the resamples lie under it); the first-order diagonal error of each seed's correction, averaged over the seeds, which the licence read until then: ring-ip (1.55 / 1.64), CH-stretch (1.15 / 2.02), CH-oop (2.22 / 1.72), other (2.91 / 3.68); no coupled-cluster licence (README.md, decision 65 as amended on 16 Nov 2026). For this molecule it is withheld: How far this molecule's bands move when it is turned, mirrored or listed in another order could not be measured (the result holds no own_spread.json: the pipeline writes it since 0.15, and python -m m08.own_spread measures an earlier result), so no band is licensed; the corrected positions are still printed.
+
+## Cost
+
+- Asus18 (laptop): 1.9 s, € 0.00 ex VAT (corpus ledger machine column 'Asus18'); steps reuse 0.5 s, correction_and_spectra 1.4 s, anharmonic 0.0 s
+
+## Provenance
+
+- result C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\probes\results_m1\anharmonic_step_substituted_2026-11-20\reference\benzonitrile; run at commit aa3fa3ce (uncommitted changes: no); certificate at c1484e27
+- steps 2–3 taken from the corpus folder C:\Users\thebr\Documents\CapstonePlan\plans\05_delta-probed-ir-pipeline\modules\05_support_predictor\corpus\molecules\B_3100da3761
+- deck 9e27bf8e934893f3; low level {"pyscf": "2.14.0", "pyscf_git": null, "numpy": "2.5.3", "python": "3.12.14", "sha256": {"analytic_hessians.py": "0ea113dae1df", "apt.py": "b22c29d0575f"}}; host Asus18
+- models: E7_rungC_v14s3clean_c00_control_release_model_n1132_seed0.pt (carried, sha16 6f52c9d8570fbcf5); E7_rungC_v14s3clean_c00_control_release_model_n1132_seed1.pt (carried, sha16 1e820b8755078b90); E7_rungC_v14s3clean_c00_control_release_model_n1132_seed2.pt (carried, sha16 bc4de0b6458e44f2)
+- own spread: not measured — the result holds no own_spread.json: the pipeline writes it since 0.15, and python -m m08.own_spread measures an earlier result
+- the models above are release networks, trained on the 1132 labelled entries of their training pool: each of the 3 networks is fitted on a random 85 % of the molecules and stopped on the other 15 %, a different 15 % per seed, so not every molecule is fitted by every network (with 3 networks about 0.15³ ≈ 0.3 % by none); the error bars are those of the measurement networks: E7_rungC_v14s3clean_c00_control_model_n1082_seed0.pt (sha16 89574ed1b69c4e10); E7_rungC_v14s3clean_c00_control_model_n1082_seed1.pt (sha16 03dbbf9f29b59186); E7_rungC_v14s3clean_c00_control_model_n1082_seed2.pt (sha16 8dd85f3f1ba5bbeb)

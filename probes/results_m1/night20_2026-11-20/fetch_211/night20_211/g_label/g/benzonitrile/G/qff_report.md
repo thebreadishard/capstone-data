@@ -1,0 +1,61 @@
+# Quartic force field from 67 displaced Hessians — /root/night20_211/g_label/g/benzonitrile/G/hess
+
+Reference file `ref.json`; 33 vibrational modes; displacement 0.1 in reduced coordinates; assignment residual max 8.46e-15.
+Harmonic ω (cm⁻¹): 147.3, 164.5, 392.6, 411.0, 465.9, 559.9, 572.7, 638.0, 704.4, 774.7, 778.8, 861.8, 942.0, 976.8, 1008.0, 1017.5, 1056.0, 1112.9, 1197.1, 1211.5, 1227.7, 1339.5, 1368.1, 1492.3, 1541.1, 1633.6, 1660.4, 2345.9, 3194.4, 3204.7, 3213.3, 3222.9, 3225.7
+
+## Noise diagnostics
+
+Off-diagonal semi-diagonal quartic constants φ_iijj have two independent finite-difference routes (displace j and read H_ii; displace i and read H_jj). Their difference is a direct estimate of the numerical error of that constant. Exactly degenerate pairs (a, b) must give equal φ_aa,jj and φ_bb,jj for every totally symmetric j; their difference is a second estimate.
+
+- route disagreement |φ_iijj(a) − φ_iijj(b)|: median 0.0, 90th percentile 0.3, max 5.3 cm⁻¹ (max |φ_iijj| 295.4)
+- cubic route spread (max − min of the three routes): median 0.02, max 2.6 cm⁻¹
+- totally symmetric modes (|φ_iii| > 5 cm⁻¹, non-degenerate): [(4, 465.9), (9, 774.7), (15, 1017.5), (16, 1056.0), (19, 1211.5), (20, 1227.7), (24, 1541.1), (26, 1660.4), (27, 2345.9), (28, 3194.4), (30, 3213.3), (32, 3225.7)]
+
+| degenerate pair (ω) | j (ω) | φ_aa,jj | φ_bb,jj | difference | route disagreement a / b |
+|---|---|---|---|---|---|
+
+## VPT2 fundamentals (deperturbation window 200.0 cm⁻¹, min K 0.0; 1197 resonances deperturbed; polyad diagonalisation not applied)
+
+| mode | ω | ν raw quartics | ν − ω | ν symmetry-averaged quartics | ν − ω | pyVPT2 ν | pair |
+|---|---|---|---|---|---|---|---|
+| 0 | 147.3 | 146.2 | -1.2 | 146.2 | -1.2 | — |  |
+| 1 | 164.5 | 166.6 | +2.1 | 166.6 | +2.1 | — |  |
+| 2 | 392.6 | 385.7 | -7.0 | 385.7 | -7.0 | — |  |
+| 3 | 411.0 | 404.2 | -6.8 | 404.2 | -6.8 | — |  |
+| 4 | 465.9 | 460.1 | -5.8 | 460.1 | -5.8 | — |  |
+| 5 | 559.9 | 556.5 | -3.4 | 556.5 | -3.4 | — |  |
+| 6 | 572.7 | 562.0 | -10.7 | 562.0 | -10.7 | — |  |
+| 7 | 638.0 | 631.8 | -6.1 | 631.8 | -6.1 | — |  |
+| 8 | 704.4 | 694.2 | -10.3 | 694.2 | -10.3 | — |  |
+| 9 | 774.7 | 765.2 | -9.5 | 765.2 | -9.5 | — |  |
+| 10 | 778.8 | 766.1 | -12.7 | 766.1 | -12.7 | — |  |
+| 11 | 861.8 | 847.1 | -14.7 | 847.1 | -14.7 | — |  |
+| 12 | 942.0 | 927.9 | -14.2 | 927.9 | -14.2 | — |  |
+| 13 | 976.8 | 970.5 | -6.3 | 970.5 | -6.3 | — |  |
+| 14 | 1008.0 | 992.1 | -16.0 | 992.1 | -16.0 | — |  |
+| 15 | 1017.5 | 1003.5 | -14.0 | 1003.5 | -14.0 | — |  |
+| 16 | 1056.0 | 1039.3 | -16.6 | 1039.3 | -16.6 | — |  |
+| 17 | 1112.9 | 1096.1 | -16.7 | 1096.1 | -16.7 | — |  |
+| 18 | 1197.1 | 1184.1 | -13.0 | 1184.1 | -13.0 | — |  |
+| 19 | 1211.5 | 1194.9 | -16.5 | 1194.9 | -16.5 | — |  |
+| 20 | 1227.7 | 1207.4 | -20.3 | 1207.4 | -20.3 | — |  |
+| 21 | 1339.5 | 1310.1 | -29.4 | 1310.1 | -29.4 | — |  |
+| 22 | 1368.1 | 1341.1 | -27.0 | 1341.1 | -27.0 | — |  |
+| 23 | 1492.3 | 1463.5 | -28.8 | 1463.5 | -28.8 | — |  |
+| 24 | 1541.1 | 1509.2 | -31.9 | 1509.2 | -31.9 | — |  |
+| 25 | 1633.6 | 1596.0 | -37.6 | 1596.0 | -37.6 | — |  |
+| 26 | 1660.4 | 1620.9 | -39.5 | 1620.9 | -39.5 | — |  |
+| 27 | 2345.9 | 2313.4 | -32.4 | 2313.4 | -32.4 | — |  |
+| 28 | 3194.4 | 3053.8 | -140.5 | 3053.8 | -140.5 | — |  |
+| 29 | 3204.7 | 3065.5 | -139.2 | 3065.5 | -139.2 | — |  |
+| 30 | 3213.3 | 3079.4 | -133.9 | 3079.4 | -133.9 | — |  |
+| 31 | 3222.9 | 3083.9 | -139.0 | 3083.9 | -139.0 | — |  |
+| 32 | 3225.7 | 3087.4 | -138.3 | 3087.4 | -138.3 | — |  |
+
+## Provenance
+
+- timestamp_utc: `2026-11-20 15:53:59`
+- host: `ubuntu-128gb-hel1-2`
+- python: `3.12.16`
+- numpy: `2.5.5`
+- command: `qff.py /root/night20_211/g_label/g/benzonitrile/G/hess --disp 0.10 --out /root/night20_211/g_label/g/benzonitrile/G/qff_report.md`

@@ -1,0 +1,274 @@
+{
+ "n": 15,
+ "positive": 15,
+ "negative": 0,
+ "chance_one_sign": 6.103515625e-05,
+ "diff_cm": {
+  "min": 0.12046576647382778,
+  "max": 0.572790137958016,
+  "max_abs": 0.572790137958016
+ },
+ "curvature_diff_cm2": {
+  "min": 16.007952504295872,
+  "max": 31.244835004911693,
+  "mean": 23.935883020532838,
+  "sd": 5.226533163114517
+ },
+ "diff_over_noise": {
+  "1e-08": {
+   "min": 3.1881953655389625,
+   "median": 5.348034525266082,
+   "max": 37.61131426605789,
+   "below_3": 0
+  },
+  "2e-08": {
+   "min": 1.5940976827694813,
+   "median": 2.674017262633041,
+   "max": 18.805657133028944,
+   "below_3": 8
+  }
+ },
+ "functional_gaps": [
+  {
+   "id": "B_0af11315e3",
+   "direction": 0,
+   "diffs_cm2": [
+    20.14664782966338,
+    20.899550692596677
+   ],
+   "gap_cm2": 0.752902862933297,
+   "noise_of_diff_cm2": 11.570992897018776
+  },
+  {
+   "id": "B_0c6c144a7f",
+   "direction": 0,
+   "diffs_cm2": [
+    27.44983723562723,
+    26.391563778551244
+   ],
+   "gap_cm2": 1.058273457075984,
+   "noise_of_diff_cm2": 57.71667247220585
+  },
+  {
+   "id": "B_1428bc8164",
+   "direction": 0,
+   "diffs_cm2": [
+    29.86658653542736,
+    30.807423504951657
+   ],
+   "gap_cm2": 0.9408369695242982,
+   "noise_of_diff_cm2": 7.887353093510886
+  },
+  {
+   "id": "B_1726105aae",
+   "direction": 0,
+   "diffs_cm2": [
+    29.116189204430157,
+    30.019481263278067
+   ],
+   "gap_cm2": 0.9032920588479101,
+   "noise_of_diff_cm2": 10.504320978600662
+  },
+  {
+   "id": "B_4ff67f9ea2",
+   "direction": 0,
+   "diffs_cm2": [
+    23.026645365006743,
+    26.198747704838297
+   ],
+   "gap_cm2": 3.1721023398315538,
+   "noise_of_diff_cm2": 58.646495932802765
+  },
+  {
+   "id": "B_55cca3aaf2",
+   "direction": 0,
+   "diffs_cm2": [
+    24.059602480137755,
+    25.2130027868493
+   ],
+   "gap_cm2": 1.1534003067115464,
+   "noise_of_diff_cm2": 58.30269731629811
+  }
+ ],
+ "verdict": "Of 15 unflagged points, 15 have the large step above the small one and 0 below; noise without a preferred sign gives one sign on all of them with probability 6.1e-05. The differences run from +0.120 to +0.573 cm⁻¹; as curvatures from +16.0 to +31.2 cm⁻² (mean +23.9, standard deviation 5.2). Against the noise the difference would carry, a point's difference is 1.6 to 18.8 standard deviations at σ = 2e-08 hartree/bohr (median 2.7; 8 point(s) below 3) and 3.2 to 37.6 at σ = 1e-08 (median 5.3; 0 below 3). Along the 6 direction(s) measured along the same vector at both steps, the two functionals' curvature differences stand 0.8 to 3.2 cm⁻² apart, where the differences themselves are +20.1 to +30.8 cm⁻²: two separate SCFs give the same step difference. Two steps cannot show that the error grows as the square of the step; that is the central difference's own error law, and a third step would test it.",
+ "directions": [
+  {
+   "id": "B_0af11315e3",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 1968.5854499466197,
+   "large_cm2": 1988.7320977762831,
+   "diff_cm2": 20.14664782966338,
+   "noise_of_diff_cm2": 11.570992897018776
+  },
+  {
+   "id": "B_0af11315e3",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 7005.656907212895,
+   "large_cm2": 7026.556457905492,
+   "diff_cm2": 20.899550692596677,
+   "noise_of_diff_cm2": 11.570992897018776
+  },
+  {
+   "id": "B_0c6c144a7f",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 554.2569474716507,
+   "large_cm2": 581.706784707278,
+   "diff_cm2": 27.44983723562723,
+   "noise_of_diff_cm2": 57.71667247220585
+  },
+  {
+   "id": "B_0c6c144a7f",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 3966.867038428758,
+   "large_cm2": 3993.258602207309,
+   "diff_cm2": 26.391563778551244,
+   "noise_of_diff_cm2": 57.71667247220585
+  },
+  {
+   "id": "B_1428bc8164",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 2566.485293673673,
+   "large_cm2": 2596.3518802091003,
+   "diff_cm2": 29.86658653542736,
+   "noise_of_diff_cm2": 7.887353093510886
+  },
+  {
+   "id": "B_1428bc8164",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 12988.582742402175,
+   "large_cm2": 13019.390165907127,
+   "diff_cm2": 30.807423504951657,
+   "noise_of_diff_cm2": 7.887353093510886
+  },
+  {
+   "id": "B_1726105aae",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 1204.3388561985823,
+   "large_cm2": 1233.4550454030125,
+   "diff_cm2": 29.116189204430157,
+   "noise_of_diff_cm2": 10.504320978600662
+  },
+  {
+   "id": "B_1726105aae",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 12470.124128956453,
+   "large_cm2": 12500.143610219731,
+   "diff_cm2": 30.019481263278067,
+   "noise_of_diff_cm2": 10.504320978600662
+  },
+  {
+   "id": "B_3dcbd985e3",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": false,
+   "small_cm2": 566.328875188493,
+   "large_cm2": 911.6860108899632,
+   "diff_cm2": null,
+   "noise_of_diff_cm2": 12.896391068807349
+  },
+  {
+   "id": "B_3dcbd985e3",
+   "tag": "b3lyp",
+   "direction": 1,
+   "same_directions": false,
+   "small_cm2": 895.665561915564,
+   "large_cm2": 587.2682245397992,
+   "diff_cm2": null,
+   "noise_of_diff_cm2": 48.24849797761371
+  },
+  {
+   "id": "B_3dcbd985e3",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": false,
+   "small_cm2": 5878.502640359041,
+   "large_cm2": 4375.239277530459,
+   "diff_cm2": null,
+   "noise_of_diff_cm2": 12.896391068807349
+  },
+  {
+   "id": "B_3dcbd985e3",
+   "tag": "wb97x",
+   "direction": 1,
+   "same_directions": false,
+   "small_cm2": 4358.745252315503,
+   "large_cm2": 5900.085686621944,
+   "diff_cm2": null,
+   "noise_of_diff_cm2": 48.24849797761371
+  },
+  {
+   "id": "B_4ff67f9ea2",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 1191.4944078741566,
+   "large_cm2": 1214.5210532391634,
+   "diff_cm2": 23.026645365006743,
+   "noise_of_diff_cm2": 58.646495932802765
+  },
+  {
+   "id": "B_4ff67f9ea2",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 3492.006415085052,
+   "large_cm2": 3518.2051627898904,
+   "diff_cm2": 26.198747704838297,
+   "noise_of_diff_cm2": 58.646495932802765
+  },
+  {
+   "id": "B_55cca3aaf2",
+   "tag": "b3lyp",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 568.7089776013087,
+   "large_cm2": 592.7685800814464,
+   "diff_cm2": 24.059602480137755,
+   "noise_of_diff_cm2": 58.30269731629811
+  },
+  {
+   "id": "B_55cca3aaf2",
+   "tag": "wb97x",
+   "direction": 0,
+   "same_directions": true,
+   "small_cm2": 3254.3862700274685,
+   "large_cm2": 3279.599272814318,
+   "diff_cm2": 25.2130027868493,
+   "noise_of_diff_cm2": 58.30269731629811
+  }
+ ],
+ "sigma_range": [
+  1e-08,
+  2e-08
+ ],
+ "two_step_noise": 1.118033988749895,
+ "flagged": [
+  "B_1428bc8164 wb97x mode 2"
+ ],
+ "inputs": {
+  "small": [
+   "probes/results_m1/low_mode_threshold_2026-11-20/patch_below60",
+   "modules/05_support_predictor/corpus/molecules"
+  ],
+  "large": [
+   "probes/results_m1/low_mode_threshold_2026-11-20/patch_step02_below60",
+   "modules/05_support_predictor/corpus/molecules"
+  ]
+ }
+}
