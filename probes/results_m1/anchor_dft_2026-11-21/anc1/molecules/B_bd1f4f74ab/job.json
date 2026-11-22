@@ -1,0 +1,107 @@
+{
+ "id": "B_bd1f4f74ab",
+ "layer": "B",
+ "xyz_angstrom": [
+  [
+   "Cl",
+   3.16871842963798,
+   -0.09735645828016379,
+   0.13449411906792164
+  ],
+  [
+   "C",
+   1.4646767356961095,
+   -0.045000926494829854,
+   0.06217278852300352
+  ],
+  [
+   "N",
+   0.8286903149641066,
+   -1.2253495347779262,
+   0.08172025978973217
+  ],
+  [
+   "C",
+   -0.5126164616346578,
+   -1.1507280689129404,
+   0.023489563475418772
+  ],
+  [
+   "C",
+   -1.2057618208000125,
+   0.037046058401238806,
+   -0.05118004339844232
+  ],
+  [
+   "C",
+   -0.4373039921265486,
+   1.179913699610066,
+   -0.06380801982070637
+  ],
+  [
+   "N",
+   0.9061599043657829,
+   1.1720477798960411,
+   -0.008077352018593298
+  ],
+  [
+   "H",
+   -1.0324083769897086,
+   -2.104711766658652,
+   0.03904877870365883
+  ],
+  [
+   "H",
+   -2.2856830883267842,
+   0.07022555782082703,
+   -0.09702127920192055
+  ],
+  [
+   "H",
+   -0.8944716447862735,
+   2.1639136593963273,
+   -0.1208388151200697
+  ]
+ ],
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 4,
+  "memory_gb": 6,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "out_dir": "/root/dft1/molecules/B_bd1f4f74ab",
+ "optimise": true,
+ "grid_check": false,
+ "hessians": false,
+ "source": {
+  "list": "needs_dft.txt",
+  "name": "pyrimidine+Cl",
+  "smiles": "Clc1ncccn1"
+ }
+}

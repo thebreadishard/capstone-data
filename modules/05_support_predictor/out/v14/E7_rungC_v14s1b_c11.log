@@ -1,0 +1,46 @@
+analytic second-route Hessians substituted for 1154 molecules
+atomic polar tensors found for 757 molecules: intensity read-outs on (lever 5, registered 2 Oct 2026 06:5x)
+selection set: 169 molecules of 18 scaffold cores (seed, fraction (26, 0.15)); pool 913
+hold-out twins: 2 pool molecules are hold-out molecules under another id and leave the pool (B_3100da3761, B_07cadc7923)
+1181 molecules; pool 911; hold-out (a) 10, (b) 70 (['fluoranthene', 'fluorene']); sizes [913]; seeds [1]; epochs 300; threads 8; model 365,634 parameters, sum aggregation
+  hybrid head: 422,484 parameters; F_low input scales 0.0338, 0.286, 0.122; SQM α per class on
+  fresh sum body pre-flight: worst |output| 44.1 on the training molecules
+    seed 1 epoch 1/300: loss main 1.947e-06 aux 0.6182 val 0.6069 val_main 1.404e-06 (29 s)
+    seed 1 epoch 10/300: loss main 4.776e-07 aux 0.1898 val 0.2353 val_main 5.927e-07 (281 s)
+    seed 1 epoch 20/300: loss main 3.062e-07 aux 0.1092 val 0.1587 val_main 3.951e-07 (570 s)
+    seed 1 epoch 30/300: loss main 2.285e-07 aux 0.07896 val 0.1345 val_main 3.283e-07 (852 s)
+    seed 1 epoch 40/300: loss main 2.383e-07 aux 0.0676 val 0.1216 val_main 3.175e-07 (1139 s)
+    seed 1 epoch 50/300: loss main 1.744e-07 aux 0.05905 val 0.1214 val_main 2.785e-07 (1426 s)
+    seed 1 epoch 60/300: loss main 1.602e-07 aux 0.05317 val 0.1054 val_main 2.487e-07 (1716 s)
+    seed 1 epoch 70/300: loss main 1.404e-07 aux 0.04199 val 0.1057 val_main 2.717e-07 (2023 s)
+    seed 1 epoch 80/300: loss main 1.26e-07 aux 0.03865 val 0.1071 val_main 2.53e-07 (2368 s)
+    seed 1 epoch 90/300: loss main 1.129e-07 aux 0.03303 val 0.09995 val_main 2.397e-07 (2663 s)
+    seed 1 epoch 100/300: loss main 1.097e-07 aux 0.03036 val 0.09893 val_main 2.33e-07 (2961 s)
+    seed 1 epoch 110/300: loss main 9.988e-08 aux 0.02676 val 0.1001 val_main 2.406e-07 (3259 s)
+    seed 1 epoch 120/300: loss main 9.937e-08 aux 0.02555 val 0.09528 val_main 2.213e-07 (3539 s)
+    seed 1 epoch 130/300: loss main 8.487e-08 aux 0.02242 val 0.1001 val_main 2.409e-07 (3823 s)
+    seed 1 epoch 140/300: loss main 8.242e-08 aux 0.0217 val 0.09621 val_main 2.234e-07 (4107 s)
+    seed 1 epoch 150/300: loss main 7.556e-08 aux 0.01945 val 0.09441 val_main 2.146e-07 (4385 s)
+    seed 1 epoch 160/300: loss main 7.312e-08 aux 0.01853 val 0.09418 val_main 2.193e-07 (4666 s)
+    seed 1 epoch 170/300: loss main 7.081e-08 aux 0.01731 val 0.09196 val_main 2.127e-07 (4949 s)
+    seed 1 epoch 180/300: loss main 6.633e-08 aux 0.01593 val 0.09396 val_main 2.146e-07 (5224 s)
+    seed 1 epoch 190/300: loss main 6.26e-08 aux 0.01506 val 0.09353 val_main 2.127e-07 (5510 s)
+    seed 1 epoch 200/300: loss main 6.017e-08 aux 0.01408 val 0.09439 val_main 2.153e-07 (5792 s)
+    seed 1 epoch 210/300: loss main 5.728e-08 aux 0.01318 val 0.09306 val_main 2.149e-07 (6074 s)
+    seed 1 epoch 220/300: loss main 5.52e-08 aux 0.0126 val 0.09419 val_main 2.16e-07 (6361 s)
+    seed 1 epoch 230/300: loss main 5.407e-08 aux 0.01212 val 0.0947 val_main 2.202e-07 (6646 s)
+    seed 1 epoch 240/300: loss main 5.266e-08 aux 0.01167 val 0.0946 val_main 2.219e-07 (6953 s)
+    seed 1 epoch 250/300: loss main 5.176e-08 aux 0.01136 val 0.0955 val_main 2.258e-07 (7243 s)
+    seed 1 epoch 260/300: loss main 5.101e-08 aux 0.01112 val 0.09603 val_main 2.277e-07 (7520 s)
+    seed 1 epoch 270/300: loss main 5.04e-08 aux 0.01094 val 0.0961 val_main 2.288e-07 (7801 s)
+    seed 1 epoch 280/300: loss main 5.007e-08 aux 0.01083 val 0.09626 val_main 2.305e-07 (8068 s)
+    seed 1 epoch 290/300: loss main 4.978e-08 aux 0.01075 val 0.09645 val_main 2.313e-07 (8336 s)
+    seed 1 epoch 300/300: loss main 4.965e-08 aux 0.01071 val 0.09656 val_main 2.325e-07 (8602 s)
+  model saved: out\v14\E7_rungC_v14s1b_c11_model_n913_seed1.pt
+  n=913 seed 1: inner validation internal term 0.09196, main term 2.127e-07 on 137 molecules (fit on 774)
+  n=913 seed 1 (a): ring couplings 0.94 vs zero 3.73 (ratio 0.25) | corrected ω 3.95 (zero 23.37) | ΔH residual ratio 0.216
+  n=913 seed 1 (b): 1 molecules without an intensity read-out (a mode crossed the threshold)
+  n=913 seed 1 (b): ring couplings 1.03 vs zero 3.87 (ratio 0.27) | corrected ω 2.82 (zero 22.93) | ΔH residual ratio 0.221
+  n=913 seed 1 (sel): 3 molecules without an intensity read-out (a mode crossed the threshold)
+  n=913 seed 1 (sel): ring couplings 1.82 vs zero 4.09 (ratio 0.45) | corrected ω 4.06 (zero 22.92) | ΔH residual ratio 0.321
+wrote out/v14/E7_rungC_v14s1b_c11.json/.md in 9036 s

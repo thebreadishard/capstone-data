@@ -1,0 +1,125 @@
+{
+ "id": "G_f0584908ef",
+ "layer": "G",
+ "xyz_angstrom": [
+  [
+   "C",
+   -1.8462035017740643,
+   -0.19316363652977836,
+   0.1385976586406028
+  ],
+  [
+   "C",
+   -1.545823704186148,
+   1.0810228838079647,
+   -0.38498721151105825
+  ],
+  [
+   "N",
+   -0.3130609142291091,
+   1.6062060807165661,
+   -0.6372655027362472
+  ],
+  [
+   "C",
+   0.6860276209197941,
+   0.7415856612923897,
+   -0.3215387735604191
+  ],
+  [
+   "N",
+   1.9956348397591872,
+   0.9576585576243569,
+   -0.45172101757696675
+  ],
+  [
+   "N",
+   2.496191105043384,
+   -0.19864889926267446,
+   -0.0020084336298241104
+  ],
+  [
+   "N",
+   1.6574843674661244,
+   -1.1630494541026792,
+   0.4143835101621135
+  ],
+  [
+   "C",
+   0.4551962526570806,
+   -0.5896772951322524,
+   0.2227639512269448
+  ],
+  [
+   "C",
+   -0.8295243229263846,
+   -1.0964947309787223,
+   0.4693429011271711
+  ],
+  [
+   "H",
+   -2.8862423503873167,
+   -0.4743860147388747,
+   0.28618884632845754
+  ],
+  [
+   "H",
+   -2.3644505782903424,
+   1.7578471628656307,
+   -0.630935040003617
+  ],
+  [
+   "H",
+   3.502372620022715,
+   -0.3460877341805626,
+   0.024336988579879006
+  ],
+  [
+   "H",
+   -1.0076014340749329,
+   -2.0828125813813574,
+   0.8728421229529949
+  ]
+ ],
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 4,
+  "memory_gb": 6,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "out_dir": "/root/dft1/molecules/G_f0584908ef",
+ "optimise": true,
+ "grid_check": false,
+ "hessians": false,
+ "source": {
+  "list": "needs_dft.txt",
+  "name": "generator r2 N #1035",
+  "smiles": "c1cnc2n[nH]nc2c1"
+ }
+}

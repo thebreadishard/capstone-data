@@ -1,0 +1,115 @@
+{
+ "symbols": [
+  "O",
+  "C",
+  "C",
+  "C",
+  "C",
+  "S",
+  "H",
+  "H",
+  "H",
+  "H"
+ ],
+ "coords_bohr": [
+  [
+   4.4774576600035525,
+   -0.015430423691432212,
+   -0.19018307123973957
+  ],
+  [
+   1.9122770653430516,
+   -0.16814778260944704,
+   -0.11398021126030185
+  ],
+  [
+   0.28884868797066765,
+   1.825784800156816,
+   0.09359847523983966
+  ],
+  [
+   -2.2902791614610183,
+   1.0312647469221883,
+   0.2801187970403825
+  ],
+  [
+   -2.59771846343745,
+   -1.5263671700729846,
+   0.20946438645169077
+  ],
+  [
+   0.30586949279803993,
+   -3.0791548547729355,
+   -0.03425021629006503
+  ],
+  [
+   5.161022657436256,
+   -1.408922957114227,
+   -1.1647181613439663
+  ],
+  [
+   0.9227561532029493,
+   3.772540591041878,
+   0.09134985782263043
+  ],
+  [
+   -3.8623741854602986,
+   2.338736412216723,
+   0.42903942084886737
+  ],
+  [
+   -4.325246337471369,
+   -2.6156852541605526,
+   0.26034533746699734
+  ]
+ ],
+ "masses_amu": [
+  15.99491461957,
+  12.0,
+  12.0,
+  12.0,
+  12.0,
+  31.9720711744,
+  1.00782503223,
+  1.00782503223,
+  1.00782503223,
+  1.00782503223
+ ],
+ "optimised_at": "B3LYP (pyscf, label settings)",
+ "reoptimised_at_label_settings": {
+  "from": "/root/night20_215/in/molecules/B_008b0bc366",
+  "why": "a negative mode at the label settings (chain 42's registration: one pyscf re-optimisation)",
+  "settings": {
+   "xc": "b3lyp",
+   "basis": "6-31G* (Cartesian d)",
+   "grid": [
+    99,
+    590
+   ],
+   "density_fitting": false,
+   "optimiser": "geomeTRIC via pyscf.geomopt.geometric_solver.kernel",
+   "convergence_energy": 1e-07,
+   "convergence_grms": 1e-05,
+   "convergence_gmax": 2e-05,
+   "convergence_drms": 0.0001,
+   "convergence_dmax": 0.0002,
+   "maxsteps": 100
+  },
+  "lowest_mode_cm": -124.65033632558331,
+  "push_bohr_largest_atom": 0.05,
+  "energy": -628.2089940284529,
+  "steps": 47,
+  "seconds": 590.3,
+  "script_sha256": "7e9dbe2cac0bdaae3af98ad0b5859548d1c075c0a5e92cfab90d08c4910e78b5",
+  "software": {
+   "pyscf": "2.15.0",
+   "pyscf_git": null,
+   "numpy": "2.5.2",
+   "python": "3.12.16",
+   "sha256": {
+    "analytic_hessians.py": "f9307fc95a2f",
+    "apt.py": "abf342388bf1"
+   }
+  }
+ }
+}

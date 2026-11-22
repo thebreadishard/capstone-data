@@ -1,0 +1,119 @@
+{
+ "id": "B_88d6a48b93",
+ "layer": "B",
+ "xyz_angstrom": [
+  [
+   "N",
+   -1.9719062561871603,
+   0.3188029335170795,
+   -0.4085046699001408
+  ],
+  [
+   "C",
+   -0.6344500611895926,
+   0.08548621939682485,
+   -0.08159971426697972
+  ],
+  [
+   "C",
+   0.21649445261613035,
+   1.0865770972377264,
+   0.3544213603694638
+  ],
+  [
+   "N",
+   1.5408760760315354,
+   0.9310790599011016,
+   0.573422357391864
+  ],
+  [
+   "C",
+   2.033018298629174,
+   -0.28274907502429625,
+   0.28719618904288574
+  ],
+  [
+   "N",
+   1.3367930645849149,
+   -1.3204468251570858,
+   -0.19855779474519922
+  ],
+  [
+   "C",
+   0.018795500628677714,
+   -1.0945321337982032,
+   -0.39342090984351813
+  ],
+  [
+   "H",
+   -2.5504109187641326,
+   -0.5165385365838272,
+   -0.4281662814857006
+  ],
+  [
+   "H",
+   -2.4063688301202637,
+   1.0726162499967036,
+   0.11671574074294905
+  ],
+  [
+   "H",
+   -0.15564751300421792,
+   2.088166915945438,
+   0.5496540065055907
+  ],
+  [
+   "H",
+   3.0927851970641163,
+   -0.4371519043082733,
+   0.45735894943756966
+  ],
+  [
+   "H",
+   -0.5199790102890895,
+   -1.9313100011231503,
+   -0.8285192332487636
+  ]
+ ],
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 4,
+  "memory_gb": 6,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "out_dir": "/root/dft1/molecules/B_88d6a48b93",
+ "optimise": true,
+ "grid_check": false,
+ "hessians": false,
+ "source": {
+  "list": "needs_dft.txt",
+  "name": "pyrimidine+NH2",
+  "smiles": "Nc1cncnc1"
+ }
+}
