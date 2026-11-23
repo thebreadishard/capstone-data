@@ -1,0 +1,40 @@
+[2026-11-22 00:00:46] E8 FD Hessian: 12 atoms, cc-pvdz, frozen 11 (derived from the elements: 11), step 0.005 bohr, 72 displacements, 16 threads, max_memory 26000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+
+WARN: Krylov solver reached subspace convergence but true residual |aop(x)+x-b| = 6.001e-09 exceeds requested tolerance 1.0e-09. The solution may be inaccurate.
+
+[2026-11-22 00:04:27] (T) lambda 143 s, gradient 18 s
+[2026-11-22 00:04:27] reference: E = -690.642199677, max|grad| 1.41e-02, 221 s; two-route checks deferred to a separate run (--two-route-check only)
+[2026-11-22 02:22:43] E8 FD Hessian: 12 atoms, cc-pvdz, frozen 11 (derived from the elements: 11), step 0.005 bohr, 72 displacements, 16 threads, max_memory 26000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+[2026-11-22 02:22:43] two-route check (energy route) PASSED: reference gradient vs (E(+h) − E(−h)) / 2h over 24 coordinates, max |Δ| 5.4e-06 a.u. at coordinate 9 (limit 2e-05); max |g0| 1.4e-02
+[2026-11-22 02:22:44] E8 FD Hessian: 12 atoms, cc-pvdz, frozen 11 (derived from the elements: 11), step 0.005 bohr, 72 displacements, 16 threads, max_memory 26000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+[2026-11-22 02:22:44] two-route check on file: passed — assembling
+[2026-11-22 02:22:44] symmetry: 4 operations, orbits [[0], [1], [2, 6], [3, 5], [4], [7, 11], [8, 10], [9]], 24 displacements (48 gradients) instead of 72
+[2026-11-22 02:22:44] pair check coordinate  0: max |mean(g+, g−) − g0| = 8.2e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  1: max |mean(g+, g−) − g0| = 4.4e-07 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  2: max |mean(g+, g−) − g0| = 7.3e-07 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  3: max |mean(g+, g−) − g0| = 7.8e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  4: max |mean(g+, g−) − g0| = 1.4e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  5: max |mean(g+, g−) − g0| = 1.4e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  6: max |mean(g+, g−) − g0| = 1.7e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  7: max |mean(g+, g−) − g0| = 1.5e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  8: max |mean(g+, g−) − g0| = 1.4e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate  9: max |mean(g+, g−) − g0| = 1.7e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 10: max |mean(g+, g−) − g0| = 1.5e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 11: max |mean(g+, g−) − g0| = 1.5e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 12: max |mean(g+, g−) − g0| = 1.5e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 13: max |mean(g+, g−) − g0| = 1.6e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 14: max |mean(g+, g−) − g0| = 1.6e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 21: max |mean(g+, g−) − g0| = 3.7e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 22: max |mean(g+, g−) − g0| = 7.2e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 23: max |mean(g+, g−) − g0| = 1.8e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 24: max |mean(g+, g−) − g0| = 2.0e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 25: max |mean(g+, g−) − g0| = 9.6e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 26: max |mean(g+, g−) − g0| = 1.9e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 27: max |mean(g+, g−) − g0| = 1.5e-05 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 28: max |mean(g+, g−) − g0| = 1.9e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] pair check coordinate 29: max |mean(g+, g−) − g0| = 2.1e-06 a.u. (limit 1e-04)
+[2026-11-22 02:22:44] symmetry reconstruction: spread of multiply-reached rows 1.22e-05 a.u.; self-check 1.8e-13
+[2026-11-22 02:22:44] energy route to the reference gradient: max |g0 − (E(+h) − E(−h))/2h| = 5.4e-06 a.u. over 24 coordinates (limit 2e-05) — PASSED
+[2026-11-22 02:22:44] Hessian written (VALID); FD asymmetry max 1.22e-05 a.u.; vibrational frequencies (cm-1): [154, 279, 367, 414, 429, 597, 611, 675, 701, 784, 845, 909, 911, 1005, 1054, 1089, 1126, 1155, 1177, 1303, 1402, 1483, 1517, 1682, 1682, 3285, 3295, 3310, 3320, 3323]
+[2026-11-22 02:22:44] two-route checks: translational sum rule 2.3e-06 E_h/bohr² (limit 1e-03); translations/rotations after projection max 6.1e-05 cm⁻¹; energy route max |H_kk − d²E/dx_k²| 4.2e-05 E_h/bohr² over 24 coordinates (limit 1e-03)
+[2026-11-22 02:22:44] APT written (apt_ccsd_t.npz): translation sum rule max |Σ_A P_A − qI| = 8.0e-05 e; symmetry spread 2.5e-04, self-check 3.0e-13

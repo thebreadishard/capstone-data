@@ -1,0 +1,13 @@
+=== (AS3) wave start: 6 molecules from /root/dpir/wave.txt on ubuntu-32gb-hel1-1, two-route mode energy 2026-11-21 19:55:40
+[2026-11-21 19:55:40] chain (corrected route) start on ubuntu-32gb-hel1-1
+[2026-11-21 19:55:40] ANCHOR B_0a7c8c539f START (parallel: 2 partial runs x 8 threads x 10000 MB) (/root/dpir/geoms/B_0a7c8c539f/geometry.json)
+[2026-11-21 19:58:33] ANCHOR B_0a7c8c539f: 21 symmetry-unique displacements over 2 partial runs
+[2026-11-21 22:04:46] ANCHOR B_0a7c8c539f: partial runs done (42 gradient files) -> assembling run
+[2026-11-21 22:04:47] ANCHOR B_0a7c8c539f: two-route check (energy route) PASSED: reference gradient vs (E(+h) − E(−h)) / 2h over 21 coordinates, max |Δ| 5.7e-06 a.u. at coordinate 7 (limit 2e-05)
+[2026-11-21 22:04:47] ANCHOR B_0a7c8c539f DONE: symmetry: 4 operations, orbits [[0, 6], [1, 5], [2, 4], [3], [7], [8, 10], [9]], 21 displacements (42 gradients) instead of 66; FD asymmetry max 2.22e-05 a.u.
+[2026-11-21 22:04:47] CHAIN FINISHED
+=== (AS3) B_0a7c8c539f hessian DONE 2026-11-21 22:04:47
+=== (AS3) B_0a7c8c539f apt PASS {"apt": "results/B_0a7c8c539f_ccpvdz/apt_ccsd_t_field.npz", "sum_rule": 7.94429383388362e-11, "seconds": 1477, "passed": 2026-11-21 22:29:25
+[2026-11-21 22:29:25] chain (corrected route) start on ubuntu-32gb-hel1-1
+[2026-11-21 22:29:25] ANCHOR A2_06067133dc START (parallel: 2 partial runs x 8 threads x 10000 MB) (/root/dpir/geoms/A2_06067133dc/geometry.json)
+[2026-11-21 22:54:13] ANCHOR A2_06067133dc: 48 symmetry-unique displacements over 2 partial runs
