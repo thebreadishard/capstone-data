@@ -1,0 +1,155 @@
+{
+ "id": "B_4df4947a75",
+ "layer": "B",
+ "xyz_angstrom": [
+  [
+   "O",
+   3.435670352947621,
+   -1.087913308775408,
+   -0.11861553638452377
+  ],
+  [
+   "C",
+   2.226590882095916,
+   -0.5030833836199105,
+   0.10321447025422359
+  ],
+  [
+   "C",
+   2.044214893220646,
+   0.5426480761820617,
+   0.9904204934331997
+  ],
+  [
+   "N",
+   0.8493291072609407,
+   1.1335510226983707,
+   1.221177006051594
+  ],
+  [
+   "C",
+   -0.21933129814494542,
+   0.6719083185178597,
+   0.5447381601270513
+  ],
+  [
+   "C",
+   -1.4632494864977494,
+   1.2521596436467095,
+   0.7538427278772715
+  ],
+  [
+   "C",
+   -2.60460120687401,
+   0.8105990939834308,
+   0.07729370924473662
+  ],
+  [
+   "C",
+   -2.5091919704728585,
+   -0.23633255811463044,
+   -0.8325238498298493
+  ],
+  [
+   "C",
+   -1.273812558394825,
+   -0.8381138610395731,
+   -1.062942299133481
+  ],
+  [
+   "C",
+   -0.12797945140473752,
+   -0.3919387829428267,
+   -0.3811748804064008
+  ],
+  [
+   "C",
+   1.1274291482452294,
+   -0.9776272581320709,
+   -0.5922863547264319
+  ],
+  [
+   "H",
+   4.10562954628832,
+   -0.6528940990857716,
+   0.4352962171090739
+  ],
+  [
+   "H",
+   2.867546543813916,
+   0.9563503160646702,
+   1.563317908407837
+  ],
+  [
+   "H",
+   -1.5460156420429385,
+   2.071534458301345,
+   1.4638997728532268
+  ],
+  [
+   "H",
+   -3.5631791275718934,
+   1.287382966176828,
+   0.26485228192219573
+  ],
+  [
+   "H",
+   -3.3931162659116008,
+   -0.5836280814350068,
+   -1.3612282049781228
+  ],
+  [
+   "H",
+   -1.2071984405655962,
+   -1.656553437570857,
+   -1.776170246772543
+  ],
+  [
+   "H",
+   1.2512649740083557,
+   -1.7980491248557007,
+   -1.2931113750490733
+  ]
+ ],
+ "deck": {
+  "deck": "v1",
+  "engine": "psi4 1.11 (conda env qc, Windows)",
+  "basis": "6-31G*",
+  "low_functional": "B3LYP",
+  "high_functional": "wB97X",
+  "optimise_at": "B3LYP/6-31G* for layers A and B; layer C uses the Hessian QM9 geometry unchanged",
+  "hessian": "psi4 hessian(): finite difference of analytic gradients (psi4 findif, 3-point, 0.005 bohr) \u2014 psi4 has no analytic Hessian for B3LYP or wB97X; both functionals at the same geometry",
+  "text_corrections": [
+   "2026-09-21: the hessian field said 'analytic'; psi4 1.11 lists analytic Hessians for HF and LDA-type functionals only, so the B3LYP and wB97X Hessians of this deck are psi4's internal finite differences of analytic gradients. Numerics unchanged; the deck hash changed from 97ed2d67c66b by this text only."
+  ],
+  "dft_radial_points": 75,
+  "dft_spherical_points": 302,
+  "scf_type": "df",
+  "e_convergence": 1e-08,
+  "d_convergence": 1e-08,
+  "reference": "rhf",
+  "charge": 0,
+  "multiplicity": 1,
+  "project_translations_rotations": true,
+  "units_in_files": {
+   "geometry": "bohr",
+   "hessian": "hartree/bohr^2",
+   "frequencies": "cm-1"
+  },
+  "threads": 4,
+  "memory_gb": 6,
+  "grid_check_for_timing_test": {
+   "radial": 99,
+   "spherical": 590
+  }
+ },
+ "out_dir": "/root/dft1/molecules/B_4df4947a75",
+ "optimise": true,
+ "grid_check": false,
+ "hessians": false,
+ "source": {
+  "list": "needs_dft.txt",
+  "name": "quinoline+OH",
+  "smiles": "Oc1cnc2ccccc2c1"
+ }
+}
