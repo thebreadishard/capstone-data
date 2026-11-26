@@ -1,0 +1,527 @@
+{
+ "pipeline_version": "0.15",
+ "name": "furan",
+ "input": {
+  "smiles": "c1ccoc1",
+  "xyz": null,
+  "xyz_atom_order": null
+ },
+ "settings": {
+  "name": "furan",
+  "out_root": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\probes\\results_m1\\pipeline_demo_2026-11-25",
+  "smiles": "c1ccoc1",
+  "xyz": null,
+  "charge": 0,
+  "multiplicity": 1,
+  "models": [
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed0.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed1.pt",
+   "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed2.pt"
+  ],
+  "psi4_python": "C:\\Users\\thebr\\.conda\\envs\\qc\\python.exe",
+  "pyscf_python": "~/qc215/bin/python",
+  "threads": 6,
+  "psi4_memory_gb": 4,
+  "wsl_cap_mb": 8192,
+  "reuse_corpus": true,
+  "reuse_only": false,
+  "corpus": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus",
+  "anharmonic_minutes": 0.0,
+  "anharmonic_shards": 2,
+  "anharmonic_cap_mb": 1536
+ },
+ "admission": {
+  "smiles": "c1ccoc1",
+  "formula": "C4H4O",
+  "elements": [
+   "C",
+   "H",
+   "O"
+  ],
+  "n_atoms": 9,
+  "training_elements": [
+   "C",
+   "CL",
+   "F",
+   "H",
+   "N",
+   "O",
+   "S"
+  ],
+  "training_atoms": [
+   8,
+   40
+  ],
+  "models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed0.pt",
+    "sha16": "6f52c9d8570fbcf5",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed1.pt",
+    "sha16": "1e820b8755078b90",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_release_model_n1132_seed2.pt",
+    "sha16": "bc4de0b6458e44f2",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried",
+    "network_kind": "release"
+   }
+  ],
+  "measurement_models": [
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed0.pt",
+    "sha16": "89574ed1b69c4e10",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed1.pt",
+    "sha16": "03dbbf9f29b59186",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   },
+   {
+    "path": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\out\\v14\\E7_rungC_v14s3clean_c00_control_model_n1082_seed2.pt",
+    "sha16": "8dd85f3f1ba5bbeb",
+    "network": "ΔH-network",
+    "version": "1.4",
+    "status": "carried"
+   }
+  ],
+  "inside_training_sizes": true
+ },
+ "deck": {
+  "file": "C:\\Users\\thebr\\Documents\\CapstonePlan\\plans\\05_delta-probed-ir-pipeline\\modules\\05_support_predictor\\corpus\\decks\\deck_v1.json",
+  "sha16": "9e27bf8e934893f3"
+ },
+ "optimisation": {
+  "e_opt": -230.0205816216203,
+  "timings_s": {
+   "optimise": 16.6,
+   "total": 19.6
+  },
+  "opt_options": null
+ },
+ "low_level": {
+  "b3lyp": {
+   "freq_analytic": [
+    614.1037060709876,
+    623.3542067423132,
+    722.8718512846033,
+    758.0708420104263,
+    831.155356157761,
+    872.7154835424661,
+    885.8446836096659,
+    890.8596655516009,
+    1023.9904970800161,
+    1073.1852127669633,
+    1099.3918274389177,
+    1175.3899070514747,
+    1222.0306967537576,
+    1299.2115274991115,
+    1432.8871614342088,
+    1529.844014267875,
+    1614.7524516549395,
+    3263.4586612928983,
+    3274.4343765974004,
+    3299.8157807594725,
+    3305.403565285509
+   ],
+   "energy": -230.02058427107013,
+   "seconds": 350,
+   "corpus_file": "absent",
+   "software": {
+    "pyscf": "2.15.0",
+    "pyscf_git": null,
+    "numpy": "2.5.2",
+    "python": "3.12.14",
+    "sha256": {
+     "analytic_hessians.py": "f9307fc95a2f",
+     "apt.py": "abf342388bf1"
+    }
+   }
+  }
+ },
+ "reuse": {
+  "reused": false,
+  "why": [
+   "the corpus has no folder of this molecule"
+  ]
+ },
+ "seconds": {
+  "optimise": 22.7,
+  "low_level": 356.2,
+  "correction_and_spectra": 0.7,
+  "own_spread": 2.5
+ },
+ "spectra": {
+  "network": {
+   "hessian_source": "probes/results_m1/pipeline_demo_2026-11-25/furan/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_demo_2026-11-25/furan/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 15,
+   "sticks": [
+    {
+     "omega_cm": 626.8,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      623.7,
+      628.9
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 637.3,
+     "km_mol": 19.74,
+     "seed_range_cm": [
+      636.1,
+      638.1
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 763.4,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      760.1,
+      767.9
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 776.5,
+     "km_mol": 78.37,
+     "seed_range_cm": [
+      775.9,
+      777.3
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 868.2,
+     "km_mol": 0.01,
+     "seed_range_cm": [
+      867.5,
+      869.2
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 891.5,
+     "km_mol": 14.72,
+     "seed_range_cm": [
+      891.5,
+      891.6
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 894.2,
+     "km_mol": 0.37,
+     "seed_range_cm": [
+      893.9,
+      894.5
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 906.2,
+     "km_mol": 0.0,
+     "seed_range_cm": [
+      905.9,
+      906.7
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1034.0,
+     "km_mol": 37.53,
+     "seed_range_cm": [
+      1032.4,
+      1035.4
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1082.9,
+     "km_mol": 1.7,
+     "seed_range_cm": [
+      1082.7,
+      1083.1
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1103.6,
+     "km_mol": 12.42,
+     "seed_range_cm": [
+      1102.0,
+      1105.4
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1182.1,
+     "km_mol": 0.45,
+     "seed_range_cm": [
+      1181.8,
+      1182.4
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1233.0,
+     "km_mol": 17.27,
+     "seed_range_cm": [
+      1232.3,
+      1233.7
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1302.1,
+     "km_mol": 0.46,
+     "seed_range_cm": [
+      1301.5,
+      1303.3
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1454.8,
+     "km_mol": 2.4,
+     "seed_range_cm": [
+      1453.9,
+      1456.0
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1552.0,
+     "km_mol": 20.31,
+     "seed_range_cm": [
+      1550.9,
+      1553.7
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 1637.1,
+     "km_mol": 0.49,
+     "seed_range_cm": [
+      1635.0,
+      1638.5
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 3301.8,
+     "km_mol": 3.02,
+     "seed_range_cm": [
+      3301.4,
+      3302.3
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 3313.2,
+     "km_mol": 2.0,
+     "seed_range_cm": [
+      3312.5,
+      3313.9
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 3339.2,
+     "km_mol": 2.99,
+     "seed_range_cm": [
+      3338.8,
+      3339.6
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    },
+    {
+     "omega_cm": 3344.6,
+     "km_mol": 0.02,
+     "seed_range_cm": [
+      3344.5,
+      3344.9
+     ],
+     "nu_cm": null,
+     "anharmonic": null
+    }
+   ]
+  },
+  "baseline": {
+   "hessian_source": "probes/results_m1/pipeline_demo_2026-11-25/furan/hessian_b3lyp_analytic.npz",
+   "broadening": {
+    "lineshape": "Lorentzian",
+    "fwhm_cm": 10.0,
+    "grid_cm": [
+     500.0,
+     3500.0
+    ]
+   },
+   "method": "double harmonic: A_k = 974.88 km/mol · |P L_k/√m|² (module 05 m05/rungC_intensities.py)",
+   "kind": "positions and heights",
+   "apt_source": "probes/results_m1/pipeline_demo_2026-11-25/furan/dipole_b3lyp_cphf.npz",
+   "n_ir_active": 14,
+   "sticks": [
+    {
+     "omega_cm": 601.2,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 610.3,
+     "km_mol": 17.51
+    },
+    {
+     "omega_cm": 707.7,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 742.2,
+     "km_mol": 79.87
+    },
+    {
+     "omega_cm": 813.7,
+     "km_mol": 0.76
+    },
+    {
+     "omega_cm": 854.4,
+     "km_mol": 0.0
+    },
+    {
+     "omega_cm": 867.2,
+     "km_mol": 15.73
+    },
+    {
+     "omega_cm": 872.2,
+     "km_mol": 0.36
+    },
+    {
+     "omega_cm": 1002.5,
+     "km_mol": 37.66
+    },
+    {
+     "omega_cm": 1050.7,
+     "km_mol": 1.08
+    },
+    {
+     "omega_cm": 1076.3,
+     "km_mol": 11.81
+    },
+    {
+     "omega_cm": 1139.0,
+     "km_mol": 0.31
+    },
+    {
+     "omega_cm": 1184.1,
+     "km_mol": 18.1
+    },
+    {
+     "omega_cm": 1258.9,
+     "km_mol": 0.15
+    },
+    {
+     "omega_cm": 1388.5,
+     "km_mol": 3.99
+    },
+    {
+     "omega_cm": 1482.4,
+     "km_mol": 18.33
+    },
+    {
+     "omega_cm": 1564.7,
+     "km_mol": 0.59
+    },
+    {
+     "omega_cm": 3133.0,
+     "km_mol": 3.05
+    },
+    {
+     "omega_cm": 3143.4,
+     "km_mol": 2.01
+    },
+    {
+     "omega_cm": 3167.8,
+     "km_mol": 2.96
+    },
+    {
+     "omega_cm": 3173.2,
+     "km_mol": 0.02
+    }
+   ],
+   "label": "baseline only: B3LYP/6-31G* scaled by PAHdb's 6-31G* factors [0.979, 0.969, 0.96] per region (Bauschlicher et al. 2018, Table 2; probes/scale_factor_baseline.py)"
+  },
+  "anharmonic": {
+   "status": "not applied",
+   "reason": "the step exists and was not run: it is off unless the run names a time budget, and `--anharmonic-minutes 120` switches it on",
+   "model": "x2*",
+   "field": null
+  },
+  "note": "positions are harmonic (ω): the anharmonic step was not applied — the step exists and was not run: it is off unless the run names a time budget, and `--anharmonic-minutes 120` switches it on"
+ },
+ "provenance": {
+  "timestamp_utc": "2026-11-25 07:32:52",
+  "host": "Asus18",
+  "python": "3.14.6",
+  "numpy": "2.5.1",
+  "command": "pipeline.py --name furan --smiles c1ccoc1 --out ../../probes/results_m1/pipeline_demo_2026-11-25 --threads 6 --psi4-memory-gb 4 --wsl-cap-mb 8192",
+  "commit": "c7e41f8ae37eaa69c5eb9cfd415a49cc8f33459f",
+  "dirty": "yes"
+ },
+ "deliveries": [
+  {
+   "number": 1,
+   "delivery": "only: harmonic, the anharmonic step is switched off",
+   "at": "2026-11-25 08:39:14",
+   "seconds_since_start": 384.6,
+   "final_by": null
+  }
+ ],
+ "commit_at_end": "c7e41f8ae37eaa69c5eb9cfd415a49cc8f33459f"
+}

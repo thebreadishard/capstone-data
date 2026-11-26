@@ -1,0 +1,20 @@
+
+== test set a: 8 molecules, 474 bands; per family this read {'ring-ip': 1.17, 'CH-stretch': 0.8, 'CH-oop': 1.86, 'other': 2.38}; recorded {'ring-ip': None, 'CH-stretch': None, 'CH-oop': None, 'other': None}
+region (cm-1)   bands   rms    | ring-ip        CH-stretch     CH-oop         other
+below 500         69   2.18  |    0               0               0              69  2.18    
+500-700           40   1.58  |    0               0               1  1.35        39  1.58    
+700-1000          86   2.60  |    5  1.04         0              33  1.91        48  3.09    
+1000-1700        195   1.17  |  183  1.12         0              12  1.75         0          
+1700-2800         11   1.83  |   11  1.83         0               0               0          
+above 2800        73   0.80  |    0              73  0.80         0               0          
+AIB range 500-3400: all 1.60 over 405 bands; the three target kinds 1.23 over 318; 'other' inside it 2.53 over 87; share of bands within 2 cm-1 in the range: 0.891
+
+== test set b: 40 molecules, 2946 bands; per family this read {'ring-ip': 1.22, 'CH-stretch': 1.67, 'CH-oop': 1.26, 'other': 2.1}; recorded {'ring-ip': None, 'CH-stretch': None, 'CH-oop': None, 'other': None}
+region (cm-1)   bands   rms    | ring-ip        CH-stretch     CH-oop         other
+below 500        523   2.64  |    0               0               0             523  2.64    
+500-700          308   1.50  |    0               0               1  1.62       307  1.50    
+700-1000         513   1.60  |   33  1.43         0              65  1.39       415  1.64    
+1000-1700       1098   1.20  | 1080  1.21         0              18  0.62         0          
+1700-2800         94   1.57  |   81  1.37         0               0              13  2.46    
+above 2800       410   1.67  |    0             410  1.67         0               0          
+AIB range 500-3400: all 1.43 over 2403 bands; the three target kinds 1.35 over 1668; 'other' inside it 1.61 over 735; share of bands within 2 cm-1 in the range: 0.895

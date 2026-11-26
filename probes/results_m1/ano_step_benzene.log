@@ -1,0 +1,36 @@
+=== (ANO) start: psi4 1.10.2, 8 threads, psi4 memory 8 GB, PSIPATH /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/ano_step_benzene_2026-11-25/basis/psi, ano-pvqz.gbs sha256 5bf9efb108b9ebdefa75f9177e1ec9d4e732b7b5e0fc6a55193558ecfebd7a68 2026-11-25 22:54:08
+[22:54:19] water mp2 cc-pvdz: max |analytic - findif| 4.71e-09 Eh/bohr
+[22:54:27] water mp2 cc-pvtz: max |analytic - findif| 4.87e-08 Eh/bohr
+=== WATER CHECK PASS (line 1e-06 Eh/bohr)
+[22:54:37] water scf cc-pvdz: max |analytic - findif| 7.79e-10 Eh/bohr
+[22:54:44] water scf cc-pvtz: max |analytic - findif| 9.82e-10 Eh/bohr
+=== WATER CHECK PASS (line 1e-06 Eh/bohr)
+=== (ANO) smoke: check W passed for mp2 and scf 2026-11-25 22:54:44
+[22:54:45] 6 rows of /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/molecules/A_8448043181/geometry.json at cc-pvdz, 0 already done
+[22:54:51] df-mp2 cc-pvdz k=0: H_kk +0.768136 (6 s)
+[22:54:58] df-mp2 cc-pvdz k=1: H_kk +0.738290 (6 s)
+[22:55:04] df-mp2 cc-pvdz k=2: H_kk +0.109661 (6 s)
+[22:55:10] df-mp2 cc-pvdz k=18: H_kk +0.318238 (6 s)
+[22:55:16] df-mp2 cc-pvdz k=19: H_kk +0.121262 (6 s)
+[22:55:22] df-mp2 cc-pvdz k=20: H_kk +0.022884 (7 s)
+=== DF ROWS DONE /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/ano_step_benzene_2026-11-25/rows/rows_mp2_ccpvdz.npz (6 rows)
+=== (ANO) mp2_ccpvdz done, peak RSS 584544 kB 2026-11-25 22:55:23
+[22:55:24] 6 rows of /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/molecules/A_8448043181/geometry.json at ano-pvqz, 0 already done
+[23:19:15] df-mp2 ano-pvqz k=0: H_kk +0.718124 (1431 s)
+[23:43:07] df-mp2 ano-pvqz k=1: H_kk +0.679982 (1432 s)
+[00:07:04] df-mp2 ano-pvqz k=2: H_kk +0.137711 (1437 s)
+[00:30:42] df-mp2 ano-pvqz k=18: H_kk +0.293938 (1419 s)
+[00:54:20] df-mp2 ano-pvqz k=19: H_kk +0.117494 (1418 s)
+[01:17:56] df-mp2 ano-pvqz k=20: H_kk +0.027352 (1416 s)
+=== DF ROWS DONE /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/ano_step_benzene_2026-11-25/rows/rows_mp2_anopvqz.npz (6 rows)
+=== (ANO) mp2_anopvqz done, peak RSS 6872332 kB 2026-11-26 01:17:57
+[01:17:58] 1 rows of /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/molecules/A_8448043181/geometry.json at ano-pvqz, 0 already done
+[01:44:25] df-mp2 ano-pvqz k=0: H_kk +0.718114 (1587 s)
+=== DF ROWS PARTIAL /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/ano_step_benzene_2026-11-25/rows/rows_mp2_anopvqz_fit5z.npz (1 of 6 rows; --only-row)
+=== (ANO) mp2_anopvqz_fit5z done, peak RSS 9305976 kB 2026-11-26 01:44:26
+[01:44:27] 6 rows of /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/../modules/05_support_predictor/corpus/molecules/A_8448043181/geometry.json at roos-ano-tz, 0 already done
+[01:52:18] df-mp2 roos-ano-tz k=0: H_kk +0.716425 (471 s)
+[02:00:06] df-mp2 roos-ano-tz k=1: H_kk +0.680392 (467 s)
+[02:07:51] df-mp2 roos-ano-tz k=2: H_kk +0.133776 (465 s)
+[02:15:36] df-mp2 roos-ano-tz k=18: H_kk +0.292714 (465 s)
+[02:23:23] df-mp2 roos-ano-tz k=19: H_kk +0.117341 (467 s)
