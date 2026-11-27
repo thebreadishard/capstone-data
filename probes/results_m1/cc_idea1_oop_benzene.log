@@ -1,0 +1,25 @@
+=== (IDEA1) start: positions 2,5 = Cartesian 2,20, basis /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/cc_ideas_2026-11-26/basis/ano-pvdz.nwchem.txt (sha256 f69b04fcbe760bda), 8 threads, max_memory 8000 MB, pyscf 2.14.0 2026-11-26 15:37:43
+[2026-11-26 15:37:43] E8 FD Hessian: 12 atoms, /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/cc_ideas_2026-11-26/basis/ano-pvdz.nwchem.txt, frozen 6 (derived from the elements: 6), step 0.005 bohr, 72 displacements, 8 threads, max_memory 8000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+[2026-11-26 15:45:33] fast (T) lambda two-route check: max |kernel − pyscf| = 2.4e-17 (l2_t; limit 1e-10; 366 s)
+[2026-11-26 16:09:55] fast (T) density two-route check: max |kernel − pyscf| = 3.7e-17 (dvo[for_grad=False]; limit 1e-10; 1448 s)
+[2026-11-26 16:26:59] (T) lambda 1462 s, gradient 1024 s
+[2026-11-26 16:26:59] reference: E = -231.658909863, max|grad| 6.37e-03, 2956 s
+[2026-11-26 16:26:59] symmetry: 24 operations, orbits [[0, 1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 11]], 6 displacements (12 gradients) instead of 72
+[2026-11-26 16:26:59] partial run: displacement indices [2, 20]
+[2026-11-26 16:47:14] (T) lambda 81 s, gradient 1028 s
+[2026-11-26 16:47:14] coordinate  2 p: E − E0 =     +1.51 µE_h, 1214 s  (1/72 gradients)
+[2026-11-26 17:07:28] (T) lambda 82 s, gradient 1028 s
+[2026-11-26 17:07:28] coordinate  2 m: E − E0 =     +1.52 µE_h, 1215 s  (2/72 gradients)
+[2026-11-26 17:07:28] pair check coordinate  2: max |mean(g+, g−) − g0| = 1.5e-06 a.u. (limit 1e-04)
+[2026-11-26 17:27:44] (T) lambda 81 s, gradient 1030 s
+[2026-11-26 17:27:44] coordinate 20 p: E − E0 =     +0.31 µE_h, 1215 s  (3/72 gradients)
+[2026-11-26 17:47:54] (T) lambda 80 s, gradient 1027 s
+[2026-11-26 17:47:54] coordinate 20 m: E − E0 =     +0.30 µE_h, 1211 s  (4/72 gradients)
+[2026-11-26 17:47:55] pair check coordinate 20: max |mean(g+, g−) − g0| = 1.9e-06 a.u. (limit 1e-04)
+[2026-11-26 17:47:55] partial run done; merge grad_*.npy files and rerun without --ks to assemble the Hessian
+=== (IDEA1) CCSD(T) done 2026-11-26 17:47:55
+[18:24:46] mp2 /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/cc_ideas_2026-11-26/basis/ano-pvdz.nwchem.txt k=2: H_kk +0.127176 (2210 s)
+[19:01:40] mp2 /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/cc_ideas_2026-11-26/basis/ano-pvdz.nwchem.txt k=20: H_kk +0.025363 (2214 s)
+→ /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/cc_ideas_2026-11-26/idea1_benzene/mp2_rows_anopvdz.npz (2 displacements)
+=== (IDEA1) MP2 done 2026-11-26 19:01:41
+=== (IDEA1) all done 2026-11-26 19:01:41

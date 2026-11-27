@@ -1,0 +1,18 @@
+Source: https://www.basissetexchange.org/api/basis/<name>/format/<fmt>/?elements=1,6,7, https://www.basissetexchange.org/api/references/<name>/format/txt/?elements=1,6,7 and https://www.basissetexchange.org/api/notes/<name>
+Fetched: 2026-11-26 13:59:25
+fcb5f4f5a1a0d9be627415a2290c7a95b5a2421c0b064d4010729fdfed116d98 *ano-pv5z.notes.txt
+3c5960ccb8bb65c923f45af2af2811710335a81d2c6b0208d1ff97789c61dd48 *ano-pv5z.nwchem.txt
+20fa3e0df51ab025bf7024204103e4afb3dd61d8eb60d3b78ea14b7de77034cf *ano-pv5z.psi4.txt
+02a148e6f5936ae2e2c75978bbd65739bdb251c99b7e4dc2f6256814c0c14cdb *ano-pv5z.references.txt
+a55db0c62878f43729da22389bb85b01760d710d5dd9699b5e871b12cb664fb0 *ano-pvdz.notes.txt
+f69b04fcbe760bdaf0926d4d6c77b508b0329ff18f9d46edc36edf88881797bc *ano-pvdz.nwchem.txt
+bdc9b9d9720e5feefd9ffd077cdd66791436b83b48ca667a7a11c3bc7dc42101 *ano-pvdz.psi4.txt
+0700db5681eacb61a21b45bf55bbf638d03583c75a684e173281e55b2859514a *ano-pvdz.references.txt
+f9ab26cce5cbf424cd5b8b527e6448766390c1be74c9f0c72433c4c2c051c3df *ano-pvqz.notes.txt
+8fab9b1b7855495843e08c4d0fb3704e69d9acac4e30e2fdee3a598100a04d9a *ano-pvqz.nwchem.txt
+857a6c2ec28f15ae3dc88f66734661f9d2d3adca3e4ad0c31fbc42c19f96adb4 *ano-pvqz.psi4.txt
+f8a0df5dba98cab56b8f5298d0b97b840511eff83ec9bbb27adaa4a51eecf723 *ano-pvqz.references.txt
+c3aac9489086d7a7efa5f67a8d6f1ce8630268408b23400cb18444de6c387c8d *ano-pvtz.notes.txt
+396bde4483e41de19871c1db29b430465b02a92060f8e7b947701f15c1ceb2ab *ano-pvtz.nwchem.txt
+a09af5d3b176cd2def77c005710bb5beae36c6119dcf9aae069fef54835084bf *ano-pvtz.psi4.txt
+6cc801a0985dd8db4f31a9ce5cfeedea0a0f18354f1625f4026377b6ef72648f *ano-pvtz.references.txt

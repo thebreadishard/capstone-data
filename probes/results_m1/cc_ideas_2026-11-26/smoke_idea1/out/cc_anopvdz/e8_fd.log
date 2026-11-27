@@ -1,0 +1,18 @@
+[2026-11-26 14:29:12] E8 FD Hessian: 6 atoms, /mnt/c/Users/thebr/Documents/CapstonePlan/plans/05_delta-probed-ir-pipeline/probes/results_m1/cc_ideas_2026-11-26/basis/ano-pvdz.nwchem.txt, frozen 2 (derived from the elements: 2), step 0.005 bohr, 36 displacements, 2 threads, max_memory 2000 MB, explicit (T) lambda, fast (T) density kernel, fast (T) lambda kernel
+[2026-11-26 14:29:30] fast (T) lambda two-route check: max |kernel − pyscf| = 6.9e-18 (l2_t; limit 1e-10; 4 s)
+[2026-11-26 14:29:42] fast (T) density two-route check: max |kernel − pyscf| = 3.5e-18 (doo[for_grad=False]; limit 1e-10; 11 s)
+[2026-11-26 14:32:07] (T) lambda 12 s, gradient 145 s
+[2026-11-26 14:32:07] reference: E = -78.386395110, max|grad| 5.99e-03, 175 s
+[2026-11-26 14:32:07] symmetry: 8 operations, orbits [[0, 1], [2, 3, 4, 5]], 6 displacements (12 gradients) instead of 36
+[2026-11-26 14:32:07] partial run: displacement indices [2, 8]
+[2026-11-26 14:34:44] (T) lambda 2 s, gradient 141 s
+[2026-11-26 14:34:44] coordinate  2 p: E − E0 =     +1.17 µE_h, 157 s  (1/36 gradients)
+[2026-11-26 14:37:43] (T) lambda 1 s, gradient 164 s
+[2026-11-26 14:37:43] coordinate  2 m: E − E0 =     +1.17 µE_h, 179 s  (2/36 gradients)
+[2026-11-26 14:37:43] pair check coordinate  2: max |mean(g+, g−) − g0| = 1.8e-06 a.u. (limit 1e-04)
+[2026-11-26 14:41:00] (T) lambda 2 s, gradient 178 s
+[2026-11-26 14:41:00] coordinate  8 p: E − E0 =     +0.26 µE_h, 197 s  (3/36 gradients)
+[2026-11-26 14:44:21] (T) lambda 2 s, gradient 183 s
+[2026-11-26 14:44:21] coordinate  8 m: E − E0 =     +0.26 µE_h, 201 s  (4/36 gradients)
+[2026-11-26 14:44:21] pair check coordinate  8: max |mean(g+, g−) − g0| = 1.8e-06 a.u. (limit 1e-04)
+[2026-11-26 14:44:21] partial run done; merge grad_*.npy files and rerun without --ks to assemble the Hessian
