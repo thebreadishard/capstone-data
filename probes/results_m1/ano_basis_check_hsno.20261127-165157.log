@@ -1,0 +1,4 @@
+2026-11-27 16:40:39
+functions on HSNO: cc-pvqz 199, ano-pvqz 199
+Terminated                 systemd-run "${MODE[@]}" --scope --quiet -p MemoryMax="${CAP}M" -p MemorySwapMax=0 "$@"
+KILLED: over the cap of 10240 MB, or stopped from outside: journalctl -b | grep -E 'oom-kill|Killed process' tells which

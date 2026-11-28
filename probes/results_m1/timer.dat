@@ -2988,3 +2988,68 @@ DFMP2 grad                          :   2156.783u     19.133s    629.112w      1
 | | | Libint2ERI::Libint2ERI        :    440.233u      0.533s    263.179w      8 calls
 
 **************************************************************************************
+
+Host: Asus18
+
+Timers On : Fri Nov 27 17:03:13 2026
+Timers Off: Fri Nov 27 17:57:35 2026
+
+Wall Time:     3261.98 seconds
+
+                                                       Time (seconds)
+Module                                       User      System        Wall        Calls
+Total PK formation time             :   8563.383u     12.500s   1386.157w      1 calls
+Libint2ERI::Libint2ERI              :     69.750u      5.500s     44.294w      6 calls
+HF: Form core H                     :      0.167u      0.017s      0.036w      1 calls
+HF: Form S/X                        :      0.050u      0.000s      0.007w      1 calls
+HF: Guess                           :     11.967u      3.667s      5.667w      1 calls
+SAD Guess                           :     11.967u      3.667s      5.666w      1 calls
+HF: Form G                          :     26.767u     51.183s     36.138w     18 calls
+JK: D                               :      0.017u      0.000s      0.001w     18 calls
+JK: USO2AO                          :      0.000u      0.000s      0.000w     18 calls
+JK: JK                              :     26.733u     51.183s     36.133w     18 calls
+PK computes JK                      :     26.733u     51.183s     36.132w     18 calls
+AIO synchronize                     :      0.000u      0.000s      0.000w      1 calls
+JK: AO2USO                          :      0.000u      0.000s      0.000w     18 calls
+HF: Form F                          :      0.000u      0.000s      0.001w     18 calls
+HF: Form D                          :      0.000u      0.000s      0.001w     18 calls
+HF: DIIS                            :      1.917u      0.367s      0.557w     17 calls
+HF: Form C                          :      0.500u      0.000s      0.068w     17 calls
+trans_ints                          :     46.533u     14.250s     19.165w      1 calls
+Trans (OV|OV)                       :     45.883u     14.000s     19.009w      1 calls
+Sort chem -> phys                   :      0.317u      0.167s      0.086w      1 calls
+Sort (OV|OV) -> <OO|VV>             :      0.317u      0.167s      0.086w      1 calls
+Trans OEI                           :      0.000u      0.000s      0.001w      1 calls
+Build Denominators                  :      0.283u      0.083s      0.057w      1 calls
+T2(1)                               :      1.617u      1.000s      0.619w      1 calls
+MP2 Energy                          :      0.683u      0.350s      0.158w      1 calls
+
+--------------------------------------------------------------------------------------
+Total PK formation time             :   8563.383u     12.500s   1386.157w      1 calls
+| Libint2ERI::Libint2ERI            :     57.317u      4.850s     37.015w      5 calls
+HF: Form core H                     :      0.167u      0.017s      0.036w      1 calls
+HF: Form S/X                        :      0.050u      0.000s      0.007w      1 calls
+HF: Guess                           :     11.967u      3.667s      5.667w      1 calls
+| SAD Guess                         :     11.967u      3.667s      5.666w      1 calls
+HF: Form G                          :     26.767u     51.183s     36.138w     18 calls
+| JK: D                             :      0.017u      0.000s      0.001w     18 calls
+| JK: USO2AO                        :      0.000u      0.000s      0.000w     18 calls
+| JK: JK                            :     26.733u     51.183s     36.133w     18 calls
+| | PK computes JK                  :     26.733u     51.183s     36.132w     18 calls
+| | | AIO synchronize               :      0.000u      0.000s      0.000w      1 calls
+| JK: AO2USO                        :      0.000u      0.000s      0.000w     18 calls
+HF: Form F                          :      0.000u      0.000s      0.001w     18 calls
+HF: Form D                          :      0.000u      0.000s      0.001w     18 calls
+HF: DIIS                            :      1.917u      0.367s      0.557w     17 calls
+HF: Form C                          :      0.500u      0.000s      0.068w     17 calls
+Libint2ERI::Libint2ERI              :     12.433u      0.650s      7.280w      1 calls
+trans_ints                          :     46.533u     14.250s     19.165w      1 calls
+| Trans (OV|OV)                     :     45.883u     14.000s     19.009w      1 calls
+| Sort chem -> phys                 :      0.317u      0.167s      0.086w      1 calls
+| | Sort (OV|OV) -> <OO|VV>         :      0.317u      0.167s      0.086w      1 calls
+| Trans OEI                         :      0.000u      0.000s      0.001w      1 calls
+| Build Denominators                :      0.283u      0.083s      0.057w      1 calls
+T2(1)                               :      1.617u      1.000s      0.619w      1 calls
+MP2 Energy                          :      0.683u      0.350s      0.158w      1 calls
+
+**************************************************************************************
